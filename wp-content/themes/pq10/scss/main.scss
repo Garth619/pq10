@@ -11,93 +11,93 @@
 		"imports/components/buttons/variables",
 		
 		"imports/layout/header/variables",
-		"imports/layout/footer/variables",
-		"imports/layout/internalbanner/variables",
-		"imports/layout/locations/variables",
-		"imports/layout/navigation/variables",
-		"imports/layout/sidebar/variables",
+		"imports/layout/footer/variables";
+// 		"imports/layout/internalbanner/variables",
+// 		"imports/layout/locations/variables",
+// 		"imports/layout/navigation/variables",
+// 		"imports/layout/sidebar/variables",
 				
-		"imports/templates/404/variables",
-		"imports/templates/about/variables",
-		"imports/templates/attorneyprofile/variables",
-		"imports/templates/blog/variables",
-		"imports/templates/caseresults/variables",
-		"imports/templates/contactpage/variables",
-		"imports/templates/homepage/sectionone/variables",
-		"imports/templates/homepage/sectiontwo/variables",
-		"imports/templates/homepage/sectionthree/variables",
-		"imports/templates/homepage/sectionfour/variables",
-		"imports/templates/homepage/sectionsix/variables",
-		"imports/templates/meetteam/variables",
-		"imports/templates/pa-directory/variables",
-		"imports/templates/testimonials/variables",
-		"imports/templates/videocenter/variables",
+// 		"imports/templates/404/variables",
+// 		"imports/templates/about/variables",
+// 		"imports/templates/attorneyprofile/variables",
+// 		"imports/templates/blog/variables",
+// 		"imports/templates/caseresults/variables",
+// 		"imports/templates/contactpage/variables",
+// 		"imports/templates/homepage/sectionone/variables",
+// 		"imports/templates/homepage/sectiontwo/variables",
+// 		"imports/templates/homepage/sectionthree/variables",
+// 		"imports/templates/homepage/sectionfour/variables",
+// 		"imports/templates/homepage/sectionsix/variables",
+// 		"imports/templates/meetteam/variables",
+// 		"imports/templates/pa-directory/variables",
+// 		"imports/templates/testimonials/variables",
+// 		"imports/templates/videocenter/variables",
 
 		
-		"imports/utils/variables_do_not_edit",
-		"imports/utils/mixins_do_not_edit";
+// 		"imports/utils/variables_do_not_edit",
+// 		"imports/utils/mixins_do_not_edit";
 
 		
 
 				
-// third party files
+// // third party files
 				
-@import	"imports/vendors/slick",
-		"imports/vendors/lity";
+// @import	"imports/vendors/slick",
+// 		"imports/vendors/lity";
 
-// reset
+// // reset
 
-@import	"imports/base/reset";
+// @import	"imports/base/reset";
 
-// global
+// // global
 
-@import	"imports/global/content/content",
-		"imports/global/misc/global";
+// @import	"imports/global/content/content",
+// 		"imports/global/misc/global";
 
-// components
+// // components
 
-@import	"imports/components/buttons/buttons",
-		"imports/components/internal_forms/internal_forms";
+// @import	"imports/components/buttons/buttons",
+// 		"imports/components/internal_forms/internal_forms";
 				
-// layout 			
+// // layout 			
 
-@import	"imports/layout/header/header",
-		"imports/layout/navigation/navigation",
-		"imports/layout/internalbanner/internal-banner",
-		"imports/layout/sidebar/sidebar",
-		"imports/layout/locations/locations",
-		"imports/layout/locations/locations_many",
-		"imports/layout/footer/footer";
+// @import	"imports/layout/header/header",
+// 		"imports/layout/navigation/navigation",
+// 		"imports/layout/internalbanner/internal-banner",
+// 		"imports/layout/sidebar/sidebar",
+// 		"imports/layout/locations/locations",
+// 		"imports/layout/locations/locations_many",
+// 		"imports/layout/footer/footer";
 				
-// page templates 
+// // page templates 
 				
-@import	"imports/templates/homepage/sectionone/section_one",
-		"imports/templates/homepage/sectiontwo/section_two",
-		"imports/templates/homepage/sectionthree/section_three",
-		"imports/templates/homepage/sectionfour/section_four",
-		"imports/templates/homepage/sectionfive/section_five",
-		"imports/templates/homepage/sectionsix/section_six",
-		"imports/templates/pa-directory/template-pa-directory",
-		"imports/templates/testimonials/template-testimonials",
-		"imports/templates/about/template-about",
-		"imports/templates/attorneyprofile/template-attbio",
-		"imports/templates/caseresults/template-results",
-		"imports/templates/meetteam/template-meetteam",
-		"imports/templates/videocenter/template-video",
-		"imports/templates/contactpage/contact_global",
-		"imports/templates/contactpage/contact_layout_one",
-		"imports/templates/contactpage/contact_layout_two",
-		"imports/templates/contactpage/contact_map",
-		"imports/templates/blog/template-blog",
-		"imports/templates/404/not-found";
+// @import	"imports/templates/homepage/sectionone/section_one",
+// 		"imports/templates/homepage/sectiontwo/section_two",
+// 		"imports/templates/homepage/sectionthree/section_three",
+// 		"imports/templates/homepage/sectionfour/section_four",
+// 		"imports/templates/homepage/sectionfive/section_five",
+// 		"imports/templates/homepage/sectionsix/section_six",
+// 		"imports/templates/pa-directory/template-pa-directory",
+// 		"imports/templates/testimonials/template-testimonials",
+// 		"imports/templates/about/template-about",
+// 		"imports/templates/attorneyprofile/template-attbio",
+// 		"imports/templates/caseresults/template-results",
+// 		"imports/templates/meetteam/template-meetteam",
+// 		"imports/templates/videocenter/template-video",
+// 		"imports/templates/contactpage/contact_global",
+// 		"imports/templates/contactpage/contact_layout_one",
+// 		"imports/templates/contactpage/contact_layout_two",
+// 		"imports/templates/contactpage/contact_map",
+// 		"imports/templates/blog/template-blog",
+// 		"imports/templates/404/not-found";
 
-// xd export variables
+// // xd export variables
 
-@import	"imports/utils/xd_parse/scss/map/_xd_map_placeholder",
-		"imports/utils/xd_parse/scss/map/_xd_map",
-		"imports/utils/xd_parse/scss/functions/_xd_function",
-		"imports/utils/xd_parse/scss/_xd_variables";
+// @import	"imports/utils/xd_parse/scss/map/_xd_map_placeholder",
+// 		"imports/utils/xd_parse/scss/map/_xd_map",
+// 		"imports/utils/xd_parse/scss/functions/_xd_function",
+// 		"imports/utils/xd_parse/scss/_xd_variables";
 				
-// animations (listed last so it will override styles above 
+// // animations (listed last so it will override styles above 
 
-@import	"imports/layout/animations";
+// @import	"imports/layout/animations";
