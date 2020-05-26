@@ -1,0 +1,107 @@
+////////////////////////////////////////////////////////////////////
+// Testimonials Page
+////////////////////////////////////////////////////////////////////
+
+// .testi_feature
+
+$testi_feature_bg_color: $color_dark_one;
+
+$testi_feature_text_color: $color_lite_one;
+
+// .testi_feature .testi_feature_inner svg.stars polygon
+
+$testi_feature_star_color: $color_bright_one;
+
+// .testi_feature .testi_feature_inner .testi_intro
+
+$testi_feature_intro_size: 45px;
+$testi_feature_intro_size_large_laptop: 40px;
+$testi_feature_intro_size_small_laptop: 30px;
+$testi_feature_intro_size_xlarge_mobile: 23px;
+
+$testi_feature_intro_line_height: 50px;
+$testi_feature_intro_line_height_large_laptop: 45px;
+$testi_feature_intro_line_height_small_laptop: 35px;
+$testi_feature_intro_line_height_xlarge_mobile: 29px;
+
+// .testi_feature .testi_feature_inner .testi_description p
+
+$testi_feature_desc_size: 22px;
+$testi_feature_desc_size_large_laptop: 19px;
+$testi_feature_desc_size_tablet: 16px;
+
+$testi_feature_desc_line_height: 35px;
+$testi_feature_desc_line_height_large_laptop: 27px;
+$testi_feature_desc_line_height_tablet: 29px;
+
+// .testi_feature .testi_feature_inner .testi_description a.testi_read_more
+
+$testi_feature_read_more_color: $color_lite_one;
+$testi_feature_read_more_color_hover: $color_bright_one;
+
+$testi_feature_read_more_weight: 700;
+
+$testi_feature_read_more_size: 22px;
+$testi_feature_read_more_size_large_laptop: 20px;
+$testi_feature_read_more_size_small_laptop: 18px;
+$testi_feature_read_more_size_tablet: 16px;
+
+$testi_feature_read_more_spacing: 2.2px;
+
+// .testi_feature .testi_feature_inner span.testi_name
+
+$testi_feature_name_weight: 700;
+
+$testi_feature_name_size: 22px;
+$testi_feature_name_size_large_laptop: 20px;
+$testi_feature_name_size_small_laptop: 18px;
+$testi_feature_name_size_tablet: 16px;
+
+$testi_feature_name_spacing: 2.2px;
+
+// .testi_bottom .testi_col .single_testi svg.stars polygon
+
+$testi_star_color: $color_bright_one;
+
+// .testi_bottom .testi_col .single_testi .testi_intro
+
+$testi_intro_size: 33px;
+$testi_intro_size_large_laptop: 29px;
+$testi_intro_size_small_laptop: 26px;
+$testi_intro_size_tablet: 23px;
+
+$testi_intro_line_height: 42px;
+$testi_intro_line_height_large_laptop: 35px;
+$testi_intro_line_height_small_laptop: 32px;
+$testi_intro_line_height_tablet: 30px;
+
+// .testi_bottom .testi_col .single_testi .testi_description
+
+$testi_desc_weight: 500;
+
+$testi_desc_size: 18px;
+$testi_desc_size_tablet: 16px;
+
+$testi_desc_line_height: 30px;
+$testi_desc_line_height_tablet: 29px;
+
+// .testi_bottom .testi_col .single_testi .testi_description .testi_read_more
+
+$testi_desc_read_more_color: $color_bright_one;
+$testi_desc_read_more_color_hover: $color_dark_three;
+
+$testi_desc_read_more_weight: 700;
+
+$testi_desc_read_more_size: 20px;
+$testi_desc_read_more_size_small_laptop: 18px;
+$testi_desc_read_more_size_tablet: 16px;
+
+// .testi_bottom .testi_col .single_testi span.testi_name
+
+$testi_desc_name_weight: 700;
+
+$testi_desc_name_size: 20px;
+$testi_desc_name_size_small_laptop: 18px;
+$testi_desc_name_size_tablet: 16px;
+
+$testi_desc_name_line_height: 26px;

@@ -1,0 +1,32 @@
+////////////////////////////////////////////////////////////////////
+// PA Directory Page
+////////////////////////////////////////////////////////////////////
+
+// .pa_directory ul.menu li a
+
+$pa_direct_color: $color_dark_one;
+
+// .pa_directory ul.pa_directory_top_menu>li
+
+$pa_direct_section_title_weight: 700;
+
+$pa_direct_section_title_size: 30px;
+$pa_direct_section_title_size_large_laptop: 25px;
+$pa_direct_section_title_size_small_laptop: 22px;
+$pa_direct_section_title_size_xlarge_laptop: 18px;
+
+$pa_direct_section_title_spacing: 0.1em;
+
+// .pa_directory ul.menu li
+
+$pa_direct_color_hover: $color_bright_one;
+
+$pa_direct_alternate_row_bg_color: $color_lite_two;
+
+$pa_direct_list_item_size: 21px;
+$pa_direct_list_item_size_small_laptop: 18px;
+
+$pa_direct_list_item_line_height: 24px;
+$pa_direct_list_item_line_height_small_laptop: 22px;
+
+$pa_direct_list_item_spacing: 0;

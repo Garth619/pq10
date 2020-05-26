@@ -1,0 +1,117 @@
+////////////////////////////////////////////////////////////////////
+// Global Content
+////////////////////////////////////////////////////////////////////
+
+// Global body color
+
+$body_color: $color_dark_one;
+
+// Global span.content_color (for highlighting where needed)
+
+$span_color: $color_bright_one;
+
+// Global Accent Bars
+
+$accent_color: $color_gradient_one;
+
+// .content
+
+$content_color: $color_dark_two;
+
+$content_weight: 500;
+
+$content_size: 18px;
+$content_size_large_laptop: 17px;
+$content_size_small_laptop: 16px;
+
+$content_line_height: 30px;
+$content_line_height_small_laptop: 28px;
+
+// .content h1, .page_header, h2.page_header
+
+$content_header_color: $color_dark_two;
+
+$content_header_size_weight: 400;
+
+$content_header_size: 48px;
+$content_header_size_large_laptop: 40px;
+$content_header_size_small_laptop: 33px;
+$content_header_size_tablet: 36px;
+$content_header_size_xlarge_mobile: 29px;
+
+$content_header_line_height: 50px;
+$content_header_line_height_large_laptop: 44px;
+$content_header_line_height_small_laptop: 39px;
+$content_header_line_height_tablet: 40px;
+$content_header_line_height_xlarge_mobile: 32px;
+
+// .content h2
+
+$content_h2_color: $color_bright_one;
+
+$content_h2_weight: 400;
+
+$content_h2_size: 28px;
+$content_h2_size_large_laptop: 24px;
+$content_h2_size_small_laptop: 23px;
+$content_h2_size_xlarge_mobile: 23px;
+
+$content_h2_line_height: 36px;
+$content_h2_line_height_large_laptop: 30px;
+$content_h2_line_height_small_laptop: 28px;
+
+// .content h3
+
+$content_h3_color: $color_dark_three;
+
+$content_h3_weight: 700;
+
+$content_h3_size: 22px;
+$content_h3_size_large_laptop: 20px;
+$content_h3_size_small_laptop: 19px;
+$content_h3_size_tablet: 19px;
+
+$content_h3_line_height: 30px;
+$content_h3_line_height_small_laptop: 22px;
+$content_h3_line_height_tablet: 22px;
+
+// .content blockquote
+
+$content_blockquote_color: $color_dark_three;
+$content_blockquote_color_accent: $color_gradient_three;
+
+$content_blockquote_size: 27px;
+$content_blockquote_size_large_laptop: 25px;
+$content_blockquote_size_small_laptop: 22px;
+
+$content_blockquote_line_height: 40px;
+$content_blockquote_line_height_large_laptop: 35px;
+$content_blockquote_line_height_small_laptop: 32px;
+$content_blockquote_line_height_xlarge_mobile: 30px;
+
+// .content ul li
+
+$content_list_item_color: $color_dark_three;
+
+$content_list_item_line_height: 25px;
+
+// .content ol li
+
+$content_ol_list_item_weight: 700;
+
+// .content href
+
+$content_link_color: $color_bright_one;
+$content_link_color_hover: $color_bright_one;
+
+$content_link_weight: 700;
+
+// h1.internal_header
+
+$internal_header_size: 70px;
+$internal_header_size_large_laptop: 50px;
+$internal_header_size_xlarge_mobile: 35px;
+
+$internal_header_line_height: 70px;
+$internal_header_line_height_large_laptop: 55px;
+$internal_header_line_height_xlarge_mobile: 42px;

@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////
+// Footer and Contact Page Locations
+////////////////////////////////////////////////////////////////////
+
+// .location_col span.location_contact_title
+
+$location_contact_title_color: $color_bright_one;
+
+$location_contact_title_size: 35px;
+$location_contact_title_size_large_laptop: 30px;
+$location_contact_title_size_small_laptop: 27px;
+$location_contact_title_size_small_tablet: 26;
+
+// .location_col a.location_phone
+
+$location_phone_color: $color_lite_one;
+
+$location_phone_weight: 700;
+
+$location_phone_size: 40px;
+$location_phone_size_large_laptop: 35px;
+$location_phone_size_small_laptop: 30px;
+
+// .location_col span.location_title
+
+$location_title_color: $color_lite_one;
+
+$location_title_weight: 700;
+
+$location_title_size: 22px;
+$location_title_size_large_laptop: 20px;
+$location_title_size_small_laptop: 18px;
+
+$location_title_line_height_small_tablet: 25px;
+
+$location_title_spacing: 1.1px;
+
+// .location_col span.address
+
+$location_address_color: $color_lite_one;
+
+$location_address_size: 23px;
+$location_address_size_large_laptop: 21px;
+$location_address_size_small_laptop: 18px;
+$location_address_size_xlarge_mobile: 20px;
+
+$location_address_line_height: 30px;
+$location_address_line_height_large_laptop: 28px;
+$location_address_line_height_small_laptop: 26px;
+$location_address_line_height_xlarge_mobile: 28px;
+
+$location_address_spacing: 0.027em;
+
+// .location_col span.address strong
+
+$location_address_hightlight_weight: 400;
+
+$location_address_hightlight_color: $color_bright_one;
+
+// .location_col a.get_directions
+
+$location_directions_color: $color_lite_one;
+$location_directions_color_hover: $color_bright_one;
+
+$location_directions_weight: 500;
+
+$location_directions_size: 16px;
+$location_directions_size_large_laptop: 15px;
+$location_directions_size_small_laptop: 13px;
+$location_directions_size_small_tablet: 14px;
+
+$location_directions_spacing: 0.2em;
+
+// .location_col .location_phone_wrapper span, .location_col .location_phone_wrapper a
+
+$location_phone_two_title_color: $color_bright_one;
+$location_phone_two_color: $color_lite_one;
+
+$location_phone_two_size: 23px;
+$location_phone_two_size_large_laptop: 21px;
+$location_phone_two_size_small_laptop: 18px;
+
+$location_phone_two_spacing: 0.62px;
+
+// .social_media a svg.social path
+
+$sm_color: $color_lite_one;
+$sm_color_hover: $color_bright_one;
+
+//.appointment_only
+
+$appointment_only_color: $color_dark_three;
+$appointment_only_size_desktop: 16px;
+$appointment_only_size_tablet: 14px;
+$appointment_only_spacing: 0.027em;
+$appointment_only_weight: 700;
+
+//.view_all button
+
+$view_all_text_color: $color_bright_one;

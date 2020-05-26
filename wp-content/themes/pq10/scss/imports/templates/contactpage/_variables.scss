@@ -1,0 +1,147 @@
+////////////////////////////////////////////////////////////////////
+// Contact Page
+////////////////////////////////////////////////////////////////////
+
+// body.page-template-template-contact h1.internal_header
+
+$contact_internal_header_size: 46px;
+
+$contact_internal_header_line_height: 48px;
+
+// .contact_phone span, .contact_phone a
+
+$contact_phone_weight: 700;
+
+$contact_phone_size: 24px;
+
+$contact_phone_spacing: 0.65px;
+
+// .contact_phone span.phone_title
+
+$contact_phone_title_color: $color_bright_one;
+
+$contact_phone_title_size_xlarge_mobile: 19px;
+
+// .contact_phone a.phone_number
+
+$contact_phone_color: $color_dark_one;
+
+// #contact_top_content
+
+$contact_top_content_size_xlarge_mobile: 16px;
+
+$contact_top_content_line_height_xlarge_mobile: 28px;
+
+// body.page-template-template-contact .location_col a
+
+$contact_location_info_href_color: $color_dark_three;
+
+// #contact_social_media a svg path
+
+$contact_page_sm_fill_color: $color_dark_one;
+$contact_page_sm_fill_color_hover: $color_bright_one;
+
+////////////////////////////////////////////////////////////////////
+// Contact Page - Map Locator
+////////////////////////////////////////////////////////////////////
+
+// #contact_bottom
+
+$contact_map_bottom_bg_color: $color_lite_one;
+
+// #map_content h2
+
+$map_content_h2_color: $color_bright_one;
+
+$map_content_h2_weight: 700;
+
+$map_content_h2_size: 16px;
+
+$map_content_h2_spacing: 0.025em;
+
+// #map_content span, #map_content a
+
+$map_content_span_href_color: $color_dark_one;
+
+$map_content_span_href_size: 15px;
+
+// #map_content a.get_directions
+
+$map_content_directions_color: $color_bright_one;
+
+$map_content_directions_weight: 500;
+
+$map_content_directions_size: 14px;
+
+$map_content_directions_spacing: 0.1em;
+
+// .locations_select
+
+$location_select_bg_color: $color_lite_one;
+
+// .locations_select .selection span
+
+$location_select_span_weight_xlarge_mobile: 500;
+
+$location_select_span_size_xlarge_mobile: 18px;
+
+$location_select_span_spacing_xlarge_mobile: 0.025em;
+
+// .locations_select .selection_arrow
+
+$selection_arrow_bg_color_xsmall_laptop: $color_lite_two;
+
+// .locations_select .selection_arrow:after
+
+$selection_arrow_tri_color_small_laptop: $color_bright_one;
+
+// .selection_dropdown ul li
+
+$selection_dropdown_list_bg_color_xsmall_laptop: $color_lite_two;
+$selection_dropdown_list_bg_color_hover_xsmall_laptop: $color_lite_one;
+
+$selection_dropdown_list_text_color_hover_xsmall_laptop: $color_bright_one;
+
+$selection_dropdown_list_weight_xsmall_laptop: 500;
+
+$selection_dropdown_list_size_xsmall_laptop: 18px;
+
+$selection_dropdown_list_spacing_xsmall_laptop: 0.025em;
+
+// .single_mobile_location h2
+
+$single_location_h2_color: $color_bright_one;
+
+$single_location_h2_weight: 700;
+
+$single_location_h2_size: 20px;
+
+$single_location_h2_spacing: 0.025em;
+
+// .single_mobile_location span.mobile_address
+
+$single_location_address_weight_xsmall_laptop: 500;
+
+$single_location_address_size_xsmall_laptop: 20px;
+
+$single_location_address_line_height_xsmall_laptop: 28px;
+
+// .single_mobile_location a.mobile_get_directions
+
+$single_location_get_directions_color_xsmall_laptop: $color_bright_one;
+
+$single_location_get_directions_weight_xsmall_laptop: 500;
+
+$single_location_get_directions_size_xsmall_laptop: 14px;
+
+$single_location_get_directions_spacing_xsmall_laptop: 0.2em;
+
+// .single_mobile_location a.mobile_phone
+
+$single_location_phone_color_xsmall_laptop: $color_dark_one;
+
+$single_location_phone_weight_xsmall_laptop: 500;
+
+$single_location_phone_size_xsmall_laptop: 20px;
+
+$single_location_phone_spacing_xsmall_laptop: 0.027em;

@@ -1,0 +1,45 @@
+// Originally the contact page inherited the same layout as the footer (page-templates/includes/template-locations.php and scss/layout/locations/_locations.scss). Layout One was added in later and so it inherits alot of the same styles as locations but not... Unfortunately there is now some duplicated code on page-templates/includes/contact_page/template-contact-layout-one.php in relation to the orginal locations template
+
+body.page-template-template-contact {
+  .internal_container {
+    padding-bottom: 0;
+  }
+}
+
+#contact_layout_one {
+  margin-top: 125px;
+  padding-bottom: 90px;
+  @include mq(large_laptop) {
+    margin-top: 60px;
+  }
+  .location_col {
+    @include mq(xlarge_mobile) {
+      text-align: center;
+    }
+
+    &:nth-of-type(1) {
+      @include mq(small_tablet) {
+        align-items: flex-end;
+      }
+    }
+    .location_phone_wrapper {
+      span {
+        font-weight: 700;
+      }
+      a {
+        @include mq(xlarge_mobile) {
+          font-size: 20px;
+        }
+      }
+    }
+    .social_media {
+      margin-top: 38px;
+    }
+    a.get_directions {
+      margin-top: 44px;
+      @include mq(large_laptop) {
+        margin-top: 30px;
+      }
+    }
+  }
+}

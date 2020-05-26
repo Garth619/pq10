@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////
+// Section Three
+////////////////////////////////////////////////////////////////////
+
+// h1#sec_three_header
+
+$sec_three_header_size: 100px;
+$sec_three_header_size_large_laptop: 80px;
+$sec_three_header_size_small_laptop: 58px;
+$sec_three_header_size_tablet: 60px;
+$sec_three_header_size_xlarge_mobile: 38px;
+
+$sec_three_header_line_height: 100px;
+$sec_three_header_line_height_large_laptop: 80px;
+$sec_three_header_line_height_small_laptop: 60px;
+$sec_three_header_line_height_xlarge_mobile: 40px;
+
+// .sec_three_quote .sec_three_quote_inner p
+
+$sec_three_paragraph_color: $color_dark_one;
+
+$sec_three_quote_size: 48px;
+$sec_three_quote_size_large_monitor: 45px;
+$sec_three_quote_size_large_laptop: 36px;
+$sec_three_quote_size_small_laptop: 32px;
+$sec_three_quote_size_tablet: 36px;
+$sec_three_quote_size_xlarge_mobile: 26px;
+
+$sec_three_quote_line_height: 60px;
+$sec_three_quote_line_height_large_monitor: 55px;
+$sec_three_quote_line_height_large_laptop: 45px;
+$sec_three_quote_line_height_small_laptop: 38px;
+$sec_three_quote_line_height_tablet: 45px;
+$sec_three_quote_line_height_xlarge_mobile: 33px;
+
+//.sec_three_quote .sec_three_quote_inner span.quote_name
+
+$sec_three_quote_name_color: $color_dark_one;
+
+$sec_three_quote_name_weight: 700;
+
+$sec_three_quote_name_size: 16px;
+$sec_three_quote_name_size_small_laptop: 13px;
+
+$sec_three_quote_name_line_height: 30px;
+
+$sec_three_quote_name_spacing: 0.2em;
