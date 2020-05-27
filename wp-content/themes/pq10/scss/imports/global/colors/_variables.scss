@@ -4,16 +4,26 @@
 
 // Primary
 
-$color_dark_one: #0F3447;
+$color_dark_one: #0f3447;
 $color_dark_two: #016171;
-
 
 // Secondary
 
-$color_bright_one: #016171;
-
+$color_bright_one: #e11022;
+$color_bright_two: #04b1b4;
 
 // Light
 
 $color_lite_one: #fff;
-$color_lite_two: #f6f7fb;
+$color_lite_two: #f3f4f6;
+
+// Gradients
+
+$color_gradient_one: linear-gradient(to bottom, #e60f25 0%, #bd0011 100%);
+$color_gradient_two: linear-gradient(
+  to bottom,
+  #006170 0%,
+  #0b384a 50%,
+  #0c3446 100%
+);
+$color_gradient_three: linear-gradient(to bottom, #b0fff9 0%, #00fbff 100%);
