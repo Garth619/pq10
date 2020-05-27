@@ -123,7 +123,7 @@
 			
 			// disable clone
 			acf.disable( this.$clone(), this.cid );
-						
+			
 			// render
 			this.render();
 		},
@@ -135,19 +135,32 @@
 				$(this).find('> .order > span').html( i+1 );
 			});
 			
+			// Extract vars.
+			var $controll = this.$control();
+			var $button = this.$button();
+			
 			// empty
 			if( this.val() == 0 ) {
-				this.$control().addClass('-empty');
+				$controll.addClass('-empty');
 			} else {
-				this.$control().removeClass('-empty');
+				$controll.removeClass('-empty');
 			}
 			
-			// max
-			if( this.allowAdd() ) {
-				this.$button().removeClass('disabled');
+			// Reached max rows.
+			if( !this.allowAdd() ) {
+				$controll.addClass('-max');
+				$button.addClass('disabled');
 			} else {
-				this.$button().addClass('disabled');
-			}	
+				$controll.removeClass('-max');
+				$button.removeClass('disabled');
+			}
+			
+			// Reached min rows (not used).
+			//if( !this.allowRemove() ) {
+			//	$controll.addClass('-min');
+			//} else {
+			//	$controll.removeClass('-min');
+			//}	
 		},
 		
 		validateAdd: function(){
@@ -200,32 +213,33 @@
 				return false;
 			}
 			
-			// vars
-			var $clone = this.$clone();
-			
 			// defaults
 			args = acf.parseArgs(args, {
-				before: $clone
+				before: false
 			});
 			
 			// add row
 			var $el = acf.duplicate({
-				target: $clone,
-				append: function( $el, $el2 ){
+				target: this.$clone(),
+				append: this.proxy(function( $el, $el2 ){
+					
+					// append
+					if( args.before ) {
+						args.before.before( $el2 );
+					} else {
+						$el.before( $el2 );
+					}
 					
 					// remove clone class
 					$el2.removeClass('acf-clone');
 					
-					// append
-					args.before.before( $el2 );
-				}
+					// enable
+					acf.enable( $el2, this.cid );
+					
+					// render
+					this.render();
+				})
 			});
-			
-			// enable 
-			acf.enable_form( $el, this.cid );
-			
-			// update order
-			this.render();
 			
 			// trigger change for validation errors
 			this.$input().trigger('change');
@@ -336,7 +350,7 @@
 			}	
 		},
 		
-		onShow: function( e, context ){
+		onShow: function( e, $el, context ){
 			
 			// get sub fields
 			var fields = acf.getFields({
@@ -670,7 +684,7 @@
 			}
 		},
 		
-		onShow: function( e, context ){
+		onShow: function( e, $el, context ){
 			
 			// get sub fields
 			var fields = acf.getFields({
@@ -764,9 +778,6 @@
 				before: false
 			});
 			
-			// append
-			args.append = this.$layoutsWrap();
-			
 			// validate
 			if( !this.allowAdd() ) {
 				return false;
@@ -775,21 +786,22 @@
 			// add row
 			var $el = acf.duplicate({
 				target: this.$clone( args.layout ),
-				append: function( $el, $el2 ){
+				append: this.proxy(function( $el, $el2 ){
 					
+					// append
 					if( args.before ) {
 						args.before.before( $el2 );
 					} else {
-						args.append.append( $el2 );
+						this.$layoutsWrap().append( $el2 );
 					}
-				}
+					
+					// enable 
+					acf.enable( $el2, this.cid );
+					
+					// render
+					this.render();
+				})
 			});
-			
-			// enable 
-			acf.enable_form( $el, this.cid );
-			
-			// update order
-			this.render();
 			
 			// trigger change for validation errors
 			this.$input().trigger('change');
@@ -1188,7 +1200,10 @@
 				start: function (event, ui) {
 					ui.placeholder.html( ui.item.html() );
 					ui.placeholder.removeAttr('style');
-	   			}
+	   			},
+	   			update: function(event, ui) {
+					self.$input().trigger('change');
+		   		}
 			});
 			
 			// resizable
@@ -1387,7 +1402,7 @@
 				attachment = attachment.attributes;
 				
 				// preview size
-				var url = acf.isget(attachment, 'sizes', 'medium', 'url');
+				var url = acf.isget(attachment, 'sizes', this.get('preview_size'), 'url');
 				if( url !== null ) {
 					attachment.url = url;
 				}
@@ -1405,23 +1420,26 @@
 			// vars
 			var $el = this.$attachment( attachment.id );
 			
-			// image
+			// Image type.
 			if( attachment.type == 'image' ) {
 				
-				// remove filename	
+				// Remove filename.
 				$el.find('.filename').remove();
 			
-			// other (video)	
+			// Other file type.	
 			} else {	
 				
-				// attempt to find attachment thumbnail
-				attachment.url = acf.isget(attachment, 'thumb', 'src');
+				// Check for attachment featured image.
+				var image = acf.isget(attachment, 'image', 'src');
+				if( image !== null ) {
+					attachment.url = image;
+				}
 				
-				// update filename
+				// Update filename text.
 				$el.find('.filename').text( attachment.filename );
 			}
 			
-			// default icon
+			// Default to mimetype icon.
 			if( !attachment.url ) {
 				attachment.url = acf.get('mimeTypeIcon');
 				$el.addClass('-icon');
@@ -1591,10 +1609,13 @@
 		
 		onChangeSort: function( e, $el ){
 			
-			// vars
-			var val = $el.val();
+			// Bail early if is disabled.
+			if( $el.hasClass('disabled') ) {
+				return;
+			}
 			
-			// validate
+			// Get sort val.
+			var val = $el.val();
 			if( !val ) {
 				return;
 			}
@@ -1604,6 +1625,7 @@
 			this.$attachments().each(function(){
 				ids.push( $(this).data('id') );
 			});
+			
 			
 			// step 1
 			var step1 = this.proxy(function(){
@@ -1702,7 +1724,6 @@
 	
 })(jQuery);
 
-// @codekit-prepend "../js/acf-field-repeater.js";
-// @codekit-prepend "../js/acf-field-flexible-content.js";
-// @codekit-prepend "../js/acf-field-gallery.js";
-
+// @codekit-prepend "_acf-field-repeater.js";
+// @codekit-prepend "_acf-field-flexible-content.js";
+// @codekit-prepend "_acf-field-gallery.js";
