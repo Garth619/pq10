@@ -1,9 +1,10 @@
 header {
   background-color: $color_lite_one;
+  @include fixed(0, null, null, 0);
   #header_inner {
     display: flex;
     flex-wrap: wrap;
-    max-width:1920px;
+    max-width: 1920px;
     @include margin_lr;
   }
 }
@@ -84,19 +85,52 @@ header {
 #header_right {
   flex-basis: 100%;
   background-color: $color_dark_one;
- #header_right_inner {
+  padding: 12px 0px;
+  #header_right_inner {
     width: 100%;
     text-align: center;
     color: $color_lite_one;
   }
 }
 
-
-
 .consult_cta {
   display: inline-block;
+  > span {
+    @include type(
+      (
+        size: 14px,
+        family: $primaryfont,
+        color: $color_lite_one,
+      )
+    );
+    &:first-of-type {
+      &:after {
+        content: "";
+        vertical-align: top;
+        display: inline-block;
+        margin: 6px 2px 0 6px;
+        transform: rotate(-45deg);
+        background-color: $color_bright_one;
+        @include box(5px);
+      }
+    }
+  }
+}
+
+span.hide {
+  display: none;
 }
 
 a#header_phone {
   display: inline-block;
+  margin: 0 0px 0 4px;
+  @include type(
+    (
+      size: 18px,
+      spacing: 1.6px,
+      family: $primaryfont,
+      color: $color_lite_one,
+      weight: 800,
+    )
+  );
 }

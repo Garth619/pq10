@@ -107,7 +107,7 @@
 	
 				<span class='consult_verbiage'>Free Consultation</span><!-- consult_verbiage -->
 
-				<span class='consult_verbiage'>Hablamos Español</span><!-- consult_verbiage -->
+				<span class='consult_verbiage'><span class="hide">Hablamos</span> Español</span><!-- consult_verbiage -->
 	
 			</div><!-- consult_cta -->
 

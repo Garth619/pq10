@@ -1,5 +1,59 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
 nav {
-  display: none;
+  background: $color_gradient_two;
+  padding: 35px 40px;
+  @include box(100%, 100vh);
+  @include fixed(122px, null, null, 0);
+}
+
+nav {
+  ul {
+    list-style: none;
+    li {
+      font-family: $primaryfont;
+      a {
+        color: $color_lite_one;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+nav {
+  ul.menu {
+    > li {
+      margin-bottom: 30px;
+      @include type(
+        (
+          size: 15px,
+          height: 17px,
+          spacing: 1.5px,
+          weight: 800,
+          transform: uppercase,
+        )
+      );
+    }
+    > li.menu-item-has-children {
+      > a {
+        &:after {
+          content: "";
+          vertical-align: top;
+          display: inline-block;
+          margin:5px 0 0 5px;
+          @include tri(down, 4px, 6px, $color_lite_one);
+        }
+      }
+    }
+  }
+}
+
+
+nav {
+  ul.sub-menu {
+    display: none;
+    li {
+
+    }
+  }
 }
