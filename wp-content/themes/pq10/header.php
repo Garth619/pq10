@@ -58,68 +58,68 @@
 
 <header>
 
-<div id='header_left'>
+<div id='header_inner'>
 
-	<a class='logo' href='<?php bloginfo('url');?>'>
+	<div id='header_left'>
+
+		<a class='logo' href='<?php bloginfo('url');?>'>
 	
 			<?php echo file_get_contents( get_template_directory() . '/images/hilley/logo2.svg' ) ?>
 	
-	</a><!-- logo -->
+		</a><!-- logo -->
 
-</div><!-- header_left -->
+	</div><!-- header_left -->
 
-<div id='header_middle'>
+	<div id='header_middle'>
 
-	<div class='menu_wrapper'>
+		<div class='menu_wrapper'>
 	
-		<div class='menu_bars'>
+			<div class='menu_bars'>
 		
-			<div class='menu_bars_inner'>
+				<div class='menu_bars_inner'>
 			
-				<span></span>
-				<span></span>
+					<span></span>
+					<span></span>
 			
-			</div><!-- menu_bars_inner -->
+				</div><!-- menu_bars_inner -->
 
-			<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
+				<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
 		
-		</div><!-- menu_bars -->
+			</div><!-- menu_bars -->
 
-		<div class='menu_close'>
+			<div class='menu_close'>
 		
-			<div class='menu_close_x'>
-			
-				<span></span>
-			
-			</div><!-- menu_close_x -->
+				<span class='menu_close_x'></span><!-- menu_close_x -->
 
-			<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
+				<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
 		
-		</div><!-- menu_close -->
+			</div><!-- menu_close -->
 	
-	</div><!-- menu_wrapper -->
+		</div><!-- menu_wrapper -->
 
-</div><!-- header_middle -->
+	</div><!-- header_middle -->
 
-<div id='header_right'>
+	<div id='header_right'>
 
-<div id='header_right_inner'>
+		<div id='header_right_inner'>
 	
-	<div class='consult_cta'>
+			<div class='consult_cta'>
 	
-		<span class='consult_verbiage'>Free Consultation</span><!-- consult_verbiage -->
+				<span class='consult_verbiage'>Free Consultation</span><!-- consult_verbiage -->
 
-		<span class='consult_verbiage'>Hablamos Español</span><!-- consult_verbiage -->
+				<span class='consult_verbiage'>Hablamos Español</span><!-- consult_verbiage -->
 	
-	</div><!-- consult_cta -->
+			</div><!-- consult_cta -->
 
-	<a id='header_phone' href='tel:4042336200'>(404) 233-6200</a><!-- header_phone -->
+			<a id='header_phone' href='tel:4042336200'>(404) 233-6200</a><!-- header_phone -->
 
-	</div><!-- header_right_inner -->
+		</div><!-- header_right_inner -->
 
-	<nav id="top_nav"><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
+		<nav id="top_nav"><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
 
-</div><!-- header_right -->
+	</div><!-- header_right -->
+
+</div><!-- header_inner -->
 
 </header>
 	

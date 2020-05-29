@@ -1,53 +1,102 @@
-
 header {
-  background-color: #fff;
-  display: flex;
-  flex-wrap:wrap;
+  background-color: $color_lite_one;
+  #header_inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:1920px;
+    @include margin_lr;
+  }
 }
 
 #header_left {
-  flex-grow:1;
-  padding:10px 15px;
+  flex-grow: 1;
+  padding: 10px 15px;
   a.logo {
-      svg {
-        max-width: 200px;
-        width:100%;
-      }
-  }
-}
-
-
-#header_middle {
-  flex-basis:60px;
-  position: relative;
-  background-color: $color_dark_two;
-}
-
-
-.menu_wrapper {
-  @include box(100%);
-  @include abs(0,null,null,0);
-  > div {
-    color:#fff;
-    @include flex(center,center);
-    @include box(100%);
-    @include abs(0,null,null,0);
-  }
-}
-
-.menu_bars {
-  
-  .menu_bars_inner {
-    
-    span {
-
+    svg {
+      max-width: 200px;
+      width: 100%;
     }
   }
 }
 
+#header_middle {
+  flex-basis: 60px;
+  position: relative;
+  background-color: $color_dark_two;
+}
+
+.menu_wrapper {
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  > div {
+    color: $color_lite_one;
+    @include flex(center, center);
+    @include box(100%);
+    @include abs(0, null, null, 0);
+  }
+  .menu_verbiage {
+    @include type(
+      (
+        size: 11px,
+        family: $primaryfont,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+  }
+}
+
+.menu_bars {
+  @include flex(center, center, column);
+  .menu_bars_inner {
+    span {
+      display: block;
+      background-color: $color_lite_one;
+      margin-bottom: 6px;
+      @include box(33px, 4px);
+    }
+  }
+}
+
+.menu_close {
+  @include flex(center, center, column);
+  .menu_close_x {
+    position: relative;
+    margin-bottom: 1px;
+    @include box(30px);
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      background-color: $color_lite_one;
+      @include abs(12px, null, null, -2px);
+      @include box(33px, 4px);
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
 
 #header_right {
-  flex-basis:100%;
+  flex-basis: 100%;
   background-color: $color_dark_one;
-  height:300px;
+ #header_right_inner {
+    width: 100%;
+    text-align: center;
+    color: $color_lite_one;
+  }
+}
+
+
+
+.consult_cta {
+  display: inline-block;
+}
+
+a#header_phone {
+  display: inline-block;
 }
