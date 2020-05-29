@@ -87,7 +87,7 @@
 		
 			</div><!-- menu_bars -->
 
-			<div class='menu_close'>
+			<div class='menu_close close'>
 		
 				<span class='menu_close_x'></span><!-- menu_close_x -->
 

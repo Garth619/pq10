@@ -12,98 +12,9 @@ jQuery(document).ready(function($){
 	
 	$('body').addClass('ready');
 
-	
-	 /* Modernizr - check if browser supports webp for section_one. 
-     --------------------------------------------------------------------------------------- */
-    
-    // add data-webp and data-jpg to images in section one and you're gucci
-    
-     Modernizr.on('webp', function (result) {
-	    
-	    $('#section_one img').each(function () {
-	    
-				if (result) {
-    
-					if ($(this).attr('data-webp')) {
-          
-          	var img = $(this).data('webp');
-          
-						$(this).attr('src', img);
-        	
-        	}
-        	
-        }
-  
-	 			else {
-		 			
-		 			if ($(this).attr('data-jpg')) {
-          
-          	var img = $(this).data('jpg');
-          
-						$(this).attr('src', img);
-        	
-        	}
-    
-    		}
-  		
-  		});
-  		
-  		
-  		// background images (one time load, does not reflect media queries or window width..yet)
-  		
-  		if (result) {
-	  		
-	  		var sectionOne = '#section_one';
-	  		
-	  		if ($(sectionOne).attr('data-webpbg')) {
-		  		
-		  		var imgBg = $(sectionOne).data('webpbg');
-		  		
-		  		$(sectionOne).css('background-image', 'url(' + imgBg + ')');
-		  		
-	  		}
-	  		
-	  	}
-	  	
-	  	
-	  	else {
-		  	
-		  	if ($('#section_one').attr('data-jpgbg')) {
-		  		
-		  		var imgBg = $('#section_one').data('jpgbg');
-		  		
-		  		$('#section_one').css('background-image', 'url(' + imgBg + ')');
-		  		
-	  		}
-		  	
-	  	}
-  		
-			// console.log(result);
-	
-		});
-		
-
-
-		
-
-
-
      /* Wistia - Call function when script needs to be loaded either by hover or waypoints
      --------------------------------------------------------------------------------------- */
 
-    //function wistiaLoad() {
-     // jQuery.getScript('https://fast.wistia.com/assets/external/E-v1.js', function(data, textStatus, jqxhr) {
-        //console.log('wistia load:', textStatus); // Success
-     // });
-   // }
-
-    // examples:
-
-    // jQuery(".banner-box-1").one("mouseenter", function(e){
-    //   wistiaLoad();
-    // });
-
-    // createWaypoint('section-1', null, null, '100%', wistiaLoad, false)
     
     
      // loads wistia on click to improve initial page speed
@@ -192,14 +103,13 @@ jQuery(document).ready(function($){
       }
     }
 		
-	createWaypoint('fixed_header', 'header.double_bar', 'visible', 0, null, true);
-	//createWaypoint('section_one', 'header.double_bar', 'visible', 72, null, true);
-	//createWaypoint('internal_main', 'header.double_bar', 'visible', 72, null, true);
+	// createWaypoint('fixed_header', 'header.double_bar', 'visible', 0, null, true);
+
 		
-	createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
-    createWaypoint('sec_three_left_trigger', '#sec_three_left_trigger', 'visible', 700, null, true);
-    createWaypoint('section_four', '#section_four', 'visible', 400, null, true);
-    createWaypoint('section_six', '#section_six', 'visible', 400, null, true);
+	// createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
+  //   createWaypoint('sec_three_left_trigger', '#sec_three_left_trigger', 'visible', 700, null, true);
+  //   createWaypoint('section_four', '#section_four', 'visible', 400, null, true);
+  //   createWaypoint('section_six', '#section_six', 'visible', 400, null, true);
    
 
 
@@ -216,98 +126,98 @@ jQuery(document).ready(function($){
 
 
 
-$('.sec_one_awards_slider').slick({
-  infinite: true,
-  slidesToShow: 5,
-  slidesToScroll: 5,
-	arrows:false,
-	dots:true,
-	responsive: [
-    {
-      breakpoint: 1450,
-      settings: {
-      slidesToShow: 5,
-      slidesToScroll: 5,
-     }
-   },
-   {
-      breakpoint: 767,
-      settings: {
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      dots:true,
-     }
-   }
-	]
- });
+// $('.sec_one_awards_slider').slick({
+//   infinite: true,
+//   slidesToShow: 5,
+//   slidesToScroll: 5,
+// 	arrows:false,
+// 	dots:true,
+// 	responsive: [
+//     {
+//       breakpoint: 1450,
+//       settings: {
+//       slidesToShow: 5,
+//       slidesToScroll: 5,
+//      }
+//    },
+//    {
+//       breakpoint: 767,
+//       settings: {
+//       slidesToShow: 3,
+//       slidesToScroll: 3,
+//       dots:true,
+//      }
+//    }
+// 	]
+//  });
  
 
- $('.sec_one_slider_only_slider').slick({
-	infinite: true,
-	slidesToShow: 4,
-	slidesToScroll: 4,
-	  arrows:false,
-	  dots:false,
-	  responsive: [
-	  {
-		breakpoint: 1450,
-		settings: {
-		slidesToShow: 4,
-		slidesToScroll: 4,
-	   }
-	 },
-	 {
-		breakpoint: 650,
-		settings: {
-		autoplay: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	   }
-	 }
-	  ]
-   });
+//  $('.sec_one_slider_only_slider').slick({
+// 	infinite: true,
+// 	slidesToShow: 4,
+// 	slidesToScroll: 4,
+// 	  arrows:false,
+// 	  dots:false,
+// 	  responsive: [
+// 	  {
+// 		breakpoint: 1450,
+// 		settings: {
+// 		slidesToShow: 4,
+// 		slidesToScroll: 4,
+// 	   }
+// 	 },
+// 	 {
+// 		breakpoint: 650,
+// 		settings: {
+// 		autoplay: true,
+// 		slidesToShow: 1,
+// 		slidesToScroll: 1,
+// 	   }
+// 	 }
+// 	  ]
+//    });
  
  
  
- $('#sec_two_cr').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  mobileFirst:true,
-  adaptiveHeight:true,
-	arrows:true,
-	prevArrow:".sec_two_arrow_left",
-	nextArrow:".sec_two_arrow_right",
-	responsive: [
-    {
-      breakpoint: 767,
-      settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      arrows:true,
-			prevArrow:".sec_two_arrow_left",
-			nextArrow:".sec_two_arrow_right",
-     }
-   },
-   {
-      breakpoint: 1066,
-      settings: "unslick",
-   }
-	]
- });
+//  $('#sec_two_cr').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   mobileFirst:true,
+//   adaptiveHeight:true,
+// 	arrows:true,
+// 	prevArrow:".sec_two_arrow_left",
+// 	nextArrow:".sec_two_arrow_right",
+// 	responsive: [
+//     {
+//       breakpoint: 767,
+//       settings: {
+//       slidesToShow: 2,
+//       slidesToScroll: 2,
+//       arrows:true,
+// 			prevArrow:".sec_two_arrow_left",
+// 			nextArrow:".sec_two_arrow_right",
+//      }
+//    },
+//    {
+//       breakpoint: 1066,
+//       settings: "unslick",
+//    }
+// 	]
+//  });
  
  
  
- $('.sec_four_test_slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-	arrows:true,
-	adaptiveHeight:true,
-	fade:true,
-	prevArrow:".sec_four_arrow_left",
-	nextArrow:".sec_four_arrow_right"
- });
+//  $('.sec_four_test_slider').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+// 	arrows:true,
+// 	adaptiveHeight:true,
+// 	fade:true,
+// 	prevArrow:".sec_four_arrow_left",
+// 	nextArrow:".sec_four_arrow_right"
+//  });
  
  
  
@@ -327,15 +237,7 @@ var macyInstance = Macy({
 
 
 	
-// change nav color to black if banner doesn't exisit on template
 
-
-if ($("#internal_banner, #section_one")[0]){
-	
-} else {
-	$('body').addClass('no-banner');
-}
-	
 	
 	
 	
@@ -368,25 +270,25 @@ $('span.go_back').on('click', function(e) {
 
 // add active to blog widgets that dont show a built in current class
 
-var pgurl = window.location.href;
+// var pgurl = window.location.href;
 	
-	$(".sidebar_box ul li").each(function(){
+// 	$(".sidebar_box ul li").each(function(){
   
-  if($(this).find('a').attr("href") == pgurl)
+//   if($(this).find('a').attr("href") == pgurl)
     
-    $(this).addClass("active");
+//     $(this).addClass("active");
 	
-	})
+// 	})
 
 
 
-$('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e) {
+// $('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e) {
   
-  $(this).next('ul.sub-menu').slideToggle(300);
+//   $(this).next('ul.sub-menu').slideToggle(300);
   
-  $(this).toggleClass('active');
+//   $(this).toggleClass('active');
   
-});
+// });
 
 
 // resize - tablet and desktop top navigatons behave differently. These turn off click functions at certain window widths without reloading the page
@@ -401,7 +303,7 @@ $('.sidebar_box ul.menu > li.menu-item-has-children > a').on('click', function(e
 	  
 	  $('.menu_close').toggleClass('close');
 	  
-	  $('.header_bottom').slideToggle(400);
+	  $('nav').slideToggle(400);
 	  
 	});
 
