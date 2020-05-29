@@ -62,7 +62,7 @@
 
 	<a class='logo' href='<?php bloginfo('url');?>'>
 	
-			<?php echo file_get_contents( get_template_directory() . '/images/hilley/logo.svg' ) ?>
+			<?php echo file_get_contents( get_template_directory() . '/images/hilley/logo2.svg' ) ?>
 	
 	</a><!-- logo -->
 
@@ -74,13 +74,16 @@
 	
 		<div class='menu_bars'>
 		
-			<span></span>
-			<span></span>
-			<span></span>
+			<div class='menu_bars_inner'>
+			
+				<span></span>
+				<span></span>
+			
+			</div><!-- menu_bars_inner -->
+
+			<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
 		
 		</div><!-- menu_bars -->
-
-		<span class="menu_verbiage">Menu</span><!-- menu_verbiage -->
 
 		<div class='menu_close'>
 		

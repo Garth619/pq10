@@ -1,0 +1,53 @@
+
+header {
+  background-color: #fff;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+#header_left {
+  flex-grow:1;
+  padding:10px 15px;
+  a.logo {
+      svg {
+        max-width: 200px;
+        width:100%;
+      }
+  }
+}
+
+
+#header_middle {
+  flex-basis:60px;
+  position: relative;
+  background-color: $color_dark_two;
+}
+
+
+.menu_wrapper {
+  @include box(100%);
+  @include abs(0,null,null,0);
+  > div {
+    color:#fff;
+    @include flex(center,center);
+    @include box(100%);
+    @include abs(0,null,null,0);
+  }
+}
+
+.menu_bars {
+  
+  .menu_bars_inner {
+    
+    span {
+
+    }
+  }
+}
+
+
+#header_right {
+  flex-basis:100%;
+  background-color: $color_dark_one;
+  height:300px;
+}
