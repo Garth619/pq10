@@ -79,17 +79,17 @@
 
 // see media query variables in _variables.scss
 
-// @mixin mq($size) {
-//   @each $item, $value in $media_queries {
-//     @if $item == $size {
-//       @if map-get($value, breakpoint) != null {
-//         @media screen and #{map-get($value, breakpoint)} {
-//           @content;
-//         }
-//       }
-//     }
-//   }
-// }
+@mixin mq($size) {
+  @each $item, $value in $media_queries {
+    @if $item == $size {
+      @if map-get($value, breakpoint) != null {
+        @media screen and #{map-get($value, breakpoint)} {
+          @content;
+        }
+      }
+    }
+  }
+}
 
 ////////////////////////////////////////////////////////////////////
 // Width/Height Dimensions

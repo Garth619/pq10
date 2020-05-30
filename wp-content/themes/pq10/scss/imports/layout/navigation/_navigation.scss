@@ -8,6 +8,10 @@ nav {
   -webkit-overflow-scrolling: touch;
   @include box(100%, 100vh);
   @include fixed(122px, null, null, 0);
+  @include mq(xlarge_mobile) {
+    top: 80px;
+    padding:27px 0;
+  }
 }
 
 nav {
@@ -93,6 +97,9 @@ nav {
       }
       a {
         padding-bottom:30px;
+        &:hover {
+          color:$color_bright_two;
+        }
       }
     }
     li.current-menu-item {
@@ -106,6 +113,7 @@ nav {
           background-color: $color_bright_one;
           @include box(6px);
         }
+        
       }
       
     }

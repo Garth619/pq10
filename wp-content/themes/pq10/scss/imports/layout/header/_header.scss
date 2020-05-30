@@ -1,17 +1,26 @@
 header {
   background-color: $color_lite_one;
+  width: 100%;
   @include fixed(0, null, null, 0);
   #header_inner {
     display: flex;
     flex-wrap: wrap;
     max-width: 1920px;
     @include margin_lr;
+    @include mq(xlarge_mobile) {
+      flex-wrap:unset;
+    }
   }
 }
 
 #header_left {
   flex-grow: 1;
   padding: 10px 15px;
+  @include mq(xlarge_mobile) {
+    flex-basis:100%;
+    max-width:230px;
+    order:1;
+  }
   a.logo {
     svg {
       max-width: 200px;
@@ -24,6 +33,11 @@ header {
   flex-basis: 60px;
   position: relative;
   background-color: $color_dark_two;
+  @include mq(xlarge_mobile) {
+    order:3;
+    flex-basis:79px;
+    flex-shrink:0;
+  }
 }
 
 .menu_wrapper {
@@ -46,7 +60,6 @@ header {
     );
   }
 }
-
 
 .menu_bars {
   opacity: 1;
@@ -87,7 +100,8 @@ header {
   }
 }
 
-.menu_bars.close, .menu_close.close {
+.menu_bars.close,
+.menu_close.close {
   opacity: 0;
 }
 
@@ -95,18 +109,30 @@ header {
   flex-basis: 100%;
   background-color: $color_dark_one;
   padding: 12px 0px;
+  @include mq(xlarge_mobile) {
+    order:2;
+    background-color: $color_lite_one;
+    flex-grow:1;
+    margin-right: 20px;
+  }
   #header_right_inner {
     width: 100%;
-    //text-align: center;
     color: $color_lite_one;
-    @include flex(center,center);
+    @include flex(center, center);
+    @include mq(xlarge_mobile) {
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 8px;
+    }
   }
 }
 
 .consult_cta {
-  //display: inline-block;
-  // vertical-align: top;
-  margin-top:2px;
+  margin-top: 2px;
+  @include mq(xlarge_mobile) {
+    order:2;
+    margin-top:2px;
+  }
   > span {
     @include type(
       (
@@ -115,6 +141,9 @@ header {
         color: $color_lite_one,
       )
     );
+    @include mq(xlarge_mobile) {
+      color:$color_dark_one;
+    }
     &:first-of-type {
       &:after {
         content: "";
@@ -124,6 +153,9 @@ header {
         transform: rotate(-45deg);
         background-color: $color_bright_one;
         @include box(5px);
+        @include mq(xlarge_mobile) {
+          margin: 6px 7px 0 12px;
+        }
       }
     }
   }
@@ -131,6 +163,9 @@ header {
 
 span.hide {
   display: none;
+  @include mq(xlarge_mobile) {
+    display:inline-block;
+  }
 }
 
 a#header_phone {
@@ -145,4 +180,12 @@ a#header_phone {
       weight: 800,
     )
   );
+  @include mq(xlarge_mobile) {
+    color:$color_bright_one;
+    font-size: 22px;
+    letter-spacing: 1.98px;
+    order:1;
+    margin-bottom:5px;
+    margin-right:-3px;
+  }
 }

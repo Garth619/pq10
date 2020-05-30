@@ -22,86 +22,86 @@ $secondaryfont: georgia, serif !default;
 // Media Queries
 ////////////////////////////////////////////////////////////////////
 
-$xxxlarge_monitor: 2000px !default;
-$xxlarge_monitor: 1930px !default;
-$xlarge_monitor: 1860px !default;
-$large_monitor: 1600px !default;
+// $xxxlarge_monitor: 2000px !default;
+// $xxlarge_monitor: 1930px !default;
+// $xlarge_monitor: 1860px !default;
+// $large_monitor: 1600px !default;
 
-$large_laptop: 1450px !default;
-$small_laptop: 1380px !default;
-$xsmall_laptop: 1270px !default;
+// $large_laptop: 1450px !default;
+// $small_laptop: 1380px !default;
+// $xsmall_laptop: 1270px !default;
 
-$tablet: 1170px !default;
-$small_tablet: 1066px !default;
-$xsmall_tablet: 975px !default;
+// $tablet: 1170px !default;
+// $small_tablet: 1066px !default;
+// $xsmall_tablet: 975px !default;
 
-$xlarge_mobile: 767px !default;
-$large_mobile: 650px !default;
-$small_mobile: 430px !default;
-$xsmall_mobile: 410px !default;
+// $xlarge_mobile: 767px !default;
+// $large_mobile: 650px !default;
+// $small_mobile: 430px !default;
+// $xsmall_mobile: 410px !default;
 
-$internal_xlarge_monitor: 1760px !default;
+// $internal_xlarge_monitor: 1760px !default;
 
-// $media_queries: (
-//   // monitor
-//     xxxlarge_monitor:
-//     (
-//       breakpoint: "(min-width: #{$xxxlarge_monitor})" // note: min-width,,,
-//     ),
-//   xxlarge_monitor: (
-//     breakpoint: "(min-width: #{$xxlarge_monitor})" // note: min-width,,,
-//   ),
-//   xlarge_monitor: (
-//     breakpoint: "(max-width: #{$xlarge_monitor})",
-//   ),
-//   large_monitor: (
-//     breakpoint: "(max-width: #{$large_monitor})",
-//   ),
-//   // laptop
-//     large_laptop:
-//     (
-//       breakpoint: "(max-width: #{$large_laptop})",
-//     ),
-//   small_laptop: (
-//     breakpoint: "(max-width: #{$small_laptop})",
-//   ),
-//   xsmall_laptop: (
-//     breakpoint: "(max-width: #{$xsmall_laptop})",
-//   ),
-//   // tablet
-//     min_width_tablet:
-//     (
-//       breakpoint: "(min-width: #{$tablet + 1})" // note: min-width,,,
-//     ),
-//   tablet: (
-//     breakpoint: "(max-width: #{$tablet})",
-//   ),
-//   small_tablet: (
-//     breakpoint: "(max-width: #{$small_tablet})",
-//   ),
-//   xsmall_tablet: (
-//     breakpoint: "(max-width: #{$xsmall_tablet})",
-//   ),
-//   // mobile
-//     xlarge_mobile:
-//     (
-//       breakpoint: "(max-width: #{$xlarge_mobile})",
-//     ),
-//   large_mobile: (
-//     breakpoint: "(max-width: #{$large_mobile})",
-//   ),
-//   small_mobile: (
-//     breakpoint: "(max-width: #{$small_mobile})",
-//   ),
-//   xsmall_mobile: (
-//     breakpoint: "(max-width: #{$xsmall_mobile})",
-//   ),
-//   // Custom Addons
-//     internal_xlarge_monitor:
-//     (
-//       breakpoint: "(max-width: #{$internal_xlarge_monitor})",
-//     )
-// );
+$media_queries: (
+  // monitor
+  //   xxxlarge_monitor:
+  //   (
+  //     breakpoint: "(min-width: #{$xxxlarge_monitor})" // note: min-width,,,
+  //   ),
+  // xxlarge_monitor: (
+  //   breakpoint: "(min-width: #{$xxlarge_monitor})" // note: min-width,,,
+  // ),
+  // xlarge_monitor: (
+  //   breakpoint: "(min-width: #{$xlarge_monitor})",
+  // ),
+  // large_monitor: (
+  //   breakpoint: "(min-width: #{$large_monitor})",
+  // ),
+  // // laptop
+  //   large_laptop:
+  //   (
+  //     breakpoint: "(min-width: #{$large_laptop})",
+  //   ),
+  // small_laptop: (
+  //   breakpoint: "(min-width: #{$small_laptop})",
+  // ),
+  // xsmall_laptop: (
+  //   breakpoint: "(min-width: #{$xsmall_laptop})",
+  // ),
+  // // tablet
+  //   min_width_tablet:
+  //   (
+  //     breakpoint: "(min-width: #{$tablet + 1})" // note: min-width,,,
+  //   ),
+  // tablet: (
+  //   breakpoint: "(min-width: #{$tablet})",
+  // ),
+  // small_tablet: (
+  //   breakpoint: "(min-width: #{$small_tablet})",
+  // ),
+  // xsmall_tablet: (
+  //   breakpoint: "(min-width: #{$xsmall_tablet})",
+  // ),
+  // mobile
+    xlarge_mobile:
+    (
+      breakpoint: "(min-width: #{$xlarge_mobile})",
+    ),
+  // large_mobile: (
+  //   breakpoint: "(min-width: #{$large_mobile})",
+  // ),
+  // small_mobile: (
+  //   breakpoint: "(min-width: #{$small_mobile})",
+  // ),
+  // xsmall_mobile: (
+  //   breakpoint: "(min-width: #{$xsmall_mobile})",
+  // ),
+  // // Custom Addons
+  //   internal_xlarge_monitor:
+  //   (
+  //     breakpoint: "(min-width: #{$internal_xlarge_monitor})",
+  //   )
+);
 
 // see _mixins.scss for media query mixin
 
