@@ -73,9 +73,9 @@ $media_queries: (
   //   (
   //     breakpoint: "(min-width: #{$tablet + 1})" // note: min-width,,,
   //   ),
-  // tablet: (
-  //   breakpoint: "(min-width: #{$tablet})",
-  // ),
+   small_monitor: (
+     breakpoint: "(min-width: #{$small_monitor})",
+   ),
   // small_tablet: (
   //   breakpoint: "(min-width: #{$small_tablet})",
   // ),
@@ -83,9 +83,9 @@ $media_queries: (
   //   breakpoint: "(min-width: #{$xsmall_tablet})",
   // ),
   // mobile
-    xlarge_mobile:
+    small_tablet:
     (
-      breakpoint: "(min-width: #{$xlarge_mobile})",
+      breakpoint: "(min-width: #{$small_tablet})",
     ),
   // large_mobile: (
   //   breakpoint: "(min-width: #{$large_mobile})",
