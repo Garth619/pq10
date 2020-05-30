@@ -296,6 +296,7 @@ $('span.go_back').on('click', function(e) {
 
 // nav	
 
+	$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
 	$('.menu_wrapper').on('click', function(e) {
 	  
@@ -303,7 +304,7 @@ $('span.go_back').on('click', function(e) {
 	  
 	  $('.menu_close').toggleClass('close');
 	  
-	  $('nav').slideToggle(400);
+	  $('header nav').slideToggle(400);
 	  
 	});
 
@@ -351,7 +352,7 @@ $('span.go_back').on('click', function(e) {
 			
 		navTablet();
 		
-		$('.header_bottom nav li.menu-item-has-children > a').off().on('click', tabletClick);
+		$('header nav li.menu-item-has-children > a').off().on('click', tabletClick);
 				
 	}
 	

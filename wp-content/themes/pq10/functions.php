@@ -45,7 +45,9 @@ function load_my_styles_scripts() {
 		// carry on to enqueue script like normal, but now it contains my needed js variable with php data tied to it from above
 		
 
-		// Enqueue Script
+        // Enqueue Script
+        
+        
 		    
     wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
     

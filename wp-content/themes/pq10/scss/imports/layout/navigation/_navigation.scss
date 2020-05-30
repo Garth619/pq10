@@ -2,7 +2,10 @@
 
 nav {
   background: $color_gradient_two;
-  padding: 35px 40px;
+  padding: 16px 0px;
+  overflow-y: scroll;
+  display: none;
+  -webkit-overflow-scrolling: touch;
   @include box(100%, 100vh);
   @include fixed(122px, null, null, 0);
 }
@@ -13,6 +16,8 @@ nav {
     li {
       font-family: $primaryfont;
       a {
+        padding: 0 40px;
+        display: block;
         color: $color_lite_one;
         text-decoration: none;
       }
@@ -20,11 +25,16 @@ nav {
   }
 }
 
+
+
+
+
 nav {
   ul.menu {
+    padding-bottom:200px;
     > li {
-      //margin-bottom: 30px;
       @include type(
+        
         (
           size: 15px,
           height: 17px,
@@ -33,6 +43,17 @@ nav {
           transform: uppercase,
         )
       );
+      > a {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background:transparent;
+        transition:background 150ms ease-in-out;
+        &.active {
+          box-shadow: 0px 1px 20px 3px rgba(0,0,0,0.3);
+          background: $color_bright_two;
+        }
+      }
     }
     > li.menu-item-has-children {
       > a {
@@ -40,20 +61,53 @@ nav {
           content: "";
           vertical-align: top;
           display: inline-block;
-          margin:5px 0 0 5px;
+          margin: 5px 0 0 5px;
           @include tri(down, 4px, 6px, $color_lite_one);
         }
+      }
+    }
+    > li.current-menu-ancestor {
+        ul.sub-menu {
+          display: block;
       }
     }
   }
 }
 
-
 nav {
   ul.sub-menu {
     display: none;
+    padding:33px 0 0 0;
     li {
-
+      @include type (
+        (
+          size: 16px,
+          height: 18px,
+          transform: capitalize 
+        )
+      );
+      &:last-of-type {
+        a {
+          padding-bottom:20px;
+        }
+      }
+      a {
+        padding-bottom:30px;
+      }
+    }
+    li.current-menu-item {
+      a {
+        &:after {
+          content: "";
+          vertical-align: top;
+          display: inline-block;
+          margin: 6px 2px 0 6px;
+          transform: rotate(-45deg);
+          background-color: $color_bright_one;
+          @include box(6px);
+        }
+      }
+      
     }
   }
 }

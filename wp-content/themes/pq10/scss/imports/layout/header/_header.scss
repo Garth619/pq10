@@ -47,6 +47,7 @@ header {
   }
 }
 
+
 .menu_bars {
   opacity: 1;
   transition: opacity 200ms ease-in-out;
@@ -96,13 +97,16 @@ header {
   padding: 12px 0px;
   #header_right_inner {
     width: 100%;
-    text-align: center;
+    //text-align: center;
     color: $color_lite_one;
+    @include flex(center,center);
   }
 }
 
 .consult_cta {
-  display: inline-block;
+  //display: inline-block;
+  // vertical-align: top;
+  margin-top:2px;
   > span {
     @include type(
       (
