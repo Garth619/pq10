@@ -6,17 +6,19 @@ nav {
   overflow-y: scroll;
   display: none;
   -webkit-overflow-scrolling: touch;
-  @include box(100%, 100vh);
+  @include box(100%);
   @include fixed(122px, null, null, 0);
   @include mq(small_tablet) {
     top: 80px;
-    padding:27px 0;
+    padding: 27px 0;
   }
   @include mq(small_monitor) {
-    display:block;
-    background:transparent;
+    display: block;
+    background: transparent;
     position: static;
-    @include box(auto);
+    padding: 9px 0 0px 0;
+    overflow-y: initial;
+    //@include box(auto);
   }
 }
 
@@ -37,9 +39,9 @@ nav {
 
 nav {
   ul.menu {
-    padding-bottom:200px;
+    padding-bottom: 200px;
     @include mq(small_monitor) {
-      padding-bottom: 0;;
+      padding-bottom: 0;
       @include flex(flex-end);
     }
     > li {
@@ -53,21 +55,33 @@ nav {
         )
       );
       @include mq(small_monitor) {
-        margin-left: 17px;
-        @include quick_type(12px,15px,1.2px);
+        margin-left: 14px;
+        @include quick_type(12px, 15px, 1.2px);
+        &:nth-last-of-type(-n + 3) {
+          ul.sub-menu {
+            left: auto;
+            right: 0;
+          }
+        }
       }
       > a {
         display: block;
         padding-top: 16px;
         padding-bottom: 16px;
-        background:transparent;
-        transition:background 150ms ease-in-out;
+        background: transparent;
+        transition: background 150ms ease-in-out;
         @include mq(small_monitor) {
-          color:$color_dark_three;
-          padding:0;
+          color: $color_dark_three;
+          padding: 0;
+          transition: all 150ms ease-in-out;
+        }
+        &:hover {
+          @include mq(small_monitor) {
+            color: $color_bright_two;
+          }
         }
         &.active {
-          box-shadow: 0px 1px 20px 3px rgba(0,0,0,0.3);
+          box-shadow: 0px 1px 20px 3px rgba(0, 0, 0, 0.3);
           background: $color_bright_two;
         }
       }
@@ -75,6 +89,13 @@ nav {
     > li.menu-item-has-children {
       @include mq(small_monitor) {
         position: relative;
+        padding-bottom:28px;
+        &:hover {
+          ul.sub-menu {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
       }
       > a {
         &:after {
@@ -84,14 +105,40 @@ nav {
           margin: 5px 0 0 5px;
           @include tri(down, 4px, 6px, $color_lite_one);
           @include mq(small_monitor) {
-            
+            margin: 5px 0 0 3px;
+            transition: all 150ms ease-in-out;
+            @include tri(down, 4px, 6px, $color_dark_one);
+          }
+        }
+        &:hover {
+          &:after {
+            @include mq(small_monitor) {
+              @include tri(down, 4px, 6px, $color_bright_two);
+            }
           }
         }
       }
     }
     > li.current-menu-ancestor {
-        ul.sub-menu {
-          display: block;
+      > a {
+        background: transparent;
+        box-shadow: none;
+        color: $color_bright_two;
+        &:after {
+          @include tri(down, 4px, 6px, $color_bright_two);
+        }
+      }
+      ul.sub-menu {
+        display: block;
+      }
+    }
+    > li.current-menu-item {
+      > a {
+        @include mq(small_monitor) {
+          background: transparent;
+          box-shadow: none;
+          color: $color_bright_two;
+        }
       }
     }
   }
@@ -100,28 +147,53 @@ nav {
 nav {
   ul.sub-menu {
     display: none;
-    padding:33px 0 0 0;
-    @include abs(0,null,null,0);
+    padding: 20px 0 0 0;
     @include mq(small_monitor) {
-      display:block;
+      display: block;
+      width: 291px;
+      background: $color_gradient_two;
+      opacity: 0;
+      visibility: hidden;
+      transition:all 150ms ease-in-out;
+      @include abs(43px, null, null, 0);
     }
     li {
-      @include type (
+      @include type(
         (
           size: 16px,
           height: 18px,
-          transform: capitalize 
+          transform: capitalize,
         )
       );
+      @include mq(small_monitor) {
+        @include type(
+          (
+            size: 14px,
+            height: 16px,
+            weight: 700,
+          )
+        );
+      }
       &:last-of-type {
         a {
-          padding-bottom:20px;
+          padding-bottom: 20px;
         }
       }
       a {
-        padding-bottom:30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @include mq(small_monitor) {
+          background: transparent;
+          transition: all 150ms ease-in-out;
+          padding: 15px 29px;
+        }
         &:hover {
-          color:$color_bright_two;
+          color: $color_bright_two;
+          @include mq(small_monitor) {
+            box-shadow: 0px 1px 20px 3px rgba(0, 0, 0, 0.3);
+            background: $color_bright_two;
+            color: $color_lite_one;
+          }
         }
       }
     }
@@ -136,9 +208,7 @@ nav {
           background-color: $color_bright_one;
           @include box(6px);
         }
-        
       }
-      
     }
   }
 }

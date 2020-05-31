@@ -20,11 +20,19 @@ header {
     flex-basis:100%;
     max-width:230px;
     order:1;
+    // padding:0 15px;
+  }
+  @include mq(small_monitor) {
+    max-width: 275px;
+    padding: 16px 15px 0;
   }
   a.logo {
     svg {
       max-width: 200px;
       width: 100%;
+      @include mq(small_monitor) {
+        max-width:100%;
+      }
     }
   }
 }
@@ -116,9 +124,12 @@ header {
     background-color: $color_lite_one;
     flex-grow:1;
     margin-right: 20px;
+    padding:0;
+    flex-basis:auto;
   }
   @include mq(small_monitor) {
-    margin-right: 28px;
+    margin-right: 33px;
+    padding: 18px 0 0 0;
   }
   #header_right_inner {
     width: 100%;
@@ -132,6 +143,7 @@ header {
     @include mq(small_monitor) {
       flex-direction:row;
       justify-content: flex-end;
+      align-items: center;
     }
   }
 }
@@ -144,6 +156,7 @@ header {
   }
   @include mq(small_monitor) {
     order:1;
+    margin-top:0;
   }
   > span {
     @include type(
@@ -155,6 +168,7 @@ header {
     );
     @include mq(small_tablet) {
       color:$color_dark_one;
+      font-size: 16px;
     }
     &:first-of-type {
       &:after {
@@ -202,5 +216,6 @@ a#header_phone {
   }
   @include mq(small_monitor) {
     order:2;
+    margin-left:15px;
   }
 }
