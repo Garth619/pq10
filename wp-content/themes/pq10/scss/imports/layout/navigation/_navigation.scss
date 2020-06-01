@@ -16,14 +16,14 @@ nav {
     display: block;
     background: transparent;
     position: static;
-    padding: 9px 0 0px 0;
+    padding: 4px 0 0px 0;
     overflow-y: initial;
-    //@include box(auto);
   }
   @include mq(large_laptop) {
-   order:1;
+    order: 1;
+    padding: 9px 0 0px 0;
   }
-  @include mq(xlarge_laptop) {
+  @include mq(small_monitor) {
     margin-right: 30px;
     padding: 44px 0 0px 0;
   }
@@ -75,7 +75,7 @@ nav {
         margin-left: 18px;
         @include quick_type(14px, 16px, 1.4px);
       }
-      @include mq(xlarge_laptop) {
+      @include mq(small_monitor) {
         margin-left: 22px;
         @include quick_type(15px, 17px, 1.5px);
       }
@@ -112,6 +112,12 @@ nav {
           }
         }
       }
+      @include mq(large_laptop) {
+        padding-bottom: 32px;
+      }
+      @include mq(small_monitor) {
+        padding-bottom: 64px;
+      }
       > a {
         &:after {
           content: "";
@@ -136,11 +142,16 @@ nav {
     }
     > li.current-menu-ancestor {
       > a {
-        background: transparent;
-        box-shadow: none;
-        color: $color_bright_two;
+        @include mq(small_laptop) {
+          background: transparent;
+          box-shadow: none;
+          color: $color_bright_two;
+        }
         &:after {
-          @include tri(down, 4px, 6px, $color_bright_two);
+          @include tri(down, 4px, 6px, $color_lite_one);
+          @include mq(small_laptop) {
+             @include tri(down, 4px, 6px, $color_bright_two);
+          }
         }
       }
       ul.sub-menu {
@@ -162,18 +173,21 @@ nav {
 nav {
   ul.sub-menu {
     display: none;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
     @include mq(small_laptop) {
       display: block;
       width: 291px;
       background: $color_gradient_two;
-      //opacity: 0;
-      //visibility: hidden;
+      opacity: 0;
+      visibility: hidden;
       transition: all 150ms ease-in-out;
       @include abs(43px, null, null, 0);
     }
     @include mq(large_laptop) {
-      top: 52px;
+      top: 48px;
+    }
+    @include mq(small_monitor) {
+      top: 81px;
     }
     li {
       @include type(

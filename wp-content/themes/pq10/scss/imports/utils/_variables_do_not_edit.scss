@@ -50,8 +50,8 @@ $media_queries: (
   large_laptop: (
     breakpoint: "(min-width: #{$large_laptop})",
   ),
-  xlarge_laptop: (
-    breakpoint: "(min-width: #{$xlarge_laptop})",
+  small_monitor: (
+    breakpoint: "(min-width: #{$small_monitor})",
   ),
 );
 

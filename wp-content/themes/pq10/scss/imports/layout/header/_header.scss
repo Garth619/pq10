@@ -2,11 +2,8 @@ header {
   background-color: $color_lite_one;
   width: 100%;
   @include fixed(0, null, null, 0, 10);
-  @include mq(large_laptop) {
-    padding-bottom: 8px;
-  }
-  @include mq(xlarge_laptop) {
-    padding-bottom: 36px;
+  @include mq(small_laptop) {
+    position: static;
   }
   #header_inner {
     display: flex;
@@ -26,7 +23,6 @@ header {
     flex-basis:100%;
     max-width:230px;
     order:1;
-    // padding:0 15px;
   }
   @include mq(small_laptop) {
     max-width: 275px;
@@ -35,6 +31,9 @@ header {
   @include mq(large_laptop) {
     max-width: 345px;
     padding: 16px 21px 0;
+  }
+  @include mq(small_monitor) {
+    padding: 29px 21px 0;
   }
   a.logo {
     svg {
@@ -144,7 +143,7 @@ header {
     margin-right: 33px;
     padding: 18px 0 0 0;
   }
-  @include mq(xlarge_laptop) {
+  @include mq(small_monitor) {
     margin-right: 35px;
     @include flex();
   }
@@ -155,29 +154,37 @@ header {
     @include mq(small_tablet) {
       flex-direction: column;
       align-items: flex-end;
-      margin-top: 8px;
+      margin-top: 19px;
     }
     @include mq(small_laptop) {
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
+      margin-top: 12px;
     }
     @include mq(large_laptop) {
       flex-direction:row;
       justify-content: flex-end;
       align-items: center;
     }
-    @include mq(xlarge_laptop) {
+    @include mq(small_monitor) {
       justify-content: unset;
       width:auto;
       flex-shrink:0;
       order:2;
       flex-direction: column;
       padding-left: 30px;
-      margin-top:20px;
-      padding-top: 8px;
+      margin-top: 22px;
+      padding-top: 6px;
       align-items: flex-end;
-      border-left:4px solid $color_dark_one;
+      position: relative;
+      &:after {
+        content:"";
+        display: block;
+        background: $color_dark_one;
+        @include abs(0,null,null,0);
+        @include box(4px,72px);
+      }
     }
   }
 }
@@ -192,7 +199,7 @@ header {
     order:1;
     margin-top:0;
   }
-  @include mq(xlarge_laptop) {
+  @include mq(small_monitor) {
     order:2;
     margin-top: 5px;
   }
@@ -206,12 +213,14 @@ header {
     );
     @include mq(small_tablet) {
       color:$color_dark_one;
+    }
+    @include mq(small_laptop) {
       font-size: 16px;
     }
     @include mq(large_laptop) {
       font-size: 16px;
     }
-    @include mq(xlarge_laptop) {
+    @include mq(small_monitor) {
       font-size: 17px;
     }
     &:first-of-type {
@@ -226,7 +235,7 @@ header {
         @include mq(small_tablet) {
           margin: 6px 7px 0 12px;
         }
-        @include mq(xlarge_laptop) {
+        @include mq(small_monitor) {
           @include box(7px);
         }
       }
@@ -264,12 +273,13 @@ a#header_phone {
   @include mq(small_laptop) {
     order:2;
     margin-left:15px;
+    font-size: 23px;
   }
   @include mq(large_laptop) {
     font-size: 27px;
    
   }
-  @include mq(xlarge_laptop) {
+  @include mq(small_monitor) {
     order:1;
     font-size: 30px;
   }
