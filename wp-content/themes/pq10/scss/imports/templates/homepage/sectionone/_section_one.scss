@@ -14,6 +14,13 @@
   @include mq(small_laptop) {
     margin-top:0;
   }
+  @include mq(large_laptop) {
+    padding-bottom: 83px;
+  }
+  @include mq(small_monitor) {
+    padding-bottom: 137px;
+    padding-right:0;
+  }
 }
 
 
@@ -24,6 +31,10 @@
   @include mq(small_tablet) {
     @include flex(flex-end,null);
   }
+  @include mq(small_monitor) {
+    max-width:1630px;
+    margin:0 auto;
+  }
 }
 
 #sec_one_content {
@@ -33,6 +44,14 @@
     text-align: left;
     width:100%;
     max-width:448px;
+  }
+  @include mq(large_laptop) {
+    max-width:640px;
+    padding-top: 69px;
+  }
+  @include mq(small_monitor) {
+    max-width:756px;
+    padding-top: 119px;
   }
 }
 
@@ -49,13 +68,21 @@ span#sec_one_subtitle {
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(15px,null,4.5px);
+    @include quick_type(15px,auto,4.5px);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(18px,auto,5.4px);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(20px,auto,6px);
   }
   &:before {
     content:""; 
     display: inline-block;
     margin-right:8px;
     background:$color_bright_one;
+    vertical-align: top;
+    margin-top: 5px;
     transform:rotate(45deg);
     @include box(7px);
   }
@@ -78,6 +105,14 @@ span#sec_one_title {
     margin:4px 0 25px;
     max-width: 100%;
     @include quick_type(35px,45px,null);
+  }
+  @include mq(large_laptop) {
+    margin: 14px 0 25px;
+    @include quick_type(50px,60px,null);
+  }
+  @include mq(small_monitor) {
+    margin: 14px 0 30px;
+    @include quick_type(60px,75px,null);
   }
 }
 

@@ -16,6 +16,8 @@
 
   <picture>
 
+    <source media="(min-width: 1380px)" srcset="<?php bloginfo('template_directory');?>/images/hilley/hero-desk.jpg">
+
     <source media="(min-width: 768px)" srcset="<?php bloginfo('template_directory');?>/images/hilley/hero-tab.jpg">
 
     <img id='sec_one_hero' src='<?php bloginfo('template_directory');?>/images/hilley/hero-mob.jpg' />

@@ -49,6 +49,10 @@ a.button {
     @include mq(small_tablet) {
       padding: 24px 27px;
     }
+    @include mq(small_monitor) {
+      font-size: 18px;
+      padding: 27px 50px;
+    }
   }
 }
 
