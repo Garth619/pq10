@@ -16,8 +16,6 @@ $secondaryfont: georgia, serif !default;
 // Colors
 ////////////////////////////////////////////////////////////////////
 
-
-
 ////////////////////////////////////////////////////////////////////
 // Media Queries
 ////////////////////////////////////////////////////////////////////
@@ -43,64 +41,18 @@ $secondaryfont: georgia, serif !default;
 // $internal_xlarge_monitor: 1760px !default;
 
 $media_queries: (
-  // monitor
-  //   xxxlarge_monitor:
-  //   (
-  //     breakpoint: "(min-width: #{$xxxlarge_monitor})" // note: min-width,,,
-  //   ),
-  // xxlarge_monitor: (
-  //   breakpoint: "(min-width: #{$xxlarge_monitor})" // note: min-width,,,
-  // ),
-  // xlarge_monitor: (
-  //   breakpoint: "(min-width: #{$xlarge_monitor})",
-  // ),
-  // large_monitor: (
-  //   breakpoint: "(min-width: #{$large_monitor})",
-  // ),
-  // // laptop
-  //   large_laptop:
-  //   (
-  //     breakpoint: "(min-width: #{$large_laptop})",
-  //   ),
-  // small_laptop: (
-  //   breakpoint: "(min-width: #{$small_laptop})",
-  // ),
-  // xsmall_laptop: (
-  //   breakpoint: "(min-width: #{$xsmall_laptop})",
-  // ),
-  // // tablet
-  //   min_width_tablet:
-  //   (
-  //     breakpoint: "(min-width: #{$tablet + 1})" // note: min-width,,,
-  //   ),
-   small_monitor: (
-     breakpoint: "(min-width: #{$small_monitor})",
-   ),
-  // small_tablet: (
-  //   breakpoint: "(min-width: #{$small_tablet})",
-  // ),
-  // xsmall_tablet: (
-  //   breakpoint: "(min-width: #{$xsmall_tablet})",
-  // ),
-  // mobile
-    small_tablet:
-    (
-      breakpoint: "(min-width: #{$small_tablet})",
-    ),
-  // large_mobile: (
-  //   breakpoint: "(min-width: #{$large_mobile})",
-  // ),
-  // small_mobile: (
-  //   breakpoint: "(min-width: #{$small_mobile})",
-  // ),
-  // xsmall_mobile: (
-  //   breakpoint: "(min-width: #{$xsmall_mobile})",
-  // ),
-  // // Custom Addons
-  //   internal_xlarge_monitor:
-  //   (
-  //     breakpoint: "(min-width: #{$internal_xlarge_monitor})",
-  //   )
+  small_tablet: (
+    breakpoint: "(min-width: #{$small_tablet})",
+  ),
+  small_laptop: (
+    breakpoint: "(min-width: #{$small_laptop})",
+  ),
+  large_laptop: (
+    breakpoint: "(min-width: #{$large_laptop})",
+  ),
+  xlarge_laptop: (
+    breakpoint: "(min-width: #{$xlarge_laptop})",
+  ),
 );
 
 // see _mixins.scss for media query mixin
@@ -108,4 +60,3 @@ $media_queries: (
 ////////////////////////////////////////////////////////////////////
 // Global Content
 ////////////////////////////////////////////////////////////////////
-

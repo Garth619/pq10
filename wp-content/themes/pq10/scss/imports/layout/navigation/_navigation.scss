@@ -12,13 +12,20 @@ nav {
     top: 80px;
     padding: 27px 0;
   }
-  @include mq(small_monitor) {
+  @include mq(small_laptop) {
     display: block;
     background: transparent;
     position: static;
     padding: 9px 0 0px 0;
     overflow-y: initial;
     //@include box(auto);
+  }
+  @include mq(large_laptop) {
+   order:1;
+  }
+  @include mq(xlarge_laptop) {
+    margin-right: 30px;
+    padding: 44px 0 0px 0;
   }
 }
 
@@ -40,7 +47,7 @@ nav {
 nav {
   ul.menu {
     padding-bottom: 200px;
-    @include mq(small_monitor) {
+    @include mq(small_laptop) {
       padding-bottom: 0;
       @include flex(flex-end);
     }
@@ -54,7 +61,7 @@ nav {
           transform: uppercase,
         )
       );
-      @include mq(small_monitor) {
+      @include mq(small_laptop) {
         margin-left: 14px;
         @include quick_type(12px, 15px, 1.2px);
         &:nth-last-of-type(-n + 3) {
@@ -64,19 +71,27 @@ nav {
           }
         }
       }
+      @include mq(large_laptop) {
+        margin-left: 18px;
+        @include quick_type(14px, 16px, 1.4px);
+      }
+      @include mq(xlarge_laptop) {
+        margin-left: 22px;
+        @include quick_type(15px, 17px, 1.5px);
+      }
       > a {
         display: block;
         padding-top: 16px;
         padding-bottom: 16px;
         background: transparent;
         transition: background 150ms ease-in-out;
-        @include mq(small_monitor) {
+        @include mq(small_laptop) {
           color: $color_dark_three;
           padding: 0;
           transition: all 150ms ease-in-out;
         }
         &:hover {
-          @include mq(small_monitor) {
+          @include mq(small_laptop) {
             color: $color_bright_two;
           }
         }
@@ -87,9 +102,9 @@ nav {
       }
     }
     > li.menu-item-has-children {
-      @include mq(small_monitor) {
+      @include mq(small_laptop) {
         position: relative;
-        padding-bottom:28px;
+        padding-bottom: 28px;
         &:hover {
           ul.sub-menu {
             opacity: 1;
@@ -104,7 +119,7 @@ nav {
           display: inline-block;
           margin: 5px 0 0 5px;
           @include tri(down, 4px, 6px, $color_lite_one);
-          @include mq(small_monitor) {
+          @include mq(small_laptop) {
             margin: 5px 0 0 3px;
             transition: all 150ms ease-in-out;
             @include tri(down, 4px, 6px, $color_dark_one);
@@ -112,7 +127,7 @@ nav {
         }
         &:hover {
           &:after {
-            @include mq(small_monitor) {
+            @include mq(small_laptop) {
               @include tri(down, 4px, 6px, $color_bright_two);
             }
           }
@@ -134,7 +149,7 @@ nav {
     }
     > li.current-menu-item {
       > a {
-        @include mq(small_monitor) {
+        @include mq(small_laptop) {
           background: transparent;
           box-shadow: none;
           color: $color_bright_two;
@@ -148,14 +163,17 @@ nav {
   ul.sub-menu {
     display: none;
     padding: 20px 0 0 0;
-    @include mq(small_monitor) {
+    @include mq(small_laptop) {
       display: block;
       width: 291px;
       background: $color_gradient_two;
-      opacity: 0;
-      visibility: hidden;
-      transition:all 150ms ease-in-out;
+      //opacity: 0;
+      //visibility: hidden;
+      transition: all 150ms ease-in-out;
       @include abs(43px, null, null, 0);
+    }
+    @include mq(large_laptop) {
+      top: 52px;
     }
     li {
       @include type(
@@ -165,7 +183,7 @@ nav {
           transform: capitalize,
         )
       );
-      @include mq(small_monitor) {
+      @include mq(small_laptop) {
         @include type(
           (
             size: 14px,
@@ -182,14 +200,14 @@ nav {
       a {
         padding-top: 15px;
         padding-bottom: 15px;
-        @include mq(small_monitor) {
+        @include mq(small_laptop) {
           background: transparent;
           transition: all 150ms ease-in-out;
           padding: 15px 29px;
         }
         &:hover {
           color: $color_bright_two;
-          @include mq(small_monitor) {
+          @include mq(small_laptop) {
             box-shadow: 0px 1px 20px 3px rgba(0, 0, 0, 0.3);
             background: $color_bright_two;
             color: $color_lite_one;
