@@ -178,6 +178,7 @@ nav {
       display: block;
       width: 291px;
       background: $color_gradient_two;
+      padding:17px 0;
       opacity: 0;
       visibility: hidden;
       transition: all 150ms ease-in-out;
@@ -185,9 +186,12 @@ nav {
     }
     @include mq(large_laptop) {
       top: 48px;
+      width:375px;
+      padding:29px 0;
     }
     @include mq(small_monitor) {
       top: 81px;
+      padding: 27px 0;
     }
     li {
       @include type(
@@ -202,9 +206,15 @@ nav {
           (
             size: 14px,
             height: 16px,
-            weight: 700,
+            weight: 400,
           )
         );
+      }
+      @include mq(large_laptop) {
+        @include quick_type(17px,19px,0);
+      }
+      @include mq(small_monitor) {
+        @include quick_type(18px,20px,0);
       }
       &:last-of-type {
         a {
@@ -218,6 +228,9 @@ nav {
           background: transparent;
           transition: all 150ms ease-in-out;
           padding: 15px 29px;
+        }
+        @include mq(large_laptop) {
+          padding: 19px 40px;
         }
         &:hover {
           color: $color_bright_two;
