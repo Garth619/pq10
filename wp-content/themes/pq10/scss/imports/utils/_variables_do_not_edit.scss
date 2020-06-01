@@ -44,6 +44,9 @@ $media_queries: (
   small_tablet: (
     breakpoint: "(min-width: #{$small_tablet})",
   ),
+  tablet: (
+    breakpoint: "(min-width: #{$tablet})",
+  ),
   small_laptop: (
     breakpoint: "(min-width: #{$small_laptop})",
   ),

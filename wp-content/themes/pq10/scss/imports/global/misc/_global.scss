@@ -1,42 +1,56 @@
-
-
 a.button {
   text-decoration: none;
   position: relative;
-  width:100%;
-  max-width:309px;
+  width: 100%;
+  max-width: 309px;
   display: inline-block;
-  z-index:1;
-  margin-top: 15px;
-  &:before,&:after {
-    content:"";
+  z-index: 1;
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  @include mq(small_tablet) {
+    width: auto;
+    max-width: 100%;
+  }
+  &:before,
+  &:after {
+    content: "";
     display: block;
     border-radius: 5px;
-    z-index:-1;
+    z-index: -1;
     @include box(100%);
-    @include abs(0,null,null,0);
+    @include abs(0, null, null, 0);
   }
   &:before {
     background: $color_gradient_one;
   }
+  &:after {
+    background: $color_bright_two;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
   span {
-    display:inline-block;
-    z-index:1;
+    display: block;
+    z-index: 1;
+    text-align: center;
     padding: 22px 10px;
-    @include type (
+    @include type(
       (
         size: 15px,
         spacing: 2.25px,
         family: $primaryfont,
         color: $color_lite_one,
         weight: 800,
-        transform: uppercase
+        transform: uppercase,
       )
     );
+    @include mq(small_tablet) {
+      padding: 24px 27px;
+    }
   }
 }
-
-
 
 .alignleft,
 img.alignleft {
