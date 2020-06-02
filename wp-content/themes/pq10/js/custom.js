@@ -126,30 +126,37 @@ jQuery(document).ready(function($){
 
 
 
-// $('.sec_one_awards_slider').slick({
-//   infinite: true,
-//   slidesToShow: 5,
-//   slidesToScroll: 5,
-// 	arrows:false,
-// 	dots:true,
-// 	responsive: [
-//     {
-//       breakpoint: 1450,
-//       settings: {
-//       slidesToShow: 5,
-//       slidesToScroll: 5,
-//      }
-//    },
-//    {
-//       breakpoint: 767,
-//       settings: {
-//       slidesToShow: 3,
-//       slidesToScroll: 3,
-//       dots:true,
-//      }
-//    }
-// 	]
-//  });
+$('#sec_two_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+	slidesToScroll: 1,
+	mobileFirst:true,
+	adaptiveHeight:true,
+	arrows:false,
+	dots:true,
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+      slidesToShow: 2,
+			slidesToScroll: 2,
+			dots:false,
+			adaptiveHeight:false,
+			arrows:true,
+			prevArrow:"#sec_two_arrow_left",
+			nextArrow:"#sec_two_arrow_right",
+     }
+   },
+   {
+      breakpoint: 1066,
+      settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots:true,
+     }
+   }
+	]
+ });
  
 
 //  $('.sec_one_slider_only_slider').slick({
