@@ -12,7 +12,7 @@
     padding: 25px 0px 31px;
     margin:0 auto;
     max-width: 688px;
-    @include flex();
+    @include flex(null,center);
   }
   @include mq(small_laptop) {
     max-width: 100%;
@@ -27,7 +27,11 @@
 
 .sec_two_arrow {
   cursor: pointer;
+  display:none;
   @include box(15px,31px);
+  @include mq(small_tablet) {
+    display:inline-block;
+  }
   @include mq(small_laptop) {
     display:none;
   }
@@ -95,6 +99,7 @@
     height:294px;
     background: transparent;
     box-shadow:none;
+    padding: 30px 10px 25px;
     transition:all 150ms ease-in-out;
   }
   @include mq(small_laptop) {
@@ -119,7 +124,7 @@
   svg {
     @include box(95px);
     @include mq(small_tablet) {
-     @include box(107px);
+     @include box(80px);
     }
     @include mq(small_laptop) {
       @include box(75px);
@@ -139,6 +144,7 @@
       )
     );
     @include mq(small_tablet) {
+      margin: 16px auto 0;
       @include quick_type(22px,30px,null);
     }
     @include mq(small_laptop) {
@@ -168,14 +174,34 @@
 
 
 .sec_two_single_slide {
-  &:nth-of-type(2) {
+  &.two {
+    svg {
+      @include mq(small_tablet) {
+        margin-top: -8px;
+        @include box(100px);
+      }
+      @include mq(small_laptop) {
+        @include box(95px);
+      }
+    }
     span.sec_two_slide_title {
+      @include mq(small_tablet) {
+        margin-top:5px;
+      }
       @include mq(small_laptop) {
         max-width: 215px;
+        margin-top:13px;
       }
     }
   }
-  &:nth-of-type(4) {
+  &.three {
+    span.sec_two_slide_title {
+      @include mq(small_tablet) {
+        max-width: 245px;
+      }
+    }
+  }
+  &.four {
     span.sec_two_slide_title {
       @include mq(small_laptop) {
         max-width: 215px;

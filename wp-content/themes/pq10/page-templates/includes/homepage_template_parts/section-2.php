@@ -10,7 +10,7 @@
 	
 		<div id='sec_two_slider'>
 
-			<div class='sec_two_single_slide'>
+			<div class='sec_two_single_slide one'>
 			
 				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-01.svg' ) ?>
 				
@@ -18,7 +18,7 @@
 			
 			</div><!-- sec_two_single_slide -->
 
-			<div class='sec_two_single_slide'>
+			<div class='sec_two_single_slide two'>
 			
 				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-02.svg' ) ?>
 				
@@ -26,7 +26,7 @@
 			
 			</div><!-- sec_two_single_slide -->
 
-			<div class='sec_two_single_slide'>
+			<div class='sec_two_single_slide three'>
 			
 				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-03.svg' ) ?>
 				
@@ -34,7 +34,7 @@
 			
 			</div><!-- sec_two_single_slide -->
 
-			<div class='sec_two_single_slide'>
+			<div class='sec_two_single_slide four'>
 			
 				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-04.svg' ) ?>
 				
