@@ -1,150 +1,80 @@
 a.button {
-  padding: $button_padding;
-  border-radius: 45px;
-  box-shadow: 0px 1px 25px 1px rgba(0, 0, 0, 0.4);
-  transition: all 200ms ease-in-out;
-  display: inline-block;
+  text-decoration: none;
   position: relative;
+  width: 100%;
+  max-width: 309px;
+  display: inline-block;
   z-index: 1;
-  @include type(
-    (
-      size: $button_size,
-      family: $primaryfont,
-      color: $button_font_color,
-      weight: $button_weight,
-      transform: lowercase,
-    )
-  );
-  @include mq(large_laptop) {
-    padding: $button_padding_large_laptop;
-    font-size: $button_size_large_laptop;
-  }
-  @include mq(small_laptop) {
-    padding: 21px 33px;
-    font-size: $button_size_small_laptop;
-  }
-  @include mq(tablet) {
-    font-size: $button_size_large_laptop;
-  }
-  &:before,
-  &:after {
-    // using before and after because if gradients are needed, they can sometimes flash on hover. These can handle solid colors too if not using gradients
-    border-radius: 45px;
-    content: "";
-    display: block;
-    @include abs(0, null, null, 0, -1);
-    @include box(100%);
-  }
-  &:before {
-    background: $button_background_color;
-  }
-  &:after {
-    background: $button_background_color_hover;
-    opacity: 0;
-    transition: all 200ms ease-in-out;
-  }
   &:hover {
     &:after {
       opacity: 1;
     }
   }
-}
-
-a.button_with_arrow {
-  padding: $button_arrow_padding;
-  @include mq(large_laptop) {
-    padding: $button_arrow_padding_large_laptop;
-  }
-  @include mq(small_laptop) {
-    padding: $button_arrow_padding_small_laptop;
-  }
-  .arrow_inner {
-    @include flex();
-    span {
-      margin-right: 22px;
-      @include mq(large_laptop) {
-        margin-right: 19px;
-      }
-    }
-    img,
-    svg {
-      transform: rotate(180deg);
-      @include box(18px, 21px);
-    }
-    svg {
-      path {
-        fill: $button_arrow_fill_color;
-      }
-    }
-  }
-}
-
-a.button.internal_button {
-  display: inline-block;
-}
-
-a.internal_button {
-  margin-top: 20px;
-  @include mq(small_laptop) {
-    padding: 19px 41px;
-    @include quick_type(16px, null, null);
-  }
-}
-
-a.button.read_more {
-  // blog button
-  margin-top: 20px;
-  font-size: $button_read_more_size;
-  padding: 8px 26px;
-  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.4);
-  &:hover {
-    color: $button_font_color;
-  }
-}
-
-span.play_button {
-  border-radius: 50%;
-  background: $play_button_outer_bg_color;
-  position: relative;
-  @include flex(center, center);
-  @include box(168px);
-  @include mq(large_monitor) {
-    @include box(128px);
-  }
-  @include mq(tablet) {
-    @include box(100px);
+  @include mq(small_tablet) {
+    width: auto;
+    max-width: 100%;
   }
   &:before,
   &:after {
     content: "";
     display: block;
+    border-radius: 5px;
+    z-index: -1;
+    @include box(100%);
+    @include abs(0, null, null, 0);
   }
   &:before {
-    border-radius: 50%;
-    background: $play_button_bg_color;
-    box-shadow: 0px 2px 18px 0.5px rgba(0, 0, 0, 0.75);
-    transition: all 400ms ease-in-out;
-    @include box(83px);
-    @include mq(large_monitor) {
-      @include box(68px);
-    }
-    @include mq(tablet) {
-      @include box(54px);
-    }
+    background: $color_gradient_one;
   }
   &:after {
-    @include abs(72px, null, null, 80px);
-    @include box(0);
-    @include tri(right, 12px, 14px, $play_button_tri_bg_color);
-    @include mq(large_monitor) {
-      top: 55px;
-      left: 61px;
-      @include tri(right, 10px, 11px, $play_button_tri_bg_color);
+    background: $color_bright_two;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
+  span {
+    display: block;
+    z-index: 1;
+    text-align: center;
+    padding: 22px 10px;
+    @include type(
+      (
+        size: 15px,
+        spacing: 2.25px,
+        family: $primaryfont,
+        color: $color_lite_one,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      padding: 24px 27px;
     }
-    @include mq(tablet) {
-      top: 43px;
-      left: 48px;
-      @include tri(right, 8px, 9px, $play_button_tri_bg_color);
+    @include mq(small_monitor) {
+      font-size: 18px;
+      padding: 27px 50px;
     }
+  }
+}
+
+
+a.button_two {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 18px 20px;
+  border:3px solid $color_dark_two;
+  @include type (
+    (
+      size: 16px,
+      spacing: 2.4px,
+      family: $primaryfont,
+      color: $color_dark_two,
+      weight: 800,
+      align: center,
+      transform: uppercase
+    )
+  );
+  &:hover {
+    color:$color_lite_one;
+    background:$color-dark_two;
   }
 }

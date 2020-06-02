@@ -27,7 +27,41 @@
 
 		<div id='sec_three_right'>
 		
+			<div class='sec_three_attorney'>
 			
+				<div class='attorney_image_one_wrapper'>
+				
+					<img class='attorney_image_one' src='<?php bloginfo('template_directory');?>/images/hilley/content-img-hilley.jpg' />
+
+					<span class='sec_three_att_title'>Ronald Hilley</span><!-- sec_three_att_title -->
+
+					<span class='sec_three_att_subtitle'>ClIENT SATISFACTION AWARD WINNER FOR 3 CONSECUTIVE YEARS</span><!-- sec_three_att_subtitle -->
+
+					<span class='sec_three_att_quote'>“I was badly injured at work. Mr. Ronald Hilley worked very hard to settle my case. I am very grateful to have had him on my side. Thank you so very much and I totally recommend him…” - Sanita Pilic</span><!-- sec_three_att_quote -->
+
+					<a class='sec_three_att_button button_two' href=''>Meet attorney Ron hilley</a><!-- sec_three_att_button -->
+				
+				</div><!-- attorney_image_one_wrapper -->
+			
+			</div><!-- sec_three_attorney -->
+
+			<div class='sec_three_attorney'>
+			
+				<div class='attorney_image_one_wrapper'>
+				
+					<img class='attorney_image_one' src='<?php bloginfo('template_directory');?>/images/hilley/content-img-hilley.jpg' />
+
+					<span class='sec_three_att_title'>Ronald Hilley</span><!-- sec_three_att_title -->
+
+					<span class='sec_three_att_subtitle'>ClIENT SATISFACTION AWARD WINNER FOR 3 CONSECUTIVE YEARS</span><!-- sec_three_att_subtitle -->
+
+					<span class='sec_three_att_quote'>“I was badly injured at work. Mr. Ronald Hilley worked very hard to settle my case. I am very grateful to have had him on my side. Thank you so very much and I totally recommend him…” - Sanita Pilic</span><!-- sec_three_att_quote -->
+
+					<a class='sec_three_att_button button_two' href=''>Meet attorney Ron hilley</a><!-- sec_three_att_button -->
+				
+				</div><!-- attorney_image_one_wrapper -->
+			
+			</div><!-- sec_three_attorney -->
 		
 		</div><!-- sec_three_right -->
 

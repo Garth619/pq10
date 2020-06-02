@@ -2,39 +2,4 @@
 // Buttons
 ////////////////////////////////////////////////////////////////////
 
-// global a.button, a.button_with_arrow, a.internal_button
 
-$button_background_color: $color_gradient_two;
-
-$button_background_color_hover: $color_bright_one;
-
-$button_font_color: $color_lite_one;
-
-$button_weight: 500;
-
-$button_size: 21px;
-$button_size_large_laptop: 19px;
-$button_size_small_laptop: 18px;
-
-$button_padding: 25px 40px 27px;
-$button_padding_large_laptop: 24px 40px;
-$button_padding_small_laptop: 21px 41px;
-
-$button_arrow_padding: 27px 27px 27px 35px;
-$button_arrow_padding_large_laptop: 23px 27px 23px 35px;
-$button_arrow_padding_small_laptop: 20px 27px 20px 35px;
-
-$button_arrow_fill_color: $color_lite_one;
-
-// a.button.read_more
-
-$button_read_more_size: 18px;
-
-// global play button
-
-$play_button_outer_bg_color: rgba(255, 255, 255, 0.3);
-
-$play_button_bg_color: $color_bright_one;
-$play_button_bg_color_hover: $color_bright_one;
-
-$play_button_tri_bg_color: $color_lite_one;
