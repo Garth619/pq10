@@ -148,12 +148,8 @@ $('#sec_two_slider').slick({
      }
    },
    {
-      breakpoint: 1066,
-      settings: {
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      dots:true,
-     }
+      breakpoint: 1170,
+      settings: "unslick"
    }
 	]
  });

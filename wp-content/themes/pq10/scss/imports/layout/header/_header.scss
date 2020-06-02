@@ -3,7 +3,7 @@ header {
   width: 100%;
   @include fixed(0, null, null, 0, 10);
   @include mq(small_laptop) {
-    position: static;
+    position: relative;
   }
   #header_inner {
     display: flex;

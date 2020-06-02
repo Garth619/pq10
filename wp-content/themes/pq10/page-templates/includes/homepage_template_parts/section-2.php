@@ -30,7 +30,7 @@
 			
 				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-03.svg' ) ?>
 				
-				<span class='sec_two_slide_title'>Husband and wife legal team fighting together for you </span><!-- sec_two_slide_title -->
+				<span class='sec_two_slide_title'>We work around the clock to make sure our clients are statisfied </span><!-- sec_two_slide_title -->
 			
 			</div><!-- sec_two_single_slide -->
 

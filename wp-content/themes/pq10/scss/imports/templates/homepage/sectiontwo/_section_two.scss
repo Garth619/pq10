@@ -12,7 +12,11 @@
     padding: 25px 0px 31px;
     margin:0 auto;
     max-width: 688px;
-    @include flex(center,center);
+    @include flex();
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+    padding: 36px 0px 41px;
   }
 }
 
@@ -24,6 +28,9 @@
 .sec_two_arrow {
   cursor: pointer;
   @include box(15px,31px);
+  @include mq(small_laptop) {
+    display:none;
+  }
 }
 
 
@@ -33,6 +40,11 @@
   padding:0 40px;
   @include mq(small_tablet) {
     max-width:100%;
+  }
+  @include mq(small_laptop) {
+    padding:0;
+    width: 100%;
+    @include flex(space-between,null);
   }
   .slick-slide {
     margin: 0 10px;
@@ -85,6 +97,11 @@
     box-shadow:none;
     transition:all 150ms ease-in-out;
   }
+  @include mq(small_laptop) {
+    flex-basis:25%;
+    height: auto;
+    padding: 40px 10px 0;
+  }
   &:hover {
     @include mq(small_tablet) {
       background: $color_bright_two;
@@ -95,11 +112,18 @@
         }
       }
     }
+    @include mq(small_laptop) {
+      box-shadow: 0px 1px 50px #030E14CC;
+    }
   }
   svg {
-    //@include box(95px);
+    @include box(95px);
     @include mq(small_tablet) {
-     // @include box(107px);
+     @include box(107px);
+    }
+    @include mq(small_laptop) {
+      @include box(75px);
+
     }
   }
   span.sec_two_slide_title {
@@ -117,6 +141,10 @@
     @include mq(small_tablet) {
       @include quick_type(22px,30px,null);
     }
+    @include mq(small_laptop) {
+      max-width: 245px;
+      margin-top: 24px;
+    }
     &:after {
       content:'';
       display: block;
@@ -129,6 +157,28 @@
         background: $color_bright_one;
         transition:all 150ms #fff;
         @include box(8px);
+      }
+      @include mq(small_laptop) {
+        margin: 21px auto 34px;
+        @include box(6px);
+      }
+    }
+  }
+}
+
+
+.sec_two_single_slide {
+  &:nth-of-type(2) {
+    span.sec_two_slide_title {
+      @include mq(small_laptop) {
+        max-width: 215px;
+      }
+    }
+  }
+  &:nth-of-type(4) {
+    span.sec_two_slide_title {
+      @include mq(small_laptop) {
+        max-width: 215px;
       }
     }
   }
