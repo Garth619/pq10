@@ -44,9 +44,10 @@
 #sec_two_slider {
   max-width: 380px;
   margin:0 auto;
-  padding:0 40px;
+  padding:0px;
   @include mq(small_tablet) {
     max-width:100%;
+    padding:0 40px;
   }
   @include mq(small_laptop) {
     padding:0;
@@ -201,6 +202,8 @@
   }
 }
 
+
+// hacky code, each box has differnces
 
 .sec_two_single_slide {
   &.two {
