@@ -20,7 +20,7 @@
 		
 			<div id='sec_four_slider'>
 			
-				<div class='sec_four_single_slide'>
+				<div class='sec_four_single_slide one'>
 
 				<div class='svg_wrapper'>
 				
@@ -50,7 +50,7 @@
 				
 				</div><!-- sec_four_single_slide -->
 
-				<div class='sec_four_single_slide'>
+				<div class='sec_four_single_slide two'>
 
 				<div class='svg_wrapper'>
 				
@@ -80,7 +80,7 @@
 				
 				</div><!-- sec_four_single_slide -->
 
-				<div class='sec_four_single_slide'>
+				<div class='sec_four_single_slide three'>
 
 				<div class='svg_wrapper'>
 				
@@ -110,7 +110,7 @@
 				
 				</div><!-- sec_four_single_slide -->
 
-				<div class='sec_four_single_slide'>
+				<div class='sec_four_single_slide four'>
 
 				<div class='svg_wrapper'>
 				

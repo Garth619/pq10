@@ -17,6 +17,9 @@
       @include box(65%, 100%);
       @include abs(0, null, null, 0);
     }
+    @include mq(large_laptop) {
+      width: 47%;
+    }
   }
 }
 
@@ -44,6 +47,9 @@
   @include mq(small_laptop) {
     padding: 153px 110px 162px 50px;
   }
+  @include mq(large_laptop) {
+    padding: 199px 110px 162px 50px;
+  }
 }
 
 #sec_four_left_content {
@@ -59,6 +65,9 @@
   );
   @include mq(small_tablet) {
     margin-top: 22px;
+  }
+  @include mq(large_laptop) {
+    @include quick_type(18px, 30px, 0.45px);
   }
   p {
     margin-bottom: 12px;
@@ -85,6 +94,9 @@ span#sec_four_left_title {
   }
   @include mq(small_laptop) {
     @include quick_type(70px, 70px, 1.75px);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(80px, 80px, 2px);
   }
   &:after {
     content: "";
@@ -131,6 +143,9 @@ a.cr_button {
     margin-top: 31px;
     padding: 8px 25px;
   }
+  @include mq(large_laptop) {
+    padding: 10px 25px;
+  }
   &:hover {
     background: $color_lite_one;
     color: $color_bright_two;
@@ -151,8 +166,12 @@ a.cr_button {
     padding: 80px 0;
   }
   @include mq(small_laptop) {
-    flex-basis:768px;
-    padding:0;
+    flex-basis: 768px;
+    padding: 0;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 958px;
+    padding: 92px 0;
   }
 }
 
@@ -172,6 +191,9 @@ a.cr_button {
   }
   @include mq(small_laptop) {
     padding: 68px 30px;
+  }
+  @include mq(large_laptop) {
+    padding: 105px 30px;
   }
   .slick-slide {
     @include mq(large_mobile) {
@@ -236,12 +258,18 @@ a.cr_button {
     padding: 0;
     @include flex(null, center);
   }
+  @include mq(large_laptop) {
+    height: 202px;
+  }
   &:nth-of-type(-n + 2) {
     @include mq(tablet) {
       margin-bottom: 45px;
     }
     @include mq(small_laptop) {
       margin-bottom: 90px;
+    }
+    @include mq(large_laptop) {
+      margin-bottom: 103px;
     }
   }
   .svg_wrapper {
@@ -273,6 +301,9 @@ a.cr_button {
     @include mq(tablet) {
       @include abs(null, null, 10px, 20px);
     }
+    @include mq(large_laptop) {
+      bottom: 13px;
+    }
   }
   span.sec_four_title {
     @include type(
@@ -284,6 +315,9 @@ a.cr_button {
         transform: uppercase,
       )
     );
+    @include mq(large_laptop) {
+      font-size: 18px;
+    }
     &.type {
       margin-top: 23px;
       color: $color_dark_two;
@@ -308,6 +342,10 @@ a.cr_button {
         color: $color_dark_one,
       )
     );
+    @include mq(large_laptop) {
+      max-width: 215px;
+      @include quick_type(15px, 24px, null);
+    }
   }
   span.sec_four_amount {
     margin-top: 5px;
@@ -320,5 +358,25 @@ a.cr_button {
         color: $color_dark_one,
       )
     );
+    @include mq(large_laptop) {
+      margin-top: 8px;
+      font-size: 38px;
+    }
+  }
+}
+
+// hacky differences in each slide
+
+.sec_four_single_slide {
+  &.three {
+    span.sec_four_description {
+      @include mq(small_laptop) {
+        max-width:180px;
+      }
+      @include mq(large_laptop) {
+        max-width:100%;
+      }
+
+    }
   }
 }
