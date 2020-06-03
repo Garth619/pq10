@@ -153,90 +153,39 @@ $('#sec_two_slider').slick({
    }
 	]
  });
+
+
+
+ $('#sec_four_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+	slidesToScroll: 1,
+	mobileFirst:true,
+	adaptiveHeight:true,
+	arrows:false,
+	dots:true,
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+      slidesToShow: 2,
+			slidesToScroll: 2,
+			dots:false,
+			adaptiveHeight:false,
+			arrows:true,
+			prevArrow:"#sec_two_arrow_left",
+			nextArrow:"#sec_two_arrow_right",
+     }
+   },
+   {
+      breakpoint: 1170,
+      settings: "unslick"
+   }
+	]
+ });
  
 
-//  $('.sec_one_slider_only_slider').slick({
-// 	infinite: true,
-// 	slidesToShow: 4,
-// 	slidesToScroll: 4,
-// 	  arrows:false,
-// 	  dots:false,
-// 	  responsive: [
-// 	  {
-// 		breakpoint: 1450,
-// 		settings: {
-// 		slidesToShow: 4,
-// 		slidesToScroll: 4,
-// 	   }
-// 	 },
-// 	 {
-// 		breakpoint: 650,
-// 		settings: {
-// 		autoplay: true,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 	   }
-// 	 }
-// 	  ]
-//    });
- 
- 
- 
-//  $('#sec_two_cr').slick({
-//   infinite: true,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   mobileFirst:true,
-//   adaptiveHeight:true,
-// 	arrows:true,
-// 	prevArrow:".sec_two_arrow_left",
-// 	nextArrow:".sec_two_arrow_right",
-// 	responsive: [
-//     {
-//       breakpoint: 767,
-//       settings: {
-//       slidesToShow: 2,
-//       slidesToScroll: 2,
-//       arrows:true,
-// 			prevArrow:".sec_two_arrow_left",
-// 			nextArrow:".sec_two_arrow_right",
-//      }
-//    },
-//    {
-//       breakpoint: 1066,
-//       settings: "unslick",
-//    }
-// 	]
-//  });
- 
- 
- 
-//  $('.sec_four_test_slider').slick({
-//   infinite: true,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-// 	arrows:true,
-// 	adaptiveHeight:true,
-// 	fade:true,
-// 	prevArrow:".sec_four_arrow_left",
-// 	nextArrow:".sec_four_arrow_right"
-//  });
- 
- 
- 
-// macy http://macyjs.com/
 
-/*
-var macyInstance = Macy({
-  container: '.testimonials_wrapper',
-	columns: 3,
-	margin:49,
-	breakAt: {
-        1450: 2,
-        1066:1
-  }
-});
-*/
 
 
 	

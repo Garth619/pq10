@@ -1,0 +1,194 @@
+
+
+#section_four {
+  position: relative;
+  padding-bottom: 85px;
+  @include box(100%,null);
+}
+
+
+#sec_four_inner {
+  position: relative;
+  z-index:1;
+}
+
+
+#sec_four_left {
+  background-color: $color_bright_three;
+  padding: 70px 25px 155px;
+  //background-blend-mode:multiply;
+  //background-image: url(/wp-content/themes/pq10/images/hilley/results-img-desk.jpg);
+}
+
+#sec_four_left_content {
+  margin-top: 17px;
+  @include type (
+    (
+      size: 16px,
+      spacing: 0.4px,
+      height: 28px,
+      family: $primaryfont,
+      color: $color_lite_one
+    )
+  );
+  p {
+    margin-bottom:12px;
+    &:last-of-type {
+      margin-bottom: 0;;
+    }
+  }
+}
+
+span#sec_four_left_title {
+  display: block;
+   @include type (
+     (
+       size: 42px,
+       spacing: 1.05px,
+       height: 42px,
+       family: $secondaryfont,
+       color: $color_lite_one,
+       weight: 700
+     )
+   ); 
+   &:after {
+     content:"";
+     display: block;
+     background:$color_bright_one;
+     margin-top: 24px;
+     @include box(100%,2px);
+   }
+}
+
+
+img#sec_four_bg {
+  @include image();
+  @include abs(0,null,null,0);
+  @include box(100%);
+  object-fit:cover;
+}
+
+
+a.cr_button {
+  display: inline-block;
+  border:3px solid $color_lite_one;
+  border-radius: 6px;
+  margin-top: 19px;
+  padding: 8px 29px;
+  transition:all 150ms ease-in-out;
+  @include type (
+    (
+      size: 16px,
+      spacing: 2.4px,
+      family: $primaryfont,
+      color: $color_lite_one,
+      weight: 800,
+      align: center,
+      transform: uppercase
+    )
+  );
+  &:hover {
+    background:$color_lite_one;
+    color:$color_bright_two;
+  }
+}
+
+
+#sec_four_right {
+  padding:0 25px;
+  margin-top: -99px;
+}
+
+#sec_four_slider {
+  box-shadow: 0px 1px 40px #00000080;
+  background: $color_lite_one;
+  padding:0 20px;
+  .slick-dots {
+    position:absolute;
+    bottom: -48px;
+    width: calc(100% - 50px);
+    li.slick-active {
+      button {
+        &:before {
+          color:$color_bright_two;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color:$color_bright_two;
+        }
+      }
+    }
+    li {
+      margin:0 4px;
+      width:16px;
+      button {
+      width:16px;
+        &:before {
+          width:16px;
+          opacity:1;
+          color:$color_lite_one;
+          font-size:25px;
+        }
+      }
+    }
+  }
+}
+
+
+.sec_four_single_slide {
+  text-align: center;
+  padding: 37px 0px 49px;
+  svg {
+    @include box(69px);
+  }
+  span {
+    display: block;
+  }
+  span.sec_four_title {
+    @include type (
+      (
+        size: 16[x],
+        spacing: 1.6px,
+        family: $primaryfont,
+         weight: 800,
+        transform: uppercase
+      )
+    );
+    &.type {
+      margin-top:23px;
+      color:$color_dark_two;
+    }
+    &.result {
+      margin-top:27px;
+      color:$color_bright_one;
+    }
+  }
+  span.sec_four_description {
+    margin:4px auto 0;
+    max-width:200px;
+    @include type (
+      (
+        size: 14px,
+        spacing: 0.35px,
+        height: 19px,
+        family: $primaryfont,
+        color: $color_dark_one
+      )
+    );
+  }
+  span.sec_four_amount {
+    margin-top:5px;
+    @include type (
+      (
+        size: 28px,
+        spacing: 0.7px,
+        height: 41px,
+        family: $primaryfont,
+        color: $color_dark_one
+      )
+    );
+  }
+}
