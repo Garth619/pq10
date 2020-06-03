@@ -7,12 +7,29 @@
   @include mq(large_mobile) {
     padding-bottom: 65px;
   }
+  @include mq(tablet) {
+    position:relative;
+    padding:0;
+  }
+  &:after {
+    @include mq(tablet) {
+      content:"";
+      display:block;
+      background-color: $color_bright_three;
+      @include box(65%,100%);
+      @include abs(0,null,null,0);
+    }
+  }
+  
 }
 
 
 #sec_four_inner {
   position: relative;
   z-index:1;
+  @include mq(tablet) {
+    @include flex(null,center);
+  }
 }
 
 
@@ -23,6 +40,11 @@
   //background-image: url(/wp-content/themes/pq10/images/hilley/results-img-desk.jpg);
   @include mq(small_tablet) {
     padding: 70px 25px 163px;
+  }
+  @include mq(tablet) {
+    flex-grow:1;
+    background: transparent;
+    padding: 70px 35px 162px 50px;
   }
 }
 
@@ -121,6 +143,12 @@ a.cr_button {
     padding: 0 4px;
     margin-top: -110px;
   }
+  @include mq(tablet) {
+    flex-basis: 662px;
+    flex-shrink:0;
+    margin-top:0;
+    padding:80px 0;
+  }
 }
 
 #sec_four_slider {
@@ -130,6 +158,11 @@ a.cr_button {
   @include mq(large_mobile) {
     background:transparent;
     box-shadow: none;
+  }
+  @include mq(tablet) {
+    box-shadow: 0px 1px 40px #00000080;
+    background: $color_lite_one;
+    @include flex(null,null,null,wrap);
   }
   .slick-slide {
     @include mq(large_mobile) {
@@ -188,6 +221,10 @@ a.cr_button {
   @include mq(large_mobile) {
     box-shadow: 0px 1px 14px #00000080;
     background: $color_lite_one;
+  }
+  @include mq(tablet) {
+    flex-basis:50%;
+    box-shadow: none;
   }
   svg {
     @include box(69px);

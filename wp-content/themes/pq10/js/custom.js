@@ -175,7 +175,7 @@ $('#sec_two_slider').slick({
      }
    },
    {
-      breakpoint: 1170,
+      breakpoint: 1066,
       settings: "unslick"
    }
 	]
