@@ -34,6 +34,9 @@ h4 {
     @include mq(small_laptop) {
       padding-bottom:13px;
     }
+    @include mq(large_laptop) {
+      padding-bottom:30px;
+    }
   }
   h3 {
     padding-top:20px;
