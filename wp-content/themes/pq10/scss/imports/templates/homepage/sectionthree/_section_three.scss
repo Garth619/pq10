@@ -15,7 +15,10 @@
 }
 
 #sec_three_inner {
-  @include flex();
+  @include mq(small_laptop) {
+    @include flex();
+  }
+ 
   @include mq(small_monitor) {
     max-width: 1440px;
     margin: 0 auto;

@@ -166,15 +166,12 @@ $('#sec_two_slider').slick({
 	dots:true,
 	responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 675,
       settings: {
       slidesToShow: 2,
 			slidesToScroll: 2,
-			dots:false,
+			dots:true,
 			adaptiveHeight:false,
-			arrows:true,
-			prevArrow:"#sec_two_arrow_left",
-			nextArrow:"#sec_two_arrow_right",
      }
    },
    {
