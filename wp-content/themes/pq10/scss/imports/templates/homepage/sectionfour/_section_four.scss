@@ -20,6 +20,9 @@
     @include mq(large_laptop) {
       width: 47%;
     }
+    @include mq(small_monitor) {
+      width:51%;
+    }
   }
 }
 
@@ -28,6 +31,10 @@
   z-index: 1;
   @include mq(tablet) {
     @include flex(null, center);
+  }
+  @include mq(small_monitor) {
+    max-width:2100px;
+    @include margin_lr;
   }
 }
 
@@ -50,6 +57,9 @@
   @include mq(large_laptop) {
     padding: 199px 110px 162px 50px;
   }
+  @include mq(small_monitor) {
+    padding: 43px 112px 162px 114px;
+  }
 }
 
 #sec_four_left_content {
@@ -68,6 +78,9 @@
   }
   @include mq(large_laptop) {
     @include quick_type(18px, 30px, 0.45px);
+  }
+  @include mq(small_monitor) {
+    margin-top: 31px;
   }
   p {
     margin-bottom: 12px;
@@ -98,6 +111,9 @@ span#sec_four_left_title {
   @include mq(large_laptop) {
     @include quick_type(80px, 80px, 2px);
   }
+  @include mq(small_monitor) {
+    @include quick_type(90px, 90px, 2.5px);
+  }
   &:after {
     content: "";
     display: block;
@@ -106,6 +122,9 @@ span#sec_four_left_title {
     @include box(100%, 2px);
     @include mq(small_tablet) {
       margin-top: 30px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 38px;
     }
   }
 }
@@ -146,6 +165,9 @@ a.cr_button {
   @include mq(large_laptop) {
     padding: 10px 25px;
   }
+  @include mq(small_monitor) {
+    margin-top: 37px;
+  }
   &:hover {
     background: $color_lite_one;
     color: $color_bright_two;
@@ -173,6 +195,10 @@ a.cr_button {
     flex-basis: 958px;
     padding: 92px 0;
   }
+  @include mq(small_monitor) {
+    flex-basis: 1317px;
+    padding: 129px 0;
+  }
 }
 
 #sec_four_slider {
@@ -194,6 +220,9 @@ a.cr_button {
   }
   @include mq(large_laptop) {
     padding: 105px 30px;
+  }
+  @include mq(small_monitor) {
+    padding: 193px 110px;
   }
   .slick-slide {
     @include mq(large_mobile) {
@@ -271,6 +300,9 @@ a.cr_button {
     @include mq(large_laptop) {
       margin-bottom: 103px;
     }
+    @include mq(small_monitor) {
+      margin-bottom: 160px;
+    }
   }
   .svg_wrapper {
     @include mq(tablet) {
@@ -281,6 +313,9 @@ a.cr_button {
     @include box(69px);
     @include mq(small_laptop) {
       @include box(85px);
+    }
+    @include mq(small_monitor) {
+      @include box(110px);
     }
   }
   span {
@@ -361,6 +396,9 @@ a.cr_button {
     @include mq(large_laptop) {
       margin-top: 8px;
       font-size: 38px;
+    }
+    @include mq(small_monitor) {
+      font-size: 40px;
     }
   }
 }

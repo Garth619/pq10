@@ -21,6 +21,10 @@
   @include mq(large_laptop) {
     padding: 42px 0px 42px;
   }
+  @include mq(small_monitor) {
+    max-width:1920px;
+    @include margin_lr;
+  }
 }
 
 
