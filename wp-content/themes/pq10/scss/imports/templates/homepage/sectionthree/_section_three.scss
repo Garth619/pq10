@@ -9,16 +9,21 @@
   @include mq(large_laptop) {
     padding: 95px 100px 115px;
   }
+  @include mq(small_monitor) {
+    padding: 165px 100px 115px;
+  }
 }
-
 
 #sec_three_inner {
   @include flex();
+  @include mq(small_monitor) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
-
 #sec_three_left {
-  flex-grow:1;
+  flex-grow: 1;
 }
 
 #sec_three_left.content {
@@ -29,47 +34,63 @@
   }
 }
 
-h1.sec_three_header {
-padding-bottom:40px;
- @include type (
-   (
-     size: 36px,
-     spacing: 0,
-     height: 42px,
-     family: $secondaryfont,
-     color: $color_dark_one,
-     weight: 700
-    )
- ); 
- @include mq(small_tablet) {
-   @include quick_type(60px,70px,null);
- }
- @include mq(large_laptop) {
-  padding-bottom: 30px;
- }
- &:after {
-   content:"";
-   display: block;
-   background:$color_bright_one;
-   margin-top: 28px;
-   @include box(100%, 2px);
-   @include mq(small_tablet) {
-    margin-top: 42px;
-   }
- }
+#sec_three_content_inner {
+  @include mq(small_monitor) {
+    padding-right:75px;
+  }
+  
 }
 
+h1.sec_three_header {
+  padding-bottom: 40px;
+  @include type(
+    (
+      size: 36px,
+      spacing: 0,
+      height: 42px,
+      family: $secondaryfont,
+      color: $color_dark_one,
+      weight: 700,
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(60px, 70px, null);
+  }
+  @include mq(large_laptop) {
+    padding-bottom: 30px;
+  }
+  @include mq(small_monitor) {
+    padding-bottom: 40px;
+    @include quick_type(75px, 80px, null);
+  }
+  @include mq(small_monitor) {
+    padding-right: 50px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    background: $color_bright_one;
+    margin-top: 28px;
+    @include box(100%, 2px);
+    @include mq(small_tablet) {
+      margin-top: 42px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 55px;
+    }
+  }
+}
 
 #sec_three_right {
   display: none;
   @include mq(small_tablet) {
-    display:block;
-    margin-top:85px;
+    display: block;
+    margin-top: 85px;
     margin-bottom: 90px;
   }
   @include mq(small_laptop) {
-    flex-shrink:0;
-    flex-basis:365px;
+    flex-shrink: 0;
+    flex-basis: 365px;
     margin-left: 53px;
     margin-top: 16px;
   }
@@ -77,8 +98,12 @@ padding-bottom:40px;
     flex-basis: 405px;
     margin-left: 80px;
   }
+  @include mq(small_monitor) {
+    margin-top: 2px;
+    flex-basis: 470px;
+    margin-left: 130px;
+  }
 }
-
 
 .sec_three_attorney {
   text-align: center;
@@ -86,8 +111,11 @@ padding-bottom:40px;
   @include mq(small_laptop) {
     margin-bottom: 80px;
   }
+  @include mq(small_monitor) {
+    margin-bottom: 100px;
+  }
   &:last-of-type {
-    margin-bottom:0px;
+    margin-bottom: 0px;
     span.sec_three_att_subtitle {
       max-width: 520px;
     }
@@ -96,18 +124,21 @@ padding-bottom:40px;
 
 span.sec_three_att_title {
   display: block;
-  margin-top:40px;
-  @include type (
+  margin-top: 40px;
+  @include type(
     (
       size: 25px,
       family: $secondaryfont,
       color: $color_dark_two,
-      weight: 700
+      weight: 700,
     )
   );
   @include mq(small_laptop) {
     font-size: 25px;
     margin-top: 29px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 50px;
   }
 }
 
@@ -115,7 +146,7 @@ span.sec_three_att_subtitle {
   max-width: 420px;
   display: block;
   margin: 28px auto 0;
-  @include type (
+  @include type(
     (
       size: 18px,
       spacing: 1.44px,
@@ -124,19 +155,23 @@ span.sec_three_att_subtitle {
       color: $color_bright_one,
       weight: 800,
       align: center,
-      transform: uppercase
+      transform: uppercase,
     )
   );
   @include mq(small_laptop) {
     max-width: 350px;
-    @include quick_type(16px,22px,null);
+    @include quick_type(16px, 22px, null);
+  }
+  @include mq(small_monitor) {
+    max-width: 410px;
+    @include quick_type(18px, 25px, null);
   }
   &:after {
-    content:"";
-    display:block;
-    margin:35px auto 0;
-    background:$color_lite_four;
-    @include box(200px,1px);
+    content: "";
+    display: block;
+    margin: 35px auto 0;
+    background: $color_lite_four;
+    @include box(200px, 1px);
     @include mq(small_laptop) {
       margin: 30px auto 0;
     }
@@ -144,16 +179,16 @@ span.sec_three_att_subtitle {
 }
 
 span.sec_three_att_quote {
-  margin:25px auto 39px;
+  margin: 25px auto 39px;
   display: block;
   max-width: 430px;
-  @include type (
+  @include type(
     (
       size: 19px,
       height: 32px,
       family: $secondaryfont,
       color: $color_dark_one,
-      weight: 500 
+      weight: 500,
     )
   );
   @include mq(small_laptop) {
@@ -162,16 +197,22 @@ span.sec_three_att_quote {
   @include mq(large_laptop) {
     max-width: 385px;
   }
-  
+  @include mq(small_monitor) {
+    max-width: 425px;
+  }
 }
 
 .attorney_image_one_wrapper {
   img {
-    margin:0 auto;
+    margin: 0 auto;
     border-radius: 50%;
+    box-shadow: 0px 0px 20px #00000029;
     @include image();
     @include mq(small_tablet) {
       @include box(155px);
+    }
+    @include mq(small_monitor) {
+      @include box(175px);
     }
   }
 }

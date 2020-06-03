@@ -62,6 +62,7 @@ a.button_two {
   border-radius: 6px;
   padding: 18px 20px;
   border:3px solid $color_dark_two;
+  transition:all 150ms ease-in-out;
   @include type (
     (
       size: 16px,
