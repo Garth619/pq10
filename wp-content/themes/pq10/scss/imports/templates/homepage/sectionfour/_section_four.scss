@@ -229,7 +229,7 @@ a.cr_button {
     height:175px;
     text-align: left;
     padding:0;
-    @include flex();
+    @include flex(null,center);
     &:nth-of-type(-n + 2) {
       margin-bottom:45px;
     }
