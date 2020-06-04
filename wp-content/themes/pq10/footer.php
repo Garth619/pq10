@@ -21,6 +21,8 @@
 			<div id='footer_form_right'>
 		
 				<?php gravity_form(1, false, false, false, '', true, 12); ?>
+
+				<span id='required'>*Required Fields</span><!-- required -->
 		
 			</div><!-- footer_form_right -->
 		
