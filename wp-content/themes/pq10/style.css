@@ -683,6 +683,26 @@ img.aligncenter {
   height: auto;
 }
 
+.gform_wrapper ul li ::-webkit-input-placeholder {
+  color: #0f3447;
+}
+
+.gform_wrapper ul li ::-moz-placeholder {
+  color: #0f3447;
+}
+
+.gform_wrapper ul li :-moz-placeholder {
+  color: #0f3447;
+}
+
+.gform_wrapper ul li :-ms-input-placeholder {
+  color: #0f3447;
+}
+
+.gform_wrapper ul li ::-moz-placeholder {
+  opacity: 1;
+}
+
 a.button {
   text-decoration: none;
   position: relative;
@@ -1477,6 +1497,41 @@ footer {
 #footer_form_wrapper {
   background: #f3f4f6;
   padding: 55px 25px;
+}
+#footer_form_wrapper .gform_wrapper {
+  margin-top: 20px;
+}
+#footer_form_wrapper .gform_wrapper ul {
+  list-style: none;
+  text-align: left;
+}
+#footer_form_wrapper .gform_wrapper ul li {
+  width: 100%;
+}
+#footer_form_wrapper .gform_wrapper ul li label {
+  display: none;
+}
+#footer_form_wrapper .gform_wrapper ul li input, #footer_form_wrapper .gform_wrapper ul li textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  box-shadow: 0px 1px 10px #00000033;
+  transition: border 150ms ease-in-out;
+  padding: 16px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-family: "Open Sans", sans-serif;
+  color: #0f3447;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+#footer_form_wrapper .gform_wrapper ul li input:focus, #footer_form_wrapper .gform_wrapper ul li textarea:focus {
+  border: 2px solid #04b1b4;
+}
+#footer_form_wrapper .gform_wrapper ul li textarea {
+  height: 166px;
 }
 
 span#footer_form_title {

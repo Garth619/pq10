@@ -53,18 +53,18 @@ img.aligncenter {
   }
 }
 
-// .gform_wrapper ul li ::-webkit-input-placeholder {
-//   color: $form_input_placeholder_color;
-// }
-// .gform_wrapper ul li ::-moz-placeholder {
-//   color: $form_input_placeholder_color;
-// }
-// .gform_wrapper ul li :-moz-placeholder {
-//   color: $form_input_placeholder_color;
-// }
-// .gform_wrapper ul li :-ms-input-placeholder {
-//   color: $form_input_placeholder_color;
-// }
-// .gform_wrapper ul li ::-moz-placeholder {
-//   opacity: 1;
-// }
+.gform_wrapper ul li ::-webkit-input-placeholder {
+  color: $color_dark_one;
+}
+.gform_wrapper ul li ::-moz-placeholder {
+  color: $color_dark_one;
+}
+.gform_wrapper ul li :-moz-placeholder {
+  color: $color_dark_one;
+}
+.gform_wrapper ul li :-ms-input-placeholder {
+  color: $color_dark_one;
+}
+.gform_wrapper ul li ::-moz-placeholder {
+  opacity: 1;
+}
