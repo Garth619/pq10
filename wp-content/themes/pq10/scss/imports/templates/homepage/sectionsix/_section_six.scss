@@ -1,0 +1,14 @@
+#section_six {
+  background:$color_lite_two;
+}
+
+#sec_six_inner {
+  padding: 40px 25px 25px;
+  @include mq(small_tablet) {
+    padding: 70px 60px 85px;
+  }
+  @include mq(small_laptop) {
+    max-width: 950px;
+    @include margin_lr;
+  }
+}

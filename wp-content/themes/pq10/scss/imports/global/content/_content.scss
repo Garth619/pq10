@@ -18,6 +18,13 @@ h4 {
   @include mq(small_monitor) {
     @include quick_type(17px,30px,null);
   }
+  a {
+    color:$color_dark_two;
+    text-decoration:none;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
   h2 {
     padding-top:7px;
     padding-bottom: 25px;
@@ -56,7 +63,32 @@ h4 {
       )
     );
   }
-  p {
+  strong {
+    color:$color_dark_two;
+    font-weight:800;
+  }
+  ul,ol {
+    list-style: none;
+    li {
+      margin-bottom: 26px;
+    }
+  }
+  ul {
+    li {
+      position: relative;
+      padding-left:20px;
+      &:before {
+        content:"";
+        display:block;
+        border-radius:50%;
+        background:$color_dark_two;
+        top: 12px;
+        @include box(7px);
+        @include abs(13px,null,null,0);
+      }
+    }
+  }
+  p,ul,ol {
     margin-bottom:30px;
   }
 }

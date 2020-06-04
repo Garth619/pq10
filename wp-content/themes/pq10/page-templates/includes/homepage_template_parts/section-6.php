@@ -1,109 +1,35 @@
 <section id="section_six">
 	
-	<div class="sec_six_inner">
+	<div id="sec_six_inner" class="content">
 		
-		<div class="sec_six_left">
-			
-			<div class="sec_six_left_inner">
-				
-				<span><?php the_field( 'sec_six_title' ); ?></span>
-				
-				<a class="button" href="<?php the_field( 'view_all_button_page_link' ); ?>"><?php the_field( 'view_all_button_verbiage' ); ?></a>
-				
-			</div><!-- sec_six_left_inner -->
-			
-			<picture>
-
-				<?php 
-					$sec_six_image_background_webp_mobile = get_field( 'sec_six_image_background_webp_mobile' );
-					$sec_six_image_background_mobile = get_field( 'sec_six_image_background_mobile' );
-					$sec_six_image_background_webp_tablet = get_field( 'sec_six_image_background_webp_tablet' );
-					$sec_six_image_background_tablet = get_field( 'sec_six_image_background_tablet' );
-					$sec_six_image_background_webp_small_desktop = get_field( 'sec_six_image_background_webp_small_desktop' );
-					$sec_six_image_background_small_desktop = get_field( 'sec_six_image_background_small_desktop' );
-					$sec_six_image_background_large_desktop = get_field( 'sec_six_image_background_large_desktop' );
-					$sec_six_image_background_webp_large_desktop = get_field( 'sec_six_image_background_webp_large_desktop' );
-					$sec_six_image_background_webp_desktop = get_field( 'sec_six_image_background_webp_desktop' );
-					$sec_six_image_background_desktop = get_field( 'sec_six_image_background_desktop' );
-				?>
-				
-				<?php if($sec_six_image_background_webp_mobile) { ?>
-				
-					<source media="(max-width: 767px)" data-srcset="<?php echo $sec_six_image_background_webp_mobile['url']; ?>" type="image/webp">
-			
-				<?php } ?>
-				
-				<?php if($sec_six_image_background_mobile) { ?>
-				
-					<source media="(max-width: 767px)" data-srcset="<?php echo $sec_six_image_background_mobile['url']; ?>">
-				
-				<?php } ?>
-
-				<?php if($sec_six_image_background_webp_tablet) { ?>
-				
-					<source media="(max-width: 1180px)" data-srcset="<?php echo $sec_six_image_background_webp_tablet['url']; ?>" type="image/webp">
-			
-				<?php } ?>
-			
-				<?php if($sec_six_image_background_tablet) { ?>
-				
-					<source media="(max-width: 1180px)" data-srcset="<?php echo $sec_six_image_background_tablet['url']; ?>">
-				
-				<?php } ?>
-
-				<?php if($sec_six_image_background_webp_small_desktop) { ?>
-				
-					<source media="(max-width: 1270px)" data-srcset="<?php echo $sec_six_image_background_webp_small_desktop['url']; ?>" type="image/webp">
-			
-				<?php } ?>
-				
-				<?php if($sec_six_image_background_small_desktop) { ?>
-				
-					<source media="(max-width: 1270px)" data-srcset="<?php echo $sec_six_image_background_small_desktop['url']; ?>">
-				
-				<?php } ?>
-
-				<?php if($sec_six_image_background_webp_large_desktop) { ?>
-				
-					<source media="(max-width: 1450px)" data-srcset="<?php echo $sec_six_image_background_webp_large_desktop['url']; ?>" type="image/webp">
-			
-				<?php } ?>
-				
-				<?php if($sec_six_image_background_large_desktop) { ?>
-				
-					<source media="(max-width: 1450px)" data-srcset="<?php echo $sec_six_image_background_large_desktop['url']; ?>">
-				
-				<?php } ?>
-
-				<?php if($sec_six_image_background_webp_desktop) { ?>
-				
-					<source data-srcset="<?php echo $sec_six_image_background_webp_desktop['url']; ?>" type="image/webp">
-			
-				<?php } ?>
-				
-				<img class="lazyload" data-src="<?php echo $sec_six_image_background_desktop['url']; ?>" alt="<?php echo $sec_six_image_background_desktop['alt']; ?>" />
-			
-			</picture>
-			
-		</div><!-- sec_six_left -->
+		<div class='sec_six_col'>
 		
-		<div class="sec_six_right">
-			
-			<?php if(get_field('sec_six_practice_areas')): ?>
-				
-				<ul>
-			 
-				<?php while(has_sub_field('sec_six_practice_areas')): ?>
-			 
-					<li><a href="<?php the_sub_field( 'practice_area_page_link' ); ?>"><?php the_sub_field( 'practice_area_title' ); ?></a></li>		
-			    
-				<?php endwhile; ?>
-				
-				</ul>
-			 
-			<?php endif; ?>
-			
-		</div><!-- sec_six_right -->
+			<h2>We serve clients throughout Atlanta and the state of Georgia.</h2>
+
+			<p>Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		
+		<ul>
+		<li><strong>Lorem ipsum dolor -</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
+		<li><strong>Lorem ipsum dolor -</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
+		<li><strong>Lorem ipsum dolor -</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
+		<li><strong>Lorem ipsum dolor -</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+		</ul>
+
+		</div><!-- sec_six_col -->
+
+		<div class='sec_six_col'>
+		
+			<h2>Achieving the results our clients deserve</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+			<h3>WE CAN HELP YOU – LEARN HOW</h3>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		
+		</div><!-- sec_six_col -->
 		
 	</div><!-- sec_six_inner -->
 	
