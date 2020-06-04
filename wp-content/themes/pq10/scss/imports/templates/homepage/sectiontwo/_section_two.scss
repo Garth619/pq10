@@ -42,6 +42,11 @@
   @include mq(small_laptop) {
     display:none;
   }
+  svg#arrow {
+    path {
+      fill:$color_lite_one;
+    }
+  }
 }
 
 

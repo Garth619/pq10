@@ -180,6 +180,46 @@ $('#sec_two_slider').slick({
    }
 	]
  });
+
+
+
+ $('#sec_five_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+	slidesToScroll: 1,
+	mobileFirst:true,
+	arrows:true,
+	dots:false,
+	prevArrow:"#sec_five_arrow_left",
+	nextArrow:"#sec_five_arrow_right",
+	responsive: [
+    {
+      breakpoint: 530,
+      settings: {
+      slidesToShow: 2,
+			slidesToScroll: 2
+     }
+	 },
+	 {
+		breakpoint: 767,
+		settings: {
+		slidesToShow: 3,
+		slidesToScroll: 3
+	 }
+ },
+ {
+	breakpoint: 1020,
+	settings: {
+	slidesToShow: 4,
+	slidesToScroll: 4
+ }
+},
+   {
+      breakpoint: 1170,
+      settings: "unslick"
+   }
+	]
+ });
  
 
 

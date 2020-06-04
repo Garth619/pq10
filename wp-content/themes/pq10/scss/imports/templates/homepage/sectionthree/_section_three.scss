@@ -173,7 +173,7 @@ span.sec_three_att_subtitle {
     content: "";
     display: block;
     margin: 35px auto 0;
-    background: $color_lite_four;
+    background: $color_lite_three;
     @include box(200px, 1px);
     @include mq(small_laptop) {
       margin: 30px auto 0;

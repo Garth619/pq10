@@ -17,8 +17,11 @@
       @include box(65%, 100%);
       @include abs(0, null, null, 0);
     }
-    @include mq(large_laptop) {
+    @include mq(small_laptop) {
       width: 47%;
+    }
+    @include mq(large_laptop) {
+    
     }
     @include mq(small_monitor) {
       width:51%;
@@ -327,9 +330,9 @@ a.cr_button {
     flex-direction: column;
     position: relative;
     align-content: space-between;
-    border-left: 1px solid $color_lite_four;
-    @include mq(tablet) {
+   @include mq(tablet) {
       padding-left: 20px;
+      border-left: 1px solid $color_lite_three;
     }
   }
   .sec_four_result_wrapper {
@@ -408,6 +411,7 @@ a.cr_button {
 .sec_four_single_slide {
   &.three {
     span.sec_four_description {
+      max-width:250px;
       @include mq(small_laptop) {
         max-width:180px;
       }

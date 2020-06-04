@@ -41,6 +41,9 @@ $secondaryfont: georgia, serif !default;
 // $internal_xlarge_monitor: 1760px !default;
 
 $media_queries: (
+  mobile: (
+    breakpoint: "(min-width: #{$mobile})",
+  ),
   large_mobile: (
     breakpoint: "(min-width: #{$large_mobile})",
   ),
