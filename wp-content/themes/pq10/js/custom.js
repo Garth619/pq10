@@ -220,6 +220,19 @@ $('#sec_two_slider').slick({
    }
 	]
  });
+
+
+
+
+
+ $('#sec_seven_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+	slidesToScroll: 1,
+	adaptiveHeight:true,
+	arrows:false,
+	dots:true
+ });
  
 
 

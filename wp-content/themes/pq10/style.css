@@ -2956,6 +2956,11 @@ a.cr_button:hover {
   background: linear-gradient(to bottom, #006170 0%, #0b384a 50%, #0c3446 100%);
   padding: 60px 25px;
 }
+@media screen and (min-width: 768px) {
+  #section_seven {
+    padding: 67px 25px;
+  }
+}
 
 #section_seven_inner {
   text-align: center;
@@ -2963,14 +2968,24 @@ a.cr_button:hover {
   padding: 45px 20px;
   box-shadow: 0px 1px 40px #00000080;
 }
-#section_seven_inner svg#stars {
+@media screen and (min-width: 768px) {
+  #section_seven_inner {
+    padding: 81px 40px;
+  }
+}
+#section_seven_inner svg {
   width: 100%;
   max-width: 115px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-#section_seven_inner svg#stars path {
+@media screen and (min-width: 768px) {
+  #section_seven_inner svg {
+    max-width: 145px;
+  }
+}
+#section_seven_inner svg path {
   fill: #e11022;
 }
 
@@ -2986,25 +3001,46 @@ span.sec_seven_title {
   font-style: normal;
   text-decoration: none;
 }
-
-span.sec_seven_name {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 1.4px;
-  font-family: "Open Sans", sans-serif;
-  color: #08161E;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-style: normal;
-  text-decoration: none;
+@media screen and (min-width: 768px) {
+  span.sec_seven_title {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
 }
-span.sec_seven_name:before {
-  content: "";
-  display: block;
-  margin: 25px auto 22px;
-  background: #e11022;
-  width: 54px;
-  height: 2px;
+
+@media screen and (min-width: 768px) {
+  #sec_seven_slider {
+    max-width: 545px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#sec_seven_slider .slick-dots {
+  bottom: -80px;
+}
+@media screen and (min-width: 768px) {
+  #sec_seven_slider .slick-dots {
+    bottom: -120px;
+  }
+}
+#sec_seven_slider .slick-dots li.slick-active button:before {
+  color: #04b1b4;
+}
+#sec_seven_slider .slick-dots li:hover button:before {
+  color: #04b1b4;
+}
+#sec_seven_slider .slick-dots li {
+  margin: 0 4px;
+  width: 16px;
+}
+#sec_seven_slider .slick-dots li button {
+  width: 16px;
+}
+#sec_seven_slider .slick-dots li button:before {
+  width: 16px;
+  opacity: 1;
+  color: #fff;
+  font-size: 25px;
 }
 
 span.sec_seven_desc {
@@ -3018,4 +3054,57 @@ span.sec_seven_desc {
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  span.sec_seven_desc {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+  }
+}
+
+.sec_seven_content {
+  margin-top: 10px;
+  display: none;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "Open Sans", sans-serif;
+  color: #08161E;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .sec_seven_content {
+    display: block;
+  }
+}
+.sec_seven_content p {
+  margin-bottom: 20px;
+}
+
+span.sec_seven_name {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  font-family: "Open Sans", sans-serif;
+  color: #08161E;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  span.sec_seven_name {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+}
+span.sec_seven_name:before {
+  content: "";
+  display: block;
+  margin: 25px auto 22px;
+  background: #e11022;
+  width: 54px;
+  height: 2px;
 }

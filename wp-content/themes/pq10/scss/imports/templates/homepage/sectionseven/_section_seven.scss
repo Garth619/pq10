@@ -1,6 +1,9 @@
 #section_seven {
   background:$color_gradient_two;
   padding: 60px 25px;
+  @include mq(small_tablet) {
+    padding: 67px 25px;
+  }
 }
 
 
@@ -9,11 +12,17 @@
   background:$color_lite_one;
   padding: 45px 20px;
   box-shadow: 0px 1px 40px #00000080;
-  svg#stars {
+  @include mq(small_tablet) {
+    padding: 81px 40px;
+  }
+  svg {
     width:100%;
     max-width:115px;
     display: block;
     @include margin_lr;
+    @include mq(small_tablet) {
+      max-width:145px;
+    }
     path {
       fill:$color_bright_one;
     }
@@ -33,33 +42,52 @@ span.sec_seven_title {
       transform: uppercase 
     )
   );
-}
-
-
-span.sec_seven_name {
-  display:block;
-  @include type (
-    (
-      size: 14px,
-      spacing: 1.4px,
-      family: $primaryfont,
-      color: $color_dark_three,
-      weight: 800,
-      transform: uppercase
-    )
-  );
-  &:before {
-    content:"";
-    display:block; 
-    margin:25px auto 22px;
-    background:$color_bright_one;
-    @include box(54px,2px);
+  @include mq(small_tablet) {
+    @include quick_type(15px,null,3px);
   }
 }
 
 
+
+
 #sec_seven_slider {
-  
+  @include mq(small_tablet) {
+    max-width:545px;
+    @include margin_lr;
+  }
+  .slick-dots {
+    bottom:-80px;
+    @include mq(small_tablet) {
+      bottom:-120px;
+    }
+    li.slick-active {
+      button {
+        &:before {
+          color:$color_bright_two;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color:$color_bright_two;
+        }
+      }
+    }
+    li {
+      margin:0 4px;
+      width:16px;
+      button {
+      width:16px;
+        &:before {
+          width:16px;
+          opacity:1;
+          color:$color_lite_one;
+          font-size:25px;
+        }
+      }
+    }
+  }
 }
 
 
@@ -81,4 +109,51 @@ span.sec_seven_desc {
       weight: 700 
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(30px,40px,0.3px);
+  }
+}
+
+
+.sec_seven_content {
+  margin-top: 10px;
+  display: none;
+  @include mq(small_tablet) {
+    display:block;
+  }
+  @include type (
+    (
+      size: 16px,
+      height: 30px,
+      family: $primaryfont,
+      color: $color_dark_three
+    )
+  );
+  p {
+    margin-bottom:20px;
+  }
+}
+
+span.sec_seven_name {
+  display:block;
+  @include type (
+    (
+      size: 14px,
+      spacing: 1.4px,
+      family: $primaryfont,
+      color: $color_dark_three,
+      weight: 800,
+      transform: uppercase
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(15px,null,3px);
+  }
+  &:before {
+    content:"";
+    display:block; 
+    margin:25px auto 22px;
+    background:$color_bright_one;
+    @include box(54px,2px);
+  }
 }
