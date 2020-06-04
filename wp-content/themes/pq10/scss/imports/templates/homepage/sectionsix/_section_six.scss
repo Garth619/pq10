@@ -11,4 +11,20 @@
     max-width: 950px;
     @include margin_lr;
   }
+  @include mq(large_laptop) {
+    max-width: 1315px;
+    padding: 105px 60px 85px;
+    @include flex(space-between,null);
+  }
+  @include mq(small_monitor) {
+    max-width: 1565px;
+    padding: 130px 60px 120px;
+  }
 }
+
+
+.sec_six_col {
+  flex-basis:45%;
+}
+
+
