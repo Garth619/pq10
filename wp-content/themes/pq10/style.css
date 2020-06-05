@@ -1497,15 +1497,25 @@ footer {
 #footer_form_wrapper {
   background: #f3f4f6;
 }
+
 @media screen and (min-width: 1170px) {
-  #footer_form_wrapper {
+  #footer_form_inner {
     padding: 0 75px 90px;
     display: flex;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1380px) {
-  #footer_form_wrapper {
+  #footer_form_inner {
     padding: 0 100px 90px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #footer_form_inner {
+    padding: 0 180px 90px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1524,12 +1534,13 @@ footer {
 @media screen and (min-width: 1170px) {
   #footer_form_left {
     text-align: left;
+    margin: 0;
     padding: 111px 70px 180px 0;
   }
 }
 @media screen and (min-width: 1380px) {
   #footer_form_left {
-    padding: 122px 70px 180px 0;
+    padding: 156px 70px 180px 0;
   }
 }
 
@@ -1562,6 +1573,12 @@ span#footer_form_title {
     line-height: 70px;
   }
 }
+@media screen and (min-width: 1695px) {
+  span#footer_form_title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
 span#footer_form_title:after {
   content: "";
   display: block;
@@ -1579,6 +1596,11 @@ span#footer_form_title:after {
 @media screen and (min-width: 1380px) {
   span#footer_form_title:after {
     margin-top: 49px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  span#footer_form_title:after {
+    margin-top: 55px;
   }
 }
 span#footer_form_title br {
@@ -1703,6 +1725,12 @@ span#required {
     flex-basis: 539px;
   }
 }
+@media screen and (min-width: 1695px) {
+  #footer_form_right {
+    margin-top: 133px;
+    flex-basis: 719px;
+  }
+}
 #footer_form_right .gform_wrapper {
   margin-top: 20px;
 }
@@ -1773,6 +1801,11 @@ span#required {
     float: right;
   }
 }
+@media screen and (min-width: 1695px) {
+  #footer_form_right .gform_wrapper .gform_footer {
+    margin-top: 50px;
+  }
+}
 #footer_form_right .gform_wrapper .gform_footer:hover:after {
   opacity: 1;
 }
@@ -1808,6 +1841,12 @@ span#required {
   text-transform: uppercase;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 1695px) {
+  #footer_form_right .gform_wrapper .gform_footer input[type=submit] {
+    font-size: 18px;
+    padding: 23px 30px;
+  }
 }
 #footer_form_right .gform_wrapper .gfield_description,
 #footer_form_right .gform_wrapper .validation_message {

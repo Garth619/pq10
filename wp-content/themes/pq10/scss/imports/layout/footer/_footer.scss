@@ -2,16 +2,28 @@ footer {
   text-align: center;
 }
 
+
 #footer_form_wrapper {
   background: $color_lite_two;
+}
+
+#footer_form_inner {
+  
   @include mq(small_laptop) {
     padding: 0 75px 90px;
-    @include flex();
+    @include flex(space-between);
   }
   @include mq(large_laptop) {
     padding: 0 100px 90px;
   }
+  @include mq(small_monitor) {
+    padding: 0 180px 90px;
+    max-width:1920px;
+    @include margin_lr;
+  }
 }
+
+
 
 #footer_form_left {
   padding: 55px 25px 150px;
@@ -23,10 +35,11 @@ footer {
   }
   @include mq(small_laptop) {
     text-align: left;
+    margin:0;
     padding: 111px 70px 180px 0;
   }
   @include mq(large_laptop) {
-    padding: 122px 70px 180px 0;
+    padding: 156px 70px 180px 0;
   }
 }
 
@@ -51,6 +64,9 @@ span#footer_form_title {
   @include mq(large_laptop) {
     @include quick_type(70px, 70px, null);
   }
+  @include mq(small_monitor) {
+    @include quick_type(80px, 80px, null);
+  }
   &:after {
     content: "";
     display: block;
@@ -63,6 +79,9 @@ span#footer_form_title {
     }
     @include mq(large_laptop) {
       margin-top: 49px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 55px;
     }
   }
   br {
@@ -168,6 +187,10 @@ span#required {
   @include mq(large_laptop) {
     flex-basis:539px;
   }
+  @include mq(small_monitor) {
+    margin-top: 133px;
+    flex-basis:719px;
+  }
   .gform_wrapper {
     margin-top: 20px;
     ul {
@@ -225,6 +248,9 @@ span#required {
       @include mq(small_laptop) {
         float: right;
       }
+      @include mq(small_monitor) {
+        margin-top: 50px;
+      }
       &:hover {
         &:after {
           opacity: 1;
@@ -262,6 +288,10 @@ span#required {
             transform: uppercase,
           )
         );
+        @include mq(small_monitor) {
+          font-size: 18px;
+          padding: 23px 30px;
+        }
       }
     }
     .gfield_description,
