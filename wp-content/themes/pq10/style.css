@@ -1498,21 +1498,29 @@ footer {
   background: #f3f4f6;
 }
 
+#footer_form_inner {
+  padding-bottom: 150px;
+}
+@media screen and (min-width: 768px) {
+  #footer_form_inner {
+    padding-bottom: 180px;
+  }
+}
 @media screen and (min-width: 1170px) {
   #footer_form_inner {
-    padding: 0 75px 90px;
+    padding: 0 75px 120px;
     display: flex;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 1380px) {
   #footer_form_inner {
-    padding: 0 100px 90px;
+    padding: 0 100px 120px;
   }
 }
 @media screen and (min-width: 1695px) {
   #footer_form_inner {
-    padding: 0 180px 90px;
+    padding: 0 180px 120px;
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
@@ -1520,7 +1528,7 @@ footer {
 }
 
 #footer_form_left {
-  padding: 55px 25px 150px;
+  padding: 55px 25px 0px;
   max-width: 580px;
   margin-left: auto;
   margin-right: auto;
@@ -1528,19 +1536,24 @@ footer {
 @media screen and (min-width: 768px) {
   #footer_form_left {
     max-width: 700px;
-    padding: 55px 25px 180px;
+    padding: 55px 25px 0px;
   }
 }
 @media screen and (min-width: 1170px) {
   #footer_form_left {
     text-align: left;
     margin: 0;
-    padding: 111px 70px 180px 0;
+    padding: 111px 70px 0px 0;
   }
 }
 @media screen and (min-width: 1380px) {
   #footer_form_left {
-    padding: 156px 70px 180px 0;
+    padding: 156px 70px 0px 0;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #footer_form_left {
+    padding: 55px 25px 150px;
   }
 }
 
@@ -1674,6 +1687,11 @@ span#schedule {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  span#schedule {
+    margin-top: 65px;
+  }
+}
 
 span#required {
   display: block;
@@ -1718,7 +1736,21 @@ span#required {
 #footer_form_right {
   flex-basis: 509px;
   flex-shrink: 0;
-  margin-top: 80px;
+  padding: 0 25px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  #footer_form_right {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #footer_form_right {
+    padding-bottom: 0;
+    margin-top: 80px;
+  }
 }
 @media screen and (min-width: 1380px) {
   #footer_form_right {
@@ -1781,9 +1813,11 @@ span#required {
 #footer_form_right .gform_wrapper ul li textarea {
   height: 166px;
 }
-#footer_form_right .gform_wrapper ul li#field_1_1,
+@media screen and (min-width: 768px) {
+  #footer_form_right .gform_wrapper ul li#field_1_1,
 #footer_form_right .gform_wrapper ul li#field_1_2 {
-  width: 49%;
+    width: 49%;
+  }
 }
 #footer_form_right .gform_wrapper .gform_footer {
   display: inline-block;
@@ -1859,6 +1893,13 @@ span#required {
   text-transform: uppercase;
   font-style: normal;
   text-decoration: none;
+}
+
+#footer_bottom {
+  background: linear-gradient(to bottom, #006170 0%, #0b384a 50%, #0c3446 100%);
+  width: 100%;
+  height: 3000px;
+  display: none;
 }
 
 #section_one {

@@ -35,14 +35,41 @@
 
 	</div><!-- footer_form_wrapper -->
 
-</footer><!-- consultation -->
-		
+	<div id='footer_bottom'>
 	
-		
-
-					<?php //echo file_get_contents( get_template_directory() . "/images/footer-01.svg" ) ?>
-					
+		<div class='locations'>
+	
+			<div class='loc_col'>
 			
+				
+			
+			</div><!-- loc_col -->
+
+			<div class='loc_col'>
+			
+				
+			
+			</div><!-- loc_col -->
+
+			<div class='loc_col'>
+			
+				
+			
+			</div><!-- loc_col -->
+
+		</div><!-- locations -->
+
+		<div id='copyright'>
+	
+			<div id='copyright_inner'>
+		
+			</div><!-- copyright_inner -->
+	
+		</div><!-- copyright -->
+
+	</div><!-- footer_bottom -->
+
+</footer>
 
 <?php wp_footer();?>
 
