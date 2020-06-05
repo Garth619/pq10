@@ -10,6 +10,8 @@
 				
 				</div><!-- loc_row -->
 
+				<span class='loc_row_divider'></span><!-- loc_row_divider -->
+
 				<div class='loc_row'>
 				
 					<span class='locations_title'>Local</span><!-- locations_title -->

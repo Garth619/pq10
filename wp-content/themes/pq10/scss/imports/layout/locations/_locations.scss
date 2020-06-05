@@ -1,44 +1,70 @@
-
 .locations {
-  max-width:310px;
-  padding-bottom: 50px;
-  border-bottom:2px solid $color_lite_four;
+  max-width: 310px;
+  padding-bottom: 55px;
   @include margin_lr;
+  @include mq(small_tablet) {
+    padding-bottom: 48px;
+    max-width: 100%;
+  }
+  @include mq(small_laptop) {
+    padding-bottom: 5px;
+    @include flex(space-between);
+  }
 }
 
 .loc_col {
-  margin-bottom:70px;
-  &:nth-of-type(2), &:nth-of-type(3) {
+  margin-bottom: 70px;
+  &:nth-of-type(1) {
+    order: 2;
+    margin-top: 35px;
+    flex-basis:294px;
+    span.locations_title {
+      position: relative;
+      top:-2px;
+    }
+  }
+  &:nth-of-type(2) {
+    order: 1;
+  }
+  &:nth-of-type(3) {
+    order: 3;
+    margin-top:20px;
+  }
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
     span.locations_title {
       &:after {
-        content:"";
+        content: "";
         display: block;
-        background:$color_bright_two;
-        margin:25px auto 22px;
-        @include box(74px,2px);
+        background: $color_bright_two;
+        margin: 25px auto 22px;
+        @include box(74px, 2px);
       }
     }
   }
   &:last-of-type {
-    margin-bottom:0px;
+    margin-bottom: 0px;
   }
 }
 
-
-
 .loc_row {
-  &:after {
-    content: "";
-    display: block;
-    width: 168px;
-    height: 2px;
-    background: $color_bright_two;
-    margin: 25px auto 35px;
-  }
-  &:last-of-type {
-    &:after {
-      display: none;
+  @include mq(small_laptop) {
+    margin-bottom: 34px;
+    @include flex(space-between, flex-end);
+    &:last-of-type {
+      margin-bottom: 0px;
     }
+  }
+}
+
+span.loc_row_divider {
+  display: block;
+  width: 168px;
+  height: 2px;
+  background: $color_bright_two;
+  margin: 25px auto 27px;
+  @include mq(small_laptop) {
+    width: 100%;
   }
 }
 
@@ -59,6 +85,7 @@ span.locations_title {
 a.locations_phone {
   display: inline-block;
   margin-top: 8px;
+  transition: all 150ms ease-in-out;
   @include type(
     (
       size: 25px,
@@ -68,60 +95,65 @@ a.locations_phone {
       weight: 700,
     )
   );
+  &:hover {
+    color:$color_bright_two;
+  }
 }
 
 span.locations_address {
-  display:block;
-  @include type (
+  display: block;
+  @include type(
     (
       size: 18px,
       spacing: 1.62px,
       height: 22px,
       family: $primaryfont,
       color: $color_lite_one,
-      weight: 700
+      weight: 700,
     )
   );
 }
 
-
 a.get_directions {
   display: inline-block;
-  margin-top:27px;
+  margin-top: 27px;
   border-radius: 6px;
-  padding:10px 13px;
-  border:2px solid $color_bright_two;
+  padding: 10px 13px;
+  border: 2px solid $color_bright_two;
   transition: all 150ms ease-in-out;
-  @include type (
+  @include type(
     (
       size: 13px,
       spacing: 2.6px,
       family: $primaryfont,
       color: $color_lite_one,
       weight: 700,
-      transform: uppercase
+      transform: uppercase,
     )
   );
   &:hover {
-    background:$color_bright_two;
+    background: $color_bright_two;
   }
 }
 
-
-
 .social_media {
+  margin-top:35px;
   a {
-    text-decoration:none;
+    text-decoration: none;
+    margin:0 2px;
     svg {
+      @include mq(small_laptop) {
+        @include box(63px);
+      }
       path {
-        fill:$color_dark_one;
+        fill: $color_dark_one;
       }
     }
     &:hover {
       svg {
         path {
-          fill:$color_bright_one;
-          transition:all 150ms ease-in-out;
+          fill: $color_bright_one;
+          transition: all 150ms ease-in-out;
         }
       }
     }
