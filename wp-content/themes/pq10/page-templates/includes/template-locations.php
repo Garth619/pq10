@@ -6,7 +6,7 @@
 				
 					<span class='locations_title'>Toll Free</span><!-- locations_title -->
 
-					<a class='locations_phone' href='tel:4129442036'>412.944.2036</a><!-- locations_phone -->
+					<a class='locations_phone' href='tel:4129442036'>(877) 938-2300</a><!-- locations_phone -->
 				
 				</div><!-- loc_row -->
 
@@ -16,7 +16,7 @@
 				
 					<span class='locations_title'>Local</span><!-- locations_title -->
 
-					<a class='locations_phone' href='tel:8663043277'>866.304.3277</a><!-- locations_phone -->
+					<a class='locations_phone' href='tel:8663043277'>(404) 233-6200</a><!-- locations_phone -->
 				
 				</div><!-- loc_row -->
 			

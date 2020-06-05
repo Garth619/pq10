@@ -10,6 +10,9 @@
     padding-bottom: 5px;
     @include flex(space-between);
   }
+  @include mq(large_laptop) {
+    padding-bottom: 35px;
+  }
 }
 
 .loc_col {
@@ -17,7 +20,7 @@
   &:nth-of-type(1) {
     order: 2;
     margin-top: 35px;
-    flex-basis:294px;
+    flex-basis: 324px;
     span.locations_title {
       position: relative;
       top:-2px;
@@ -28,7 +31,7 @@
   }
   &:nth-of-type(3) {
     order: 3;
-    margin-top:20px;
+    margin-top: 25px;
   }
   &:nth-of-type(2),
   &:nth-of-type(3) {
@@ -112,6 +115,9 @@ span.locations_address {
       weight: 700,
     )
   );
+  @include mq(large_laptop) {
+    @include quick_type(20px,25px,1.8px);
+  }
 }
 
 a.get_directions {

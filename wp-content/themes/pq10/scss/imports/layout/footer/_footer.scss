@@ -348,6 +348,9 @@ span#required {
   @include mq(small_laptop) {
     padding: 69px 75px 30px;
   }
+  @include mq(large_laptop) {
+    padding: 95px 75px 30px;
+  }
 }
 
 
@@ -364,6 +367,10 @@ span#required {
     padding-left:35px;
     padding-right:35px;
     width:100vw;
+  }
+  @include mq(large_laptop) {
+    padding-left:50px;
+    padding-right:50px;
   }
 }
 
