@@ -4,6 +4,10 @@ footer {
 
 #footer_form_wrapper {
   background: $color_lite_two;
+  @include mq(small_laptop) {
+    padding: 0 75px 90px;
+    @include flex();
+  }
   .gform_wrapper {
     margin-top: 20px;
     ul {
@@ -57,6 +61,9 @@ footer {
       margin-top: 39px;
       @include mq(small_tablet) {
         margin-top: 25px;
+      }
+      @include mq(small_laptop) {
+        float:right;
       }
       &:hover {
         &:after {
@@ -122,6 +129,10 @@ footer {
     max-width: 700px;
     padding: 55px 25px 180px;
   }
+  @include mq(small_laptop) {
+    text-align:left;
+    padding: 111px 70px 180px 0;
+  }
 }
 
 span#footer_form_title {
@@ -139,17 +150,27 @@ span#footer_form_title {
   @include mq(small_tablet) {
     @include quick_type(60px,70px,null);
   }
+  @include mq(small_tablet) {
+    @include quick_type(60px,65px,null);
+  }
   &:after {
     content: "";
     display: block;
     background: $color_bright_one;
     margin-top: 25px;
     @include box(100%, 2px);
+    @include mq(small_laptop) {
+      margin-top: 36px;
+      width:228px;
+    }
   }
   br {
     display: none;
     @include mq(small_tablet) {
       display:inline-block;
+    }
+    @include mq(small_laptop) {
+      display:none;
     }
   }
 }
@@ -169,6 +190,9 @@ span#footer_form_title {
     margin: 31px auto 0;
     @include quick_type(22px,30px,0px);
   }
+  @include mq(small_laptop) {
+    @include quick_type(20px,30px,0px);
+  }
   a {
     color: $color_dark_two;
     text-decoration: none;
@@ -184,7 +208,7 @@ span#footer_form_title {
 
 span#schedule {
   display: block;
-  margin-top: 65px;
+  margin-top: 35px;
   @include type(
     (
       size: 16px,
@@ -205,6 +229,9 @@ span#required {
   @include mq(small_tablet) {
     margin-top: -89px;
   }
+  @include mq(small_laptop) {
+    margin-top: -3px;
+  }
   @include type (
     (
       size: 13px,
@@ -220,4 +247,12 @@ span#required {
     text-align: left;
     font-size:12px;
   }
+}
+
+
+
+#footer_form_right {
+  flex-basis:509px;
+  flex-shrink:0;
+  margin-top: 80px;
 }

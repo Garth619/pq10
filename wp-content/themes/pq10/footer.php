@@ -15,6 +15,8 @@
 				</div><!-- footer_desc -->
 
 				<span id='schedule'>Schedule Your Free Consultation Today</span><!-- schedule -->
+
+				</div><!-- footer_form_inner -->
 		
 			</div><!-- footer_form_left -->
 
@@ -26,7 +28,7 @@
 		
 			</div><!-- footer_form_right -->
 		
-		</div><!-- footer_form_inner -->
+	
 	
 	</div><!-- footer_form_wrapper -->
 
