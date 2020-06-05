@@ -42,7 +42,20 @@
 		<div id='copyright'>
 	
 			<div id='copyright_inner'>
-		
+
+				<ul>
+					<li>&copy; <?php echo date('Y'); ?> Hilley & Frieder, P.C.</li>
+					<li><a href="">All Rights Reserved</a></li>
+					<li><a href="">Disclaimer</a></li>
+					<li><a href="">Site Map</a></li>
+				</ul>
+
+				<a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
+				
+					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-01.svg' ) ?>
+				
+				</a><!-- ilawyer -->
+
 			</div><!-- copyright_inner -->
 	
 		</div><!-- copyright -->

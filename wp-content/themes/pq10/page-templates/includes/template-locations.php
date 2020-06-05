@@ -38,25 +38,25 @@
 			
 				<a class='sm tw' href='<?php bloginfo('bloginfo');?>/href'>
 				
-
+					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-tw.svg' ) ?>
 
 				</a><!-- sm tw -->
 
 				<a class='sm li' href='<?php bloginfo('bloginfo');?>/href'>
 				
+					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-li.svg' ) ?>
 				
-
 				</a><!-- sm li -->
 
 				<a class='sm yelp' href='<?php bloginfo('bloginfo');?>/href'>
 				
-				
+				<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-yelp.svg' ) ?>
 
 				</a><!-- sm yelp -->
 
 				<a class='sm fb' href='<?php bloginfo('bloginfo');?>/href'>
 				
-				
+					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-fb.svg' ) ?>
 
 				</a><!-- sm fb -->
 			

@@ -1,4 +1,11 @@
 
+.locations {
+  max-width:310px;
+  padding-bottom: 50px;
+  border-bottom:2px solid $color_lite_four;
+  @include margin_lr;
+}
+
 .loc_col {
   margin-bottom:70px;
   &:nth-of-type(2), &:nth-of-type(3) {
@@ -97,5 +104,26 @@ a.get_directions {
   );
   &:hover {
     background:$color_bright_two;
+  }
+}
+
+
+
+.social_media {
+  a {
+    text-decoration:none;
+    svg {
+      path {
+        fill:$color_dark_one;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill:$color_bright_one;
+          transition:all 150ms ease-in-out;
+        }
+      }
+    }
   }
 }
