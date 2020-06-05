@@ -6,7 +6,7 @@
 		
 			<div id='footer_form_inner'>
 		
-				<span id='footer_form_title'>Request a free consultation</span><!-- footer_form_title -->
+				<span id='footer_form_title'>Request a<br/> free consultation</span><!-- footer_form_title -->
 
 				<div id='footer_desc'>
 			

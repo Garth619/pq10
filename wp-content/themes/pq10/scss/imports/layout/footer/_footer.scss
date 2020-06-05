@@ -4,12 +4,14 @@ footer {
 
 #footer_form_wrapper {
   background: $color_lite_two;
-  padding: 55px 25px 150px;
   .gform_wrapper {
     margin-top: 20px;
     ul {
       list-style: none;
       text-align: left;
+      @include mq(small_tablet) {
+        @include flex(space-between,null,null,wrap);
+      }
       li {
         width: 100%;
         label {
@@ -32,6 +34,9 @@ footer {
               color: $color_dark_one,
             )
           );
+          @include mq(small_tablet) {
+            padding: 24px 20px;
+          }
           &:focus {
             border: 2px solid $color_bright_two;
           }
@@ -40,12 +45,19 @@ footer {
           height: 166px;
         }
       }
+      li#field_1_1, li#field_1_2 {
+        //flex-basis:47%;
+        width:49%;
+      }
     }
     .gform_footer {
       display: inline-block;
       position: relative;
       z-index:1;
       margin-top: 39px;
+      @include mq(small_tablet) {
+        margin-top: 25px;
+      }
       &:hover {
         &:after {
           opacity: 1;
@@ -101,6 +113,17 @@ footer {
   }
 }
 
+
+#footer_form_left {
+  padding: 55px 25px 150px;
+  max-width: 580px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 700px;
+    padding: 55px 25px 180px;
+  }
+}
+
 span#footer_form_title {
   display: block;
   @include type(
@@ -113,12 +136,21 @@ span#footer_form_title {
       weight: 700,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(60px,70px,null);
+  }
   &:after {
     content: "";
     display: block;
     background: $color_bright_one;
     margin-top: 25px;
     @include box(100%, 2px);
+  }
+  br {
+    display: none;
+    @include mq(small_tablet) {
+      display:inline-block;
+    }
   }
 }
 
@@ -132,6 +164,11 @@ span#footer_form_title {
       color: $color_dark_two,
     )
   );
+  @include mq(small_tablet) {
+    // max-width:645px;
+    margin: 31px auto 0;
+    @include quick_type(22px,30px,0px);
+  }
   a {
     color: $color_dark_two;
     text-decoration: none;
@@ -147,7 +184,7 @@ span#footer_form_title {
 
 span#schedule {
   display: block;
-  margin-top: 35px;
+  margin-top: 65px;
   @include type(
     (
       size: 16px,
@@ -165,6 +202,9 @@ span#schedule {
 span#required {
   display: block;
   margin-top: -98px;
+  @include mq(small_tablet) {
+    margin-top: -89px;
+  }
   @include type (
     (
       size: 13px,
@@ -176,4 +216,8 @@ span#required {
       transform: uppercase 
     )
   );
+  @include mq(small_tablet) {
+    text-align: left;
+    font-size:12px;
+  }
 }
