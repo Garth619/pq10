@@ -8,13 +8,173 @@ footer {
     padding: 0 75px 90px;
     @include flex();
   }
+  @include mq(large_laptop) {
+    padding: 0 100px 90px;
+  }
+}
+
+#footer_form_left {
+  padding: 55px 25px 150px;
+  max-width: 580px;
+  @include margin_lr;
+  @include mq(small_tablet) {
+    max-width: 700px;
+    padding: 55px 25px 180px;
+  }
+  @include mq(small_laptop) {
+    text-align: left;
+    padding: 111px 70px 180px 0;
+  }
+  @include mq(large_laptop) {
+    padding: 122px 70px 180px 0;
+  }
+}
+
+span#footer_form_title {
+  display: block;
+  @include type(
+    (
+      size: 36px,
+      spacing: 0.9px,
+      height: 42px,
+      family: $secondaryfont,
+      color: $color_dark_one,
+      weight: 700,
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(60px, 70px, null);
+  }
+  @include mq(small_laptop) {
+    @include quick_type(60px, 65px, null);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(70px, 70px, null);
+  }
+  &:after {
+    content: "";
+    display: block;
+    background: $color_bright_one;
+    margin-top: 25px;
+    @include box(100%, 2px);
+    @include mq(small_laptop) {
+      margin-top: 36px;
+      width: 228px;
+    }
+    @include mq(large_laptop) {
+      margin-top: 49px;
+    }
+  }
+  br {
+    display: none;
+    @include mq(small_tablet) {
+      display: inline-block;
+    }
+    @include mq(small_laptop) {
+      display: none;
+    }
+    @include mq(large_laptop) {
+      
+    }
+  }
+}
+
+#footer_desc {
+  margin: 25px 0 0;
+  @include type(
+    (
+      size: 18px,
+      height: 28px,
+      family: $primaryfont,
+      color: $color_dark_two,
+    )
+  );
+  @include mq(small_tablet) {
+    margin: 31px auto 0;
+    @include quick_type(22px, 30px, 0px);
+  }
+  @include mq(small_laptop) {
+    @include quick_type(20px, 30px, 0px);
+  }
+  @include mq(large_laptop) {
+    margin: 42px auto 0;
+    @include quick_type(22px, 30px, 0px);
+  }
+  a {
+    color: $color_dark_two;
+    text-decoration: none;
+    font-weight: 800;
+  }
+  p {
+    margin-bottom: 25px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+span#schedule {
+  display: block;
+  margin-top: 35px;
+  @include type(
+    (
+      size: 16px,
+      spacing: 1.44px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color_bright_one,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+}
+
+span#required {
+  display: block;
+  margin-top: -98px;
+  @include mq(small_tablet) {
+    margin-top: -89px;
+  }
+  @include mq(small_laptop) {
+    margin-top: -3px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 8px;
+  }
+  @include type(
+    (
+      size: 13px,
+      spacing: 2.6px,
+      family: $primaryfont,
+      color: $color_dark_one,
+      weight: 600,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    text-align: left;
+    font-size: 12px;
+  }
+  @include mq(large_laptop) {
+    font-size: 14px;
+  }
+}
+
+#footer_form_right {
+  flex-basis: 509px;
+  flex-shrink: 0;
+  margin-top: 80px;
+  @include mq(large_laptop) {
+    flex-basis:539px;
+  }
   .gform_wrapper {
     margin-top: 20px;
     ul {
       list-style: none;
       text-align: left;
       @include mq(small_tablet) {
-        @include flex(space-between,null,null,wrap);
+        @include flex(space-between, null, null, wrap);
       }
       li {
         width: 100%;
@@ -49,21 +209,21 @@ footer {
           height: 166px;
         }
       }
-      li#field_1_1, li#field_1_2 {
-        //flex-basis:47%;
-        width:49%;
+      li#field_1_1,
+      li#field_1_2 {
+        width: 49%;
       }
     }
     .gform_footer {
       display: inline-block;
       position: relative;
-      z-index:1;
+      z-index: 1;
       margin-top: 39px;
       @include mq(small_tablet) {
         margin-top: 25px;
       }
       @include mq(small_laptop) {
-        float:right;
+        float: right;
       }
       &:hover {
         &:after {
@@ -104,155 +264,19 @@ footer {
         );
       }
     }
-    .gfield_description, .validation_message {
-      margin-bottom:15px;
+    .gfield_description,
+    .validation_message {
+      margin-bottom: 15px;
       @include type(
-          (
-            size: 12px,
-            spacing: 2px,
-            family: $primaryfont,
-            color: $color_bright_two,
-            weight: 800,
-            transform: uppercase,
-          )
-        );
+        (
+          size: 12px,
+          spacing: 2px,
+          family: $primaryfont,
+          color: $color_bright_two,
+          weight: 800,
+          transform: uppercase,
+        )
+      );
     }
   }
-}
-
-
-#footer_form_left {
-  padding: 55px 25px 150px;
-  max-width: 580px;
-  @include margin_lr;
-  @include mq(small_tablet) {
-    max-width: 700px;
-    padding: 55px 25px 180px;
-  }
-  @include mq(small_laptop) {
-    text-align:left;
-    padding: 111px 70px 180px 0;
-  }
-}
-
-span#footer_form_title {
-  display: block;
-  @include type(
-    (
-      size: 36px,
-      spacing: 0.9px,
-      height: 42px,
-      family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 700,
-    )
-  );
-  @include mq(small_tablet) {
-    @include quick_type(60px,70px,null);
-  }
-  @include mq(small_tablet) {
-    @include quick_type(60px,65px,null);
-  }
-  &:after {
-    content: "";
-    display: block;
-    background: $color_bright_one;
-    margin-top: 25px;
-    @include box(100%, 2px);
-    @include mq(small_laptop) {
-      margin-top: 36px;
-      width:228px;
-    }
-  }
-  br {
-    display: none;
-    @include mq(small_tablet) {
-      display:inline-block;
-    }
-    @include mq(small_laptop) {
-      display:none;
-    }
-  }
-}
-
-#footer_desc {
-  margin: 25px 0 0;
-  @include type(
-    (
-      size: 18px,
-      height: 28px,
-      family: $primaryfont,
-      color: $color_dark_two,
-    )
-  );
-  @include mq(small_tablet) {
-    // max-width:645px;
-    margin: 31px auto 0;
-    @include quick_type(22px,30px,0px);
-  }
-  @include mq(small_laptop) {
-    @include quick_type(20px,30px,0px);
-  }
-  a {
-    color: $color_dark_two;
-    text-decoration: none;
-    font-weight: 800;
-  }
-  p {
-    margin-bottom: 25px;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-}
-
-span#schedule {
-  display: block;
-  margin-top: 35px;
-  @include type(
-    (
-      size: 16px,
-      spacing: 1.44px,
-      height: 25px,
-      family: $primaryfont,
-      color: $color_bright_one,
-      weight: 800,
-      transform: uppercase,
-    )
-  );
-}
-
-
-span#required {
-  display: block;
-  margin-top: -98px;
-  @include mq(small_tablet) {
-    margin-top: -89px;
-  }
-  @include mq(small_laptop) {
-    margin-top: -3px;
-  }
-  @include type (
-    (
-      size: 13px,
-      spacing: 2.6px,
-      family: $primaryfont,
-      color: $color_dark_one,
-      weight:600,
-      align: center,
-      transform: uppercase 
-    )
-  );
-  @include mq(small_tablet) {
-    text-align: left;
-    font-size:12px;
-  }
-}
-
-
-
-#footer_form_right {
-  flex-basis:509px;
-  flex-shrink:0;
-  margin-top: 80px;
 }
