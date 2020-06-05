@@ -1,53 +1,67 @@
-<div id="location_info">
-		
-		<div class="location_col">
-			
-			<div class="location_tablet_layout">
-			
-				<span class="location_contact_title"><?php the_field( 'footer_contact_us_title','option'); ?></span><!-- footer_contact_title -->
+<div class='locations'>
+	
+			<div class='loc_col'>
+
+				<div class='loc_row'>
 				
-				<a class="location_phone" href="tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('footer_phone', 'option')); ?>"><?php the_field( 'footer_phone','option'); ?></a>
-			
-			</div><!-- location_tablet_layout -->
-			
-			<div class="social_media">
+					<span class='locations_title'>Toll Free</span><!-- locations_title -->
+
+					<a class='locations_phone' href='tel:4129442036'>412.944.2036</a><!-- locations_phone -->
 				
-				<?php get_template_part('page-templates/includes/template','social-media'); ?>
+				</div><!-- loc_row -->
+
+				<div class='loc_row'>
 				
+					<span class='locations_title'>Local</span><!-- locations_title -->
+
+					<a class='locations_phone' href='tel:8663043277'>866.304.3277</a><!-- locations_phone -->
+				
+				</div><!-- loc_row -->
+			
+			</div><!-- loc_col -->
+
+			<div class='loc_col'>
+			
+			<span class='locations_title'>Office</span><!-- locations_title -->
+
+			<span class='locations_address'>5855 Sandy Springs Circle<br/> Suite 200<br/> Atlanta, GA 30328</span><!-- locations_address -->
+
+			<a class='get_directions' href=''>Get Directions</a><!-- get_directions -->
+			
+			</div><!-- loc_col -->
+
+			<div class='loc_col'>
+			
+			<span class='locations_title'>Social</span><!-- locations_title -->
+
+			<div class='social_media'>
+			
+				<a class='sm tw' href='<?php bloginfo('bloginfo');?>/href'>
+				
+
+
+				</a><!-- sm tw -->
+
+				<a class='sm li' href='<?php bloginfo('bloginfo');?>/href'>
+				
+				
+
+				</a><!-- sm li -->
+
+				<a class='sm yelp' href='<?php bloginfo('bloginfo');?>/href'>
+				
+				
+
+				</a><!-- sm yelp -->
+
+				<a class='sm fb' href='<?php bloginfo('bloginfo');?>/href'>
+				
+				
+
+				</a><!-- sm fb -->
+			
 			</div><!-- social_media -->
 			
-		</div><!-- location_col -->
-		
-		<div class="location_col">
-			
-			<span class="location_title"><?php the_field( 'main_location_title_footer','option'); ?></span><!-- footer_location_title -->
-			
-			<span class="address"><?php the_field( 'main_location_address_footer','option'); ?></span><!-- address -->
-			
-			<a class="get_directions" href="<?php the_field( 'main_location_get_directions_link','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'main_location_get_directions_title','option'); ?></a><!-- get_directions -->
-			
-			<div class="location_phone_wrapper">
-				
-				<span class="location_phone_title">Phone</span>
-				
-				<a class="location_phone_small" href="tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('main_location_phone_footer', 'option')); ?>"><?php the_field( 'main_location_phone_footer','option'); ?></a><!-- location_phone -->
-				
-			</div><!-- location_phone_wrapper -->
-			
-		</div><!-- location_col -->
-		
-		<div class="location_col">
-			
-			<span class="location_title"><?php the_field( 'other_locations_title','option'); ?></span><!-- location_title -->
-			
-			<span class="address info"><?php the_field( 'other_locations_content','option'); ?></span><!-- address -->
-			
-			<?php if(get_field('other_locations_link','option')) { ?>
-			
-				<a class="get_directions complete_list" href="<?php the_field( 'other_locations_link','option'); ?>"><?php the_field( 'see_other_locations_verbiage','option'); ?></a><!-- get_directions -->
-			
-			<?php } ?>
-			
-		</div><!-- location_col -->
-		
-	</div><!-- location_info -->
+			</div><!-- loc_col -->
+
+		</div><!-- locations -->

@@ -37,27 +37,7 @@
 
 	<div id='footer_bottom'>
 	
-		<div class='locations'>
-	
-			<div class='loc_col'>
-			
-				
-			
-			</div><!-- loc_col -->
-
-			<div class='loc_col'>
-			
-				
-			
-			</div><!-- loc_col -->
-
-			<div class='loc_col'>
-			
-				
-			
-			</div><!-- loc_col -->
-
-		</div><!-- locations -->
+			<?php get_template_part('page-templates/includes/template','locations');?>
 
 		<div id='copyright'>
 	
