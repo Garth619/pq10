@@ -1548,12 +1548,12 @@ footer {
 }
 @media screen and (min-width: 1380px) {
   #footer_form_left {
-    padding: 156px 70px 0px 0;
+    padding: 126px 70px 0px 0;
   }
 }
 @media screen and (min-width: 1695px) {
   #footer_form_left {
-    padding: 55px 25px 150px;
+    padding: 156px 25px 150px;
   }
 }
 
@@ -1690,6 +1690,16 @@ span#schedule {
 @media screen and (min-width: 768px) {
   span#schedule {
     margin-top: 65px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  span#schedule {
+    margin-top: 28px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  span#schedule {
+    margin-top: 34px;
   }
 }
 

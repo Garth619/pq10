@@ -42,10 +42,10 @@ footer {
     padding: 111px 70px 0px 0;
   }
   @include mq(large_laptop) {
-    padding: 156px 70px 0px 0;
+    padding: 126px 70px 0px 0;
   }
   @include mq(small_monitor) {
-    padding: 55px 25px 150px;
+    padding: 156px 25px 150px;
   }
 }
 
@@ -154,6 +154,12 @@ span#schedule {
   );
   @include mq(small_tablet) {
     margin-top: 65px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 28px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 34px;
   }
 }
 
