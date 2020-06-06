@@ -13,6 +13,10 @@
   @include mq(large_laptop) {
     padding-bottom: 35px;
   }
+  @include mq(small_monitor) {
+    max-width:1510px;
+    @include margin_lr;
+  }
 }
 
 .loc_col {

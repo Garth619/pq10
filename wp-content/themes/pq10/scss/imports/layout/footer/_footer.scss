@@ -341,15 +341,18 @@ span#required {
 #footer_bottom {
   background:$color_gradient_two;
   width:100%;
-  padding: 82px 25px 40px;
+  padding: 46px 24px 40px;
   @include mq(small_tablet) {
-    padding: 82px 0px 20px;
+    padding: 52px 0px 20px;
   }
   @include mq(small_laptop) {
     padding: 69px 75px 30px;
   }
   @include mq(large_laptop) {
     padding: 95px 90px 30px;
+  }
+  @include mq(small_monitor) {
+    padding: 95px 205px 30px;
   }
 }
 
@@ -370,7 +373,11 @@ span#required {
   }
   @include mq(large_laptop) {
     padding-left:50px;
+    margin-left:-90px;
     padding-right:50px;
+  }
+  @include mq(small_monitor) {
+    margin-left:-205px;
   }
 }
 
@@ -382,6 +389,10 @@ span#required {
   }
   @include mq(small_laptop) {
     @include flex(space-between,center);
+  }
+  @include mq(small_monitor) {
+    max-width:1920px;
+    @include margin_lr;
   }
   ul {
     list-style: none;
@@ -398,6 +409,9 @@ span#required {
       );
       @include mq(small_tablet) {
         font-size:14px;
+      }
+      @include mq(small_monitor) {
+        font-size:15px;
       }
       &:after {
         content:"|";

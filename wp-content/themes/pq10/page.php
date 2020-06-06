@@ -4,7 +4,7 @@
 	
 	<div id="internal_banner">
 		
-		<div class="internal_banner_content">
+		<div id="internal_banner_content">
 			
 			<?php if(get_field('banner_title')) : ?>
 			
@@ -63,23 +63,29 @@
 	
 	<div class="page_container">
 		
-		<?php get_sidebar(); ?>
-		
-		<div class="page_content content">
+		<div class="page_content">
 			
 			<?php if(get_field('banner_h1') == "Yes") : ?>
 			
-				<h2 class="page_header"><?php the_title();?></h2><!-- page_header -->
+				<h2 class="page_header"><?php the_title();?></h2>
 			
 			<?php else:?>
 			
-				<h1 class="page_header"><?php the_title();?></h1><!-- page_header -->
+				<h1 class="page_header"><?php the_title();?></h1>
 			
 			<?php endif;?>
+
+			<div class='page_content_inner content'>
 			
 			<?php get_template_part( 'loop', 'page' ); ?>
 			
+			</div><!-- page_content_inner -->
+			
+		
+			
 		</div><!-- page_content -->
+
+		<?php get_sidebar(); ?>
 		
 	</div><!-- page_container -->
 	
