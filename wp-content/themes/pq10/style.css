@@ -662,6 +662,12 @@ h4 {
   width: 150px;
   height: 2px;
 }
+@media screen and (min-width: 1695px) {
+  .content blockquote:after {
+    margin-top: 33px;
+    width: 228px;
+  }
+}
 .content blockquote p {
   margin-bottom: 0;
 }
@@ -674,6 +680,9 @@ h4 {
 }
 .content ul li, .content ol li {
   margin-bottom: 26px;
+}
+.content ul.single_line_list li, .content ol.single_line_list li {
+  margin-bottom: 0;
 }
 .content ul li {
   position: relative;
