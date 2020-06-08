@@ -198,7 +198,7 @@ span.sidebar_required {
 .sidebar_box {
  h3 {
     background:$color_dark_one;
-    padding: 35px 35px;
+    padding: 35px 75px 35px 35px;
     position: relative;
     @include type (
       (
@@ -228,6 +228,59 @@ span.sidebar_required {
   }
   ul {
     list-style: none;
+    li {
+      color:$color_lite_one;
+      a {
+        padding:20px 25px;
+        display: block;
+        margin-bottom:10px;
+       
+        @include type (
+          (
+            size: 17px,
+            height: 25px,
+            family: $primaryfont,
+            color: $color_lite_one,
+            weight: 400
+          )
+        );
+      }
+    }
+  }
+  ul.menu {
+    background: $color_gradient_two;
+    padding:10px 54px 25px;
+    li.menu-item-has-children {
+      position: relative;
+      &:after {
+        content:"";
+        display:block;
+        @include abs(30px,20px,null,null);
+        @include tri(down,6px,7px,$color_lite_one);
+      }
+    }
+    li {
+      a {
+        background:$color_bright_two;
+        box-shadow: 0px 1px 20px #030E1480;
+      }
+    }
+  }
+  ul.sub-menu {
+    border-bottom:2px solid $color_bright_two;
+    margin-bottom:10px;
+    li {
+      a {
+        padding: 16px 25px;
+        box-shadow:none;
+        background:transparent;
+        color:$color_lite_one;
+        transition: all 150ms ease-in-out;
+        &:hover {
+          color:$color_bright_two;
+        }
+      }
+    }
   }
 }
 
