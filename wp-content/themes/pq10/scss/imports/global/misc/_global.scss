@@ -9,7 +9,7 @@
 }
 
 .page_container {
-  padding: 40px 25px 20px;
+  padding: 40px 25px 60px;
   @include flex(null, null, column);
   @include mq(small_tablet) {
     padding: 60px 25px 50px;
@@ -198,11 +198,11 @@ span.sidebar_required {
 .sidebar_box {
  h3 {
     background:$color_dark_one;
-    padding: 35px 75px 35px 35px;
+    padding: 26px 28px 26px 23px;
     position: relative;
     @include type (
       (
-        size: 27px,
+        size: 24px,
         weight:600,
         family: $secondaryfont,
         color: $color_lite_one
@@ -217,8 +217,8 @@ span.sidebar_required {
       content:"";
       display: inline-block;
       vertical-align: top;
-      margin-top:12px;
-      margin-right: 27px;
+      margin-top:10px;
+      margin-right: 16px;
       background:$color_bright_one;
       transform:rotate(-45deg);
       @include box(8px);
@@ -229,7 +229,7 @@ span.sidebar_required {
       vertical-align: top;
       transform-origin: center center;
       transition:all 150ms ease-in-out;
-      @include abs(51px,40px,null,null);
+      @include abs(39px,40px,null,null);
       @include tri(up,6px,7px,$color_bright_two);
     }
   }
@@ -238,7 +238,7 @@ span.sidebar_required {
     li {
       color:$color_lite_one;
       a {
-        padding:20px 25px;
+        padding: 16px 25px;
         display: block;
         margin-bottom:10px;
        
@@ -256,7 +256,7 @@ span.sidebar_required {
   }
   ul.menu {
     background: $color_gradient_two;
-    padding:10px 54px 25px;
+    padding: 10px 24px 25px;
     li.menu-item-has-children {
       position: relative;
       &:after {
@@ -264,7 +264,7 @@ span.sidebar_required {
         display:block;
         transform-origin: center center;
         transition:all 150ms ease-in-out;
-        @include abs(30px,20px,null,null);
+        @include abs(27px,20px,null,null);
         @include tri(down,6px,7px,$color_lite_one);
       }
       &.active {
