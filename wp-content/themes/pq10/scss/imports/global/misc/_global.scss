@@ -208,6 +208,11 @@ span.sidebar_required {
         color: $color_lite_one
       )
     );
+    &.close {
+      &:after {
+        transform:rotate(-180deg);
+      }
+    }
     &:before {
       content:"";
       display: inline-block;
@@ -222,8 +227,10 @@ span.sidebar_required {
       content:"";
       display:inline-block;
       vertical-align: top;
+      transform-origin: center center;
+      transition:all 150ms ease-in-out;
       @include abs(51px,40px,null,null);
-      @include tri(down,6px,7px,$color_bright_two);
+      @include tri(up,6px,7px,$color_bright_two);
     }
   }
   ul {
@@ -255,20 +262,33 @@ span.sidebar_required {
       &:after {
         content:"";
         display:block;
+        transform-origin: center center;
+        transition:all 150ms ease-in-out;
         @include abs(30px,20px,null,null);
         @include tri(down,6px,7px,$color_lite_one);
       }
+      &.active {
+        &:after {
+          transform:rotate(-180deg);
+        }
+      }
     }
-    li {
-      a {
-        background:$color_bright_two;
-        box-shadow: 0px 1px 20px #030E1480;
+    > li {
+      >a {
+        background:transparent;
+        box-shadow: 0px 1px 20px transparent;
+        transition:all 150ms ease-in-out;
+        &:hover {
+          background:$color_bright_two;
+          box-shadow: 0px 1px 20px #030E1480;
+        }
       }
     }
   }
   ul.sub-menu {
     border-bottom:2px solid $color_bright_two;
-    margin-bottom:10px;
+    display: none;
+    //margin-bottom:10px;
     li {
       a {
         padding: 16px 25px;
