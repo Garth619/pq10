@@ -86,7 +86,7 @@
 			
 		</div><!-- page_content -->
 
-		<?php get_sidebar(); ?>
+		<?php get_sidebar('blog'); ?>
 		
 	</div><!-- page_container -->
 	

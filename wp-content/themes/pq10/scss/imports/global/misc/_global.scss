@@ -53,7 +53,6 @@
   @include mq(small_monitor) {
     padding: 66px 45px 178px;
   }
-
   .gform_wrapper {
     margin-top: 35px;
     text-align: center;
@@ -197,7 +196,39 @@ span.sidebar_required {
 }
 
 .sidebar_box {
-  display: none;
+ h3 {
+    background:$color_dark_one;
+    padding: 35px 35px;
+    position: relative;
+    @include type (
+      (
+        size: 27px,
+        weight:600,
+        family: $secondaryfont,
+        color: $color_lite_one
+      )
+    );
+    &:before {
+      content:"";
+      display: inline-block;
+      vertical-align: top;
+      margin-top:12px;
+      margin-right: 27px;
+      background:$color_bright_one;
+      transform:rotate(-45deg);
+      @include box(8px);
+    }
+    &:after {
+      content:"";
+      display:inline-block;
+      vertical-align: top;
+      @include abs(51px,40px,null,null);
+      @include tri(down,6px,7px,$color_bright_two);
+    }
+  }
+  ul {
+    list-style: none;
+  }
 }
 
 .page_content {
@@ -213,12 +244,6 @@ span.sidebar_required {
   }
 }
 
-// .page_content_inner {
-//   padding: 30px 0 0 0;
-//   @include mq(small_monitor) {
-//     padding: 59px 0 0 0;
-//   }
-// }
 
 .alignleft,
 img.alignleft {
