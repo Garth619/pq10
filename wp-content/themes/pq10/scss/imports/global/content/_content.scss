@@ -17,8 +17,16 @@ h4 {
       weight: 700
     )
   );
+  margin-bottom: 25px;
   @include mq(small_tablet) {
+    margin-bottom: 35px;
     @include quick_type(60px,70px,null);
+  }
+  @include mq(small_laptop) {
+    margin-bottom: 45px;
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 56px;
   }
   &:after {
     content:"";

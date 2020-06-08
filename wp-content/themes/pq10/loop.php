@@ -31,13 +31,13 @@
 		
 		</div><!-- blog_meta -->
 		
-		<div class="blog_content">
+		<div class="blog_content content">
 			
 			<?php echo wp_trim_words( get_the_content(), 54, '...' );?>
 		
 		</div><!-- blog_content -->
 		
-		<a class="button read_more" href="<?php the_permalink();?>">Read More</a>
+		<a class="button_two read_more" href="<?php the_permalink();?>">Read More</a>
 			
 		<?php edit_post_link( __( 'Edit'), '', '' ); ?>
 	
