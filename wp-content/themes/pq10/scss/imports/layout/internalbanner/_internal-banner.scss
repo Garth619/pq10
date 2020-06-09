@@ -56,14 +56,33 @@ img#internal_hero {
 
 #internal_banner_two {
   position: relative;
+  text-align: center;
   padding:52px 25px 0;
+  @include mq(small_tablet) {
+    padding:52px 60px 0;
+  }
+  @include mq(small_laptop) {
+    padding: 76px 75px 128px;
+  }
+  @include mq(large_laptop) {
+    padding: 76px 100px 128px;
+  }
+  @include mq(small_monitor) {
+    padding: 86px 150px 236px;
+  }
   img#internal_hero {
     display: none;
+    @include mq(small_laptop) {
+      display:block;
+    }
   }
 }
 
 
 .banner_title_two {
+  display:inline-block;
+  position: relative;
+  z-index:1;
   @include type (
     (
       size: 36px,
@@ -74,11 +93,24 @@ img#internal_hero {
       weight: 700
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(60px,70px,null);
+  }
+  @include mq(small_laptop) {
+    color:$color_lite_one;
+    @include quick_type(55px,65px,null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(70px,75px,null);
+  }
   &:after {
     content:"";
     display:block;
     background:$color_bright_one;
     margin-top: 27px;
     @include box(100%,2px);
+    @include mq(small_monitor) {
+      margin-top: 33px;
+    }
   }
 }

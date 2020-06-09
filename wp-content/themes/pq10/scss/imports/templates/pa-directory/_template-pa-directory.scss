@@ -1,8 +1,17 @@
 #pa_directory_wrapper {
   text-align: center;
-  padding:30px 25px;
+  width: 100%;
+  padding: 40px 25px 0;
+  @include mq(tablet) {
+    padding: 56px 25px 14px;
+  }
+  @include mq(small_monitor) {
+    padding: 96px 25px 14px;
+  }
   ul {
     list-style: none;
+  }
+  > ul {
     > li {
       @include type(
         (
@@ -12,6 +21,9 @@
           color: $color_dark_two,
         )
       );
+      @include mq(small_monitor) {
+        margin-bottom: 54px;
+      }
       > a {
         display: block;
         &:before,
@@ -36,31 +48,68 @@
 }
 
 #pa_directory_wrapper {
-   div {
+  div {
     border-top: 2px solid $color_lite_two;
-    margin:35px 0 0;
-    padding:35px 0 35px;
+    margin: 35px auto 0;
+    max-width: 680px;
+    padding: 35px 0 35px;
+    @include mq(tablet) {
+      max-width: 830px;
+    }
+    @include mq(large_laptop) {
+      max-width: 1070px;
+    }
+    @include mq(small_monitor) {
+      margin: 64px auto 0;
+      padding: 50px 0 35px;
+      max-width: 1337px;
+    }
     ul.menu {
+      @include mq(small_tablet) {
+        @include flex(space-between, null, null, wrap);
+      }
+      &:after {
+        @include mq(small_laptop) {
+          content:"";
+          display:block;
+          flex-basis:31%;
+        }
+      }
       li {
-        @include type (
+        @include type(
           (
             size: 17px,
             height: 20px,
             family: $primaryfont,
             color: $color_dark_one,
-            weight: 400
+            weight: 400,
           )
         );
+        @include mq(small_tablet) {
+          flex-basis: 47%;
+        }
+        @include mq(tablet) {
+          flex-basis: 31%;
+        }
+        @include mq(large_laptop) {
+          margin-bottom: 15px;
+        }
         a {
           text-decoration: none;
           color: $color_dark_one;
+          display: block;
           transition: all 150ms ease-in-out;
-          padding-bottom:15px;
-          &:before, &:after {
+          padding-bottom: 15px;
+          @include mq(small_tablet) {
+            height: 52px;
+            @include flex(center, center);
+          }
+          &:before,
+          &:after {
             display: none;
           }
           &:hover {
-            color:$color_bright_one;
+            color: $color_bright_one;
           }
         }
       }
