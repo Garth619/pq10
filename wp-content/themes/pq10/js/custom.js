@@ -274,7 +274,7 @@ $('span.go_back').on('click', function(e) {
 
 var pgurl = window.location.href;
 	
-	$(".sidebar_box ul li").each(function(){
+	$(".sidebar_box.sidebar_blog ul li").each(function(){
   
   if($(this).find('a').attr("href") == pgurl)
     

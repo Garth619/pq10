@@ -1,196 +1,309 @@
 .sidebar_wrapper {
-  flex-basis: 592px;
-  flex-shrink: 0;
-  background: $bg_color;
-  padding: 95px 0px 40px;
-  @include mq(large_laptop) {
-    padding: 70px 0px 0;
-    flex-basis: 422px;
-  }
+  max-width: 515px;
   @include mq(small_laptop) {
-    flex-basis: 281px;
-    padding: 75px 0px 0;
+    width: 390px;
+    flex-shrink: 0;
+    margin-top: 14px;
   }
-  @include mq(tablet) {
-    order: 2;
-    flex-basis: auto;
-    padding: 55px 0px;
-    margin-top: 15px;
+  @include mq(large_laptop) {
+    width: 420px;
   }
-  @include mq(xlarge_mobile) {
-    padding: 45px 0px;
+  @include mq(small_monitor) {
+    width: 470px;
   }
+}
+
+.sidebar_form {
+  display: none;
+  @include mq(small_laptop) {
+    padding: 55px 45px 178px;
+    margin-bottom: 70px;
+    display: block;
+    background: $color_lite_two;
+    box-shadow: 0px 1px 40px #00000040;
+  }
+  @include mq(small_monitor) {
+    padding: 66px 45px 178px;
+  }
+  .gform_wrapper {
+    margin-top: 35px;
+    text-align: center;
+    ul {
+      list-style: none;
+      text-align: left;
+      li {
+        width: 100%;
+        label {
+          display: none;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border-radius: 6px;
+          border: 2px solid transparent;
+          box-shadow: 0px 1px 10px #00000033;
+          transition: border 150ms ease-in-out;
+          padding: 16px 23px;
+          margin-bottom: 15px;
+          text-align: left;
+          @include type(
+            (
+              size: 16px,
+              spacing: 0.4px,
+              family: $primaryfont,
+              color: $color_dark_one,
+            )
+          );
+          &:focus {
+            border: 2px solid $color_bright_two;
+          }
+        }
+        textarea {
+          height: 145px;
+        }
+      }
+    }
+    .gform_footer {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      margin-top: 46px;
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        border-radius: 6px;
+        z-index: -1;
+        @include box(100%);
+        @include abs(0, null, null, 0);
+      }
+      &:before {
+        background: $color_gradient_one;
+      }
+      &:after {
+        background: $color_bright_two;
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+      }
+      input[type="submit"] {
+        background: transparent;
+        border: none;
+        padding: 20px 30px;
+        cursor: pointer;
+        @include type(
+          (
+            size: 16px,
+            spacing: 2.4px,
+            family: $primaryfont,
+            color: $color_lite_one,
+            weight: 800,
+            transform: uppercase,
+          )
+        );
+      }
+    }
+    .gfield_description,
+    .validation_message {
+      margin-bottom: 15px;
+      @include type(
+        (
+          size: 12px,
+          spacing: 2px,
+          family: $primaryfont,
+          color: $color_bright_two,
+          weight: 800,
+          transform: uppercase,
+        )
+      );
+    }
+  }
+}
+
+span.sidebar_form_title {
+  @include mq(small_laptop) {
+    display: block;
+    @include type(
+      (
+        size: 35px,
+        height: 40px,
+        family: $secondaryfont,
+        color: $color_dark_one,
+        weight: 700,
+      )
+    );
+  }
+  @include mq(small_monitor) {
+    @include quick_type(35px, 40px, null);
+  }
+  &:after {
+    @include mq(small_laptop) {
+      content: "";
+      display: block;
+      margin-top: 28px;
+      background: $color_bright_one;
+      @include box(130px, 2px);
+    }
+  }
+}
+
+span.sidebar_required {
+  display: block;
+  text-align: center;
+  margin-top: -105px;
+  @include type(
+    (
+      size: 14px,
+      spacing: 2.8px,
+      family: $primaryfont,
+      color: $color_dark_three,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
 }
 
 .sidebar_box {
   h3 {
-    padding: 0 120px 15px;
-    display: inline-block;
+    background: $color_dark_one;
+    padding: 26px 28px 26px 23px;
+    position: relative;
     @include type(
       (
-        size: $sidebar_header_h3_size,
-        spacing: $sidebar_header_h3_spacing,
-        height: $sidebar_header_h3_line_height,
-        family: $primaryfont,
-        weight: $sidebar_header_h3_line_weight,
-        color: $sidebar_header_h3_color,
-        transform: uppercase,
+        size: 24px,
+        weight: 600,
+        family: $secondaryfont,
+        color: $color_lite_one,
       )
     );
     @include mq(large_laptop) {
-      padding: 0 82px 15px;
-      @include quick_type(
-        $sidebar_header_h3_size_large_laptop,
-        $sidebar_header_h3_line_height_large_laptop,
-        null
-      );
+      padding: 35px 68px 35px 44px;
+      @include quick_type(27px, null, null);
     }
-    @include mq(small_laptop) {
-      padding: 0 44px 23px;
-      @include quick_type(
-        $sidebar_header_h3_size_small_laptop,
-        $sidebar_header_h3_line_height_small_laptop,
-        null
-      );
+    &.close {
+      &:after {
+        transform: rotate(-180deg);
+      }
     }
-    @include mq(tablet) {
-      padding: 0 109px 17px;
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 10px;
+      margin-right: 16px;
+      background: $color_bright_one;
+      transform: rotate(-45deg);
+      @include box(8px);
     }
-    @include mq(xlarge_mobile) {
-      padding: 0 40px 14px;
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: top;
+      transform-origin: center center;
+      transition: all 150ms ease-in-out;
+      @include abs(40px, 40px, null, null);
+      @include tri(up, 6px, 7px, $color_bright_two);
+      @include mq(small_laptop) {
+       top:50px;
+      }
     }
   }
   ul {
     list-style: none;
     li {
-      @include type(
-        (
-          size: $sidebar_list_size,
-          height: $sidebar_list_line_height,
-          family: $secondaryfont,
-          transform: lowercase,
-        )
-      );
-      @include mq(large_laptop) {
-        @include quick_type(
-          $sidebar_list_size_large_laptop,
-          $sidebar_list_line_height_large_laptop,
-          null
-        );
-      }
-      @include mq(small_laptop) {
-        @include quick_type(
-          $sidebar_list_size_small_laptop,
-          $sidebar_list_line_height_small_laptop,
-          null
-        );
-      }
+      color: $color_lite_one;
       a {
-        color: $sidebar_list_color;
-        text-decoration: none;
+        padding: 16px 47px 16px 25px;
         display: block;
-        margin-bottom: 21px;
-        padding: 0 140px 0 120px;
-        transition: all 200ms ease-in-out;
-        &:hover {
-          color: $sidebar_list_color_hover;
-        }
-        @include mq(large_laptop) {
-          margin-bottom: 9px;
-          padding: 0 152px 15px 82px;
-        }
-
-        @include mq(small_laptop) {
-          padding: 0 90px 0 44px;
-          margin-bottom: 22px;
-        }
-        @include mq(tablet) {
-          padding: 0 109px;
-          max-width: 402px;
-          margin-bottom: 19px;
-        }
-        @include mq(xlarge_mobile) {
-          padding: 0 40px;
-          margin-bottom: 20px;
-          max-width: 272px;
-        }
+        margin-bottom: 10px;
+        @include type(
+          (
+            size: 17px,
+            height: 25px,
+            family: $primaryfont,
+            color: $color_lite_one,
+            weight: 400,
+          )
+        );
       }
     }
-    > li.active {
-      > a {
-        color: $sidebar_active_list_color;
+  }
+  &.sidebar_blog ul, ul.menu {
+    background: $color_gradient_two;
+    padding: 10px 24px 25px;
+    @include mq(large_laptop) {
+      padding: 10px 44px 25px;
+    }
+    li.menu-item-has-children {
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        transform-origin: center center;
+        transition: all 150ms ease-in-out;
+        @include abs(27px, 20px, null, null);
+        @include tri(down, 6px, 7px, $color_lite_one);
+      }
+      &.active {
+        &:after {
+          transform: rotate(-180deg);
+        }
       }
     }
     > li.current-menu-item {
       > a {
-        color: $sidebar_current_list_color;
-      }
-    }
-    > li.menu-item-has-children {
-      > a {
-        position: relative;
-        @include mq(xlarge_mobile) {
-          padding: 0 58px 0 40px;
-        }
-        &:after {
-          transition: all 200ms ease-in-out;
-          @include abs(8px, 122px);
-          @include tri(down, 4px, 8px, $sidebar_list_tri_color);
-          @include box(0);
-          @include mq(small_laptop) {
-            right: 62px;
-            top: 6px;
-          }
-          @include mq(xlarge_mobile) {
-            right: 42px;
-          }
-        }
-      }
-      > a.active {
-        color: $sidebar_active_list_parent_color;
-        &:after {
-          border-top-color: $sidebar_active_list_parent_tri_color;
-        }
+        background: $color_bright_two;
+        box-shadow: 0px 1px 20px #030e1480;
       }
     }
     > li.current-menu-ancestor {
       > a {
-        color: $sidebar_current_list_parent_color;
-        &:after {
-          border-top-color: $sidebar_current_list_parent_tri_color;
+        background: $color_bright_two;
+        box-shadow: 0px 1px 20px #030e1480;
+      }
+      ul.sub-menu {
+        display: block;
+      }
+    }
+    > li {
+      &.blog-active {
+        a {
+          color:$color_bright_two;
         }
       }
-      > ul.sub-menu {
-        display: block;
+      > a {
+        background: transparent;
+        box-shadow: 0px 1px 20px transparent;
+        transition: all 150ms ease-in-out;
+        &:hover {
+          background: $color_bright_two;
+          box-shadow: 0px 1px 20px #030e1480;
+        }
       }
     }
   }
   ul.sub-menu {
-    background: $sidebar_submenu_bg_color;
-    border-top: 3px solid $sidebar_submenu_bordertop_color;
-    padding: 36px 0 27px;
-    margin-top: 30px;
-    margin-bottom: 28px;
+    border-bottom: 2px solid $color_bright_two;
     display: none;
-    @include mq(large_laptop) {
-      margin-top: 18px;
-      padding: 31px 0 12px;
+    //margin-bottom:10px;
+    li.current-menu-item {
+      a {
+        color:$color_bright_two;
+      }
     }
-    @include mq(small_laptop) {
-      margin-bottom: 20px;
-      padding: 31px 0 25px;
-    }
-    @include mq(tablet) {
-      padding: 35px 0;
-    }
-    @include mq(xlarge_mobile) {
-      padding: 30px 0;
-      margin-bottom: 26px;
-    }
-    > li {
-      &:last-of-type {
-        a {
-          margin-bottom: 5px;
+    li {
+      a {
+        padding: 16px 25px;
+        box-shadow: none;
+        background: transparent;
+        color: $color_lite_one;
+        transition: all 150ms ease-in-out;
+        &:hover {
+          color: $color_bright_two;
         }
       }
     }
