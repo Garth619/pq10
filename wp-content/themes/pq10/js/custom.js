@@ -272,15 +272,15 @@ $('span.go_back').on('click', function(e) {
 
 // add active to blog widgets that dont show a built in current class
 
-// var pgurl = window.location.href;
+var pgurl = window.location.href;
 	
-// 	$(".sidebar_box ul li").each(function(){
+	$(".sidebar_box ul li").each(function(){
   
-//   if($(this).find('a').attr("href") == pgurl)
+  if($(this).find('a').attr("href") == pgurl)
     
-//     $(this).addClass("active");
+    $(this).addClass("blog-active");
 	
-// 	})
+	})
 
 
 

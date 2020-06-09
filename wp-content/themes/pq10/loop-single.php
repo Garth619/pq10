@@ -2,7 +2,7 @@
 
 
 		
-		<h2 class="blog_header"><?php the_title();?></h2>
+		<h1 class="blog_header"><?php the_title();?></h1>
 		
 		<div class="blog_meta">
 		
@@ -12,7 +12,7 @@
 		
 		</div><!-- blog_meta -->
 		
-		<div class="blog_content">
+		<div class="blog_content content">
 			
 			<?php the_content();?>
 		

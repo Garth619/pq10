@@ -29,27 +29,27 @@ get_header(); ?>
 		
 		<div id='pa_directory_wrapper' class='box_wrapper'>
 		
-		<?php if(get_field('practice_area_directory')): ?>
+			<?php if(get_field('practice_area_directory')): ?>
 		
-		<ul class="pa_directory_top_menu">
-			
-			<?php while(has_sub_field('practice_area_directory')): ?>
-	 
-				<li>
+			<ul class="pa_directory_top_menu">
+				
+				<?php while(has_sub_field('practice_area_directory')): ?>
+		 
+					<li>
+						
+						<a><?php the_sub_field( 'title' ); ?></a>
 					
-					<a><?php the_sub_field( 'title' ); ?></a>
+						<?php $obj = get_sub_field('pa_nav_menu'); ?>
 				
-					<?php $obj = get_sub_field('pa_nav_menu'); ?>
+						<?php wp_nav_menu( array( 'menu' => $obj->name) ); ?>
+					 
+					 </li>
+					
+				<?php endwhile; ?>
 			
-					<?php wp_nav_menu( array( 'menu' => $obj->name) ); ?>
-				 
-				 </li>
-				
-			<?php endwhile; ?>
-		
-		</ul><!-- pa_directory_top_menu -->
-	 
-	<?php endif; ?>
+			</ul><!-- pa_directory_top_menu -->
+		 
+		<?php endif; ?>
 		
 		</div><!-- pa_directory_wrapper -->
 		

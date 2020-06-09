@@ -216,21 +216,21 @@
 
 .sec_two_single_slide {
   &.two {
-    svg {
-      @include mq(small_tablet) {
-        margin-top: -8px;
-        @include box(100px);
-      }
-      @include mq(small_laptop) {
-        @include box(95px);
-      }
-      @include mq(large_laptop) {
-        @include box(109px);
-      }
-      @include mq(small_monitor) {
-        @include box(125px);
-      }
-    }
+    // svg {
+    //   @include mq(small_tablet) {
+    //     margin-top: -8px;
+    //     @include box(100px);
+    //   }
+    //   @include mq(small_laptop) {
+    //     @include box(95px);
+    //   }
+    //   @include mq(large_laptop) {
+    //     @include box(109px);
+    //   }
+    //   @include mq(small_monitor) {
+    //     @include box(125px);
+    //   }
+    // }
     span.sec_two_slide_title {
       @include mq(small_tablet) {
         margin-top:5px;

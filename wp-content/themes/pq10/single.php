@@ -2,20 +2,32 @@
 
 <div id="internal_main">
 	
-	<div id="internal_banner" class="banner_with_page_title">
+	<div id="internal_banner">
 		
-		<div class="internal_banner_content">
+		<div id="internal_banner_content">
 			
-			<h1 class="internal_header"><?php the_field( 'internal_banner_blog_title','option'); ?></h1><!-- banner_title -->
+			<h1 class="banner_title"><?php the_title();?></h1><!-- banner_title -->
+
+			<?php if(get_field('turn_off_button') == "Yes") : ?>
+			
+			<?php else: ?>
+			
+				<a class="button internal_button" href="#consultation">
+				
+					<span><?php the_field( 'global_internal_banner_button_verbiage','option'); ?></span>
+			
+				</a>
+			
+			<?php endif;?>
 			
 		</div><!-- internal_banner_content -->
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
-		<?php $internal_banner_blog_image = get_field( 'internal_banner_blog_image','option'); ?>
+		<?php $banner_image = get_field( 'banner_image' ); ?>
 		
-		<?php if($internal_banner_blog_image) : ?>
+		<?php if($banner_image) : ?>
 		
-			<img id="internal_hero" src="<?php echo $internal_banner_blog_image['url']; ?>" alt="<?php echo $internal_banner_blog_image['alt']; ?>"/><!-- internal_hero -->
+			<img id="internal_hero" src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>"/><!-- internal_hero -->
 		
 		<?php else: ?>
 		
@@ -27,13 +39,29 @@
 	
 	<div class="page_container">
 		
-		<?php get_sidebar('blog'); ?>
-		
-		<div class="page_content content">
+		<div class="page_content">
+			
+			<?php //if(get_field('banner_h1') == "Yes") : ?>
+			
+				<!-- <h2 class="page_header"><?php the_title();?></h2> -->
+			
+			<?php //else:?>
+			
+				<!-- <h1 class="page_header"><?php the_title();?></h1> -->
+			
+			<?php //endif;?>
+
+			<div class='page_content_inner'>
 			
 			<?php get_template_part( 'loop', 'single' ); ?>
 			
+			</div><!-- page_content_inner -->
+			
+		
+			
 		</div><!-- page_content -->
+
+		<?php get_sidebar('blog'); ?>
 		
 	</div><!-- page_container -->
 	

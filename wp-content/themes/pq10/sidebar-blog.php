@@ -9,7 +9,7 @@
 
 	<span class='sidebar_required'>*Required Fields</span><!-- sidebar_required -->
 
-</div><!-- sidebar_form -->	`
+</div><!-- sidebar_form -->	
 			
 	<div class="sidebar_box sidebar_blog">
 				

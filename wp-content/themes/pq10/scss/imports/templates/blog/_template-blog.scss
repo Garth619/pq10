@@ -90,7 +90,7 @@
   }
   ul {
     list-style: none;
-    @include flex();
+    @include flex(null,null,null,wrap);
     li {
       margin-right:10px;
       a {

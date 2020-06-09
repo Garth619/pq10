@@ -302,6 +302,11 @@ span.sidebar_required {
       }
     }
     > li {
+      &.blog-active {
+        a {
+          color:$color_bright_two;
+        }
+      }
       > a {
         background: transparent;
         box-shadow: 0px 1px 20px transparent;
