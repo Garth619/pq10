@@ -345,6 +345,12 @@ span.sidebar_required {
   }
 }
 
+
+.box_wrapper {
+  box-shadow: 0px 1px 40px #00000040;
+  background:$color_lite_one;
+}
+
 .alignleft,
 img.alignleft {
   display: block;

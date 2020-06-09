@@ -48,3 +48,37 @@ img#internal_hero {
   @include box(100%);
   @include abs(0,null,null,0);
 }
+
+
+///////
+
+
+
+#internal_banner_two {
+  position: relative;
+  padding:52px 25px 0;
+  img#internal_hero {
+    display: none;
+  }
+}
+
+
+.banner_title_two {
+  @include type (
+    (
+      size: 36px,
+      height: 42px,
+      align:center,
+      family: $secondaryfont,
+      color: $color_dark_one,
+      weight: 700
+    )
+  );
+  &:after {
+    content:"";
+    display:block;
+    background:$color_bright_one;
+    margin-top: 27px;
+    @include box(100%,2px);
+  }
+}
