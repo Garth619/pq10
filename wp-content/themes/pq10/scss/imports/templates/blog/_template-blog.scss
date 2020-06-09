@@ -80,3 +80,43 @@
 }
 
 
+.paged_wrapper {
+  border-top:2px solid $color_lite_two;
+  padding-top:35px;
+  padding-bottom:20px;
+  @include mq(small_monitor) {
+    padding-top:55px;
+
+  }
+  ul {
+    list-style: none;
+    @include flex();
+    li {
+      margin-right:10px;
+      a {
+        transition:all 150ms ease-in-out;
+        @include type (
+          (
+            size: 17px,
+            family: $primaryfont,
+            color: $color_dark_one,
+            weight: 800,
+            transform:uppercase 
+          )
+        );
+        &:hover {
+          color:$color_bright_one;
+        }
+      }
+    }
+  }
+}
+
+
+
+.widget {
+  margin-bottom:35px;
+  @include mq(small_laptop) {
+    margin-bottom:60px;
+  }
+}

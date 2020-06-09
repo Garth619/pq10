@@ -288,7 +288,7 @@ $('span.go_back').on('click', function(e) {
 
 $('h3.widget-title').on('click', function(e) {
 	
-	$(this).next('ul.menu').slideToggle();
+	$(this).next('ul').slideToggle();
 
 	$(this).toggleClass('close');
 
