@@ -112,12 +112,12 @@
 }
 
 .testimonial_single {
-  margin-bottom:50px;
-  padding-bottom: 48px;
+  margin-bottom:30px;
+  padding-bottom: 30px;
   border-bottom:2px solid $color_lite_two;
   @include mq(small_laptop) {
-    margin-bottom: 70px;
-    
+    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
 

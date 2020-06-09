@@ -34,11 +34,11 @@ get_header(); ?>
 			
 				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
 
-				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+				<span class='testimonial_quote'><?php the_field( 'featured_testimonial_intro' ); ?></span><!-- testimonial_quote -->
 
-				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+				<span class='testimonial_descr'><?php the_field( 'featured_testimonial_description' ); ?></span><!-- testimonial_descr -->
 
-				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+				<span class='testimonial_name'><?php the_field( 'featured_testimonial_name' ); ?></span><!-- class -->
 			
 			</div><!-- tesimonial_inner -->
 		
@@ -47,74 +47,54 @@ get_header(); ?>
 		<div id='testimonial_bottom'>
 		
 			<div class='testimonial_col'>
-			
+
+			<?php if ( have_rows( 'testi_column_one_new' ) ) : ?>
+				<?php while ( have_rows( 'testi_column_one_new' ) ) : the_row(); ?>
+		
 				<div class='testimonial_single'>
 
-				<div class='tesimonial_inner'>
-				
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+					<div class='tesimonial_inner'>
 
-				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+						<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
 
-				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+						<span class='testimonial_quote'><?php the_sub_field( 'intro' ); ?></span><!-- testimonial_quote -->
 
-				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+						<span class='testimonial_descr'><?php the_sub_field( 'description' ); ?></span><!-- testimonial_descr -->
 
-				</div><!-- tesimonial_inner -->
-				
+						<span class='testimonial_name'>	<?php the_sub_field( 'name' ); ?></span><!-- class -->
+
+					</div><!-- tesimonial_inner -->
+
 				</div><!-- testimonial_single -->
-
-				<div class='testimonial_single'>
-
-				<div class='tesimonial_inner'>
 				
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
-
-				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
-
-				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
-
-				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
-
-				</div><!-- tesimonial_inner -->
-				
-				</div><!-- testimonial_single -->
+				<?php endwhile; ?>
+			<?php endif; ?>
 			
 			</div><!-- testimonial_col -->
 
 			<div class='testimonial_col'>
 			
+			<?php if ( have_rows( 'testi_column_two_new' ) ) : ?>
+				<?php while ( have_rows( 'testi_column_two_new' ) ) : the_row(); ?>
+		
 				<div class='testimonial_single'>
 
-				<div class='tesimonial_inner'>
-				
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+					<div class='tesimonial_inner'>
 
-				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+						<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
 
-				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+						<span class='testimonial_quote'><?php the_sub_field( 'intro' ); ?></span><!-- testimonial_quote -->
 
-				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+						<span class='testimonial_descr'><?php the_sub_field( 'description' ); ?></span><!-- testimonial_descr -->
 
-				</div><!-- tesimonial_inner -->
-				
+						<span class='testimonial_name'>	<?php the_sub_field( 'name' ); ?></span><!-- class -->
+
+					</div><!-- tesimonial_inner -->
+
 				</div><!-- testimonial_single -->
-
-				<div class='testimonial_single'>
-
-				<div class='tesimonial_inner'>
 				
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
-
-				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
-
-				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
-
-				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
-
-				</div><!-- tesimonial_inner -->
-				
-				</div><!-- testimonial_single -->
+				<?php endwhile; ?>
+			<?php endif; ?>
 			
 			</div><!-- testimonial_col -->
 		
