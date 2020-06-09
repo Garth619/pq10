@@ -26,7 +26,7 @@ get_header(); ?>
 		
 	</div><!-- internal_banner_two -->
 	
-	<div class="page_container">
+	<div class="page_container one_col">
 		
 		<div id='tesimonial_wrapper' class='box_wrapper'>
 		

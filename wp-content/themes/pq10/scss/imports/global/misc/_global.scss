@@ -30,6 +30,11 @@
   }
 }
 
+
+.page_container.one_col {
+  display: block;
+}
+
 .sidebar_wrapper {
   max-width: 515px;
   @include mq(small_laptop) {

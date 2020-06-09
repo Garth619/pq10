@@ -1,33 +1,43 @@
 
 #tesimonial_wrapper {
   padding:40px 25px;
+  @include mq(small_laptop) {
+    padding: 55px 25px;
+  }
+  @include mq(large_laptop) {
+    max-width:1085px;
+    @include margin_lr;
+  }
+  @include mq(small_monitor) {
+    max-width:1460px;
+    padding: 101px 25px;
+  }
 }
 
 
 .tesimonial_inner {
   text-align: center;
-  
+  @include mq(small_tablet) {
+    max-width:550px;
+    @include margin_lr;
+  }
+  @include mq(small_laptop) {
+    max-width: 680px;
+  }
+  @include mq(large_laptop) {
+    max-width: 900px;
+  }
   svg {
     display: block;
     margin-bottom:15px;
     @include margin_lr;
+    @include mq(small_monitor) {
+      margin-bottom: 26px;
+    }
   }
   span {
     display: block;
   }
-}
-
-
-.testimonial_descr {
-  margin-top:20px;
-  @include type (
-    (
-      size: 16px,
-      height: 33px,
-      family: $primaryfont,
-      color: $color_dark_three
-    )
-  );
 }
 
 
@@ -42,6 +52,24 @@
       weight: 700 
     )
   );
+  @include mq(small_monitor) {
+    @include quick_type(35px,45px,null);
+  }
+}
+
+.testimonial_descr {
+  margin-top:20px;
+  @include type (
+    (
+      size: 16px,
+      height: 33px,
+      family: $primaryfont,
+      color: $color_dark_three
+    )
+  );
+  @include mq(small_monitor) {
+    @include quick_type(18px,35px,null);
+  }
 }
 
 .testimonial_name {
@@ -55,6 +83,9 @@
       transform: uppercase 
     )
   );
+  @include mq(small_monitor) {
+    font-size:15px;
+  }
   &:before {
     content:"";
     display:block;
@@ -65,27 +96,50 @@
 }
 
 #testimonial_bottom {
-  margin:40px 0 0;
+  margin:40px auto 0;
+  max-width:765px;
+  @include mq(small_tablet) {
+    margin: 70px auto 20px;
+  }
+  @include mq(large_laptop) {
+    @include flex(space-between);
+    max-width:1460px;
+  }
+  @include mq(small_monitor) {
+    margin: 126px auto 20px;
+   
+  }
 }
 
 .testimonial_single {
   margin-bottom:50px;
+  padding-bottom: 48px;
+  border-bottom:2px solid $color_lite_two;
+  @include mq(small_laptop) {
+    margin-bottom: 70px;
+    
+  }
 }
 
 .testimonial_col {
+  @include mq(large_laptop) {
+    flex-basis:46%;
+    .testimonial_single {
+      &:last-of-type {
+        margin-bottom:0;
+        padding-bottom:0;
+        border:none;
+      }
+    }
+  }
   &:last-of-type {
     .testimonial_single {
       &:last-of-type {
         margin-bottom:0;
+        border:none;
+        padding-bottom:0;
       }
     }
   }
 }
 
-.testimonial_single {
-  text-align: center;
-  svg {
-    display:block;
-    @include margin_lr;
-  }
-}
