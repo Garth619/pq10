@@ -4,196 +4,123 @@
 
 get_header(); ?>
 
-<div id="internal_main" class="no_banner">
+
+<div id="internal_main">
 	
-	<div class="internal_container">
+	<div id="internal_banner_two">
+			
+		<h1 class='banner_title_two'><?php the_title();?></h1><!-- page_header_two -->
 		
-		<h1 class="internal_header"><?php the_title();?></h1><!-- internal_header -->
+		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
+		<?php $banner_image = get_field( 'banner_image' ); ?>
 		
-		<div class="testi_feature inner_container">
-			
-			<div class="testi_feature_inner">
-			
-				<?php echo file_get_contents( get_template_directory() . "/images/stars.svg"); ?>
-			
-				<div class="testi_intro">
-					
-					<?php if(get_field('featured_testimonial_intro')) { 
-				
-						the_field( 'featured_testimonial_intro' );
-					
-					} ?>
-			
-				</div><!-- testi_intro -->
-			
-				<div class="testi_description">
-					
-					<?php 
-						
-						if(get_field('extended_review') == "No") {
-				
-							echo "<p>" . get_field( 'featured_testimonial_description' ) . "</p>";
-						
-						}
-					
-						elseif(get_field('extended_review') == "Yes") {
-					
-							$post_object = get_field( 'review_post_selection_featured' );
-						
-							if ( $post_object ) {
-						
-								$post = $post_object; 
-						
-								setup_postdata( $post );  
+		<?php if($banner_image) : ?>
 		
-									echo "<p>" . wp_trim_words( get_the_content(), 50, '...' ) . "</p><a class='testi_read_more' href='" . get_permalink() . "'>Read More</a>"; 
-						
-								wp_reset_postdata();
-							
-							} 
-						
-						}
-					
-					?>
-					
-					</div><!-- testi_description -->
-				
-				<span class="testi_name"><?php the_field( 'featured_testimonial_name' ); ?></span><!-- testi_name -->
-			
-			</div><!-- testi_feature_inner -->
-			
-		</div><!-- testi_feature -->
+			<img id="internal_hero" src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>"/><!-- internal_hero -->
 		
-		<div class="testi_bottom inner_container">
-			
-			<div class="testi_col">
-				
-				<?php if(get_field('testi_column_one_new')): ?>
-				 
-					<?php while(has_sub_field('testi_column_one_new')): ?>
-				 
-						<div class="single_testi">
-					
-							<?php echo file_get_contents( get_template_directory() . "/images/stars.svg"); ?>
-					
-							<div class="testi_intro">
-								
-								<?php if(get_sub_field('intro')) { 
-						
-									the_sub_field( 'intro' ); 
-								
-								} ?>
-						
-							</div><!-- testi_intro -->
-					
-							<div class="testi_description">
-								
-								<?php 
-						
-						if(get_sub_field('extended_review') == "No") {
-				
-							echo "<p>" . get_sub_field( 'description' ) . "</p>";
-						
-						}
-					
-						elseif(get_sub_field('extended_review') == "Yes") {
-					
-							$post_object = get_sub_field( 'review_post_selection' );
-						
-							if ( $post_object ) {
-						
-								$post = $post_object; 
-						
-								setup_postdata( $post );  
+		<?php else: ?>
 		
-									echo "<p>" . wp_trim_words( get_the_content(), 50, '...' ) . "</p><a class='testi_read_more' href='" . get_permalink() . "'>Read More</a>"; 
-						
-								wp_reset_postdata();
-							
-							} 
-						
-						}
-					
-					?>
-						
-							</div><!-- testi_description -->
-					
-							<span class="testi_name"><?php the_sub_field( 'name' ); ?></span><!-- testi_name -->
-					
-						</div><!-- single_testi -->
-				    
-					<?php endwhile; ?>
-				 
-				<?php endif; ?>
-				
-			</div><!-- testi_col -->
-			
-			<div class="testi_col">
-				
-				<?php if(get_field('testi_column_two_new')): ?>
-				 
-					<?php while(has_sub_field('testi_column_two_new')): ?>
-				 
-						<div class="single_testi">
-					
-							<?php echo file_get_contents( get_template_directory() . "/images/stars.svg"); ?>
-					
-							<div class="testi_intro">
-								
-								<?php if(get_sub_field('intro')) { 
-						
-									the_sub_field( 'intro' ); 
-								
-								} ?>
-						
-							</div><!-- testi_intro -->
-					
-							<div class="testi_description">
-								
-								<?php 
-						
-						if(get_sub_field('extended_review') == "No") {
-				
-							echo "<p>" . get_sub_field( 'description' ) . "</p>";
-						
-						}
-					
-						elseif(get_sub_field('extended_review') == "Yes") {
-					
-							$post_object = get_sub_field( 'review_post_selection' );
-						
-							if ( $post_object ) {
-						
-								$post = $post_object; 
-						
-								setup_postdata( $post );  
+			<img id="internal_hero" src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
 		
-									echo "<p>" . wp_trim_words( get_the_content(), 50, '...' ) . "</p><a class='testi_read_more' href='" . get_permalink() . "'>Read More</a>"; 
-						
-								wp_reset_postdata();
-							
-							} 
-						
-						}
-					
-					?>
-						
-							</div><!-- testi_description -->
-					
-							<span class="testi_name"><?php the_sub_field( 'name' ); ?></span><!-- testi_name -->
-					
-						</div><!-- single_testi -->
-				    
-					<?php endwhile; ?>
-				 
-				<?php endif; ?>
-				
-			</div><!-- testi_col -->
-			
-		</div><!-- testi_bottom -->
-				
-	</div><!-- internal_container -->
+		<?php endif;?>
+		
+	</div><!-- internal_banner_two -->
 	
+	<div class="page_container">
+		
+		<div id='tesimonial_wrapper' class='box_wrapper'>
+		
+			<div class='tesimonial_inner'>
+			
+				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+
+				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+
+				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+
+				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+			
+			</div><!-- tesimonial_inner -->
+		
+		</div><!-- tesimonial_wrapper -->
+
+		<div id='testimonial_bottom'>
+		
+			<div class='testimonial_col'>
+			
+				<div class='testimonial_single'>
+
+				<div class='tesimonial_inner'>
+				
+				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+
+				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+
+				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+
+				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+
+				</div><!-- tesimonial_inner -->
+				
+				</div><!-- testimonial_single -->
+
+				<div class='testimonial_single'>
+
+				<div class='tesimonial_inner'>
+				
+				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+
+				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+
+				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+
+				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+
+				</div><!-- tesimonial_inner -->
+				
+				</div><!-- testimonial_single -->
+			
+			</div><!-- testimonial_col -->
+
+			<div class='testimonial_col'>
+			
+				<div class='testimonial_single'>
+
+				<div class='tesimonial_inner'>
+				
+				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+
+				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+
+				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+
+				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+
+				</div><!-- tesimonial_inner -->
+				
+				</div><!-- testimonial_single -->
+
+				<div class='testimonial_single'>
+
+				<div class='tesimonial_inner'>
+				
+				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+
+				<span class='testimonial_quote'>"Our criminal justice system is the best in the history of the world, but it is not perfect."</span><!-- testimonial_quote -->
+
+				<span class='testimonial_descr'>In my experience, it is not unusual for criminal prosecutions to rely of faulty inestigations,  unconstitutional police conduct, or false accusation by purported victims. The presumption of innocence and the prosecution having the burden of proving guilt beyond a reasonable double are not legal fictions. They must be vigorously enforced. Forget them and you forget the foundation upon which our free society lives.</span><!-- testimonial_descr -->
+
+				<span class='testimonial_name'>ATTORNEY TAYLOR ATTICUs</span><!-- class -->
+
+				</div><!-- tesimonial_inner -->
+				
+				</div><!-- testimonial_single -->
+			
+			</div><!-- testimonial_col -->
+		
+		</div><!-- testimonial_bottom -->
+		
+	</div><!-- page_container -->
 	
 </div><!-- internal_main -->
 

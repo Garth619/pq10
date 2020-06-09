@@ -55,7 +55,6 @@ get_header(); ?>
 		
 	</div><!-- page_container -->
 	
-	
 </div><!-- internal_main -->
 		
 <?php get_footer(); ?>

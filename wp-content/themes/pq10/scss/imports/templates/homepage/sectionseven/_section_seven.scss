@@ -42,6 +42,12 @@
   }
 }
 
+svg#stars {
+  path {
+    fill: $color_bright_one;
+  }
+}
+
 span.sec_seven_title {
   display: block;
   margin-bottom: 30px;
