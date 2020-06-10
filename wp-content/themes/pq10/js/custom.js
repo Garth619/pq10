@@ -241,6 +241,9 @@ $('#sec_two_slider').slick({
 
  // case results
 
+ if($('#case_results_wrapper').length >0 ){
+
+
  var macyInstance = Macy({
   container: '#case_results_wrapper',
 	columns: 3,
@@ -270,7 +273,9 @@ $('#sec_two_slider').slick({
 
 	
 
-	
+
+  
+}
 	
 	
 

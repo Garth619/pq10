@@ -21,6 +21,9 @@
 
 .loc_col {
   margin-bottom: 70px;
+  span, a {
+    color:$color_lite_one;
+  }
   &:nth-of-type(1) {
     order: 2;
     margin-top: 35px;
@@ -82,7 +85,6 @@ span.locations_title {
       size: 18px,
       spacing: 1.62px,
       family: $secondaryfont,
-      color: $color_lite_one,
       weight: 700,
       transform: lowercase,
     )
@@ -98,7 +100,6 @@ a.locations_phone {
       size: 25px,
       spacing: 2.25px,
       family: $primaryfont,
-      color: $color_lite_one,
       weight: 700,
     )
   );
@@ -115,7 +116,6 @@ span.locations_address {
       spacing: 1.62px,
       height: 22px,
       family: $primaryfont,
-      color: $color_lite_one,
       weight: 700,
     )
   );
@@ -136,7 +136,6 @@ a.get_directions {
       size: 13px,
       spacing: 2.6px,
       family: $primaryfont,
-      color: $color_lite_one,
       weight: 700,
       transform: uppercase,
     )
