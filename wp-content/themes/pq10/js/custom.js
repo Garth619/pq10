@@ -114,7 +114,10 @@ jQuery(document).ready(function($){
 
 
 
-
+  if ($(".no_banner")[0]){
+    $('header').addClass("dropshadow");
+	
+  } 
 
         
     
