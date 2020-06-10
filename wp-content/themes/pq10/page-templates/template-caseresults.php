@@ -4,42 +4,49 @@
 
 get_header(); ?>
 
-<div id="internal_main">
+<div id="internal_main" class="no_banner">
 	
-	<div class="internal_container">
-				
-		<h1 class="internal_header"><?php the_title();?></h1><!-- internal_header -->
-		
-		<div class="case_results_wrapper">
-			
-			<?php if(get_field('case_results_page')): ?>
-	 
-				<?php while(has_sub_field('case_results_page')): ?>
-	 
-					<div class="single_cr">
-			
-						<span class="cr_amount"><?php the_sub_field( 'amount' ); ?></span><!-- cr_amount -->
-			
-						<span class="cr_type"><?php the_sub_field( 'type' ); ?></span><!-- cr_type -->
-				
-						<span class="cr_description"><?php the_sub_field( 'description' ); ?></span><!-- cr_description -->
-						
-						<?php if(get_sub_field('extended_review') == "Yes") { ?>
-						
-							<a class="cr_read_more" href="<?php the_sub_field( 'case_results_post_selection' ); ?>">Read More</a>
-								
-						<?php } ?>
+	<div class="page_container one_col">
 
-					</div><!-- single_cr -->
-	    
-				<?php endwhile; ?>
-	 
-			<?php endif; ?>		
-						
-		</div><!-- case_results_wrapper -->
-				
-	</div><!-- internal_container -->
+		<h1 class="page_header center"><?php the_title();?></h1><!-- page_header -->
 		
-	</div><!-- internal_main -->
+		<div id='case_results_wrapper'>
+
+		<?php if ( have_rows( 'case_results_page' ) ) : ?>
+			<?php while ( have_rows( 'case_results_page' ) ) : the_row(); ?>
+
+
+			<div class='single_case_result'>
+			
+			<div class='single_cr_title_wrapper'>
+			
+				<span class='single_cr_title'><?php the_sub_field( 'type' ); ?></span><!-- single_cr_title -->
+			
+			</div><!-- single_cr_title_wrapper -->
+
+			<div class='single_cr_content'>
+			
+				<span class='single_amount'><?php the_sub_field( 'amount' ); ?></span><!-- single_amount -->
+
+				<div class='single_cr_descr'>
+				
+				<?php the_sub_field( 'description' ); ?>
+
+				</div><!-- single_cr_descr -->
+			
+			</div><!-- single_cr_content -->
+		
+		</div><!-- single_case_result -->
+
+		
+			<?php endwhile; ?>
+		<?php endif; ?>
+
+		
+		</div><!-- case_results_wrapper -->
+		
+	</div><!-- page_container -->
+	
+</div><!-- internal_main -->
 						
 <?php get_footer(); ?>

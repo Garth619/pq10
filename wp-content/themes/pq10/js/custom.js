@@ -4,6 +4,7 @@
 // @codekit-prepend 'modernizr-webp.js'
 // @codekit-prepend 'underscore.js'
 // @codekit-prepend 'lazysizes.js'
+// @codekit-prepend 'macy.js'
 
 
 
@@ -238,8 +239,34 @@ $('#sec_two_slider').slick({
  });
  
 
+ // case results
 
-
+ var macyInstance = Macy({
+  container: '#case_results_wrapper',
+	columns: 3,
+	margin: {
+    x: 100,
+    y: 109,
+  },
+	breakAt: {
+    1695: {
+      margin: {
+        x: 35,
+        y: 40,
+      },
+      columns: 3
+    },
+        1275: 2,
+        767: {
+          margin: {
+            x: 0,
+            y: 40,
+          },
+          columns: 1
+        }
+        
+  }
+});
 
 	
 

@@ -4,7 +4,7 @@
 	
 	<div id="internal_banner_two">
 			
-		<h1 class='banner_title_two'>Not Found</h1><!-- page_header_two -->
+		<h1 class='banner_title_two'><?php the_field( 'not_found_title','option'); ?></h1><!-- page_header_two -->
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
 		<?php $banner_image = get_field( 'banner_image' ); ?>
@@ -25,9 +25,9 @@
 		
 		<div id='not_found_wrapper' class='box_wrapper'>
 		
-			<span id='error'>Error code: 404</span><!-- error -->
+			<span id='error'><?php the_field( 'not_found_subtitle','option'); ?></span><!-- error -->
 
-			<span id='not_found_content'><span>The page you were looking for appears to have been moved, deleted or does not exist.</span><span>You could go back to where you were or head straight to our home page.</span></span><!-- not_found_content -->
+			<span id='not_found_content'><?php the_field( 'not_found_content','option'); ?></span><!-- not_found_content -->
 		
 			<div id='not_found_button_wrapper'>
 			
