@@ -27,11 +27,11 @@
 		
 			<span id='error'>Error code: 404</span><!-- error -->
 
-			<span id='not_found_content'>The page you were looking for appears to have been moved, deleted or does not exist. You could go back to where you were or head straight to our home page.</span><!-- not_found_content -->
+			<span id='not_found_content'><span>The page you were looking for appears to have been moved, deleted or does not exist.</span><span>You could go back to where you were or head straight to our home page.</span></span><!-- not_found_content -->
 		
 			<div id='not_found_button_wrapper'>
 			
-				<span class='button_two not_found_button'>Go back</span><!-- button_two -->
+				<span class='button_two not_found_button go_back'>Go back</span><!-- button_two -->
 
 				<a class='button_two not_found_button' href="<?php bloginfo('url');?>">Home</a><!-- button_two -->
 			

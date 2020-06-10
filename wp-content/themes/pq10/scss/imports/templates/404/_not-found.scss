@@ -4,6 +4,15 @@
   text-align: center;
   padding-top: 45px;
   padding-bottom:45px;
+  max-width: 910px;
+  @include margin_lr;
+  @include mq(large_laptop) {
+    padding-top: 76px;
+    padding-bottom: 63px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1160px;
+  }
 }
 
 
@@ -18,6 +27,9 @@ span#error {
       weight: 700 
     )
   );
+  @include mq(large_laptop) {
+    @include quick_type(35px,45px,null);
+  }
 }
 
 
@@ -34,6 +46,18 @@ span#not_found_content {
       color: $color_dark_three
     )
   );
+  @include mq(large_laptop) {
+    max-width: 679px;
+    @include quick_type(18px,35px,null);
+  }
+  @include mq(small_monitor) {
+    max-width:100%;
+  }
+  span {
+    @include mq(small_monitor) {
+      display:block;
+    }
+  }
 }
 
 
@@ -41,7 +65,7 @@ span#not_found_content {
   &:before {
     content:"";
     display: block;
-    margin: 45px auto 40px;
+    margin: 48px auto 46px;
     background:$color_bright_one;
     @include box(93px,2px);
   }
@@ -51,4 +75,5 @@ span#not_found_content {
   padding: 17px 20px;
   width:153px;
   margin:0 13px 15px;
+  cursor: pointer;
 }
