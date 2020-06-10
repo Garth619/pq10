@@ -60,6 +60,8 @@
   background:$color_lite_one;
   width:100%;
   min-height:100px;
+  padding-left:25px;
+  padding-right:25px;
   @include mq(small_laptop) {
     margin-top: -120px;
   }
