@@ -4,34 +4,44 @@
 	<div id='sidebar_att_box'>
 		
 		<div id='att_image_wrapper'>
+
+		<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
 		
-			<img src='<?php bloginfo('template_directory');?>/images/hilley/int-bio-hilley.jpg' />
+		<?php if ( $attorney_profile ) { ?>
+			
+			<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
+		
+		<?php } ?>
 		
 		</div><!-- att_image_wrapper -->
 
-		<div id='att_bio_lists'>
-
-			<h3>Education</h3>
-
-			<ul class="single_line_list">
-				<li>Lorem ipsum University</li>
-				<li>Law school of lorem and ipsum</li>
-				<li>Ipsum School of law and dolor</li>
-			</ul>
-
-			</div><!-- att_bio_lists -->
+		<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
+			
+			<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>
 
 			<div id='att_bio_lists'>
+			
+				<h3><?php the_sub_field( 'title' ); ?></h3>
+			
+				<?php if ( have_rows( 'list_items' ) ) : ?>
+					
+					<ul class="single_line_list">
+				
+						<?php while ( have_rows( 'list_items' ) ) : the_row(); ?>
+					
+							<li><?php the_sub_field( 'list_item' ); ?></li>
+				
+						<?php endwhile; ?>
 
-			<h3>Bar Admissions</h3>
+					</ul>
+		
+			<?php endif; ?>
 
-			<ul class="single_line_list">
-				<li>Lorem ipsum University</li>
-				<li>Law school of lorem and ipsum</li>
-				<li>Ipsum School of law and dolor</li>
-			</ul>
+		</div><!-- att_bio_lists -->
+	
+	<?php endwhile; ?>
 
-			</div><!-- att_bio_lists -->
+	<?php endif; ?>
 
 		</div><!-- sidebar_att_box -->
 		

@@ -16,7 +16,7 @@ get_header(); ?>
 			
 				<h1 id='att_title'><?php the_title();?></h1><!-- att_title -->
 
-				<span id='att_position'>Attorney</span><!-- att_position -->
+				<span id='att_position'><?php the_field( 'position' ); ?></span><!-- att_position -->
 
 			</div><!-- banner_right -->
 			
