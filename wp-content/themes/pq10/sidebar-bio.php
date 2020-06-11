@@ -2,19 +2,23 @@
 <div id="sidebar_bio_wrapper" class="content">
 
 	<div id='sidebar_att_box'>
+
+	<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
+		
+		<?php if ( $attorney_profile ) : ?>
 		
 		<div id='att_image_wrapper'>
 
-		<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
-		
-		<?php if ( $attorney_profile ) { ?>
-			
 			<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
-		
-		<?php } ?>
-		
-		</div><!-- att_image_wrapper -->
 
+		</div><!-- att_image_wrapper -->
+		
+		<?php else: ?>
+		
+			<div id='att_image_wrapper' class="placeholder"></div>
+
+		<?php endif;?>
+		
 		<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
 			
 			<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>

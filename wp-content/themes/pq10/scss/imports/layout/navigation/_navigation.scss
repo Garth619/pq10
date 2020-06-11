@@ -256,6 +256,9 @@ nav {
           transform: rotate(-45deg);
           background-color: $color_bright_one;
           @include box(6px);
+          @include mq(small_monitor) {
+            margin: 9px 2px 0 6px;
+          }
         }
       }
     }

@@ -147,6 +147,7 @@ span#att_position {
 
 #att_image_wrapper {
   margin-bottom: 20px;
+  position:relative;
   @include mq(small_monitor) {
     padding: 45px;
   }
@@ -177,3 +178,29 @@ span#att_position {
   }
 }
 
+
+
+.placeholder {
+  background:$color_dark_one;
+  color:$color_lite_one;
+  padding:0 25px;
+  @include abs(0,null,null,0);
+  @include box(100%,250px);
+  @include flex(center,center);
+  @include type (
+    (
+      size: 17px,
+      family: $primaryfont,
+      spacing:1.7px,
+      weight: 800,
+      transform: uppercase 
+    )
+  );
+  @include mq(small_monitor) {
+    height:350px;
+    font-size: 18px;
+  }
+  &:before {
+    content:"Profile Coming Soon"
+  }
+}
