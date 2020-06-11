@@ -72,6 +72,9 @@
         @include box(100%);
         @include abs(0,null,null,0);
         @include flex(center,center);
+        &.placeholder_overlay {
+          background: $color_dark_two;
+        }
         span.view_profile {
           @include type (
             (
@@ -126,3 +129,6 @@
     }
   }
 }
+
+
+

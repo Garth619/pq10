@@ -181,26 +181,44 @@ span#att_position {
 
 
 .placeholder {
-  background:$color_dark_one;
-  color:$color_lite_one;
-  padding:0 25px;
-  @include abs(0,null,null,0);
-  @include box(100%,250px);
-  @include flex(center,center);
-  @include type (
+  position: relative;
+  text-align: center;
+  .placeholder_inner {
+    background:$color_dark_one;
+    color:$color_lite_one;
+    padding:0 25px;
+    position: relative;
+    @include abs(0,null,null,0);
+    @include box(100%);
+    @include flex(center,center,column);
+    @include type (
     (
       size: 17px,
+      height:21px,
       family: $primaryfont,
       spacing:1.7px,
       weight: 800,
       transform: uppercase 
     )
   );
-  @include mq(small_monitor) {
-    height:350px;
-    font-size: 18px;
+    &:before {
+      content:"Profile Coming Soon";
+      display: block;
+    }
+    &:after {
+      content:"";
+      display: block;
+      margin:20px auto 0;
+      transform:rotate(-45deg);
+      background:$color_bright_one;
+      @include box(10px);
+    }
   }
-  &:before {
-    content:"Profile Coming Soon"
+  img {
+    width:100%;
+    @include image();
   }
 }
+
+
+

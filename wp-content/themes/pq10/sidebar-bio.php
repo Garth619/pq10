@@ -15,7 +15,13 @@
 		
 		<?php else: ?>
 		
-			<div id='att_image_wrapper' class="placeholder"></div>
+			<div class="placeholder">
+
+				<div class='placeholder_inner'></div><!-- placeholder_inner -->
+			
+				<img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /><!-- name -->
+
+			</div><!-- placeholder -->
 
 		<?php endif;?>
 		

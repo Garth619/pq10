@@ -12,145 +12,62 @@ get_header(); ?>
 		
 		<div id='meet_team_wrapper'>
 
-			<div class='single_att'>
-			
-				<a href='<?php the_permalink();?>'>
+
+		<?php $our_team = get_field( 'our_team' ); ?>
 				
-					<div class='single_att_img'>
+				<?php if ( $our_team ): ?>
 					
-						<img src='<?php bloginfo('template_directory');?>/images/hilley/int-bio-hilley.jpg' /><!-- name -->
-
-						<div class='single_att_overlay'>
-						
-							<span class='view_profile'>View Profile</span><!-- view_profile -->
-						
-						</div><!-- single_att_overlay -->
-					
-					</div><!-- single_att_img -->
-
-					<div class='single_att_title_wrapper'>
-					
-						<span class='single_att_name'>Mia I. Frieder</span><!-- single_att_name -->
-
-						<span class='single_att_position'>Attorney</span><!-- single_att_position -->
-					
-					</div><!-- single_att_title_wrapper -->
-				
-				</a>
+					<?php foreach ( $our_team as $post ):  ?>
+						<?php setup_postdata ( $post ); ?>
+							
+							<div class='single_att'>
 			
-			</div><!-- single_att -->
-
-			<div class='single_att'>
+								<a href='<?php the_permalink();?>'>
 			
-				<a href='<?php the_permalink();?>'>
-				
-					<div class='single_att_img'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/hilley/int-bio-hilley.jpg' /><!-- name -->
+									<div class='single_att_img'>
 
-						<div class='single_att_overlay'>
-						
-							<span class='view_profile'>View Profile</span><!-- view_profile -->
-						
-						</div><!-- single_att_overlay -->
-					
-					</div><!-- single_att_img -->
+									<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
+		
+									<?php if ( $attorney_profile ) : ?>
+		
+										<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
+	
+										<?php else: ?>
+		
+										<div class="placeholder">
 
-					<div class='single_att_title_wrapper'>
-					
-						<span class='single_att_name'>Mia I. Frieder</span><!-- single_att_name -->
-
-						<span class='single_att_position'>Attorney</span><!-- single_att_position -->
-					
-					</div><!-- single_att_title_wrapper -->
-				
-				</a>
+											<div class='placeholder_inner'></div><!-- placeholder_inner -->
 			
-			</div><!-- single_att -->
+											<img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /><!-- name -->
 
-			<div class='single_att'>
-			
-				<a href='<?php the_permalink();?>'>
+										</div><!-- placeholder -->
+
+									<?php endif;?>
+									
+									<div class='single_att_overlay 	<?php if(!$attorney_profile ){echo "placeholder_overlay";}?>'>
+					
+										<span class='view_profile'>View Profile</span><!-- view_profile -->
+					
+									</div><!-- single_att_overlay -->
 				
-					<div class='single_att_img'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/hilley/int-bio-hilley.jpg' /><!-- name -->
+								</div><!-- single_att_img -->
 
-						<div class='single_att_overlay'>
-						
-							<span class='view_profile'>View Profile</span><!-- view_profile -->
-						
-						</div><!-- single_att_overlay -->
-					
-					</div><!-- single_att_img -->
-
-					<div class='single_att_title_wrapper'>
-					
-						<span class='single_att_name'>Mia I. Frieder</span><!-- single_att_name -->
-
-						<span class='single_att_position'>Attorney</span><!-- single_att_position -->
-					
-					</div><!-- single_att_title_wrapper -->
+								<div class='single_att_title_wrapper'>
 				
-				</a>
-			
-			</div><!-- single_att -->
+									<span class='single_att_name'><?php the_title();?></span><!-- single_att_name -->
 
-			<div class='single_att'>
-			
-				<a href='<?php the_permalink();?>'>
+									<span class='single_att_position'><?php the_field( 'position' ); ?></span><!-- single_att_position -->
 				
-					<div class='single_att_img'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/hilley/int-bio-hilley.jpg' /><!-- name -->
-
-						<div class='single_att_overlay'>
-						
-							<span class='view_profile'>View Profile</span><!-- view_profile -->
-						
-						</div><!-- single_att_overlay -->
-					
-					</div><!-- single_att_img -->
-
-					<div class='single_att_title_wrapper'>
-					
-						<span class='single_att_name'>Mia I. Frieder</span><!-- single_att_name -->
-
-						<span class='single_att_position'>Attorney</span><!-- single_att_position -->
-					
-					</div><!-- single_att_title_wrapper -->
-				
-				</a>
+								</div><!-- single_att_title_wrapper -->
 			
-			</div><!-- single_att -->
-
-			<div class='single_att'>
-			
-				<a href='<?php the_permalink();?>'>
-				
-					<div class='single_att_img'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/hilley/int-bio-hilley.jpg' /><!-- name -->
-
-						<div class='single_att_overlay'>
-						
-							<span class='view_profile'>View Profile</span><!-- view_profile -->
-						
-						</div><!-- single_att_overlay -->
-					
-					</div><!-- single_att_img -->
-
-					<div class='single_att_title_wrapper'>
-					
-						<span class='single_att_name'>Mia I. Frieder</span><!-- single_att_name -->
-
-						<span class='single_att_position'>Attorney</span><!-- single_att_position -->
-					
-					</div><!-- single_att_title_wrapper -->
-				
-				</a>
-			
-			</div><!-- single_att -->
+						</a>
+		
+					</div><!-- single_att -->
+							
+							
+						<?php endforeach; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
 
 		</div><!-- meet_team_wrapper -->
 		
