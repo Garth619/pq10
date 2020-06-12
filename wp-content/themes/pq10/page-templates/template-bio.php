@@ -35,7 +35,7 @@ get_header(); ?>
 		
 		<?php endif;?>
 		
-	</div><!-- internal_att_banner_content -->
+	</div><!-- internal_att_banner -->
 	
 	<div class="page_container">
 

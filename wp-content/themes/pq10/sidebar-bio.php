@@ -3,7 +3,7 @@
 
 	<div id='sidebar_att_box'>
 
-	<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
+		<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
 		
 		<?php if ( $attorney_profile ) : ?>
 		
