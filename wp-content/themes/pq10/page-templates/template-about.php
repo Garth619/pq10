@@ -6,19 +6,25 @@ get_header(); ?>
 
 <div id="internal_main">
 	
-<div id="internal_about_banner">
+<div id="about_banner">
 		
-		<div id="internal_about_banner_content">
-			
-			<h1 id='about_title'><?php the_title();?></h1><!-- att_title -->
+		<div id="about_banner_content">
 
-			<div id='about_intro'>
+			<div id='about_banner_left'>
 			
-				<p>Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			
-			</div><!-- about_intro -->
+				<h1 id='about_title'><?php the_title();?></h1><!-- att_title -->
 
-		</div><!-- internal_about_banner_content -->
+					<div id='about_intro'>
+			
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+				</div><!-- about_intro -->
+
+			</div><!-- about_banner_left -->
+
+			<div id='about_banner_spacer'></div><!-- about_banner_spacer -->
+
+		</div><!-- about_banner_content -->
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
 		<?php $banner_image = get_field( 'banner_image' ); ?>
@@ -33,7 +39,7 @@ get_header(); ?>
 		
 		<?php endif;?>
 		
-	</div><!-- internal_about_banner -->
+	</div><!-- about_banner -->
 	
 	<div class="page_container content">
 		
