@@ -45,11 +45,12 @@ header {
     padding: 29px 21px 0;
   }
   a.logo {
-    svg {
-      max-width: 200px;
+    svg, img {
       width: 100%;
+      @include image();
+      max-width: 200px;
       @include mq(small_laptop) {
-        max-width:100%;
+        max-width:250px;
       }
       @include mq(large_laptop) {
         max-width:330px;

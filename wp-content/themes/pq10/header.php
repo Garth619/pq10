@@ -63,8 +63,14 @@
 	<div id='header_left'>
 
 		<a class='logo' href='<?php bloginfo('url');?>'>
-	
-			<?php echo file_get_contents( get_template_directory() . '/images/hilley/logo2.svg' ) ?>
+
+		<?php $logo = get_field( 'logo','option'); ?>
+			
+			<?php if ( $logo ) { ?>
+			
+				<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+			
+			<?php } ?>
 	
 		</a><!-- logo -->
 
@@ -104,14 +110,20 @@
 		<div id='header_right_inner'>
 	
 			<div class='consult_cta'>
-	
-				<span class='consult_verbiage'>Free Consultation</span><!-- consult_verbiage -->
 
-				<span class='consult_verbiage'><span class="hide">Hablamos</span> Español</span><!-- consult_verbiage -->
+				<?php if ( have_rows( 'header_text','option') ) : ?>
+				
+					<?php while ( have_rows( 'header_text','option') ) : the_row(); ?>
+					
+						<span class='consult_verbiage'><?php the_sub_field( 'header_text_line' ); ?></span><!-- consult_verbiage -->
+
+					<?php endwhile; ?>
+
+				<?php endif; ?>
 	
 			</div><!-- consult_cta -->
 
-			<a id='header_phone' href='tel:4042336200'>(404) 233-6200</a><!-- header_phone -->
+			<a id='header_phone' href='tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('main_phone', 'option')); ?>'><?php the_field( 'main_phone','option'); ?></a><!-- header_phone -->
 
 		</div><!-- header_right_inner -->
 
