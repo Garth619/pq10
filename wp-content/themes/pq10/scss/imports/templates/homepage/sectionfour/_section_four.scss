@@ -312,8 +312,10 @@ a.cr_button {
       margin-right: 20px;
     }
   }
-  svg {
+  svg, img {
     @include box(69px);
+    @include image();
+    @include margin_lr;
     @include mq(small_laptop) {
       @include box(85px);
     }

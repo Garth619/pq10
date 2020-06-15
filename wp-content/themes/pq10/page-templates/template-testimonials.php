@@ -32,7 +32,7 @@ get_header(); ?>
 		
 			<div class='tesimonial_inner'>
 			
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+				<?php echo file_get_contents( get_template_directory() . '/images/stars.svg' ); ?>
 
 				<span class='testimonial_quote'><?php the_field( 'featured_testimonial_intro' ); ?></span><!-- testimonial_quote -->
 
@@ -55,7 +55,7 @@ get_header(); ?>
 
 					<div class='tesimonial_inner'>
 
-						<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+						<?php echo file_get_contents( get_template_directory() . '/images/stars.svg' ); ?>
 
 						<span class='testimonial_quote'><?php the_sub_field( 'intro' ); ?></span><!-- testimonial_quote -->
 
@@ -81,7 +81,7 @@ get_header(); ?>
 
 					<div class='tesimonial_inner'>
 
-						<?php echo file_get_contents( get_template_directory() . '/images/hilley/stars.svg' ); ?>
+						<?php echo file_get_contents( get_template_directory() . '/images/stars.svg' ); ?>
 
 						<span class='testimonial_quote'><?php the_sub_field( 'intro' ); ?></span><!-- testimonial_quote -->
 

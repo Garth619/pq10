@@ -4,9 +4,9 @@
 
 				<div class='loc_row'>
 				
-					<span class='locations_title'>Toll Free</span><!-- locations_title -->
+					<span class='locations_title'><?php the_field( 'toll_free_title','option'); ?></span><!-- locations_title -->
 
-					<a class='locations_phone' href='tel:4129442036'>(877) 938-2300</a><!-- locations_phone -->
+					<a class='locations_phone' href='tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('toll_free_phone', 'option')); ?>'><?php the_field( 'toll_free_phone','option'); ?></a><!-- locations_phone -->
 				
 				</div><!-- loc_row -->
 
@@ -14,9 +14,9 @@
 
 				<div class='loc_row'>
 				
-					<span class='locations_title'>Local</span><!-- locations_title -->
-
-					<a class='locations_phone' href='tel:8663043277'>(404) 233-6200</a><!-- locations_phone -->
+					<span class='locations_title'><?php the_field( 'local_title','option'); ?></span><!-- locations_title -->
+					
+					<a class='locations_phone' href='tel:<?php echo str_replace(['-', '(', ')', ' '], '', get_field('local_phone', 'option')); ?>'><?php the_field( 'local_phone','option'); ?></a><!-- locations_phone -->
 				
 				</div><!-- loc_row -->
 			
@@ -24,43 +24,67 @@
 
 			<div class='loc_col'>
 			
-			<span class='locations_title'>Office</span><!-- locations_title -->
+			<span class='locations_title'><?php the_field( 'office_title','option'); ?></span><!-- locations_title -->
 
-			<span class='locations_address'>5855 Sandy Springs Circle<br/> Suite 200<br/> Atlanta, GA 30328</span><!-- locations_address -->
+			<span class='locations_address'><?php the_field( 'address','option'); ?></span><!-- locations_address -->
 
-			<a class='get_directions' href=''>Get Directions</a><!-- get_directions -->
+			<a class='get_directions' href='<?php the_field( 'get_directions_link','options'); ?>' target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage','options'); ?></a><!-- get_directions -->
 			
 			</div><!-- loc_col -->
 
 			<div class='loc_col'>
 			
-			<span class='locations_title'>Social</span><!-- locations_title -->
+			<span class='locations_title'><?php the_field( 'social_title','option'); ?></span><!-- locations_title -->
 
 			<div class='social_media'>
-			
-				<a class='sm tw' href='<?php bloginfo('bloginfo');?>/href'>
+
+				<?php if ( have_rows( 'social_media','option') ) : ?>
+					
+					<?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
+
+						<?php if(get_sub_field( 'icon' ) == "Twitter" ) { ?>
+
+							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
 				
-					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-tw.svg' ) ?>
+								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-tw.svg' ) ?>
 
-				</a><!-- sm tw -->
+							</a>
 
-				<a class='sm li' href='<?php bloginfo('bloginfo');?>/href'>
-				
-					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-li.svg' ) ?>
-				
-				</a><!-- sm li -->
+						<?php } ?>
 
-				<a class='sm yelp' href='<?php bloginfo('bloginfo');?>/href'>
-				
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-yelp.svg' ) ?>
+						<?php if(get_sub_field( 'icon' ) == "LinkedIn" ) { ?>
 
-				</a><!-- sm yelp -->
+							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
 
-				<a class='sm fb' href='<?php bloginfo('bloginfo');?>/href'>
-				
-					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-social-fb.svg' ) ?>
+								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-li.svg' ) ?>
 
-				</a><!-- sm fb -->
+							</a>
+
+						<?php } ?>
+
+						<?php if(get_sub_field( 'icon' ) == "Yelp" ) { ?>
+
+							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
+
+								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-yelp.svg' ) ?>
+
+							</a>
+
+						<?php } ?>
+
+						<?php if(get_sub_field( 'icon' ) == "Facebook" ) { ?>
+
+							<a href='<?php the_sub_field( 'link' ); ?>' target="_blank" rel="noopener">
+
+								<?php echo file_get_contents( get_template_directory() . '/images/footer-social-fb.svg' ) ?>
+
+							</a>
+
+						<?php } ?>
+		
+					<?php endwhile; ?>
+
+				<?php endif; ?>
 			
 			</div><!-- social_media -->
 			

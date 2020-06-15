@@ -4,11 +4,11 @@
   
     <div id='sec_one_content'>
     
-      <span id='sec_one_subtitle'>Georgia's Award Winning Team</span><!-- sec_one_subtitle -->
+      <span id='sec_one_subtitle'><?php the_field( 'section_one_subtitle' ); ?></span><!-- sec_one_subtitle -->
 
-      <span id='sec_one_title'>For personal injury, workers’ compensation and medical malpractice </span><!-- sec_one_title -->
+      <span id='sec_one_title'><?php the_field( 'section_one_large_title' ); ?></span><!-- sec_one_title -->
 
-      <a class='button' href='#consultation'><span>Request A Consultation</span></a><!-- button -->  
+      <a class='button' href='#consultation'><span><?php the_field( 'button_verbiage' ); ?></span></a><!-- button -->  
     
     </div><!-- sec_one_content -->
   
@@ -16,11 +16,49 @@
 
   <picture>
 
-    <source media="(min-width: 1380px)" srcset="<?php bloginfo('template_directory');?>/images/hilley/hero-desk.jpg">
+    <?php $hero_desktop_new_webp = get_field( 'hero_desktop_new_webp' ); ?>
+    
+    <?php if ( $hero_desktop_new_webp ) { ?>
+	  
+      <source media="(min-width: 1380px)" srcset="<?php echo $hero_desktop_new_webp['url']; ?>" type="image/webp">
+    
+    <?php } ?>
+    
+    <?php $hero_desktop_new = get_field( 'hero_desktop_new' ); ?>
+    
+    <?php if ( $hero_desktop_new ) { ?>
 
-    <source media="(min-width: 768px)" srcset="<?php bloginfo('template_directory');?>/images/hilley/hero-tab.jpg">
+      <source media="(min-width: 1380px)" srcset="<?php echo $hero_desktop_new['url']; ?>">
 
-    <img id='sec_one_hero' src='<?php bloginfo('template_directory');?>/images/hilley/hero-mob.jpg' />
+    <?php } ?>
+
+    <?php $hero_tablet_webp_new = get_field( 'hero_tablet_webp_new' ); ?>
+    
+    <?php if ( $hero_tablet_webp_new ) { ?>
+	    
+      <source media="(min-width: 768px)" srcset="<?php echo $hero_tablet_webp_new['url']; ?>" type="image/webp">
+      
+    <?php } ?>
+
+    <?php $hero_tablet_new = get_field( 'hero_tablet_new' ); ?>
+    
+    <?php if ( $hero_tablet_new ) { ?>
+	    
+      <source media="(min-width: 768px)" srcset="<?php echo $hero_tablet_new['url']; ?>">
+      
+    <?php } ?>
+
+    <?php $hero_mobile_webp_new = get_field( 'hero_mobile_webp_new' ); ?>
+    
+    <?php if ( $hero_mobile_webp_new ) { ?>
+	    
+      <source srcset="<?php echo $hero_mobile_webp_new['url']; ?>" type="image/webp">
+      
+    <?php } ?>
+
+    <?php $hero_mobile_new = get_field( 'hero_mobile_new' ); ?>
+
+    <img id='sec_one_hero' src='<?php echo $hero_mobile_new['url']; ?>' />
 
   </picture>
 

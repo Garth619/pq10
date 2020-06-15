@@ -4,49 +4,39 @@
 
 		<div id='sec_two_arrow_left' class="sec_two_arrow">
 		
-			<?php echo file_get_contents( get_template_directory() . '/images/hilley/arrow.svg' ) ?>
+			<?php echo file_get_contents( get_template_directory() . '/images/arrow.svg' ) ?>
 	
 		</div><!-- sec_two_arrow_left -->
 	
 		<div id='sec_two_slider'>
 
-			<div class='sec_two_single_slide one'>
+		<?php if ( have_rows( 'selling_points' ) ) : ?>
 			
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-01.svg' ) ?>
-				
-				<span class='sec_two_slide_title'>Husband and wife legal team fighting together for you </span><!-- sec_two_slide_title -->
+			<?php while ( have_rows( 'selling_points' ) ) : the_row(); ?>
+		
+				<div class='sec_two_single_slide <?php the_sub_field( 'class' ); ?>'>
 			
-			</div><!-- sec_two_single_slide -->
+					<?php $svg = get_sub_field( 'svg' ); ?>
+					
+					<?php if ( $svg ) { ?>
+						
+						<img src="<?php echo $svg['url']; ?>" alt="<?php echo $svg['alt']; ?>" />
+					
+					<?php } ?>
+			
+					<span class='sec_two_slide_title'><?php the_sub_field( 'description' ); ?> </span><!-- sec_two_slide_title -->
+		
+				</div><!-- sec_two_single_slide -->
+			
+			<?php endwhile; ?>
 
-			<div class='sec_two_single_slide two'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-02.svg' ) ?>
-				
-				<span class='sec_two_slide_title'>Lawyers will handle your case from start to finish</span><!-- sec_two_slide_title -->
-			
-			</div><!-- sec_two_single_slide -->
-
-			<div class='sec_two_single_slide three'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-03.svg' ) ?>
-				
-				<span class='sec_two_slide_title'>We work around the clock to make sure our clients are statisfied </span><!-- sec_two_slide_title -->
-			
-			</div><!-- sec_two_single_slide -->
-
-			<div class='sec_two_single_slide four'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/hilley/icon-04.svg' ) ?>
-				
-				<span class='sec_two_slide_title'>Never a fee to talk to our attorneys about your case</span><!-- sec_two_slide_title -->
-			
-			</div><!-- sec_two_single_slide -->
+		<?php endif; ?>
 		
 		</div><!-- sec_two_slider -->
 
 		<div id='sec_two_arrow_right' class="sec_two_arrow">
 		
-			<?php echo file_get_contents( get_template_directory() . '/images/hilley/arrow.svg' ) ?>
+			<?php echo file_get_contents( get_template_directory() . '/images/arrow.svg' ) ?>
 	
 		</div><!-- sec_two_arrow_right -->
 	

@@ -1,6 +1,5 @@
 <footer id='consultation'>
 
-
 <div id='footer_form_wrapper'>
 
 	<div id='footer_form_inner'>
@@ -9,15 +8,15 @@
 		
 			<div id='footer_left_inner'>
 		
-				<span id='footer_form_title'>Request a<br/> free consultation</span><!-- footer_form_title -->
+				<span id='footer_form_title'><?php the_field( 'form_title','option'); ?></span><!-- footer_form_title -->
 
 				<div id='footer_desc'>
 			
-					<p>There is never a fee to talk to a lawyer at Hilley & Frieder about your case. Call <a href="tel:4042336200">(404) 233-6200</a> or complete our contact form for a free and confidential consultation.</p>
+					<?php the_field( 'form_content','option'); ?>
 			
 				</div><!-- footer_desc -->
 
-				<span id='schedule'>Schedule Your Free Consultation Today!</span><!-- schedule -->
+				<span id='schedule'><?php the_field( 'schedule_verbiage','option'); ?></span><!-- schedule -->
 
 				</div><!-- footer_left_inner -->
 		
@@ -27,7 +26,7 @@
 		
 				<?php gravity_form(1, false, false, false, '', true, 12); ?>
 
-				<span id='required'>*Required Fields</span><!-- required -->
+				<span id='required'><?php the_field( 'required_field_verbiage','option'); ?></span><!-- required -->
 		
 			</div><!-- footer_form_right -->
 		
@@ -44,15 +43,24 @@
 			<div id='copyright_inner'>
 
 				<ul>
-					<li>&copy; <?php echo date('Y'); ?> Hilley & Frieder, P.C.</li>
-					<li><a href="">All Rights Reserved</a></li>
-					<li><a href="">Disclaimer</a></li>
-					<li><a href="">Site Map</a></li>
+					<li>&copy; <?php echo date('Y'); ?> <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+					<?php if(get_field('all_rights_reserved','option')) {?>
+						<li><?php the_field( 'all_rights_reserved','option'); ?></li>
+					<?php } ?>
+					<?php if(get_field('disclaimer','option') && get_field('disclaimer_title','option')) {?>
+						<li><a href="<?php the_field( 'disclaimer','option'); ?>"><?php the_field( 'disclaimer_title','option'); ?></a></li>
+					<?php } ?>
+					<?php if(get_field('privacy_policy','option') && get_field('privacy_policy_title','option')) {?>
+						<li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>
+					<?php } ?>
+					<?php if(get_field('site_map','option') && get_field('site_map_title','option')) {?>
+						<li><a href="<?php the_field( 'site_map','option'); ?>"><?php the_field( 'site_map_title','option'); ?></a></li>
+					<?php } ?>
 				</ul>
 
 				<a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
 				
-					<?php echo file_get_contents( get_template_directory() . '/images/hilley/footer-01.svg' ) ?>
+					<?php echo file_get_contents( get_template_directory() . '/images/footer-01.svg' ) ?>
 				
 				</a><!-- ilawyer -->
 
