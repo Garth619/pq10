@@ -2,7 +2,7 @@
 
 <div id='section_seven_inner'>
 
-    <span class='sec_seven_title'>Client Testimonials</span><!-- sec_seven_title -->
+    <span class='sec_seven_title'><?php the_field( 'section_seven_title' ); ?></span><!-- sec_seven_title -->
   
     <div id='sec_seven_slider'>
 

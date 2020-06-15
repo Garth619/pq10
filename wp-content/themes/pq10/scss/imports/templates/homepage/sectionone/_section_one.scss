@@ -1,10 +1,10 @@
 #section_one {
   position: relative;
-  margin-top:122px;
+  margin-top: 119px;
   width:100%;
-  padding-bottom: 60px;
+  padding-bottom: 53px;
   @include mq(small_tablet) {
-    margin-top: 80px;
+    margin-top: 77px;
     padding-bottom: 120px;
     padding-right: 27px;
   }
@@ -38,7 +38,7 @@
 }
 
 #sec_one_content {
-  padding-top: 254px;
+  padding-top: 256px;
   @include mq(small_tablet) {
     padding-top: 89px;
     text-align: left;

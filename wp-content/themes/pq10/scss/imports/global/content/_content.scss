@@ -190,11 +190,6 @@ h4 {
   ol {
     margin-bottom: 30px;
   }
-  p {
-    &:last-of-type {
-      margin-bottom:0;
-    }
-  }
   ol {
     list-style: none;
     counter-reset: item;

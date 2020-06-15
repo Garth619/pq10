@@ -47,7 +47,7 @@
   //background-blend-mode:multiply;
   //background-image: url(/wp-content/themes/pq10/images/hilley/results-img-desk.jpg);
   @include mq(small_tablet) {
-    padding: 70px 25px 163px;
+    padding: 70px 60px 147px;
   }
   @include mq(tablet) {
     flex-grow: 1;
@@ -157,7 +157,7 @@ a.cr_button {
       transform: uppercase,
     )
   );
-  @include mq(small_mobile) {
+  @include mq(small_tablet) {
     margin-top: 23px;
     padding: 11px 29px;
   }
@@ -183,6 +183,9 @@ a.cr_button {
   @include mq(large_mobile) {
     padding: 0 4px;
     margin-top: -110px;
+  }
+  @include mq(small_tablet) {
+    padding: 0 38px;
   }
   @include mq(tablet) {
     flex-basis: 702px;
@@ -277,7 +280,7 @@ a.cr_button {
 
 .sec_four_single_slide {
   text-align: center;
-  padding: 37px 0px 49px;
+  padding: 37px 0px 46px;
   @include mq(large_mobile) {
     box-shadow: 0px 1px 14px #00000080;
     background: $color_lite_one;
@@ -313,7 +316,7 @@ a.cr_button {
     }
   }
   svg, img {
-    @include box(69px);
+    @include box(80px);
     @include image();
     @include margin_lr;
     @include mq(small_laptop) {

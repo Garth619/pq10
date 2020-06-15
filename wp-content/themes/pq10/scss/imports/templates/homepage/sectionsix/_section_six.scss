@@ -3,9 +3,9 @@
 }
 
 #sec_six_inner {
-  padding: 40px 25px 25px;
+  padding: 40px 25px 34px;
   @include mq(small_tablet) {
-    padding: 70px 60px 85px;
+    padding: 70px 60px 50px;
   }
   @include mq(small_laptop) {
     max-width: 950px;

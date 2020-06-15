@@ -45,7 +45,7 @@
 }
 
 h1.sec_three_header {
-  padding-bottom: 40px;
+  padding-bottom: 18px;
   @include type(
     (
       size: 36px,
@@ -57,6 +57,7 @@ h1.sec_three_header {
     )
   );
   @include mq(small_tablet) {
+    padding-bottom: 27px;
     @include quick_type(60px, 70px, null);
   }
   @include mq(large_laptop) {
@@ -212,9 +213,6 @@ span.sec_three_att_quote {
     box-shadow: 0px 0px 20px #00000029;
     @include image();
     @include mq(small_tablet) {
-      @include box(155px);
-    }
-    @include mq(small_monitor) {
       @include box(175px);
     }
   }

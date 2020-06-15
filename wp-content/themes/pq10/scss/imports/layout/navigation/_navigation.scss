@@ -7,9 +7,9 @@ nav {
   display: none;
   -webkit-overflow-scrolling: touch;
   @include box(100%);
-  @include fixed(122px, null, null, 0);
+  @include fixed(119px, null, null, 0);
   @include mq(small_tablet) {
-    top: 80px;
+    top: 77px;
     padding: 27px 0;
   }
   @include mq(small_laptop) {
@@ -179,7 +179,7 @@ nav {
     display: none;
     padding: 10px 0 0 0;
     @include mq(small_laptop) {
-      display: block;
+      display: block !important;
       width: 291px;
       background: $color_gradient_two;
       padding:17px 0;
