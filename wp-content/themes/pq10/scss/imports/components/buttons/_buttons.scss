@@ -35,7 +35,7 @@
     display: block;
     z-index: 1;
     text-align: center;
-    padding: 24px 30px;
+    padding: 24px 20px;
     @include type(
       (
         size: 15px,
@@ -48,6 +48,9 @@
     );
     @include mq(small_tablet) {
       padding: 24px 27px;
+    }
+    @include mq(small_laptop) {
+      padding: 24px 30px;
     }
     @include mq(small_monitor) {
       font-size: 18px;

@@ -30,7 +30,7 @@
   }
   @include mq(small_monitor) {
     padding: 92px 137px 93px;
-    max-width:1600px;
+    max-width: 1350px;
     @include margin_lr;
   }
   svg {

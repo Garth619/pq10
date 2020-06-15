@@ -213,6 +213,8 @@ span#required {
   }
   @include mq(small_monitor) {
     margin-top: 133px;
+    margin-left:0;
+    margin-right:0;
     flex-basis:719px;
   }
   .gform_wrapper {

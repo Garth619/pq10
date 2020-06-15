@@ -79,6 +79,13 @@
   padding-bottom: 44px;
 }
 
+body.single {
+  .blog_content {
+    margin-top:15px;
+    padding-bottom:0;
+  }
+}
+
 
 .paged_wrapper {
   border-top:2px solid $color_lite_two;
