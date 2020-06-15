@@ -205,7 +205,7 @@ span#required {
     max-width: 700px;
   }
   @include mq(small_laptop) {
-    padding-bottom:0;
+    padding:0;
     margin-top:80px;
   }
   @include mq(large_laptop) {

@@ -4,7 +4,7 @@
     padding: 72px 60px 25px;
   }
   @include mq(small_laptop) {
-    padding: 78px 75px 50px;
+    padding: 78px 75px 78px;
   }
   @include mq(large_laptop) {
     padding: 95px 100px 115px;
@@ -59,6 +59,9 @@ h1.sec_three_header {
   @include mq(small_tablet) {
     padding-bottom: 27px;
     @include quick_type(60px, 70px, null);
+  }
+  @include mq(small_laptop) {
+    padding-bottom: 35px;
   }
   @include mq(large_laptop) {
     padding-bottom: 30px;
@@ -214,6 +217,9 @@ span.sec_three_att_quote {
     @include image();
     @include mq(small_tablet) {
       @include box(175px);
+    }
+    @include mq(small_laptop) {
+      @include box(155px);
     }
   }
 }

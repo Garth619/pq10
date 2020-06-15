@@ -21,7 +21,9 @@
     padding: 81px 40px;
   }
   @include mq(small_laptop) {
-    padding: 81px 137px 70px;
+    padding: 71px 77px 70px;
+    max-width:927px;
+    @include margin_lr;
   }
   @include mq(small_monitor) {
     padding: 92px 137px 93px;
@@ -63,6 +65,9 @@ span.sec_seven_title {
   );
   @include mq(small_tablet) {
     @include quick_type(15px, null, 3px);
+  }
+  @include mq(small_laptop) {
+    margin-bottom: 42px;
   }
   @include mq(large_laptop) {
     @include quick_type(16px, null, 3.2px);
@@ -144,6 +149,7 @@ span.sec_seven_desc {
     @include quick_type(30px, 40px, 0.3px);
   }
   @include mq(small_laptop) {
+    max-width:100%;
     @include quick_type(35px, 45px, null);
   }
   @include mq(large_laptop) {

@@ -20,7 +20,7 @@
     
     <?php if ( $hero_desktop_new_webp ) { ?>
 	  
-      <source media="(min-width: 1380px)" srcset="<?php echo $hero_desktop_new_webp['url']; ?>" type="image/webp">
+      <source media="(min-width: 1170px)" srcset="<?php echo $hero_desktop_new_webp['url']; ?>" type="image/webp">
     
     <?php } ?>
     
@@ -28,7 +28,7 @@
     
     <?php if ( $hero_desktop_new ) { ?>
 
-      <source media="(min-width: 1380px)" srcset="<?php echo $hero_desktop_new['url']; ?>">
+      <source media="(min-width: 1170px)" srcset="<?php echo $hero_desktop_new['url']; ?>">
 
     <?php } ?>
 
