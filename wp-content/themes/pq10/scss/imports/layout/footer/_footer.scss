@@ -17,7 +17,7 @@ footer {
     @include flex(space-between);
   }
   @include mq(large_laptop) {
-    padding: 0 100px 120px;
+    padding: 0 100px 135px;
   }
   @include mq(small_monitor) {
     padding: 0 180px 120px;

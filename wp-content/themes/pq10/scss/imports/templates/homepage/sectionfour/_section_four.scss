@@ -58,7 +58,7 @@
     padding: 154px 88px 162px 70px;
   }
   @include mq(large_laptop) {
-    padding: 199px 110px 162px 50px;
+    padding: 199px 81px 162px 50px;
   }
   @include mq(small_monitor) {
     padding: 43px 112px 162px 114px;
@@ -225,7 +225,7 @@ a.cr_button {
     padding: 68px 30px;
   }
   @include mq(large_laptop) {
-    padding: 105px 30px;
+    padding: 105px 30px 105px 60px;
   }
   @include mq(small_monitor) {
     padding: 193px 110px;

@@ -14,7 +14,7 @@
   }
   @include mq(large_laptop) {
     max-width: 1315px;
-    padding: 105px 60px 85px;
+    padding: 105px 60px 70px;
     @include flex(space-between,null);
   }
   @include mq(small_monitor) {

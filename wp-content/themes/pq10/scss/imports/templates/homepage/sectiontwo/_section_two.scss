@@ -176,7 +176,7 @@
       @include quick_type(22px,30px,null);
     }
     @include mq(small_laptop) {
-      max-width: 245px;
+      max-width: 275px;
       margin-top: 24px;
     }
     @include mq(large_laptop) {
@@ -219,6 +219,11 @@
 // hacky code, each box has differnces
 
 .sec_two_single_slide {
+  &.one {
+    span.sec_two_slide_title {
+      max-width:245px;
+    }
+  }
   &.two {
     // svg {
     //   @include mq(small_tablet) {
