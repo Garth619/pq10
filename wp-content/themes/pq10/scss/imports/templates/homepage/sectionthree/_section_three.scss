@@ -18,7 +18,7 @@
   @include mq(small_laptop) {
     @include flex();
   }
- 
+
   @include mq(small_monitor) {
     max-width: 1440px;
     margin: 0 auto;
@@ -39,9 +39,8 @@
 
 #sec_three_content_inner {
   @include mq(small_monitor) {
-    padding-right:75px;
+    padding-right: 75px;
   }
-  
 }
 
 h1.sec_three_header {
@@ -210,16 +209,26 @@ span.sec_three_att_quote {
 }
 
 .attorney_image_wrapper {
-  img {
-    margin: 0 auto;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px #00000029;
-    @include image();
-    @include mq(small_tablet) {
+  .att_image {
+    overflow:hidden;
+    border-radius:50%;
+    @include margin_lr;
+    @include box(175px);
+    @include mq(small_laptop) {
+     @include box(155px);
+    }
+    @include mq(large_laptop) {
+      @include box(150px);
+    }
+    @include mq(small_monitor) {
       @include box(175px);
     }
-    @include mq(small_laptop) {
-      @include box(155px);
+    img {
+      margin: 0 auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 20px #00000029;
+      @include image();
+      @include box(100%);
     }
   }
 }

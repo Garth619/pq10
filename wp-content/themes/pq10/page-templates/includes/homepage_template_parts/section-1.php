@@ -8,7 +8,7 @@
 
       <span id='sec_one_title'><?php the_field( 'section_one_large_title' ); ?></span><!-- sec_one_title -->
 
-      <a class='button' href='#consultation'><span><?php the_field( 'button_verbiage' ); ?></span></a><!-- button -->  
+      <a class='button free_consultation' href='#consultation'><span><?php the_field( 'button_verbiage' ); ?></span></a><!-- button -->  
     
     </div><!-- sec_one_content -->
   

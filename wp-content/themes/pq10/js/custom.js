@@ -104,13 +104,13 @@ jQuery(document).ready(function($){
       }
     }
 		
-	// createWaypoint('fixed_header', 'header.double_bar', 'visible', 0, null, true);
+
 
 		
-	// createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
-  //   createWaypoint('sec_three_left_trigger', '#sec_three_left_trigger', 'visible', 700, null, true);
-  //   createWaypoint('section_four', '#section_four', 'visible', 400, null, true);
-  //   createWaypoint('section_six', '#section_six', 'visible', 400, null, true);
+	      createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
+        createWaypoint('section_four', '#section_four', 'visible', 600, null, true);
+        createWaypoint('section_seven', '#section_seven', 'visible', 600, null, true);
+        createWaypoint('consultation', 'footer', 'visible', 400, null, true);
    
 
 

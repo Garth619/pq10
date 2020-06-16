@@ -19,15 +19,19 @@
 		<?php if ( have_rows( 'section_three_attorneys' ) ) : ?>
 			<?php while ( have_rows( 'section_three_attorneys' ) ) : the_row(); ?>
 		
-				<div class='sec_three_attorney'>
+				<div id="" class='sec_three_attorney'>
 			
 					<div class='attorney_image_wrapper'>
 
 						<?php $attorney_image = get_sub_field( 'attorney_image' ); ?>
 						
 						<?php if ( $attorney_image ) { ?>
+
+							<div class="att_image">
 						
-							<img class='attorney_image_one lazyload' data-src="<?php echo $attorney_image['url']; ?>" alt="<?php echo $attorney_image['alt']; ?>" />
+								<img class='attorney_image_one lazyload' data-src="<?php echo $attorney_image['url']; ?>" alt="<?php echo $attorney_image['alt']; ?>" />
+
+							</div><!-- att_image -->
 						
 						<?php } ?>
 

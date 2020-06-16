@@ -74,13 +74,13 @@ span#sec_one_subtitle {
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(15px,auto,4.5px);
+    @include quick_type(15px,null,4.5px);
   }
   @include mq(large_laptop) {
-    @include quick_type(18px,auto,5.4px);
+    @include quick_type(18px,null,5.4px);
   }
   @include mq(small_monitor) {
-    @include quick_type(20px,auto,6px);
+    @include quick_type(20px,null,6px);
   }
   &:before {
     content:""; 
