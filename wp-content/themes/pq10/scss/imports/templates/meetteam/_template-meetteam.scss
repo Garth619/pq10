@@ -50,6 +50,9 @@
   &:hover {
     a {
       .single_att_img {
+        img {
+          transform:scale(1.1);
+        }
         .single_att_overlay {
           opacity: 1;
         }
@@ -61,8 +64,11 @@
     display: block;
     .single_att_img {
       position: relative;
+      overflow:hidden;
       img {
         width:100%;
+        transform:scale(1);
+        transition: 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
         @include image();
       }
       .single_att_overlay {
@@ -70,7 +76,7 @@
         background: rgba(1,97,113,0.7);
         transition: all 200ms ease-in-out;
         @include box(100%);
-        @include abs(0,null,null,0);
+        @include abs(0,null,null,0,1);
         @include flex(center,center);
         &.placeholder_overlay {
           background: $color_dark_two;

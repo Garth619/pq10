@@ -141,7 +141,7 @@ span#att_position {
   background: $color_lite_one;
   padding:25px;
   @include mq(small_monitor) {
-    padding: 25px 25px 70px;
+    padding: 80px 25px 70px;
   }
 }
 
@@ -149,10 +149,10 @@ span#att_position {
   margin-bottom: 20px;
   position:relative;
   @include mq(small_monitor) {
-    padding: 45px;
-  }
-  @include mq(small_monitor) {
-    margin-bottom: 8px;
+    margin-bottom: 50px;
+    max-width:420px;
+    margin-left:auto;
+    margin-right:auto;
   }
   img {
     @include image();
@@ -188,7 +188,7 @@ span#att_position {
     color:$color_lite_one;
     padding:0 25px;
     position: relative;
-    @include abs(0,null,null,0);
+    @include abs(0,null,null,0,1);
     @include box(100%);
     @include flex(center,center,column);
     @include type (
