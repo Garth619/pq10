@@ -1,8 +1,11 @@
 
 #tesimonial_wrapper {
-  padding:40px 25px;
+  padding: 53px 25px;
+  @include mq(small_tablet) {
+    padding: 60px 25px;
+  }
   @include mq(small_laptop) {
-    padding: 55px 25px;
+    padding: 80px 25px;
   }
   @include mq(large_laptop) {
     max-width:1085px;
@@ -115,9 +118,9 @@
   margin-bottom:30px;
   padding-bottom: 30px;
   border-bottom:2px solid $color_lite_two;
-  @include mq(small_laptop) {
-    margin-bottom: 50px;
-    padding-bottom: 50px;
+  @include mq(small_tablet) {
+    margin-bottom:45px;
+    padding-bottom: 45px;
   }
   @include mq(small_monitor) {
     margin-bottom: 100px;

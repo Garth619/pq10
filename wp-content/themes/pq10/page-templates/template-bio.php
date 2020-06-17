@@ -7,6 +7,18 @@ get_header(); ?>
 <div id="internal_main">
 	
 	<div id="internal_att_banner">
+
+	<div id='internal_att_tablet'>
+
+	<div id='internal_att_banner_inner'>
+	
+		
+	
+	
+	
+		
+	
+
 		
 		<div id="internal_att_banner_content">
 			
@@ -21,6 +33,8 @@ get_header(); ?>
 			</div><!-- banner_right -->
 			
 		</div><!-- internal_att_banner_content -->
+
+		
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
 		<?php $banner_image = get_field( 'banner_image' ); ?>
@@ -34,13 +48,50 @@ get_header(); ?>
 			<img id="internal_hero" src="<?php echo $global_internal_banner_image['url']; ?>" alt="<?php echo $global_internal_banner_image['alt']; ?>"/><!-- internal_hero -->
 		
 		<?php endif;?>
+
+		</div><!-- internal_att_banner_inner -->
+
+		<div id='mobile_att_image'>
+		
+		<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
+		
+		<?php if ( $attorney_profile ) : ?>
+		
+		<div id='att_image_wrapper'>
+
+			<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
+
+		</div><!-- att_image_wrapper -->
+		
+		<?php else: ?>
+		
+			<div class="placeholder">
+
+				<div class='placeholder_inner'></div><!-- placeholder_inner -->
+			
+				<img src='<?php bloginfo('template_directory');?>/images/placeholder.jpg' /><!-- name -->
+
+			</div><!-- placeholder -->
+
+		<?php endif;?>
+		
+		</div><!-- mobile_att_image -->
+
+		</div><!-- internal_att_tablet -->
+
+
+		
 		
 	</div><!-- internal_att_banner -->
 	
 	<div class="page_container">
 
-		<?php get_sidebar('bio'); ?>
 		
+
+	<div id='att_profile_wrapper'>
+		
+		<?php get_sidebar('bio'); ?>
+
 		<div class="page_content">
 
 			<div class='page_content_inner content'>
@@ -50,6 +101,10 @@ get_header(); ?>
 			</div><!-- page_content_inner -->
 			
 		</div><!-- page_content -->
+		
+		</div><!-- att_profile_wrapper -->
+		
+		
 
 	</div><!-- page_container -->
 	

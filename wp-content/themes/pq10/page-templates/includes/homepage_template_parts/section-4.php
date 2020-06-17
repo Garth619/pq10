@@ -24,7 +24,7 @@
 				
 				<?php while ( have_rows( 'case_results_sec_four' ) ) : the_row(); ?>
 		
-					<div class='sec_four_single_slide one'>
+					<div class='sec_four_single_slide <?php the_sub_field( 'class' ); ?>'>
 
 						<div class='svg_wrapper'>
 

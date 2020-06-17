@@ -416,6 +416,11 @@ a.cr_button {
 // hacky differences in each slide
 
 .sec_four_single_slide {
+  &.one {
+    span.sec_four_description {
+      max-width:250px;
+    }
+  }
   &.three {
     span.sec_four_description {
       max-width:250px;

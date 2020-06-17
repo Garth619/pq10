@@ -1,22 +1,70 @@
 
 body.page-template-template-bio {
   .page_container {
+    @include flex(null,null,column);
+    @include mq(small_tablet) {
+      @include flex(space-between,null,row);
+    }
     @include mq(small_monitor) {
       padding: 65px 150px 150px;
+    }
+  }
+  .page_content {
+    order:1;
+    @include mq(small_laptop) {
+      order:2;
     }
   }
 }
 
 
 #internal_att_banner {
+  @include mq(small_tablet) {
+    margin-bottom:50px;
+  }
+  @include mq(tablet) {
+    margin-bottom: 80px;
+  }
+  @include mq(small_laptop) {
+    padding: 0;
+    margin-bottom: -5px;
+  }
+}
+
+
+#internal_att_banner_inner {
+  text-align: center;
   position: relative;
   padding: 50px 25px 110px;
-  text-align: center;
+  @include mq(small_tablet) {
+    position:static;
+    order:2;
+    text-align: left;
+    padding: 85px 25px 110px 0;
+  }
   @include mq(small_laptop) {
-    padding: 80px 0px 110px;
+    text-align: center;
+    padding:85px 75px 110px;
+  }
+  @include mq(large_laptop) {
+    padding: 77px 0px 113px;
   }
   @include mq(small_monitor) {
-    padding: 109px 0px 110px;
+    padding: 118px 0px 100px;
+  }
+}
+
+#internal_att_tablet {
+  @include mq(small_tablet) {
+    position: relative;
+    height: 300px;
+    padding:0 60px;
+    @include flex();
+  }
+  @include mq(small_laptop) {
+    display:block;
+    padding:0;
+    height:auto;
   }
 }
 
@@ -25,8 +73,6 @@ body.page-template-template-bio {
   z-index: 1;
   @include mq(small_laptop) {
     @include flex();
-    padding-left:75px;
-    padding-right:75px;
   }
   @include mq(large_laptop) {
     padding-left:100px;
@@ -72,7 +118,10 @@ h1#att_title {
       weight: 700,
     )
   );
-  @include mq(small_tablet) {
+  @include mq(tablet) {
+    @include quick_type(50px, 60px, null);
+  }
+  @include mq(small_laptop) {
     @include quick_type(60px, 70px, null);
   }
   @include mq(small_monitor) {
@@ -95,8 +144,14 @@ span#att_position {
     )
   );
   @include mq(small_tablet) {
-    font-size: 20px;
-    margin-top: 16px;
+    margin-top: 9px;
+  }
+  @include mq(tablet) {
+    font-size:17px;
+  }
+  @include mq(small_laptop) {
+    font-size:20px;
+    margin-top:16px;
   }
   @include mq(small_monitor) {
     margin-top: 24px;
@@ -119,15 +174,57 @@ span#att_position {
   }
 }
 
-#sidebar_bio_wrapper {
+#mobile_att_image {
   max-width: 420px;
-  margin: -115px auto 50px;
+  margin: -75px auto 10px;
+  position: relative;
+  z-index:1;
+  padding: 0 25px;
+  @include mq(small_tablet) {
+    flex-shrink:0;
+    flex-basis: 290px;
+    order:1;
+    margin: 45px 30px 10px 0;
+    padding:0;
+  }
+  @include mq(tablet) {
+    flex-basis: 335px;
+  }
+  @include mq(small_laptop) {
+    display:none;
+  }
+  img {
+    @include image();
+  }
+  #att_image_wrapper {
+    margin-bottom: 0;
+    display: block;
+    box-shadow: 0px 1px 40px #00000080;
+    background: #fff;
+    padding: 20px;
+  }
+}
+
+
+#att_profile_wrapper {
+  @include flex(null,null,column);
+  @include mq(small_laptop) {
+    @include flex(space-between, null,row);
+  }
+}
+
+#sidebar_bio_wrapper {
+  // max-width: 420px;
+  // margin: 0px auto 50px;
+  margin-bottom:-30px;
+  order:2;
   @include mq(small_laptop) {
     max-width: 100%;
     flex-basis: 380px;
     flex-shrink: 0;
     margin-right: 70px;
-    margin-top: -265px;
+    margin-top: -260px;
+    order:1;
   }
   @include mq(small_monitor) {
     flex-basis: 580px;
@@ -137,9 +234,11 @@ span#att_position {
 }
 
 #sidebar_att_box {
-  box-shadow: 0px 1px 40px #00000080;
-  background: $color_lite_one;
-  padding:25px;
+  @include mq(small_laptop) {
+    box-shadow: 0px 1px 40px #00000080;
+    background: $color_lite_one;
+    padding:25px;
+  }
   @include mq(small_monitor) {
     padding: 80px 25px 70px;
   }
@@ -148,6 +247,11 @@ span#att_position {
 #att_image_wrapper {
   margin-bottom: 20px;
   position:relative;
+  display: none;
+  @include mq(small_laptop) {
+    display:block;
+    flex-basis:380px;
+  }
   @include mq(small_monitor) {
     margin-bottom: 50px;
     max-width:420px;
@@ -163,9 +267,8 @@ span#att_position {
 }
 
 #att_bio_lists {
-  padding:0 25px;
   @include mq(small_laptop) {
-   
+   padding:0 25px;
   }
   @include mq(small_monitor) {
     max-width: 409px;

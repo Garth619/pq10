@@ -165,7 +165,7 @@ $('#sec_two_slider').slick({
   slidesToShow: 1,
 	slidesToScroll: 1,
 	mobileFirst:true,
-	adaptiveHeight:true,
+	//adaptiveHeight:true,
 	arrows:false,
 	dots:true,
 	responsive: [
