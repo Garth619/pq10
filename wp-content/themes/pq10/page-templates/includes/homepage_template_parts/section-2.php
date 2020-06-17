@@ -16,14 +16,8 @@
 		
 				<div class='sec_two_single_slide <?php the_sub_field( 'class' ); ?>'>
 			
-					<?php $svg = get_sub_field( 'svg' ); ?>
+					<?php the_sub_field( 'svg_code' ); ?>
 					
-					<?php if ( $svg ) { ?>
-						
-						<img src="<?php echo $svg['url']; ?>" alt="<?php echo $svg['alt']; ?>" />
-					
-					<?php } ?>
-			
 					<span class='sec_two_slide_title'><?php the_sub_field( 'description' ); ?> </span><!-- sec_two_slide_title -->
 		
 				</div><!-- sec_two_single_slide -->

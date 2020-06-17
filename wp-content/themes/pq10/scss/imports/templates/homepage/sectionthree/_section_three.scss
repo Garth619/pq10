@@ -212,6 +212,7 @@ span.sec_three_att_quote {
   .att_image {
     overflow:hidden;
     border-radius:50%;
+    box-shadow: 0px 0px 20px #00000029;
     @include margin_lr;
     @include box(175px);
     @include mq(small_laptop) {
@@ -225,8 +226,8 @@ span.sec_three_att_quote {
     }
     img {
       margin: 0 auto;
-      border-radius: 50%;
-      box-shadow: 0px 0px 20px #00000029;
+      //border-radius: 50%;
+      
       @include image();
       @include box(100%);
     }

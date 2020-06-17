@@ -1,8 +1,8 @@
 #section_two {
-  background:$color_gradient_two;
-  width:100%;
+  background: $color_gradient_two;
+  width: 100%;
   @include mq(small_tablet) {
-    padding:0 27px;
+    padding: 0 27px;
   }
 }
 
@@ -10,9 +10,9 @@
   padding: 32px 25px 25px;
   @include mq(small_tablet) {
     padding: 25px 0px 31px;
-    margin:0 auto;
+    margin: 0 auto;
     max-width: 720px;
-    @include flex(null,center);
+    @include flex(null, center);
   }
   @include mq(small_laptop) {
     max-width: 100%;
@@ -22,11 +22,10 @@
     padding: 42px 0px 42px;
   }
   @include mq(small_monitor) {
-    max-width:1920px;
+    max-width: 1920px;
     @include margin_lr;
   }
 }
-
 
 #sec_two_arrow_right {
   transform: rotate(-180deg);
@@ -34,71 +33,70 @@
 
 .sec_two_arrow {
   cursor: pointer;
-  display:none;
-  @include box(15px,31px);
+  display: none;
+  @include box(15px, 31px);
   @include mq(small_tablet) {
-    display:inline-block;
+    display: inline-block;
   }
   @include mq(small_laptop) {
-    display:none;
+    display: none;
   }
   svg#arrow {
     path {
-      fill:$color_lite_one;
+      fill: $color_lite_one;
     }
   }
 }
 
-
 #sec_two_slider {
   max-width: 380px;
-  margin:0 auto;
-  padding:0px;
-  
+  margin: 0 auto;
+  padding: 0px;
+
   @include mq(small_tablet) {
-    max-width:100%;
-    padding:0 40px;
-    width:calc(100% - 30px);
+    max-width: 100%;
+    padding: 0 40px;
+    width: calc(100% - 30px);
   }
   @include mq(small_laptop) {
-    padding:0;
+    padding: 0;
     width: 100%;
-    @include flex(space-between,null);
+    @include flex(space-between, null);
   }
   .slick-slide {
     margin: 0 10px;
-    padding:10px 0;
+    padding: 10px 0;
   }
   .slick-list {
     margin: 0 -10px;
   }
   .slick-dots {
-    position:static;
+    position: static;
     margin-top: 20px;
     li.slick-active {
       button {
         &:before {
-          color:$color_bright_two;
+          color: $color_bright_two;
         }
       }
     }
     li:hover {
       button {
         &:before {
-          color:$color_bright_two;
+          color: $color_bright_two;
         }
       }
     }
     li {
-      margin:0 3px;     
-      width:18px;
-      button {      
-      width:18px;
-        &:before {      
-          width:18px;
-          opacity:1;
-          color:$color_lite_one;
-          font-size:24px;
+      margin: 0 3px;
+      width: 18px;
+      button {
+        width: 18px;
+        &:before {
+          width: 18px;
+          opacity: 1;
+          color: $color_lite_one;
+          font-size: 24px;
         }
       }
     }
@@ -106,19 +104,19 @@
 }
 
 .sec_two_single_slide {
-  box-shadow: 0px 1px 9px #030E14CC;
+  box-shadow: 0px 1px 9px #030e14cc;
   background: $color_bright_two;
   text-align: center;
-  padding:25px 10px;
+  padding: 25px 10px;
   @include mq(small_tablet) {
-    height:294px;
+    height: 294px;
     background: transparent;
-    box-shadow:none;
+    box-shadow: none;
     padding: 37px 10px 25px;
-    transition:all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
   }
   @include mq(small_laptop) {
-    flex-basis:25%;
+    flex-basis: 25%;
     height: auto;
     padding: 40px 10px 0;
   }
@@ -131,7 +129,17 @@
   &:hover {
     @include mq(small_tablet) {
       background: $color_bright_two;
-      box-shadow: 0px 1px 9px #030E14CC;
+      box-shadow: 0px 1px 9px #030e14cc;
+      svg {
+        stop {
+          &:first-of-type {
+            stop-color: $color_gradient_first_color;
+          }
+          &:last-of-type {
+            stop-color: $color_gradient_second_color;
+          }
+        }
+      }
       span.sec_two_slide_title {
         &:after {
           background: #fff;
@@ -139,15 +147,37 @@
       }
     }
     @include mq(small_laptop) {
-      box-shadow: 0px 1px 50px #030E14CC;
+      box-shadow: 0px 1px 50px #030e14cc;
     }
   }
-  svg, img {
+  // all svgs need different id numbers and different "lineargradient" id numbers otherwise all four svgs hover at the same time... the svgs are pasted in as acf text areas on homepage backend. Here is what Im referencing https://codepen.io/ZachSaucier/pen/QNdYBb?editors=1100 They can also be referenced under "pq10/images"
+  svg,
+  img {
+    &#sp_1 {
+      path {
+        fill:url(#SVGID_1_);
+      }
+    }
+    &#sp_2 {
+      path {
+        fill:url(#SVGID_2_);
+      }
+    }
+    &#sp_3 {
+      path {
+        fill:url(#SVGID_3_);
+      }
+    }
+    &#sp_4 {
+      path {
+        fill:url(#SVGID_4_);
+      }
+    }
     @include image();
     @include margin_lr;
     @include box(82px);
     @include mq(small_tablet) {
-     //@include box(80px);
+      //@include box(80px);
     }
     @include mq(small_laptop) {
       @include box(75px);
@@ -162,18 +192,18 @@
   span.sec_two_slide_title {
     display: block;
     max-width: 230px;
-    margin:10px auto 0;
-    @include type (
+    margin: 10px auto 0;
+    @include type(
       (
         size: 22px,
         height: 30px,
         family: $secondaryfont,
-        color: $color_lite_one 
+        color: $color_lite_one,
       )
     );
     @include mq(small_tablet) {
       margin: 16px auto 0;
-      @include quick_type(22px,30px,null);
+      @include quick_type(22px, 30px, null);
     }
     @include mq(small_laptop) {
       max-width: 275px;
@@ -183,20 +213,20 @@
       margin-top: 19px;
     }
     @include mq(small_monitor) {
-      margin-top:24px;
-      @include quick_type(26px,35px,null);
+      margin-top: 24px;
+      @include quick_type(26px, 35px, null);
     }
     &:after {
-      content:'';
+      content: "";
       display: block;
-      margin:25px auto 10px;
-      transform:rotate(-45deg);
-      background:#fff;
+      margin: 25px auto 10px;
+      transform: rotate(-45deg);
+      background: #fff;
       @include box(6px);
       @include mq(small_tablet) {
         margin: 30px auto 10px;
         background: $color_bright_one;
-        transition:all 150ms #fff;
+        transition: all 150ms #fff;
         @include box(8px);
       }
       @include mq(small_laptop) {
@@ -215,17 +245,17 @@
   }
 }
 
-
 // hacky code, each box has differnces
 
 .sec_two_single_slide {
   &.one {
     span.sec_two_slide_title {
-      max-width:245px;
+      max-width: 245px;
     }
   }
   &.two {
-    svg, img {
+    svg,
+    img {
       @include box(90px);
       @include mq(small_tablet) {
         margin-top: -8px;
@@ -243,11 +273,11 @@
     }
     span.sec_two_slide_title {
       @include mq(small_tablet) {
-        margin-top:8px;
+        margin-top: 8px;
       }
       @include mq(small_laptop) {
         max-width: 215px;
-        margin-top:13px;
+        margin-top: 13px;
       }
       @include mq(large_laptop) {
         margin-top: 10px;

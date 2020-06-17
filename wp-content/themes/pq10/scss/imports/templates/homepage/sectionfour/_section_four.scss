@@ -13,7 +13,8 @@
     @include mq(tablet) {
       content: "";
       display: block;
-      background-color: $color_bright_three;
+      background: $color_gradient_two;
+      opacity:0.8;
       @include box(65%, 100%);
       @include abs(0, null, null, 0);
     }
@@ -42,7 +43,8 @@
 }
 
 #sec_four_left {
-  background-color: $color_bright_three;
+  background: $color_gradient_two;
+  opacity: 0.8;
   padding: 70px 25px 155px;
   //background-blend-mode:multiply;
   //background-image: url(/wp-content/themes/pq10/images/hilley/results-img-desk.jpg);

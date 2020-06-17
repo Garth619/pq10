@@ -10,9 +10,9 @@ get_header(); ?>
 		
 		<div id="internal_att_banner_content">
 			
-			<div id='banner_spacer'></div><!-- banner_spacer -->
+			<div id='att_banner_spacer'></div><!-- banner_spacer -->
 
-			<div id='banner_right'>
+			<div id='att_banner_right'>
 			
 				<h1 id='att_title'><?php the_title();?></h1><!-- att_title -->
 

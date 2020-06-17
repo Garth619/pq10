@@ -109,7 +109,7 @@ jQuery(document).ready(function($){
 		
 	      createWaypoint('section_three', '#section_three', 'visible', 550, null, true);
         createWaypoint('section_four', '#section_four', 'visible', 600, null, true);
-        createWaypoint('section_seven', '#section_seven', 'visible', 600, null, true);
+        createWaypoint('section_seven', '#section_seven', 'visible', 400, null, true);
         createWaypoint('consultation', 'footer', 'visible', 400, null, true);
    
 
@@ -140,7 +140,7 @@ $('#sec_two_slider').slick({
 	dots:true,
 	responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 767,
       settings: {
       slidesToShow: 2,
 			slidesToScroll: 2,

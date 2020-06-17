@@ -105,11 +105,13 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     opacity: 1;
   }
 
-  .att_image {
-    img {
-      @include img_scale(1.15);
-    }
-  }
+  // .att_image {
+  //   img {
+  //     @include img_scale(1.15);
+  //   }
+  // }
+
+
 
   span.sec_three_att_subtitle {
     &:after {
@@ -121,12 +123,12 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     #sec_three_right {
       @include fire_transform_opacity(200ms);
     }
-    .att_image {
-      img {
-        @include fire_return_scale(1);
-        transition-delay:200ms;
-      }
-    }
+    // .att_image {
+    //   img {
+    //     @include fire_return_scale(1);
+    //     transition-delay:200ms;
+    //   }
+    // }
     span.sec_three_att_subtitle {
       &:after {
         @include fire_return_scale(1);
