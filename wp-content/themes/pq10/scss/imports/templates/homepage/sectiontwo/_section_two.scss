@@ -1,5 +1,5 @@
 #section_two {
-  background: $color_gradient_two;
+  background: $sec_two_bg_color;
   width: 100%;
   @include mq(small_tablet) {
     padding: 0 27px;
@@ -43,7 +43,7 @@
   }
   svg#arrow {
     path {
-      fill: $color_lite_one;
+      fill: $arrow_bg_color;
     }
   }
 }
@@ -52,7 +52,6 @@
   max-width: 380px;
   margin: 0 auto;
   padding: 0px;
-
   @include mq(small_tablet) {
     max-width: 100%;
     padding: 0 40px;
@@ -76,14 +75,14 @@
     li.slick-active {
       button {
         &:before {
-          color: $color_bright_two;
+          color: $sec_two_dot_active_bg_color;
         }
       }
     }
     li:hover {
       button {
         &:before {
-          color: $color_bright_two;
+          color: $sec_two_dot_active_bg_hover_color;
         }
       }
     }
@@ -95,7 +94,7 @@
         &:before {
           width: 18px;
           opacity: 1;
-          color: $color_lite_one;
+          color: $sec_two_dot_bg_color;
           font-size: 24px;
         }
       }
@@ -105,7 +104,7 @@
 
 .sec_two_single_slide {
   box-shadow: 0px 1px 9px #030e14cc;
-  background: $color_bright_two;
+  background: $sec_two_slide_bg_color;
   text-align: center;
   padding: 25px 10px;
   @include mq(small_tablet) {
@@ -128,21 +127,21 @@
   }
   &:hover {
     @include mq(small_tablet) {
-      background: $color_bright_two;
+      background: $sec_two_slide_bg_hover_color;
       box-shadow: 0px 1px 9px #030e14cc;
       svg {
         stop {
           &:first-of-type {
-            stop-color: $color_gradient_first_color;
+            stop-color: $sec_two_svg_bg_color_one;
           }
           &:last-of-type {
-            stop-color: $color_gradient_second_color;
+            stop-color: $sec_two_svg_bg_color_two;
           }
         }
       }
       span.sec_two_slide_title {
         &:after {
-          background: #fff;
+          background: $sec_two_slide_diamond_hover_bg_color;
         }
       }
     }
@@ -155,22 +154,22 @@
   img {
     &#sp_1 {
       path {
-        fill:url(#SVGID_1_);
+        fill: url(#SVGID_1_);
       }
     }
     &#sp_2 {
       path {
-        fill:url(#SVGID_2_);
+        fill: url(#SVGID_2_);
       }
     }
     &#sp_3 {
       path {
-        fill:url(#SVGID_3_);
+        fill: url(#SVGID_3_);
       }
     }
     &#sp_4 {
       path {
-        fill:url(#SVGID_4_);
+        fill: url(#SVGID_4_);
       }
     }
     @include image();
@@ -195,15 +194,14 @@
     margin: 10px auto 0;
     @include type(
       (
-        size: 22px,
-        height: 30px,
+        size: $sec_two_slide_title_size,
+        height: $sec_two_slide_title_height,
         family: $secondaryfont,
-        color: $color_lite_one,
+        color: $sec_two_slide_title_color,
       )
     );
     @include mq(small_tablet) {
       margin: 16px auto 0;
-      @include quick_type(22px, 30px, null);
     }
     @include mq(small_laptop) {
       max-width: 275px;
@@ -214,19 +212,23 @@
     }
     @include mq(small_monitor) {
       margin-top: 24px;
-      @include quick_type(26px, 35px, null);
+      @include quick_type(
+        $sec_two_slide_title_height,
+        $sec_two_slide_title_height_small_monitor,
+        null
+      );
     }
     &:after {
       content: "";
       display: block;
       margin: 25px auto 10px;
       transform: rotate(-45deg);
-      background: #fff;
+      background: $sec_two_slide_diamond_bg_color;
       @include box(6px);
       @include mq(small_tablet) {
         margin: 30px auto 10px;
-        background: $color_bright_one;
-        transition: all 150ms #fff;
+        background: $sec_two_slide_diamond_bg_color_small_tablet;
+        transition: all 150ms ease-in-out;
         @include box(8px);
       }
       @include mq(small_laptop) {

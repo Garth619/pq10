@@ -2,74 +2,40 @@
 // Section One
 ////////////////////////////////////////////////////////////////////
 
-// .sec_one_video .video_inner
+// span#sec_one_subtitle
 
-$sec_one_video_bg_color: $color_lite_one;
+$sec_one_subtitle_size: 13px;
+$sec_one_subtitle_size_small_tablet: 15px;
+$sec_one_subtitle_size_large_laptop: 18px;
+$sec_one_subtitle_size_small_monitor: 20px;
 
-// .sec_one_video span.video_title
+$sec_one_subtitle_spacing: 2.6px;
+$sec_one_subtitle_spacing_small_tablet: 4.5px;
+$sec_one_subtitle_spacing_large_laptop: 5.4px;
+$sec_one_subtitle_spacing_small_monitor: 6px;
 
-$sec_one_video_title_color: $color_dark_one;
+$sec_one_subtitle_height: 15px;
 
-$sec_one_video_title_weight: 500;
+$sec_one_subtitle_weight: 800;
 
-$sec_one_video_title_size: 19px;
-$sec_one_video_title_size_large_monitor: 17px;
-$sec_one_video_title_size_small_laptop: 15px;
-$sec_one_video_title_size_tablet: 12px;
+// span#sec_one_subtitle:before
 
-$sec_one_video_title_line_height_large_monitor: 18px;
-$sec_one_video_title_line_height_small_laptop: 16px;
+$sec_one_subtitle_diamond_bg_color: $color_bright_one;
 
-// .sec_one_video span.video_title strong
+// span#sec_one_title
 
-$sec_one_video_title_strong_color: $color_bright_one;
+$sec_one_title_size: 26px;
+$sec_one_title_size_small_tablet: 35px;
+$sec_one_title_size_small_laptop: 40px;
+$sec_one_title_size_large_laptop: 50px;
+$sec_one_title_size_small_monitor: 60px;
 
-$sec_one_video_title_strong_weight: 700;
+$sec_one_title_height: 36px;
+$sec_one_title_height_small_tablet: 45px;
+$sec_one_title_height_small_laptop: 55px;
+$sec_one_title_height_large_laptop: 60px;
+$sec_one_title_height_small_monitor: 75px;
 
-// span.featured_on
+$sec_one_title_color: $color_dark_one;
 
-$sec_one_featured_title_color: $color_bright_one;
-
-$sec_one_featured_title_weight: 500;
-
-$sec_one_featured_title_size: 15px;
-$sec_one_featured_title_size_small_laptop: 13px;
-
-$sec_one_featured_title_spacing: 0.3em;
-
-$sec_one_featured_title_line_height: 20px;
-
-// ul.sec_one_selling_points
-
-$sec_one_selling_points_color: $color_lite_one;
-$sec_one_selling_points_bullet_bg_color: $color_bright_one;
-
-$sec_one_selling_points_weight: 700;
-
-$sec_one_selling_points_size: 17px;
-$sec_one_selling_points_size_large_monitor: 15px;
-
-$sec_one_selling_points_line_height: 20px;
-$sec_one_selling_points_line_height_small_tablet: 25px;
-
-$sec_one_selling_points_spacing: 0.042em;
-
-// span.sec_one_title
-
-$sec_one_title_color: $color_lite_one;
-
-$sec_one_title_size: 80px;
-$sec_one_title_size_large_monitor: 59px;
-$sec_one_title_size_small_laptop: 50px;
-$sec_one_title_size_small_tablet: 53px;
-$sec_one_title_size_xlarge_mobile: 38px;
-
-$sec_one_title_line_height: 92px;
-$sec_one_title_line_height_large_monitor: 70px;
-$sec_one_title_line_height_small_laptop: 59px;
-$sec_one_title_line_height_small_tablet: 62px;
-$sec_one_title_line_height_xlarge_mobile: 46px;
-
-// a.free_consultation_button
-
-$free_consult_button_margin: 42px 0 0;
+$sec_one_title_weight: 700;

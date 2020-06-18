@@ -24,10 +24,10 @@
     @include abs(0, null, null, 0);
   }
   &:before {
-    background: $color_gradient_one;
+    background: $button_bg_color;
   }
   &:after {
-    background: $color_bright_two;
+    background: $button_bg_color_hover;
     opacity: 0;
     transition: all 150ms ease-in-out;
   }
@@ -38,11 +38,11 @@
     padding: 24px 20px;
     @include type(
       (
-        size: 15px,
-        spacing: 2.25px,
+        size: $button_size,
+        spacing: $button_spacing,
         family: $primaryfont,
-        color: $color_lite_one,
-        weight: 800,
+        color: $button_color,
+        weight: $button_weight,
         transform: uppercase,
       )
     );
@@ -53,7 +53,7 @@
       padding: 24px 30px;
     }
     @include mq(small_monitor) {
-      font-size: 18px;
+      font-size: $button_size_small_monitor;
       padding: 27px 50px;
     }
   }

@@ -40,14 +40,14 @@ body.page-template-template-bio {
     position:static;
     order:2;
     text-align: left;
-    padding: 85px 25px 110px 0;
+    padding: 97px 25px 110px 0;
   }
   @include mq(small_laptop) {
     text-align: center;
-    padding:85px 75px 110px;
+    padding: 100px 75px 86px;
   }
   @include mq(large_laptop) {
-    padding: 77px 0px 113px;
+    padding: 100px 0px 86px;
   }
   @include mq(small_monitor) {
     padding: 118px 0px 100px;
@@ -57,13 +57,14 @@ body.page-template-template-bio {
 #internal_att_tablet {
   @include mq(small_tablet) {
     position: relative;
-    height: 300px;
+    height: 280px;
     padding:0 60px;
     @include flex();
   }
   @include mq(small_laptop) {
     display:block;
     padding:0;
+    height:300px;
     height:auto;
   }
 }
@@ -118,6 +119,9 @@ h1#att_title {
       weight: 700,
     )
   );
+  @include mq(small_tablet) {
+    @include quick_type(42px, 60px, null);
+  }
   @include mq(tablet) {
     @include quick_type(50px, 60px, null);
   }
@@ -145,8 +149,6 @@ span#att_position {
   );
   @include mq(small_tablet) {
     margin-top: 9px;
-  }
-  @include mq(tablet) {
     font-size:17px;
   }
   @include mq(small_laptop) {
@@ -182,13 +184,14 @@ span#att_position {
   padding: 0 25px;
   @include mq(small_tablet) {
     flex-shrink:0;
-    flex-basis: 290px;
+    flex-basis: 250px;
+    //flex-basis: 290px;
     order:1;
-    margin: 45px 30px 10px 0;
+    margin: 62px 30px 10px 0;
     padding:0;
   }
   @include mq(tablet) {
-    flex-basis: 335px;
+    flex-basis: 310px;
   }
   @include mq(small_laptop) {
     display:none;
