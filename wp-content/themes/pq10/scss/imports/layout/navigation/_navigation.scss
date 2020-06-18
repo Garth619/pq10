@@ -1,7 +1,7 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
 nav {
-  background: $color_gradient_two;
+  background: $nav_bg_color;
   padding: 16px 0px;
   overflow-y: scroll;
   display: none;
@@ -13,7 +13,7 @@ nav {
     padding: 27px 0;
   }
   @include mq(small_laptop) {
-    display: block;
+    display: block !important; // override when mobile slideToggle function uses inline display:none
     background: transparent;
     position: static;
     padding: 4px 0 0px 0;
@@ -37,7 +37,7 @@ nav {
       a {
         padding: 0 40px;
         display: block;
-        color: $color_lite_one;
+        color: $nav_color;
         text-decoration: none;
       }
     }
@@ -54,16 +54,16 @@ nav {
     > li {
       @include type(
         (
-          size: 15px,
-          height: 17px,
-          spacing: 1.5px,
-          weight: 800,
+          size: $nav_ulmenu_size,
+          height: $nav_ulmenu_height,
+          spacing: $nav_ulmenu_spacing,
+          weight: $nav_ulmenu_weight,
           transform: uppercase,
         )
       );
       @include mq(small_laptop) {
         margin-left: 14px;
-        @include quick_type(12px, 15px, 1.2px);
+        @include quick_type($nav_ulmenu_size_small_laptop, $nav_ulmenu_height_small_laptop, $nav_ulmenu_spacing_small_laptop);
         &:nth-last-of-type(-n + 3) {
           ul.sub-menu {
             left: auto;
@@ -73,11 +73,11 @@ nav {
       }
       @include mq(large_laptop) {
         margin-left: 18px;
-        @include quick_type(14px, 16px, 1.4px);
+        @include quick_type($nav_ulmenu_size_large_laptop, $nav_ulmenu_height_large_laptop, $nav_ulmenu_spacing_large_laptop);
       }
       @include mq(small_monitor) {
         margin-left: 22px;
-        @include quick_type(15px, 17px, 1.5px);
+        @include quick_type($nav_ulmenu_size_small_monitor, $nav_ulmenu_height_small_monitor, $nav_ulmenu_spacing_small_monitor);
       }
       > a {
         display: block;
@@ -86,18 +86,18 @@ nav {
         background: transparent;
         transition: background 150ms ease-in-out;
         @include mq(small_laptop) {
-          color: $color_dark_three;
+          color: $nav_ulmenu_color_small_laptop;
           padding: 0;
           transition: all 150ms ease-in-out;
         }
         &:hover {
           @include mq(small_laptop) {
-            color: $color_bright_two;
+            color: $nav_ulmenu_hover_color_small_laptop;
           }
         }
         &.active {
           box-shadow: 0px 1px 20px 3px rgba(0, 0, 0, 0.3);
-          background: $color_bright_two;
+          background: $nav_ulmenu_active_bg_color;
           @include mq(small_laptop) {
             box-shadow: none;
             background: transparent;
@@ -128,17 +128,17 @@ nav {
           vertical-align: top;
           display: inline-block;
           margin: 5px 0 0 5px;
-          @include tri(down, 4px, 6px, $color_lite_one);
+          @include tri(down, 4px, 6px, $nav_ulmenu_tri_bg_color);
           @include mq(small_laptop) {
             margin: 5px 0 0 3px;
             transition: all 150ms ease-in-out;
-            @include tri(down, 4px, 6px, $color_dark_one);
+            @include tri(down, 4px, 6px, $nav_ulmenu_tri_bg_color_small_laptop);
           }
         }
         &:hover {
           &:after {
             @include mq(small_laptop) {
-              @include tri(down, 4px, 6px, $color_bright_two);
+              @include tri(down, 4px, 6px, $nav_ulmenu_tri_bg_hover_color_small_laptop);
             }
           }
         }
@@ -149,12 +149,12 @@ nav {
         @include mq(small_laptop) {
           background: transparent;
           box-shadow: none;
-          color: $color_bright_two;
+          color: $nav_ulmenu_current_ances_color;
         }
         &:after {
-          @include tri(down, 4px, 6px, $color_lite_one);
+          @include tri(down, 4px, 6px, $nav_ulmenu_current_tri_color);
           @include mq(small_laptop) {
-             @include tri(down, 4px, 6px, $color_bright_two);
+             @include tri(down, 4px, 6px, $nav_ulmenu_current_tri_color_small_laptop);
           }
         }
       }
@@ -167,7 +167,7 @@ nav {
         @include mq(small_laptop) {
           background: transparent;
           box-shadow: none;
-          color: $color_bright_two;
+          color: $nav_ulmenu_current_item_color;
         }
       }
     }
@@ -181,7 +181,7 @@ nav {
     @include mq(small_laptop) {
       display: block !important;
       width: 291px;
-      background: $color_gradient_two;
+      background: $nav_ulsubmenu_bg_color_small_laptop;
       padding:17px 0;
       opacity: 0;
       visibility: hidden;
@@ -200,25 +200,25 @@ nav {
     li {
       @include type(
         (
-          size: 16px,
-          height: 18px,
+          size: $nav_ulsubmenu_size,
+          height: $nav_ulsubmenu_height,
           transform: capitalize,
         )
       );
       @include mq(small_laptop) {
         @include type(
           (
-            size: 14px,
-            height: 16px,
-            weight: 400,
+            size: $nav_ulsubmenu_size_small_laptop,
+            height: $nav_ulsubmenu_height_small_laptop,
+            weight: $nav_ulsubmenu_weight_small_laptop,
           )
         );
       }
       @include mq(large_laptop) {
-        @include quick_type(17px,19px,0);
+        @include quick_type($nav_ulsubmenu_size_large_laptop,$nav_ulsubmenu_height_large_laptop,0);
       }
       @include mq(small_monitor) {
-        @include quick_type(18px,20px,0);
+        @include quick_type($nav_ulsubmenu_size_small_monitor,$nav_ulsubmenu_height_small_monitor,0);
       }
       &:last-of-type {
         a {
@@ -237,11 +237,11 @@ nav {
           padding: 19px 40px;
         }
         &:hover {
-          color: $color_bright_two;
+          color: $nav_ulsubmenu_hover_color;
           @include mq(small_laptop) {
             box-shadow: 0px 1px 20px 3px rgba(0, 0, 0, 0.3);
-            background: $color_bright_two;
-            color: $color_lite_one;
+            background: $nav_ulsubmenu_bg_hover_color_small_laptop;
+            color: $nav_ulsubmenu_hover_color_small_laptop;
           }
         }
       }
@@ -254,7 +254,7 @@ nav {
           display: inline-block;
           margin: 6px 2px 0 6px;
           transform: rotate(-45deg);
-          background-color: $color_bright_one;
+          background-color: $nav_ulsubmenu_currentmenu_item;
           @include box(6px);
           @include mq(small_monitor) {
             margin: 9px 2px 0 6px;
