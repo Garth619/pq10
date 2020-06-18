@@ -7,7 +7,7 @@ header {
   }
   @include mq(small_laptop) {
     position: relative;
-    box-shadow:none;
+    box-shadow: none;
   }
   &.dropshadow {
     @include mq(small_laptop) {
@@ -20,7 +20,7 @@ header {
     max-width: 1920px;
     @include margin_lr;
     @include mq(small_tablet) {
-      flex-wrap:unset;
+      flex-wrap: unset;
     }
   }
 }
@@ -29,9 +29,9 @@ header {
   flex-grow: 1;
   padding: 10px 15px;
   @include mq(small_tablet) {
-    flex-basis:100%;
-    max-width:230px;
-    order:1;
+    flex-basis: 100%;
+    max-width: 230px;
+    order: 1;
   }
   @include mq(small_laptop) {
     max-width: 275px;
@@ -45,15 +45,16 @@ header {
     padding: 29px 21px 0;
   }
   a.logo {
-    svg, img {
+    svg,
+    img {
       width: 100%;
       @include image();
       max-width: 200px;
       @include mq(small_laptop) {
-        max-width:250px;
+        max-width: 250px;
       }
       @include mq(large_laptop) {
-        max-width:330px;
+        max-width: 330px;
       }
     }
   }
@@ -62,13 +63,14 @@ header {
 #header_middle {
   flex-basis: 60px;
   position: relative;
-  background-color: $color_dark_two;
+  background-color: $header_middle_bg_color;
   @include mq(small_tablet) {
-    order:3;
-    flex-basis:79px;
-    flex-shrink:0;
-  }@include mq(small_laptop) {
-    display:none;
+    order: 3;
+    flex-basis: 79px;
+    flex-shrink: 0;
+  }
+  @include mq(small_laptop) {
+    display: none;
   }
 }
 
@@ -84,9 +86,9 @@ header {
   .menu_verbiage {
     @include type(
       (
-        size: 11px,
+        size: $menu_verbiage_size,
         family: $primaryfont,
-        weight: 800,
+        weight: $menu_verbiage_weight,
         transform: uppercase,
       )
     );
@@ -119,7 +121,7 @@ header {
     &:after {
       content: "";
       display: block;
-      background-color: $color_lite_one;
+      background-color: $menu_close_bg_color;
       @include abs(12px, null, null, -2px);
       @include box(33px, 4px);
     }
@@ -139,15 +141,15 @@ header {
 
 #header_right {
   flex-basis: 100%;
-  background-color: $color_dark_one;
+  background-color: $header_right_bg_color;
   padding: 12px 0px;
   @include mq(small_tablet) {
-    order:2;
-    background-color: $color_lite_one;
-    flex-grow:1;
+    order: 2;
+    background-color: $header_right_bg_color_small_tablet;
+    flex-grow: 1;
     margin-right: 20px;
-    padding:0;
-    flex-basis:auto;
+    padding: 0;
+    flex-basis: auto;
   }
   @include mq(small_laptop) {
     margin-right: 33px;
@@ -159,7 +161,7 @@ header {
   }
   #header_right_inner {
     width: 100%;
-    color: $color_lite_one;
+    color: $header_right_inner_color;
     @include flex(center, center);
     @include mq(small_tablet) {
       flex-direction: column;
@@ -173,15 +175,15 @@ header {
       margin-top: 12px;
     }
     @include mq(large_laptop) {
-      flex-direction:row;
+      flex-direction: row;
       justify-content: flex-end;
       align-items: center;
     }
     @include mq(small_monitor) {
       justify-content: unset;
-      width:auto;
-      flex-shrink:0;
-      order:2;
+      width: auto;
+      flex-shrink: 0;
+      order: 2;
       flex-direction: column;
       padding-left: 30px;
       margin-top: 22px;
@@ -189,11 +191,11 @@ header {
       align-items: flex-end;
       position: relative;
       &:after {
-        content:"";
+        content: "";
         display: block;
-        background: $color_dark_one;
-        @include abs(0,null,null,0);
-        @include box(4px,72px);
+        background: $header_right_inner_line_color;
+        @include abs(0, null, null, 0);
+        @include box(4px, 72px);
       }
     }
   }
@@ -202,36 +204,33 @@ header {
 .consult_cta {
   margin-top: 2px;
   @include mq(small_tablet) {
-    order:2;
-    margin-top:2px;
+    order: 2;
+    margin-top: 2px;
   }
   @include mq(small_laptop) {
-    order:1;
-    margin-top:0;
+    order: 1;
+    margin-top: 0;
   }
   @include mq(small_monitor) {
-    order:2;
+    order: 2;
     margin-top: 5px;
   }
   > span {
     @include type(
       (
-        size: 14px,
+        size: $consult_cta_size,
         family: $primaryfont,
-        color: $color_lite_one,
+        color: $consult_cta_color,
       )
     );
     @include mq(small_tablet) {
-      color:$color_dark_one;
+      color: $consult_cta_color_small_tablet;
     }
     @include mq(small_laptop) {
-      font-size: 16px;
-    }
-    @include mq(large_laptop) {
-      font-size: 16px;
+      font-size: $consult_cta_size_small_laptop
     }
     @include mq(small_monitor) {
-      font-size: 17px;
+      font-size: $consult_cta_size_small_monitor;
     }
     &:first-of-type {
       &:after {
@@ -240,7 +239,7 @@ header {
         display: inline-block;
         margin: 6px 2px 0 6px;
         transform: rotate(-45deg);
-        background-color: $color_bright_one;
+        background-color: $consult_cta_diamond_bg_color;
         @include box(5px);
         @include mq(small_tablet) {
           margin: 6px 7px 0 12px;
@@ -256,7 +255,7 @@ header {
 span.hide {
   display: none;
   @include mq(small_tablet) {
-    display:inline-block;
+    display: inline-block;
   }
 }
 
@@ -265,32 +264,31 @@ a#header_phone {
   margin: 0 0px 0 4px;
   @include type(
     (
-      size: 18px,
-      spacing: 1.6px,
+      size: $header_phone_size,
+      spacing: $header_phone_spacing,
       family: $primaryfont,
-      color: $color_lite_one,
-      weight: 800,
+      color: $header_phone_color,
+      weight: $header_phone_weight,
     )
   );
   @include mq(small_tablet) {
-    color:$color_bright_one;
-    font-size: 22px;
-    letter-spacing: 1.98px;
-    order:1;
-    margin-bottom:5px;
-    margin-right:-3px;
+    color: $header_phone_color_small_tablet;
+    font-size: $header_phone_size_small_tablet;
+    letter-spacing: $header_phone_spacing_small_tablet;
+    order: 1;
+    margin-bottom: 5px;
+    margin-right: -3px;
   }
   @include mq(small_laptop) {
-    order:2;
-    margin-left:15px;
-    font-size: 23px;
+    order: 2;
+    margin-left: 15px;
+    font-size: $header_phone_size_small_laptop;
   }
   @include mq(large_laptop) {
-    font-size: 27px;
-   
+    font-size: $header_phone_size_large_laptop;
   }
   @include mq(small_monitor) {
-    order:1;
-    font-size: 30px;
+    order: 1;
+    font-size: $header_phone_size_small_monitor;
   }
 }

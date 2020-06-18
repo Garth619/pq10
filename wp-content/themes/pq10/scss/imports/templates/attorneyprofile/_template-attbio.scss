@@ -20,7 +20,7 @@ body.page-template-template-bio {
 
 #internal_att_banner {
   @include mq(small_tablet) {
-    margin-bottom:50px;
+    margin-bottom: 40px;
   }
   @include mq(tablet) {
     margin-bottom: 80px;
