@@ -47,17 +47,20 @@ h1.sec_three_header {
   padding-bottom: 18px;
   @include type(
     (
-      size: 36px,
-      spacing: 0,
-      height: 42px,
+      size: $sec_three_header_size,
+      height: $sec_three_header_height,
       family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 700,
+      color: $sec_three_header_color,
+      weight: $sec_three_header_weight,
     )
   );
   @include mq(small_tablet) {
     padding-bottom: 27px;
-    @include quick_type(60px, 70px, null);
+    @include quick_type(
+      $sec_three_header_size_small_tablet,
+      $sec_three_header_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
     padding-bottom: 35px;
@@ -67,7 +70,11 @@ h1.sec_three_header {
   }
   @include mq(small_monitor) {
     padding-bottom: 40px;
-    @include quick_type(75px, 80px, null);
+    @include quick_type(
+      $sec_three_header_size_small_monitor,
+      $sec_three_header_height_small_monitor,
+      null
+    );
   }
   @include mq(small_monitor) {
     padding-right: 50px;
@@ -75,7 +82,7 @@ h1.sec_three_header {
   &:after {
     content: "";
     display: block;
-    background: $color_bright_one;
+    background: $sec_three_header_line_color;
     margin-top: 28px;
     @include box(100%, 2px);
     @include mq(small_tablet) {
@@ -133,14 +140,13 @@ span.sec_three_att_title {
   margin-top: 40px;
   @include type(
     (
-      size: 25px,
+      size: $sec_three_att_title_size,
       family: $secondaryfont,
-      color: $color_dark_two,
-      weight: 700,
+      color: $sec_three_att_title_color,
+      weight: $sec_three_att_title_weight,
     )
   );
   @include mq(small_laptop) {
-    font-size: 25px;
     margin-top: 29px;
   }
   @include mq(small_monitor) {
@@ -154,29 +160,37 @@ span.sec_three_att_subtitle {
   margin: 28px auto 0;
   @include type(
     (
-      size: 18px,
-      spacing: 1.44px,
-      height: 25px,
+      size: $sec_three_att_subtitle_size,
+      spacing: $sec_three_att_subtitle_spacing,
+      height: $sec_three_att_subtitle_height,
       family: $primaryfont,
-      color: $color_bright_one,
-      weight: 800,
+      color: $sec_three_att_subtitle_color,
+      weight: $sec_three_att_subtitle_weight,
       align: center,
       transform: uppercase,
     )
   );
   @include mq(small_laptop) {
     max-width: 350px;
-    @include quick_type(16px, 22px, null);
+    @include quick_type(
+      $sec_three_att_subtitle_size_small_laptop,
+      $sec_three_att_subtitle_height_small_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     max-width: 410px;
-    @include quick_type(18px, 25px, null);
+    @include quick_type(
+      $sec_three_att_title_size_small_laptop,
+      $sec_three_att_title_size_large_laptop,
+      null
+    );
   }
   &:after {
     content: "";
     display: block;
     margin: 35px auto 0;
-    background: $color_lite_three;
+    background: $sec_three_att_subtitle_line_bg_color;
     @include box(200px, 1px);
     @include mq(small_laptop) {
       margin: 30px auto 0;
@@ -190,11 +204,11 @@ span.sec_three_att_quote {
   max-width: 430px;
   @include type(
     (
-      size: 19px,
-      height: 32px,
+      size: $sec_three_att_quote_size,
+      height: $sec_three_att_quote_height,
       family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 500,
+      color: $sec_three_att_quote_color,
+      weight: $sec_three_att_quote_weight,
     )
   );
   @include mq(small_laptop) {
@@ -210,13 +224,13 @@ span.sec_three_att_quote {
 
 .attorney_image_wrapper {
   .att_image {
-    overflow:hidden;
-    border-radius:50%;
+    overflow: hidden;
+    border-radius: 50%;
     box-shadow: 0px 0px 20px #00000029;
     @include margin_lr;
     @include box(175px);
     @include mq(small_laptop) {
-     @include box(155px);
+      @include box(155px);
     }
     @include mq(large_laptop) {
       @include box(150px);
@@ -226,8 +240,6 @@ span.sec_three_att_quote {
     }
     img {
       margin: 0 auto;
-      //border-radius: 50%;
-      
       @include image();
       @include box(100%);
     }

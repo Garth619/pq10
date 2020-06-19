@@ -2,15 +2,14 @@ footer {
   text-align: center;
 }
 
-
 #footer_form_wrapper {
-  background: $color_lite_two;
+  background: $footer_form_bg_color;
 }
 
 #footer_form_inner {
-  padding-bottom:150px;
+  padding-bottom: 150px;
   @include mq(small_tablet) {
-    padding-bottom:180px;
+    padding-bottom: 180px;
   }
   @include mq(small_laptop) {
     padding: 0 75px 120px;
@@ -21,12 +20,10 @@ footer {
   }
   @include mq(small_monitor) {
     padding: 0 180px 120px;
-    max-width:1920px;
+    max-width: 1920px;
     @include margin_lr;
   }
 }
-
-
 
 #footer_form_left {
   padding: 55px 25px 0px;
@@ -38,7 +35,7 @@ footer {
   }
   @include mq(small_laptop) {
     text-align: left;
-    margin:0;
+    margin: 0;
     padding: 111px 70px 0px 0;
   }
   @include mq(large_laptop) {
@@ -53,30 +50,42 @@ span#footer_form_title {
   display: block;
   @include type(
     (
-      size: 36px,
-      spacing: 0.9px,
-      height: 42px,
+      size: $footer_form_title_size,
+      spacing: $footer_form_title_spacing,
+      height: $footer_form_title_height,
       family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 700,
+      color: $footer_form_title_color,
+      weight: $footer_form_title_weight,
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(60px, 70px, null);
+    @include quick_type(
+      $footer_form_title_size_small_tablet,
+      $footer_form_title_height_small_tablet,
+      null
+    );
   }
   @include mq(small_laptop) {
-    @include quick_type(60px, 65px, null);
+    @include quick_type(null, $footer_form_title_height_small_laptop, null);
   }
   @include mq(large_laptop) {
-    @include quick_type(70px, 70px, null);
+    @include quick_type(
+      $footer_form_title_size_large_laptop,
+      $footer_form_title_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
-    @include quick_type(80px, 80px, null);
+    @include quick_type(
+      $footer_form_title_size_small_monitor,
+      $footer_form_title_height_small_monitor,
+      null
+    );
   }
   &:after {
     content: "";
     display: block;
-    background: $color_bright_one;
+    background: $footer_form_line_bg_color;
     margin-top: 25px;
     @include box(100%, 2px);
     @include mq(small_laptop) {
@@ -99,7 +108,6 @@ span#footer_form_title {
       display: none;
     }
     @include mq(large_laptop) {
-      
     }
   }
 }
@@ -108,27 +116,31 @@ span#footer_form_title {
   margin: 25px 0 0;
   @include type(
     (
-      size: 18px,
-      height: 28px,
+      size: $footer_desc_size,
+      height: $footer_desc_height,
       family: $primaryfont,
-      color: $color_dark_two,
+      color: $footer_desc_color,
     )
   );
   @include mq(small_tablet) {
     margin: 31px auto 0;
-    @include quick_type(22px, 30px, 0px);
+    @include quick_type(
+      $footer_desc_size_small_tablet,
+      $footer_desc_height_small_tablet,
+      0px
+    );
   }
   @include mq(small_laptop) {
-    @include quick_type(20px, 30px, 0px);
+    @include quick_type($footer_desc_size_small_laptop, null, 0px);
   }
   @include mq(large_laptop) {
     margin: 42px auto 0;
-    @include quick_type(22px, 30px, 0px);
+    @include quick_type($footer_desc_size_large_laptop, null, 0px);
   }
   a {
-    color: $color_dark_two;
+    color: $footer_desc_link_color;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: $footer_desc_link_weight;
   }
   p {
     margin-bottom: 25px;
@@ -143,12 +155,12 @@ span#schedule {
   margin-top: 35px;
   @include type(
     (
-      size: 16px,
-      spacing: 1.44px,
-      height: 25px,
+      size: $schedule_size,
+      spacing: $schedule_spacing,
+      height: $schedule_height,
       family: $primaryfont,
-      color: $color_bright_one,
-      weight: 800,
+      color: $schedule_color,
+      weight: $schedule_weight,
       transform: uppercase,
     )
   );
@@ -177,45 +189,45 @@ span#required {
   }
   @include type(
     (
-      size: 13px,
-      spacing: 2.6px,
+      size: $required_size,
+      spacing: $required_spacing,
       family: $primaryfont,
-      color: $color_dark_one,
-      weight: 600,
+      color: $required_color,
+      weight: $required_weight,
       align: center,
       transform: uppercase,
     )
   );
   @include mq(small_tablet) {
     text-align: left;
-    font-size: 12px;
+    font-size: $required_size_small_tablet;
   }
   @include mq(large_laptop) {
-    font-size: 14px;
+    font-size: $required_size_large_laptop;
   }
 }
 
 #footer_form_right {
   flex-basis: 509px;
   flex-shrink: 0;
-  padding:0 25px;
+  padding: 0 25px;
   max-width: 580px;
   @include margin_lr;
   @include mq(small_tablet) {
     max-width: 700px;
   }
   @include mq(small_laptop) {
-    padding:0;
-    margin-top:80px;
+    padding: 0;
+    margin-top: 80px;
   }
   @include mq(large_laptop) {
-    flex-basis:539px;
+    flex-basis: 539px;
   }
   @include mq(small_monitor) {
     margin-top: 133px;
-    margin-left:0;
-    margin-right:0;
-    flex-basis:719px;
+    margin-left: 0;
+    margin-right: 0;
+    flex-basis: 719px;
   }
   .gform_wrapper {
     margin-top: 20px;
@@ -241,17 +253,17 @@ span#required {
           margin-bottom: 15px;
           @include type(
             (
-              size: 16px,
-              spacing: 0.4px,
+              size: $form_size,
+              spacing: $form_spacing,
               family: $primaryfont,
-              color: $color_dark_one,
+              color: $form_color,
             )
           );
           @include mq(small_tablet) {
             padding: 24px 20px;
           }
           &:focus {
-            border: 2px solid $color_bright_two;
+            border: 2px solid $form_focus;
           }
         }
         textarea {
@@ -294,10 +306,10 @@ span#required {
         @include abs(0, null, null, 0);
       }
       &:before {
-        background: $color_gradient_one;
+        background: $gform_button_bg_color;
       }
       &:after {
-        background: $color_bright_two;
+        background: $gform_button_bg_hover_color;
         opacity: 0;
         transition: all 150ms ease-in-out;
       }
@@ -308,16 +320,16 @@ span#required {
         cursor: pointer;
         @include type(
           (
-            size: 16px,
-            spacing: 2.4px,
+            size: $gform_button_bg_size,
+            spacing: $gform_button_bg_spacing,
             family: $primaryfont,
-            color: $color_lite_one,
-            weight: 800,
+            color: $gform_button_bg_color,
+            weight: $gform_button_bg_weight,
             transform: uppercase,
           )
         );
         @include mq(small_monitor) {
-          font-size: 18px;
+          font-size: $gform_button_bg_small_monitor;
           padding: 23px 30px;
         }
       }
@@ -327,11 +339,11 @@ span#required {
       margin-bottom: 15px;
       @include type(
         (
-          size: 12px,
-          spacing: 2px,
+          size: $form_validation_size,
+          spacing: $form_validation_spacing,
           family: $primaryfont,
-          color: $color_bright_two,
-          weight: 800,
+          color: $form_validation_color,
+          weight: $form_validation_weight,
           transform: uppercase,
         )
       );
@@ -339,10 +351,9 @@ span#required {
   }
 }
 
-
 #footer_bottom {
-  background:$color_gradient_two;
-  width:100%;
+  background: $footer_bottom_bg_color;
+  width: 100%;
   padding: 46px 24px 40px;
   @include mq(small_tablet) {
     padding: 52px 0px 20px;
@@ -358,9 +369,8 @@ span#required {
   }
 }
 
-
 #copyright {
-  padding-top:30px;
+  padding-top: 30px;
   border-top: 2px solid $color_lite_four;
   @include mq(small_tablet) {
     margin-top: 25px;
@@ -368,18 +378,18 @@ span#required {
   }
   @include mq(small_laptop) {
     margin-top: 5px;
-    margin-left:-75px;
-    padding-left:35px;
-    padding-right:35px;
-    width:100vw;
+    margin-left: -75px;
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 100vw;
   }
   @include mq(large_laptop) {
-    padding-left:50px;
-    margin-left:-90px;
-    padding-right:50px;
+    padding-left: 50px;
+    margin-left: -90px;
+    padding-right: 50px;
   }
   @include mq(small_monitor) {
-    margin-left:-205px;
+    margin-left: -205px;
   }
 }
 
@@ -387,60 +397,60 @@ span#required {
   max-width: 320px;
   @include margin_lr;
   @include mq(small_tablet) {
-    max-width:100%;
+    max-width: 100%;
   }
   @include mq(small_laptop) {
-    @include flex(space-between,center);
+    @include flex(space-between, center);
   }
   @include mq(small_monitor) {
-    max-width:1920px;
+    max-width: 1920px;
     @include margin_lr;
   }
   ul {
     list-style: none;
     li {
       display: inline;
-      @include type (
+      @include type(
         (
-          size: 15px,
-          spacing: 0.75px,
-          height: 24px,
+          size: $copyright_size,
+          spacing: $copyright_spacing,
+          height: $copyright_height,
           family: $primaryfont,
-          color: $color_lite_one 
+          color: $copyright_color,
         )
       );
       @include mq(small_tablet) {
-        font-size:14px;
+        font-size: $copyright_size_small_tablet;
       }
       @include mq(small_monitor) {
-        font-size:15px;
+        font-size: $copyright_size_small_monitor;
       }
       &:after {
-        content:"|";
-        display:inline-block;
-        margin:0 4px 0 6px;
+        content: "|";
+        display: inline-block;
+        margin: 0 4px 0 6px;
       }
       &:last-of-type {
         &:after {
-          display:none;
+          display: none;
         }
       }
-      a { 
-        color:$color_lite_one;
+      a {
+        color: $copyright_link_color;
         text-decoration: none;
-        transition:all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
         &:hover {
-          text-decoration:underline;
+          text-decoration: underline;
         }
       }
     }
   }
   a#ilawyer {
-    display:inline-block;
+    display: inline-block;
     margin-top: 14px;
     svg {
       path {
-        fill:#fff
+        fill: $ilawyer_bg_color;
       }
     }
   }

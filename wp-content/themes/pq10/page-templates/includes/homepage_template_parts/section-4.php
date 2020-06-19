@@ -3,18 +3,22 @@
 	<div id='sec_four_inner'>
 	
 		<div id='sec_four_left'>
-		
-			<span id='sec_four_left_title'><?php the_field( 'section_four_title' ); ?></span><!-- sec_four_left_title -->
 
-			<div id='sec_four_left_content'>
+			<div id='sec_four_left_inner'>
 			
-				<?php the_field( 'section_four_description' ); ?>
+				<span id='sec_four_left_title'><?php the_field( 'section_four_title' ); ?></span><!-- sec_four_left_title -->
 
-				<a class='cr_button' href='<?php the_field( 'section_four_button_link' ); ?>'><?php the_field( 'section_four_button_verbiage' ); ?></a><!-- button_two -->
+				<div id='sec_four_left_content'>
 			
-			</div><!-- sec_four_left_content -->
+					<?php the_field( 'section_four_description' ); ?>
+
+					<a class='cr_button' href='<?php the_field( 'section_four_button_link' ); ?>'><?php the_field( 'section_four_button_verbiage' ); ?></a><!-- button_two -->
+			
+				</div><!-- sec_four_left_content -->
+
+			</div><!-- sec_four_left_inner -->
 		
-		</div><!-- sec_four_left -->
+			</div><!-- sec_four_left -->
 
 		<div id='sec_four_right'>
 		

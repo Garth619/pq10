@@ -1,5 +1,5 @@
 #section_seven {
-  background: $color_gradient_two;
+  background: $sec_seven_bg_color;
   padding: 60px 25px;
   @include mq(small_tablet) {
     padding: 67px 60px;
@@ -24,7 +24,7 @@
   }
   @include mq(small_laptop) {
     padding: 71px 77px 70px;
-    max-width:927px;
+    max-width: 927px;
     @include margin_lr;
   }
   @include mq(large_laptop) {
@@ -44,14 +44,14 @@
       max-width: 145px;
     }
     path {
-      fill: $color_bright_one;
+      fill: $sec_seven_star_bg_color;
     }
   }
 }
 
 svg#stars {
   path {
-    fill: $color_bright_one;
+    fill: $sec_seven_star_bg_color;
   }
 }
 
@@ -60,22 +60,30 @@ span.sec_seven_title {
   margin-bottom: 30px;
   @include type(
     (
-      size: 14px,
-      spacing: 1.4px,
+      size: $sec_seven_title_size,
+      spacing: $sec_seven_title_spacing,
       family: $primaryfont,
-      color: $color_dark_three,
-      weight: 800,
+      color: $sec_seven_title_color,
+      weight: $sec_seven_title_weight,
       transform: uppercase,
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(15px, null, 3px);
+    @include quick_type(
+      $sec_seven_title_size_small_tablet,
+      null,
+      $sec_seven_title_spacing_small_tablet
+    );
   }
   @include mq(small_laptop) {
     margin-bottom: 42px;
   }
   @include mq(large_laptop) {
-    @include quick_type(16px, null, 3.2px);
+    @include quick_type(
+      $sec_seven_title_size_large_laptop,
+      null,
+      $sec_seven_title_spacing_large_laptop
+    );
   }
 }
 
@@ -100,19 +108,19 @@ span.sec_seven_title {
       bottom: -110px;
     }
     @include mq(small_monitor) {
-      bottom:-140px;
+      bottom: -140px;
     }
     li.slick-active {
       button {
         &:before {
-          color: $color_bright_two;
+          color: $sec_seven_dots_active_bg_color;
         }
       }
     }
     li:hover {
       button {
         &:before {
-          color: $color_bright_two;
+          color: $sec_seven_dots_hover_bg_color;
         }
       }
     }
@@ -124,15 +132,12 @@ span.sec_seven_title {
         &:before {
           width: 16px;
           opacity: 1;
-          color: $color_lite_one;
-          font-size: 25px;
+          color: $sec_seven_dots_bg_color;
+          font-size: $sec_seven_dots_font_size;
         }
       }
     }
   }
-}
-
-.sec_seven_single_slide {
 }
 
 span.sec_seven_desc {
@@ -140,29 +145,45 @@ span.sec_seven_desc {
   margin-top: 16px;
   @include type(
     (
-      size: 22px,
-      spacing: 0.22px,
-      height: 30px,
+      size: $sec_seven_desc_size,
+      spacing: $sec_seven_desc_spacing,
+      height: $sec_seven_desc_height,
       family: $secondaryfont,
-      color: $color_dark_two,
-      weight: 700,
+      color: $sec_seven_desc_color,
+      weight: $sec_seven_desc_weight,
     )
   );
   @include mq(small_tablet) {
     max-width: 540px;
     @include margin_lr;
-    @include quick_type(30px, 40px, 0.3px);
+    @include quick_type(
+      $sec_seven_desc_size_small_tablet,
+      $sec_seven_desc_height_small_tablet,
+      $sec_seven_desc_spacing_small_tablet
+    );
   }
   @include mq(small_laptop) {
-    max-width:100%;
-    @include quick_type(35px, 45px, null);
+    max-width: 100%;
+    @include quick_type(
+      $sec_seven_desc_size_small_laptop,
+      $sec_seven_desc_height_small_laptop,
+      null
+    );
   }
   @include mq(large_laptop) {
-    @include quick_type(40px, 50px, null);
+    @include quick_type(
+      $sec_seven_desc_size_large_laptop,
+      $sec_seven_desc_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     margin-top: 29px;
-    @include quick_type(50px, 60px, null);
+    @include quick_type(
+      $sec_seven_desc_size_small_monitor,
+      $sec_seven_desc_height_small_monitor,
+      null
+    );
   }
 }
 
@@ -171,10 +192,10 @@ span.sec_seven_desc {
   display: none;
   @include type(
     (
-      size: 16px,
-      height: 30px,
+      size: $sec_seven_content_size,
+      height: $sec_seven_content_height,
       family: $primaryfont,
-      color: $color_dark_three,
+      color: $sec_seven_content_color,
     )
   );
   @include mq(small_tablet) {
@@ -185,11 +206,15 @@ span.sec_seven_desc {
   }
   @include mq(large_laptop) {
     margin-top: 31px;
-    @include quick_type(18px,35px,null);
+    @include quick_type(
+      $sec_seven_content_size_large_laptop,
+      $sec_seven_content_height_large_laptop,
+      null
+    );
   }
   @include mq(small_monitor) {
     margin: 40px auto 0;
-    max-width:845px;
+    max-width: 845px;
   }
   p {
     margin-bottom: 20px;
@@ -200,25 +225,33 @@ span.sec_seven_name {
   display: block;
   @include type(
     (
-      size: 14px,
-      spacing: 1.4px,
+      size: $sec_seven_name_size,
+      spacing: $sec_seven_name_spacing,
       family: $primaryfont,
-      color: $color_dark_three,
-      weight: 800,
+      color: $sec_seven_name_color,
+      weight: $sec_seven_name_weight,
       transform: uppercase,
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(15px, null, 3px);
+    @include quick_type(
+      $sec_seven_name_size_small_tablet,
+      null,
+      $sec_seven_name_spacing_small_tablet
+    );
   }
   @include mq(large_laptop) {
-    @include quick_type(16px, null, 3.2px);
+    @include quick_type(
+      $sec_seven_name_size_large_laptop,
+      null,
+      $sec_seven_name_spacing_large_laptop
+    );
   }
   &:before {
     content: "";
     display: block;
     margin: 25px auto 30px;
-    background: $color_bright_one;
+    background: $sec_seven_line_bg_color;
     @include box(54px, 2px);
   }
 }
