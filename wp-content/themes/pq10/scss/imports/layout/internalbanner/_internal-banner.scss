@@ -25,21 +25,21 @@
   margin:0 auto 25px;
   @include type (
     (
-      size: 50px,
-      height: 60px,
+      size: $banner_title_size,
+      height: $banner_title_height,
       family: $secondaryfont,
-      color: $color_lite_one,
-      weight: 700 
+      color: $banner_title_color,
+      weight: $banner_title_weight 
     )
   );
   @include mq(large_laptop) {
     max-width: 760px;
-    @include quick_type(55px,65px,null);
+    @include quick_type($banner_title_size_large_laptop,$banner_title_height_large_laptop,null);
   }
   @include mq(small_monitor) {
     max-width: 910px;
     margin-bottom: 39px;
-    @include quick_type(65px,75px,null);
+    @include quick_type($banner_title_size_small_monitor,$banner_title_height_small_monitor,null);
   }
 }
 
@@ -49,10 +49,7 @@ img#internal_hero {
   @include abs(0,null,null,0);
 }
 
-
 ///////
-
-
 
 #internal_banner_two {
   position: relative;
@@ -85,28 +82,28 @@ img#internal_hero {
   z-index:1;
   @include type (
     (
-      size: 36px,
-      height: 42px,
+      size: $banner_title_two_size,
+      height: $banner_title_two_height,
       align:center,
       family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 700
+      color: $banner_title_two_color,
+      weight: $banner_title_two_weight
     )
   );
   @include mq(small_tablet) {
-    @include quick_type(60px,70px,null);
+    @include quick_type($banner_title_two_size_small_tablet,$banner_title_two_height_small_tablet,null);
   }
   @include mq(small_laptop) {
     color:$color_lite_one;
-    @include quick_type(55px,65px,null);
+    @include quick_type($banner_title_two_size_small_laptop,$banner_title_two_height_small_laptop,null);
   }
   @include mq(small_monitor) {
-    @include quick_type(70px,75px,null);
+    @include quick_type($banner_title_two_size_small_monitor,$banner_title_two_height_small_monitor,null);
   }
   &:after {
     content:"";
     display:block;
-    background:$color_bright_one;
+    background:$banner_title_two_diamond_bg_color;
     margin-top: 27px;
     @include box(100%,2px);
     @include mq(small_monitor) {

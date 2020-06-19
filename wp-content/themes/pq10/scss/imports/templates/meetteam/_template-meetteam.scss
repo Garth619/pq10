@@ -73,22 +73,22 @@
       }
       .single_att_overlay {
         opacity: 0;
-        background: rgba(1,97,113,0.7);
+        background: $att_overlay_bg_color;
         transition: all 200ms ease-in-out;
         @include box(100%);
         @include abs(0,null,null,0,1);
         @include flex(center,center);
         &.placeholder_overlay {
-          background: $color_dark_two;
+          background: $placeholder_overlay;
         }
         span.view_profile {
           @include type (
             (
-              size: 17px,
-              spacing: 1.7px,
+              size: $view_profile_size,
+              spacing: $view_profile_spacing,
               family: $primaryfont,
-              color: $color_lite_one,
-              weight: 800,
+              color: $view_profile_color,
+              weight: $view_profile_weight,
               transform: uppercase 
             )
           );
@@ -97,25 +97,25 @@
             display: block;
             margin:20px auto 0;
             transform:rotate(-45deg);
-            background:$color_bright_one;
+            background:$view_profile_diamond_bg_color;
             @include box(10px);
           }
         };
       }
     }
     .single_att_title_wrapper {
-      background:$color_bright_two;
+      background:$single_att_title_bg_color;
       padding: 25px;
       span {
         display:block;
-        color:$color_lite_one;
+        color:$single_att_span_color;
       }
       span.single_att_name {
         @include type (
           (
-            size: 27px,
-            height: 29px,
-            weight:700,
+            size: $single_att_name_size,
+            height: $single_att_name_height,
+            weight:$single_att_name_weight,
             family: $secondaryfont 
           )
         );
@@ -124,10 +124,10 @@
         margin-top: 14px;
         @include type (
           (
-            size: 16px,
-            spacing: 1.6px,
+            size: $single_att_position_size,
+            spacing: $single_att_position_spacing,
             family: $primaryfont,
-            weight: 800,
+            weight: $single_att_position_weight,
             transform: uppercase 
           )
         );

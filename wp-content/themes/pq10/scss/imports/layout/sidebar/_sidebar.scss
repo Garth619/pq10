@@ -20,7 +20,7 @@
     padding: 55px 45px 178px;
     margin-bottom: 70px;
     display: block;
-    background: $color_lite_two;
+    background: $sidebar_form_bg_color;
     box-shadow: 0px 1px 40px #00000040;
   }
   @include mq(small_monitor) {
@@ -49,14 +49,14 @@
           text-align: left;
           @include type(
             (
-              size: 16px,
-              spacing: 0.4px,
+              size: $sidebar_form_bg_size,
+              spacing: $sidebar_form_bg_spacing,
               family: $primaryfont,
-              color: $color_dark_one,
+              color: $sidebar_form_bg_color,
             )
           );
           &:focus {
-            border: 2px solid $color_bright_two;
+            border: 2px solid $sidebar_form_focus_color;
           }
         }
         textarea {
@@ -84,10 +84,10 @@
         @include abs(0, null, null, 0);
       }
       &:before {
-        background: $color_gradient_one;
+        background: $sidebar_form_button_bg_color;
       }
       &:after {
-        background: $color_bright_two;
+        background: $sidebar_form_button_hover_bg_color;
         opacity: 0;
         transition: all 150ms ease-in-out;
       }
@@ -98,11 +98,11 @@
         cursor: pointer;
         @include type(
           (
-            size: 16px,
-            spacing: 2.4px,
+            size: $sidebar_form_button_size,
+            spacing: $sidebar_form_button_spacing,
             family: $primaryfont,
-            color: $color_lite_one,
-            weight: 800,
+            color: $sidebar_form_button_color,
+            weight: $sidebar_form_button_weight,
             transform: uppercase,
           )
         );
@@ -113,11 +113,11 @@
       margin-bottom: 15px;
       @include type(
         (
-          size: 12px,
-          spacing: 2px,
+          size: $sidebar_form_error_size,
+          spacing: $sidebar_form_error_spacing,
           family: $primaryfont,
-          color: $color_bright_two,
-          weight: 800,
+          color: $sidebar_form_error_color,
+          weight: $sidebar_form_error_weight,
           transform: uppercase,
         )
       );
@@ -130,11 +130,11 @@ span.sidebar_form_title {
     display: block;
     @include type(
       (
-        size: 35px,
-        height: 40px,
+        size: $sidebar_form_title_size,
+        height: $sidebar_form_title_height,
         family: $secondaryfont,
-        color: $color_dark_one,
-        weight: 700,
+        color: $sidebar_form_title_color,
+        weight: $sidebar_form_title_weight,
       )
     );
   }
@@ -146,7 +146,7 @@ span.sidebar_form_title {
       content: "";
       display: block;
       margin-top: 28px;
-      background: $color_bright_one;
+      background: $sidebar_form_title_bg_line;
       @include box(130px, 2px);
     }
   }
@@ -158,11 +158,11 @@ span.sidebar_required {
   margin-top: -105px;
   @include type(
     (
-      size: 14px,
-      spacing: 2.8px,
+      size: $sidebar_required_size,
+      spacing: $sidebar_required_spacing,
       family: $primaryfont,
-      color: $color_dark_three,
-      weight: 700,
+      color: $sidebar_required_color,
+      weight: $sidebar_required_weight,
       transform: uppercase,
     )
   );
@@ -170,20 +170,20 @@ span.sidebar_required {
 
 .sidebar_box {
   h3 {
-    background: $color_dark_one;
+    background: $sidebar_h3_bg_color;
     padding: 26px 28px 26px 23px;
     position: relative;
     @include type(
       (
-        size: 24px,
-        weight: 600,
+        size: $sidebar_h3_size,
+        weight: $sidebar_h3_weight,
         family: $secondaryfont,
-        color: $color_lite_one,
+        color: $sidebar_h3_color,
       )
     );
     @include mq(large_laptop) {
       padding: 35px 68px 35px 44px;
-      @include quick_type(27px, null, null);
+      @include quick_type($sidebar_h3_size_large_laptop, null, null);
     }
     &.close {
       &:after {
@@ -196,7 +196,7 @@ span.sidebar_required {
       vertical-align: top;
       margin-top: 10px;
       margin-right: 16px;
-      background: $color_bright_one;
+      background: $sidebar_h3_diamond_bg_color;
       transform: rotate(-45deg);
       @include box(8px);
     }
@@ -207,7 +207,7 @@ span.sidebar_required {
       transform-origin: center center;
       transition: all 150ms ease-in-out;
       @include abs(40px, 40px, null, null);
-      @include tri(up, 6px, 7px, $color_bright_two);
+      @include tri(up, 6px, 7px, $sidebar_h3_triangle_bg_color);
       @include mq(small_laptop) {
        top:50px;
       }
@@ -223,18 +223,18 @@ span.sidebar_required {
         margin-bottom: 10px;
         @include type(
           (
-            size: 17px,
-            height: 25px,
+            size: $sidebar_item_size,
+            height: $sidebar_item_height,
             family: $primaryfont,
-            color: $color_lite_one,
-            weight: 400,
+            color: $sidebar_item_color,
+            weight: $sidebar_item_weight,
           )
         );
       }
     }
   }
   &.sidebar_blog ul, ul.menu {
-    background: $color_gradient_two;
+    background: $sidebar_bg_color;
     padding: 10px 24px 25px;
     @include mq(large_laptop) {
       padding: 10px 44px 25px;
@@ -247,7 +247,7 @@ span.sidebar_required {
         transform-origin: center center;
         transition: all 150ms ease-in-out;
         @include abs(27px, 20px, null, null);
-        @include tri(down, 6px, 7px, $color_lite_one);
+        @include tri(down, 6px, 7px, $sidebar_item_triangle_bg_color);
       }
       &.active {
         &:after {
@@ -257,17 +257,15 @@ span.sidebar_required {
     }
     > li.current-menu-item {
       > a {
-          color:$color_bright_two;
-        //background: $color_bright_two;
-        //box-shadow: 0px 1px 20px #030e1480;
+          color:$sidebar_currentitem_color;
           &:hover {
-            color:$color_lite_one;
+            color:$sidebar_currentitem_hover_color;
           }
       }
     }
     > li.current-menu-ancestor {
       > a {
-        background: $color_bright_two;
+        background: $sidebar_current_ancestor_item_bg_color;
         box-shadow: 0px 1px 20px #030e1480;
       }
       ul.sub-menu {
@@ -277,9 +275,9 @@ span.sidebar_required {
     > li {
       &.blog-active {
         a {
-          color:$color_bright_two;
+          color:$sidebar_blog_active_item_color;
           &:hover {
-            color:#fff;
+            color:$sidebar_blog_active_item_hover_color;;
           }
         }
       }
@@ -288,19 +286,18 @@ span.sidebar_required {
         box-shadow: 0px 1px 20px transparent;
         transition: all 150ms ease-in-out;
         &:hover {
-          background: $color_bright_two;
+          background: $sidebar_item_hover_color;
           box-shadow: 0px 1px 20px #030e1480;
         }
       }
     }
   }
   ul.sub-menu {
-    border-bottom: 2px solid $color_bright_two;
+    border-bottom: 2px solid $sidebar_submenu_bottom_bg_color;
     display: none;
-    //margin-bottom:10px;
     li.current-menu-item {
       a {
-        color:$color_bright_two;
+        color:$sidebar_submenu_current_color;
       }
     }
     li {
@@ -308,10 +305,10 @@ span.sidebar_required {
         padding: 16px 25px;
         box-shadow: none;
         background: transparent;
-        color: $color_lite_one;
+        color: $sidebar_submenu_color;
         transition: all 150ms ease-in-out;
         &:hover {
-          color: $color_bright_two;
+          color: $sidebar_submenu_hover_color;
         }
       }
     }
