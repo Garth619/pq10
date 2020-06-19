@@ -29,7 +29,7 @@
   &:hover {
     .video_thumb {
       .video_overlay {
-        background: rgba(0, 0, 0, 0.55);
+        background: $video_overlay_bg_hover_color;
         span.play_button {
           transform: scale(0.8);
         }
@@ -78,7 +78,7 @@
     }
     .video_overlay {
       pointer-events: none;
-      background: rgba(0, 0, 0, 0.3);
+      background: $video_overlay_bg_color;
       transition: background 300ms ease-in-out;
       @include abs(0, null, null, 0);
       @include box(100%);
@@ -90,7 +90,7 @@
 span.play_button {
   display: block;
   border-radius: 50%;
-  background: $color_lite_one;
+  background: $play_button_bg_color;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
   @include box(95px);
@@ -102,7 +102,7 @@ span.play_button {
     position: relative;
     top: 0px;
     left: 2px;
-    @include tri(right, 13px, 17px, $color_bright_one);
+    @include tri(right, 13px, 17px, $play_button_triangle_bg_color);
   }
 }
 
@@ -119,12 +119,12 @@ span.play_button {
     display: block;
     @include type(
       (
-        size: 15px,
-        spacing: 1.7px,
-        height: 21px,
+        size: $video_title_size,
+        spacing: $video_title_spacing,
+        height: $video_title_height,
         family: $primaryfont,
-        color: $color_lite_one,
-        weight: 800,
+        color: $video_title_color,
+        weight: $video_title_weight,
         transform: uppercase,
       )
     );
@@ -133,7 +133,7 @@ span.play_button {
       @include margin_lr;
     }
     @include mq(large_laptop) {
-      @include quick_type(17px, 24px, null);
+      @include quick_type($video_title_size_large_laptop, $video_title_height_large_laptop, null);
     }
   }
 }

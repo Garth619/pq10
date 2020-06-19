@@ -47,16 +47,16 @@
 .testimonial_quote {
   @include type (
     (
-      size: 25px,
-      spacing: 0.35px,
-      height: 35px,
+      size: $testimonial_quote_size,
+      spacing: $testimonial_quote_spacing,
+      height: $testimonial_quote_height,
       family: $secondaryfont,
-      color: $color_dark_two,
-      weight: 700 
+      color: $testimonial_quote_color,
+      weight: $testimonial_quote_weight 
     )
   );
   @include mq(small_monitor) {
-    @include quick_type(35px,45px,null);
+    @include quick_type($testimonial_quote_size_small_monitor,$testimonial_quote_height_small_monitor,null);
   }
 }
 
@@ -64,35 +64,35 @@
   margin-top:20px;
   @include type (
     (
-      size: 16px,
-      height: 33px,
+      size: $testimonial_descr_size,
+      height: $testimonial_descr_height,
       family: $primaryfont,
-      color: $color_dark_three
+      color: $testimonial_descr_color
     )
   );
   @include mq(small_monitor) {
-    @include quick_type(18px,35px,null);
+    @include quick_type($testimonial_descr_size_small_monitor,$testimonial_descr_height_small_monitor,null);
   }
 }
 
 .testimonial_name {
   @include type (
     (
-      size: 14px,
-      spacing: 2px,
+      size: $testimonial_name_size,
+      spacing: $testimonial_name_spacing,
       family: $primaryfont,
-      color: $color_dark_three,
-      weight: 800,
+      color: $testimonial_name_color,
+      weight: $testimonial_name_weight,
       transform: uppercase 
     )
   );
   @include mq(small_monitor) {
-    font-size:15px;
+    font-size:$testimonial_name_size_small_monitor;
   }
   &:before {
     content:"";
     display:block;
-    background:$color_bright_one;
+    background:$testimonial_name_line_bg_color;
     margin:25px auto 30px;
     @include box(54px,2px);
   }
@@ -117,7 +117,7 @@
 .testimonial_single {
   margin-bottom:30px;
   padding-bottom: 30px;
-  border-bottom:2px solid $color_lite_two;
+  border-bottom:2px solid $testimonial_single_border_bg_color;
   @include mq(small_tablet) {
     margin-bottom:45px;
     padding-bottom: 45px;

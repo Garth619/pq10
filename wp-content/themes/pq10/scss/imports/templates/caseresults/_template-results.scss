@@ -25,7 +25,7 @@
 }
 
 .single_cr_title_wrapper {
-  background:$color_bright_two;
+  background:$single_cr_title_bg_color;
   padding:30px;
   @include mq(small_monitor) {
     padding: 35px;
@@ -36,11 +36,11 @@
     @include margin_lr;
     @include type (
       (
-        size: 22px,
-        height: 27px,
-        weight:700,
+        size: $single_cr_title_size,
+        height: $single_cr_title_height,
+        weight:$single_cr_title_weight,
         family: $secondaryfont,
-        color: $color_lite_one 
+        color: $single_cr_title_color 
       )
     );
   }
@@ -48,30 +48,30 @@
 
 
 .single_cr_content {
-  background:$color_lite_one;
+  background:$single_cr_content_bg_color;
   padding:35px 25px;
 }
 
 .single_amount {
   @include type (
     (
-      size: 50px,
+      size: $single_amount_size,
       family: $secondaryfont,
-      color: $color_dark_one,
-      weight: 700,
+      color: $single_amount_color,
+      weight: $single_amount_weight,
       transform: uppercase 
     )
   );
   @include mq(small_tablet) {
-    font-size:65px;
+    font-size:$single_amount_size_small_tablet;
   }
   @include mq(small_monitor) {
-    font-size: 75px;
+    font-size: $single_amount_size_small_monitor;
   }
   &:after {
     content:"";
     display:block;
-    background: $color_bright_one;
+    background: $single_amount_line_bg_color;
     margin:25px auto;
     @include box(54px,2px);
   }
@@ -81,8 +81,8 @@
 .single_cr_descr {
   @include type (
     (
-      size: 17px,
-      height: 30px,
+      size: $single_cr_descr_size,
+      height: $single_cr_descr_height,
       family: $primaryfont,
       color: $color_dark_three
     )
