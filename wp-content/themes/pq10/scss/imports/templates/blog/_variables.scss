@@ -2,51 +2,52 @@
 // Blog
 ////////////////////////////////////////////////////////////////////
 
-// h2.blog_header
+// .blog_header
 
-$blog_header_size: 35px;
-$blog_header_size_large_laptop: 30px;
-$blog_header_size_xlarge_mobile: 25px;
+$blog_header_size: 30px;
 
-$blog_header_line_height: 42px;
-$blog_header_line_height_large_laptop: 37px;
-$blog_header_line_height_xlarge_mobile: 33px;
+$blog_header_height:40px;
 
-// h2.blog_header a
+$blog_header_color: $color_dark_two;
 
-$blog_header_color: $color_dark_one;
-$blog_header_color_hover: $color_bright_one;
+$blog_header_weight:700;
 
-// .content .blog_meta
+// .blog_header a
 
-$blog_meta_weight: 700;
+$blog_header_link_color: $color_dark_two;
 
-$blog_meta_size: 18px;
-$blog_meta_size_xlarge_mobile: 17px;
+$blog_header_link_hover_color: $color_bright_one;
 
-$blog_meta_line_height: 25px;
-$blog_meta_line_height_xlarge_mobile: 20px;
+// .blog_meta
 
-$blog_meta_spacing: 1px;
+$blog_meta_border_bg_color: $color_lite_three;
 
-// .content .blog_meta ul li
+// .blog_meta span, ul, li
 
-$blog_meta_list_line_height_xlarge_mobile: 20px;
+$blog_meta_size: 17px;
 
-// .content .blog_meta ul li a
+$blog_meta_height:21px;
 
-$blog_meta_href_color: $color_bright_one;
-$blog_meta_href_color_hover: $color_bright_one;
+$blog_meta_color:$color_bright_two;
 
-// .paged_wrapper ul li
+$blog_meta_hover_color:$color_bright_one;
 
-$blog_paged_weight: 700;
+$blog_meta_weight:800;
 
-$blog_paged_size: 18px;
+// .blog_meta span, ul, li:before
 
-$blog_paged_line_height: 24px;
+$blog_meta_diamond_bg_color: $color_bright_one;
+
+// .paged_wrapper
+
+$paged_border_bg_color: $color_lite_two;
 
 // .paged_wrapper ul li a
 
-$blog_paged_color: $color_dark_one;
-$blog_paged_color_hover: $color_bright_one;
+$paged_size: 17px;
+
+$paged_color: $color_dark_one;
+
+$paged_hover_color: $color_bright_one;
+
+$paged_weight: 800;
