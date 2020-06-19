@@ -1,6 +1,6 @@
 body.page-template-template-contact {
   span.loc_row_divider {
-    background: $color_bright_one;
+    background: $contact_divider;
   }
   .locations {
     max-width: 1200px;
@@ -13,14 +13,14 @@ body.page-template-template-contact {
     &:nth-of-type(2) {
       span.locations_title {
         &:after {
-          background: $color_bright_one;
+          background: $contact_location_line_bg_color;
         }
       }
     }
     &:nth-of-type(3) {
       span.locations_title {
         &:after {
-          background: $color_bright_one;
+          background: $contact_location_line_bg_color;
         }
       }
       @include mq(small_laptop) {
@@ -29,30 +29,30 @@ body.page-template-template-contact {
     }
     span,
     a {
-      color: $color_dark_one;
+      color: $contact_location_color;
     }
   }
   a.get_directions {
-    border: 2px solid $color_dark_two;
+    border: 2px solid $get_directions_button_border_color;
     &:hover {
-      color: $color_lite_one;
-      border: 2px solid $color_bright_two;
+      color: $get_directions_button_hover_color;
+      border: 2px solid $get_directions_button_border_hover_color;
     }
   }
   .social_media {
     a {
       svg {
         circle {
-          fill: $color_dark_one;
+          fill: $contact_location_svg_circle_bg_color;
         }
         path {
-          fill: $color_lite_one;
+          fill: $contact_location_svg_path_bg_color;
         }
       }
       &:hover {
         svg {
           path {
-            fill: $color_bright_two;
+            fill: $contact_location_svg_path_bg_hover_color;
             transition: all 150ms ease-in-out;
           }
         }
