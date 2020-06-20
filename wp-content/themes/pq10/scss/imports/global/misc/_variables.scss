@@ -2,14 +2,10 @@
 // Global Misc
 ////////////////////////////////////////////////////////////////////
 
-// Light(grey) Backgrounds across the site (sidebars, certain section backgrounds, etc)
+// .box_wrapper
 
-$bg_color: $color_lite_two;
+$box_wrapper_bg_color: $color_lite_one;
 
-// border bottoms across the site (list items like nav dropdown, pa directory items, video items etc)
+// .gform_wrapper placeholder
 
-$color_border_bottom: #eaeaea;
-
-// global form placeholder input color
-
-$form_input_placeholder_color: $color_dark_one;
+$gform_placeholder: $color_dark_one;
