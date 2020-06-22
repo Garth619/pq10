@@ -11,7 +11,7 @@
   }
   @include mq(small_monitor) {
     max-width: 1460px;
-    margin:50px auto -65px;
+    margin: 50px auto -65px;
   }
   &:after {
     @include mq(large_laptop) {
@@ -133,7 +133,11 @@ span.play_button {
       @include margin_lr;
     }
     @include mq(large_laptop) {
-      @include quick_type($video_title_size_large_laptop, $video_title_height_large_laptop, null);
+      @include quick_type(
+        $video_title_size_large_laptop,
+        $video_title_height_large_laptop,
+        null
+      );
     }
   }
 }

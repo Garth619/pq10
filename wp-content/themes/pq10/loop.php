@@ -20,8 +20,16 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 	<div class="blog_post">
+
+		<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
+			
+			<h2 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 		
-		<h2 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+		<?php else:?>
+		
+			<h1 class="blog_header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
+		
+		<?php endif;?>
 		
 		<div class="blog_meta">
 		

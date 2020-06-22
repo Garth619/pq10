@@ -227,7 +227,7 @@ header {
       color: $consult_cta_color_small_tablet;
     }
     @include mq(small_laptop) {
-      font-size: $consult_cta_size_small_laptop
+      font-size: $consult_cta_size_small_laptop;
     }
     @include mq(small_monitor) {
       font-size: $consult_cta_size_small_monitor;

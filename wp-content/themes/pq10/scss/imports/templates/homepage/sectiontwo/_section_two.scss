@@ -41,7 +41,7 @@
   @include mq(small_laptop) {
     display: none;
   }
-  svg#arrow {
+  svg {
     path {
       fill: $arrow_bg_color;
     }
@@ -152,6 +152,7 @@
   // all svgs need different id numbers and different "lineargradient" id numbers otherwise all four svgs hover at the same time... the svgs are pasted in as acf text areas on homepage backend. Here is what Im referencing https://codepen.io/ZachSaucier/pen/QNdYBb?editors=1100 They can also be referenced under "pq10/images"
   svg,
   img {
+    fill: url(#SVGID_1_); // bug fix for when slick slider begins theloop again
     &#sp_1 {
       path {
         fill: url(#SVGID_1_);

@@ -1,39 +1,39 @@
 @media screen and (min-width: 1199px) {
+  // vars and mixins
 
-// vars and mixins
+  $transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+    opacity 500ms linear;
+  $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
 
-$transition: transform 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 500ms linear;
-$transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  @mixin img_scale($scale) {
+    transform: scale($scale, $scale);
+    transition: $transition;
+  }
 
-@mixin img_scale($scale) {
-  transform: scale($scale, $scale);
-  transition: $transition;
-}
+  @mixin transform_opacity($transform: 0px) {
+    transform: translateY($transform);
+    opacity: 0;
+    transition: $transition;
+  }
 
-@mixin transform_opacity($transform:0px) {
-  transform: translateY($transform);
-  opacity: 0;
-  transition: $transition;
-}
+  @mixin fire_transform_opacity($delay) {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-delay: $delay, $delay;
+  }
 
-@mixin fire_transform_opacity($delay) {
-  transform: translateY(0px);
-  opacity: 1;
-  transition-delay: $delay, $delay;
-}
+  @mixin line_animation($direction) {
+    transform: scale(0, 1);
+    transform-origin: top $direction;
+    transition: $transition_two;
+  }
 
-@mixin line_animation($direction) {
-  transform: scale(0, 1);
-  transform-origin: top $direction;
-  transition: $transition_two;
-}
+  @mixin fire_return_scale($scale, $delay: 0ms) {
+    transform: scale($scale, $scale);
+    transition-delay: $delay, $delay;
+  }
 
-@mixin fire_return_scale($scale, $delay: 0ms) { 
-  transform: scale($scale, $scale);
-  transition-delay: $delay, $delay;
-}
-
-// section one
+  // section one
 
   #section_one {
     overflow: hidden;
@@ -43,10 +43,9 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include img_scale(1.2);
   }
 
-
   body.ready {
     img#sec_one_hero {
-      transition-delay:300ms;
+      transition-delay: 300ms;
       @include img_scale(1);
     }
   }
@@ -76,7 +75,6 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include transform_opacity(-25px);
   }
 
-
   body.ready {
     a.free_consultation {
       @include fire_transform_opacity(900ms);
@@ -99,7 +97,6 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-
   #sec_three_right {
     @include transform_opacity(-45px);
     opacity: 1;
@@ -110,8 +107,6 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   //     @include img_scale(1.15);
   //   }
   // }
-
-
 
   span.sec_three_att_subtitle {
     &:after {
@@ -136,7 +131,6 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-
   // section four
 
   #section_four {
@@ -153,18 +147,17 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-
   span#sec_four_left_title {
     &:after {
       @include line_animation(left);
     }
-  } 
+  }
 
   #section_four.visible {
     span#sec_four_left_title {
       &:after {
         @include fire_return_scale(1);
-        transition-delay:200ms;
+        transition-delay: 200ms;
       }
     }
   }
@@ -178,29 +171,29 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-  #section_seven.visible, body.ready.page-template-template-testimonials {
+  #section_seven.visible,
+  body.ready.page-template-template-testimonials {
     svg#stars {
       path {
         opacity: 1;
         &:nth-of-type(1) {
-          transition-delay:150ms
+          transition-delay: 150ms;
         }
         &:nth-of-type(2) {
-          transition-delay:250ms
+          transition-delay: 250ms;
         }
         &:nth-of-type(3) {
-          transition-delay:350ms
+          transition-delay: 350ms;
         }
         &:nth-of-type(4) {
-          transition-delay:450ms
+          transition-delay: 450ms;
         }
         &:nth-of-type(5) {
-          transition-delay:550ms
+          transition-delay: 550ms;
         }
       }
     }
   }
-
 
   span.sec_seven_name {
     &:before {
@@ -213,11 +206,10 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     span.sec_seven_name {
       &:before {
         @include fire_return_scale(1);
-        transition-delay:300ms;
+        transition-delay: 300ms;
       }
     }
   }
-
 
   // footer
 
@@ -227,7 +219,6 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-
   footer.visible {
     span#footer_form_title {
       &:after {
@@ -236,14 +227,13 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-  // about 
+  // about
 
   h1#about_title {
     &:after {
       @include line_animation(left);
     }
   }
-
 
   body.ready {
     h1#about_title {
@@ -265,8 +255,11 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
   }
 
-  #about_banner, #internal_att_banner, #internal_banner, #internal_banner_two {
-    overflow:hidden;
+  #about_banner,
+  #internal_att_banner,
+  #internal_banner,
+  #internal_banner_two {
+    overflow: hidden;
   }
 
   // internal banner
@@ -276,28 +269,28 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     transition: transform 1550ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   }
 
-
   body.ready {
-      img#internal_hero {
-        @include fire_return_scale(1);
-        transition-delay:200ms;
-      }
+    img#internal_hero {
+      @include fire_return_scale(1);
+      transition-delay: 200ms;
+    }
   }
 
   // internal headers
 
-  .page_header.center, .banner_title_two {
+  .page_header.center,
+  .banner_title_two {
     &:after {
       @include line_animation(center);
     }
   }
-  
 
   body.ready {
-    .page_header.center, .banner_title_two {
+    .page_header.center,
+    .banner_title_two {
       &:after {
         @include fire_return_scale(1);
-        transition-delay: 200ms;;
+        transition-delay: 200ms;
       }
     }
   }
@@ -305,25 +298,23 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   // att profile
 
   #att_image_wrapper {
-    overflow:hidden;
+    overflow: hidden;
     img {
       @include img_scale(1.1);
     }
   }
-  
 
   body.ready {
     #att_image_wrapper {
       img {
         @include fire_return_scale(1);
-        transition-delay:200ms;
+        transition-delay: 200ms;
       }
     }
   }
 
   // testimoniala
 
-  
   .testimonial_name {
     &:before {
       @include line_animation(center);
@@ -335,14 +326,8 @@ $transition_two: transform 1350ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     .testimonial_name {
       &:before {
         @include fire_return_scale(1);
-        transition-delay:300ms;
+        transition-delay: 300ms;
       }
     }
   }
-
-
-
-
 }
-
-

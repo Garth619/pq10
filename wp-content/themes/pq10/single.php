@@ -6,19 +6,43 @@
 		
 		<div id="internal_banner_content">
 			
-			<h1 class="banner_title"><?php the_title();?></h1><!-- banner_title -->
-
-			<?php if(get_field('turn_off_button') == "Yes") : ?>
+		<?php if(get_field('banner_title')) : ?>
 			
-			<?php else: ?>
+			<?php if(get_field('banner_h1') == "Yes") : ?>
+		
+				<h1 class="banner_title"><?php the_field( 'banner_title' ); ?></h1><!-- banner_title -->
 			
-				<a class="button internal_button" href="#consultation">
-				
-					<span><?php the_field( 'global_internal_banner_button_verbiage','option'); ?></span>
+				<?php else: ?>
 			
-				</a>
+				<span class="banner_title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
 			
 			<?php endif;?>
+		
+		<?php else:?>
+		
+		<?php if(get_field('banner_h1') == "Yes") : ?>
+		
+			<h1 class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></h1><!-- banner_title -->
+
+			<?php else: ?>
+		
+			<span class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></span><!-- banner_title -->
+
+		<?php endif;?>
+		
+		<?php endif;?>
+		
+		<?php if(get_field('turn_off_button') == "Yes") : ?>
+		
+		<?php else: ?>
+		
+			<a class="button internal_button" href="#consultation">
+			
+				<span><?php the_field( 'global_internal_banner_button_verbiage','option'); ?></span>
+		
+			</a>
+		
+		<?php endif;?>
 			
 		</div><!-- internal_banner_content -->
 		
@@ -40,24 +64,12 @@
 	<div class="page_container">
 		
 		<div class="page_content">
-			
-			<?php //if(get_field('banner_h1') == "Yes") : ?>
-			
-				<!-- <h2 class="page_header"><?php the_title();?></h2> -->
-			
-			<?php //else:?>
-			
-				<!-- <h1 class="page_header"><?php the_title();?></h1> -->
-			
-			<?php //endif;?>
 
 			<div class='page_content_inner'>
 			
 			<?php get_template_part( 'loop', 'single' ); ?>
 			
 			</div><!-- page_content_inner -->
-			
-		
 			
 		</div><!-- page_content -->
 

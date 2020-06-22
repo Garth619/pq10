@@ -1,6 +1,6 @@
 .sidebar_wrapper {
-  margin-top:15px;
-  margin-bottom:-40px;
+  margin-top: 15px;
+  margin-bottom: -40px;
   @include mq(small_laptop) {
     width: 390px;
     flex-shrink: 0;
@@ -209,7 +209,7 @@ span.sidebar_required {
       @include abs(40px, 40px, null, null);
       @include tri(up, 6px, 7px, $sidebar_h3_triangle_bg_color);
       @include mq(small_laptop) {
-       top:50px;
+        top: 50px;
       }
     }
   }
@@ -233,7 +233,8 @@ span.sidebar_required {
       }
     }
   }
-  &.sidebar_blog ul, ul.menu {
+  &.sidebar_blog ul,
+  ul.menu {
     background: $sidebar_bg_color;
     padding: 10px 24px 25px;
     @include mq(large_laptop) {
@@ -257,10 +258,10 @@ span.sidebar_required {
     }
     > li.current-menu-item {
       > a {
-          color:$sidebar_currentitem_color;
-          &:hover {
-            color:$sidebar_currentitem_hover_color;
-          }
+        color: $sidebar_currentitem_color;
+        &:hover {
+          color: $sidebar_currentitem_hover_color;
+        }
       }
     }
     > li.current-menu-ancestor {
@@ -275,9 +276,9 @@ span.sidebar_required {
     > li {
       &.blog-active {
         a {
-          color:$sidebar_blog_active_item_color;
+          color: $sidebar_blog_active_item_color;
           &:hover {
-            color:$sidebar_blog_active_item_hover_color;;
+            color: $sidebar_blog_active_item_hover_color;
           }
         }
       }
@@ -297,7 +298,7 @@ span.sidebar_required {
     display: none;
     li.current-menu-item {
       a {
-        color:$sidebar_submenu_current_color;
+        color: $sidebar_submenu_current_color;
       }
     }
     li {

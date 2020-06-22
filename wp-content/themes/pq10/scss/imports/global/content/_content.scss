@@ -141,11 +141,19 @@ h4 {
       )
     );
     @include mq(large_laptop) {
-      @include quick_type($content_h4_size_large_laptop, $content_h4_height_large_laptop, null);
+      @include quick_type(
+        $content_h4_size_large_laptop,
+        $content_h4_height_large_laptop,
+        null
+      );
     }
     @include mq(small_monitor) {
       margin: 55px 0 78px;
-      @include quick_type($content_h4_size_small_monitor, $content_h4_height_small_monitor, null);
+      @include quick_type(
+        $content_h4_size_small_monitor,
+        $content_h4_height_small_monitor,
+        null
+      );
     }
     &:after {
       content: "";

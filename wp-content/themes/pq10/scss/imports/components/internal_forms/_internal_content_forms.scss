@@ -1,7 +1,7 @@
 .content {
   .gform_wrapper {
     padding-top: 45px;
-    padding-bottom:45px;
+    padding-bottom: 45px;
     ul {
       padding: 0;
       li {
@@ -39,11 +39,11 @@
             padding: 12px 15px;
             background: #fff;
             border: 1px solid $internal_form_border_bg_color;
-            @include type (
+            @include type(
               (
                 size: $internal_form_size,
                 family: $primaryfont,
-                color: $internal_form_color 
+                color: $internal_form_color,
               )
             );
           }
@@ -134,7 +134,7 @@
           )
         );
       }
-    } 
+    }
     .gfield_description,
     .validation_message {
       display: block;
@@ -145,7 +145,7 @@
           size: $internal_form_error_size,
           family: $primaryfont,
           color: $internal_form_error_color,
-          weight: $internal_form_error_weight
+          weight: $internal_form_error_weight,
         )
       );
     }

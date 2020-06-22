@@ -96,7 +96,7 @@ $sidebar_item_weight: 400;
 
 // .sidebar_box ul li.menu-item-has-children a:after
 
-$sidebar_item_triangle_bg_color:$color_lite_one;
+$sidebar_item_triangle_bg_color: $color_lite_one;
 
 // .sidebar_box ul li.current-menu-item a
 
@@ -106,13 +106,13 @@ $sidebar_currentitem_hover_color: $color_lite_one;
 
 // .sidebar_box ul li.current-menu-ancestor a
 
-$sidebar_current_ancestor_item_bg_color:$color_bright_two;
+$sidebar_current_ancestor_item_bg_color: $color_bright_two;
 
 // .sidebar_box ul li.blog-active a
 
 $sidebar_blog_active_item_color: $color_bright_two;
 
-$sidebar_blog_active_item_hover_color:$color_lite_one;
+$sidebar_blog_active_item_hover_color: $color_lite_one;
 
 // .sidebar_box ul.sub-menu
 
@@ -127,4 +127,3 @@ $sidebar_submenu_hover_color: $color_bright_two;
 // .sidebar_box ul.sub-menu li.current-menu-item a
 
 $sidebar_submenu_current_color: $color_bright_two;
-

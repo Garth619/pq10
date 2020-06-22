@@ -7,33 +7,34 @@
 		
 		<div id="internal_banner_content">
 			
-			<?php if(get_field('banner_title')) : ?>
+			<?php if(get_field('internal_banner_blog_title','option')) : ?>
+
+				<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
 			
-				<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-					<h1 class="banner_title"><?php the_field( 'banner_title' ); ?></h1><!-- banner_title -->
-				
-					<?php else: ?>
-				
-					<span class="banner_title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
-				
+					<h1 class="banner_title"><?php the_field( 'internal_banner_blog_title','option' ); ?></h1><!-- banner_title -->
+
+				<?php else:?>
+
+					<span class="banner_title"><?php the_field( 'internal_banner_blog_title','option' ); ?></span><!-- banner_title -->
+
 				<?php endif;?>
 			
 			<?php else:?>
-			
-			<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-				<h1 class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></h1><!-- banner_title -->
 
-				<?php else: ?>
+				<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
 			
-				<span class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></span><!-- banner_title -->
+					<h1 class="banner_title"><?php the_field( 'global_internal_banner_title','option'); ?></h1><!-- banner_title -->
+
+				<?php else:?>
+
+					<span class="banner_title"><?php the_field( 'global_internal_banner_title','option' ); ?></span><!-- banner_title -->
+
+					<?php endif;?>
 
 			<?php endif;?>
 			
-			<?php endif;?>
 			
-			<?php if(get_field('turn_off_button') == "Yes") : ?>
+			<?php if(get_field('turn_off_button_blog','option') == "Yes") : ?>
 			
 			<?php else: ?>
 			
@@ -48,7 +49,7 @@
 		</div><!-- internal_banner_content -->
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
-		<?php $banner_image = get_field( 'banner_image' ); ?>
+		<?php $banner_image = get_field( 'internal_banner_blog_image','option'); ?>
 		
 		<?php if($banner_image) : ?>
 		
@@ -65,16 +66,6 @@
 	<div class="page_container">
 		
 		<div class="page_content">
-			
-			<?php //if(get_field('banner_h1') == "Yes") : ?>
-			
-				<!-- <h2 class="page_header"><?php the_title();?></h2> -->
-			
-			<?php //else:?>
-			
-				<!-- <h1 class="page_header"><?php the_title();?></h1> -->
-			
-			<?php //endif;?>
 
 			<div class='page_content_inner'>
 			

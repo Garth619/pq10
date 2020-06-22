@@ -1,8 +1,16 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-
+<?php if(get_field('banner_h1') == "Yes") : ?>
+			
+			<h2 class="blog_header"><?php the_title();?></h2>
+		
+		<?php else:?>
 		
 		<h1 class="blog_header"><?php the_title();?></h1>
+		
+		<?php endif;?>
+		
+		<!-- <h1 class="blog_header"><?php the_title();?></h1> -->
 		
 		<div class="blog_meta">
 		

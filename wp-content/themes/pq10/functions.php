@@ -185,10 +185,6 @@ function gform_tabindexer( $tab_index, $form = false ) {
   return GFCommon::$tab_index >= $starting_index ? GFCommon::$tab_index : $starting_index;
 }
 
-
-
-
-
 /* Remove Unnecessary Scripts
 -------------------------------------------------------------- */
 remove_action('wp_head', 'print_emoji_detection_script', 7);

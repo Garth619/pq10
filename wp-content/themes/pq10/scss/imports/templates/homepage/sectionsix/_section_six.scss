@@ -1,5 +1,5 @@
 #section_six {
-  background:$section_six_bg_color;
+  background: $section_six_bg_color;
 }
 
 #sec_six_inner {
@@ -15,7 +15,7 @@
   @include mq(large_laptop) {
     max-width: 1315px;
     padding: 105px 60px 70px;
-    @include flex(space-between,null);
+    @include flex(space-between, null);
   }
   @include mq(small_monitor) {
     max-width: 1565px;
@@ -23,9 +23,6 @@
   }
 }
 
-
 .sec_six_col {
-  flex-basis:45%;
+  flex-basis: 45%;
 }
-
-

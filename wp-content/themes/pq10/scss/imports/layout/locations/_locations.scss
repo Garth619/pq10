@@ -14,15 +14,16 @@
     padding-bottom: 35px;
   }
   @include mq(small_monitor) {
-    max-width:1510px;
+    max-width: 1510px;
     @include margin_lr;
   }
 }
 
 .loc_col {
   margin-bottom: 70px;
-  span, a {
-    color:$color_lite_one;
+  span,
+  a {
+    color: $color_lite_one;
   }
   &:nth-of-type(1) {
     order: 2;
@@ -30,7 +31,7 @@
     flex-basis: 324px;
     span.locations_title {
       position: relative;
-      top:-2px;
+      top: -2px;
     }
   }
   &:nth-of-type(2) {
@@ -104,7 +105,7 @@ a.locations_phone {
     )
   );
   &:hover {
-    color:$locations_phone_hover_color;
+    color: $locations_phone_hover_color;
   }
 }
 
@@ -120,7 +121,11 @@ span.locations_address {
     )
   );
   @include mq(large_laptop) {
-    @include quick_type($locations_address_size_large_laptop,$locations_address_height_large_laptop,$locations_address_spacing_large_laptop);
+    @include quick_type(
+      $locations_address_size_large_laptop,
+      $locations_address_height_large_laptop,
+      $locations_address_spacing_large_laptop
+    );
   }
 }
 
@@ -146,10 +151,10 @@ a.get_directions {
 }
 
 .social_media {
-  margin-top:35px;
+  margin-top: 35px;
   a {
     text-decoration: none;
-    margin:0 2px;
+    margin: 0 2px;
     svg {
       @include mq(small_laptop) {
         @include box(63px);

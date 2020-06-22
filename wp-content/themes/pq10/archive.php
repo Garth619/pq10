@@ -6,29 +6,18 @@
 	<div id="internal_banner">
 		
 		<div id="internal_banner_content">
-			
-		<?php if (have_posts())the_post();?>
 
-		<h1 class="banner_title"><?php if ( is_day() ) : ?>
-	
-	<?php printf( __( '<span>%s</span>', 'twentyten' ), get_the_date() ); ?>
-		
-		<?php elseif ( is_month() ) : ?>
-	
-	<?php printf( __( '<span>%s</span>', 'twentyten' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyten' ) ) ); ?>
-		
-		<?php elseif ( is_year() ) : ?>
-	<?php printf( __( '<span>%s</span>', 'twentyten' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyten' ) ) ); ?>
-	
-	<?php else : ?>
-	
-	<?php _e( 'Blog Archives', 'twentyten' ); ?>
-	
-	<?php endif; ?></h1><!-- banner_title -->
+			<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
 
-<?php rewind_posts(); ?>
+				<h1 class="banner_title"><?php printf( __( '<span>%s</span>'), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyten' ) ) ); ?></h1><!-- banner_title -->
+
+			<?php else:?>
+
+				<span class="banner_title"><?php printf( __( '<span>%s</span>'), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyten' ) ) ); ?></span><!-- banner_title -->
+
+		<?php endif;?>
 			
-			<?php if(get_field('turn_off_button') == "Yes") : ?>
+			<?php if(get_field('turn_off_button_blog','option') == "Yes") : ?>
 			
 			<?php else: ?>
 			
@@ -43,7 +32,7 @@
 		</div><!-- internal_banner_content -->
 		
 		<?php $global_internal_banner_image = get_field( 'global_internal_banner_image','option'); ?>
-		<?php $banner_image = get_field( 'banner_image' ); ?>
+		<?php $banner_image = get_field( 'internal_banner_blog_image','option' ); ?>
 		
 		<?php if($banner_image) : ?>
 		
@@ -60,16 +49,6 @@
 	<div class="page_container">
 		
 		<div class="page_content">
-			
-			<?php //if(get_field('banner_h1') == "Yes") : ?>
-			
-				<!-- <h2 class="page_header"><?php the_title();?></h2> -->
-			
-			<?php //else:?>
-			
-				<!-- <h1 class="page_header"><?php the_title();?></h1> -->
-			
-			<?php //endif;?>
 
 			<div class='page_content_inner'>
 			
@@ -77,14 +56,11 @@
 			
 			</div><!-- page_content_inner -->
 			
-		
-			
 		</div><!-- page_content -->
 
 		<?php get_sidebar('blog'); ?>
 		
 	</div><!-- page_container -->
-	
 	
 </div><!-- internal_main -->
 

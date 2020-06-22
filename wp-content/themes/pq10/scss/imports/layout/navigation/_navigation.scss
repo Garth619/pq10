@@ -63,7 +63,11 @@ nav {
       );
       @include mq(small_laptop) {
         margin-left: 14px;
-        @include quick_type($nav_ulmenu_size_small_laptop, $nav_ulmenu_height_small_laptop, $nav_ulmenu_spacing_small_laptop);
+        @include quick_type(
+          $nav_ulmenu_size_small_laptop,
+          $nav_ulmenu_height_small_laptop,
+          $nav_ulmenu_spacing_small_laptop
+        );
         &:nth-last-of-type(-n + 3) {
           ul.sub-menu {
             left: auto;
@@ -73,11 +77,19 @@ nav {
       }
       @include mq(large_laptop) {
         margin-left: 18px;
-        @include quick_type($nav_ulmenu_size_large_laptop, $nav_ulmenu_height_large_laptop, $nav_ulmenu_spacing_large_laptop);
+        @include quick_type(
+          $nav_ulmenu_size_large_laptop,
+          $nav_ulmenu_height_large_laptop,
+          $nav_ulmenu_spacing_large_laptop
+        );
       }
       @include mq(small_monitor) {
         margin-left: 22px;
-        @include quick_type($nav_ulmenu_size_small_monitor, $nav_ulmenu_height_small_monitor, $nav_ulmenu_spacing_small_monitor);
+        @include quick_type(
+          $nav_ulmenu_size_small_monitor,
+          $nav_ulmenu_height_small_monitor,
+          $nav_ulmenu_spacing_small_monitor
+        );
       }
       > a {
         display: block;
@@ -138,7 +150,12 @@ nav {
         &:hover {
           &:after {
             @include mq(small_laptop) {
-              @include tri(down, 4px, 6px, $nav_ulmenu_tri_bg_hover_color_small_laptop);
+              @include tri(
+                down,
+                4px,
+                6px,
+                $nav_ulmenu_tri_bg_hover_color_small_laptop
+              );
             }
           }
         }
@@ -154,7 +171,12 @@ nav {
         &:after {
           @include tri(down, 4px, 6px, $nav_ulmenu_current_tri_color);
           @include mq(small_laptop) {
-             @include tri(down, 4px, 6px, $nav_ulmenu_current_tri_color_small_laptop);
+            @include tri(
+              down,
+              4px,
+              6px,
+              $nav_ulmenu_current_tri_color_small_laptop
+            );
           }
         }
       }
@@ -182,7 +204,7 @@ nav {
       display: block !important;
       width: 291px;
       background: $nav_ulsubmenu_bg_color_small_laptop;
-      padding:17px 0;
+      padding: 17px 0;
       opacity: 0;
       visibility: hidden;
       transition: all 150ms ease-in-out;
@@ -190,8 +212,8 @@ nav {
     }
     @include mq(large_laptop) {
       top: 48px;
-      width:375px;
-      padding:29px 0;
+      width: 375px;
+      padding: 29px 0;
     }
     @include mq(small_monitor) {
       top: 81px;
@@ -215,10 +237,18 @@ nav {
         );
       }
       @include mq(large_laptop) {
-        @include quick_type($nav_ulsubmenu_size_large_laptop,$nav_ulsubmenu_height_large_laptop,0);
+        @include quick_type(
+          $nav_ulsubmenu_size_large_laptop,
+          $nav_ulsubmenu_height_large_laptop,
+          0
+        );
       }
       @include mq(small_monitor) {
-        @include quick_type($nav_ulsubmenu_size_small_monitor,$nav_ulsubmenu_height_small_monitor,0);
+        @include quick_type(
+          $nav_ulsubmenu_size_small_monitor,
+          $nav_ulsubmenu_height_small_monitor,
+          0
+        );
       }
       &:last-of-type {
         a {
