@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "To edit Blog Banner, go to Dashboard-> Theme Options -> Internal Banner Blog",
+            "message": "To edit Blog Banner, go to Dashboard-> Theme Options -> Blog Banner",
             "new_lines": "wpautop",
             "esc_html": 0
         }
@@ -41,5 +41,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1592790675
+    "modified": 1592798589
 }

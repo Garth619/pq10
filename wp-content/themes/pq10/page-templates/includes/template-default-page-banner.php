@@ -1,4 +1,4 @@
-<?php if(!get_field('disable_banner')) { ?>
+<?php if(!get_field('disable_banner_new')) { ?>
 	
 	<div id="internal_banner">
 		

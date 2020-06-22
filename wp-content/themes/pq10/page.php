@@ -26,7 +26,11 @@
 			
 		</div><!-- page_content -->
 
-		<?php get_sidebar(); ?>
+		<?php if(!get_field('disable_sidebar')) {
+
+			get_sidebar();
+
+		} ?>
 		
 	</div><!-- page_container -->
 	

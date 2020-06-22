@@ -3,7 +3,7 @@
 
 <div id="internal_main">
 
-<?php if(!get_field('blog_disable_banner','option')) { ?>
+<?php if(!get_field('disable_banner_blog_redo','option')) { ?>
 	
 	<div id="internal_banner">
 		
