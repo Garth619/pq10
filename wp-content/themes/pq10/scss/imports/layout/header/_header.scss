@@ -7,12 +7,7 @@ header {
   }
   @include mq(small_laptop) {
     position: relative;
-    box-shadow: none;
-  }
-  &.dropshadow {
-    @include mq(small_laptop) {
-      box-shadow: 0px 3px 20px #00000029;
-    }
+    box-shadow: 0px 3px 20px #00000029;
   }
   #header_inner {
     display: flex;

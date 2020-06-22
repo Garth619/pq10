@@ -2,6 +2,8 @@
 
 
 <div id="internal_main">
+
+<?php if(!get_field('blog_disable_banner','option')) { ?>
 	
 	<div id="internal_banner">
 		
@@ -62,6 +64,8 @@
 		<?php endif;?>
 		
 	</div><!-- internal_banner -->
+
+		<?php } ?>
 	
 	<div class="page_container">
 		

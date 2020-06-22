@@ -961,7 +961,7 @@
         },
         {
             "key": "field_5e7a866060460",
-            "label": "Internal Banner Blog Title",
+            "label": "Banner Blog Title",
             "name": "internal_banner_blog_title",
             "type": "text",
             "instructions": "",
@@ -985,7 +985,7 @@
         },
         {
             "key": "field_5ef011b19430d",
-            "label": "Banner H1",
+            "label": "Banner Blog H1",
             "name": "banner_h1_blog",
             "type": "select",
             "instructions": "Change banner span tags into h1 header tags?",
@@ -1014,7 +1014,7 @@
         },
         {
             "key": "field_5e8394d6cdd36",
-            "label": "Internal Banner Blog Image",
+            "label": "Banner Blog Image",
             "name": "internal_banner_blog_image",
             "type": "image",
             "instructions": "Image needs to be a jpg",
@@ -1041,11 +1041,11 @@
             "allow_bulkedit": 0
         },
         {
-            "key": "field_5ef011c51b1ef",
-            "label": "Turn Off Button",
-            "name": "turn_off_button_blog",
+            "key": "field_5ef01dfbd6b9a",
+            "label": "Blog Disable Banner",
+            "name": "blog_disable_banner",
             "type": "select",
-            "instructions": "Hide Button on this page's banner",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1084,6 +1084,35 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_5ef011c51b1ef",
+            "label": "Turn Off Button",
+            "name": "turn_off_button_blog",
+            "type": "select",
+            "instructions": "Hide Button on this page's banner",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "show_column": 0,
+            "show_column_sortable": 0,
+            "show_column_weight": 1000,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5e83ce4c8f954",
@@ -1146,5 +1175,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592791618
+    "modified": 1592795490
 }
