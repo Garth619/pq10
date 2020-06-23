@@ -1,0 +1,47 @@
+/* noto-serif-kr-500 - latin */
+@font-face {
+  font-family: 'Noto Serif KR';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Serif KR Medium'), local('NotoSerifKR-Medium'),
+       url('wp-content/themes/pq10/fonts/noto-500.woff2') format('woff2');
+}
+/* noto-serif-kr-700 - latin */
+@font-face {
+  font-family: 'Noto Serif KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Serif KR Bold'), local('NotoSerifKR-Bold'),
+       url('wp-content/themes/pq10/fonts/noto-700.woff2') format('woff2');
+}
+
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('wp-content/themes/pq10/fonts/open-sans-400.woff2') format('woff2');
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('wp-content/themes/pq10/fonts/open-sans-700.woff2') format('woff2');
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+       url('wp-content/themes/pq10/fonts/open-sans-800.woff2') format('woff2');
+}

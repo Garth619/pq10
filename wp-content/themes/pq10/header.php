@@ -28,17 +28,9 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 
+
 <style>
 	
-	<?php if(get_field('fonts','option')): ?>
-	 
-		<?php while(has_sub_field('fonts','option')): ?>
-	 
-			@import url(<?php the_sub_field( 'font_url' ); ?>);
-	    
-		<?php endwhile; ?>
-	 
-	<?php endif; ?>
 
 
 
