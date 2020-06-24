@@ -27,13 +27,38 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+<?php if(get_field('host_google_fonts_locally','option') == "Yes") :?>
+
+	<style>
+
+		<?php the_field('locally_hosted_google_fonts','option');?>
+
+	</style>
+
+<?php else:?>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+	<style>
+
+		<?php if(get_field('fonts','option')): ?>
+	 
+   		<?php while(has_sub_field('fonts','option')): ?>
+  
+     		@import url(<?php the_sub_field( 'font_url' ); ?>);
+     
+   		<?php endwhile; ?>
+  
+		 <?php endif; ?>
+		 
+		 </style>
+
+		<?php endif; ?>
+
 
 
 <style>
 	
-
-
-
 <?php the_field( 'review_css','option'); ?>
 
 </style>

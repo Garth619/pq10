@@ -1121,7 +1121,15 @@
             "type": "repeater",
             "instructions": "Set in quotes: i.e. <br\/><br\/>\r\nRecently discovered that google font url semicolons (after each weight) are being flagged as errors in chrome console. To correct, replace semicolons with %3B below\r\n<br\/><br\/>\r\n'https:\/\/fonts.googleapis.com\/css2?family=Taviraj&family=Work+Sans:wght@400;500;700&display=swap'\r\n<br\/><br\/>\r\n'https:\/\/use.typekit.net\/fcn7lzy.css'",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef28270fdabe",
+                        "operator": "==",
+                        "value": ""
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -1156,6 +1164,66 @@
                     "show_column_weight": 1000
                 }
             ]
+        },
+        {
+            "key": "field_5ef28270fdabe",
+            "label": "Host Google Fonts Locally?",
+            "name": "host_google_fonts_locally",
+            "type": "select",
+            "instructions": "Here are some new techniques that can help page speed scores by hosting google fonts locally. I have seen improvements hosting locally vs hosting through google font's cdn. If interested refer to this pdf (feb 2020)<br\/><br\/> \"\/wp-content\/themes\/pq10\/fonts\/self-hosted-google-fonts-(Feb 2020).pdf\" or visit <a href=\"https:\/\/www.tunetheweb.com\/blog\/should-you-self-host-google-fonts\/\" target=\"_blank\">Should you Self Host Google Fonts?<\/a><br\/><br\/>Here is generator thats helpful <a href=\"https:\/\/google-webfonts-helper.herokuapp.com\/fonts\" target=\"_blank\">Google Webfonts Helper<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "show_column": 0,
+            "show_column_sortable": 0,
+            "show_column_weight": 1000,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ef27e7afdabd",
+            "label": "Locally Hosted Google Fonts",
+            "name": "locally_hosted_google_fonts",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef28270fdabe",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 60,
+            "new_lines": "",
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0
         }
     ],
     "location": [
@@ -1175,5 +1243,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592850926
+    "modified": 1592953266
 }
